@@ -1,0 +1,127 @@
+2022-10-29 15:53:26.784  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 22160 (D:\Hrushikesh\tms\target\classes started by Q in D:\Hrushikesh\tms)
+2022-10-29 15:53:26.793  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : No active profile set, falling back to 1 default profile: "default"
+2022-10-29 15:53:27.662  INFO DESKTOP-C48K438 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-29 15:53:27.689  INFO DESKTOP-C48K438 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2022-10-29 15:53:28.473  INFO DESKTOP-C48K438 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-29 15:53:28.605  INFO DESKTOP-C48K438 --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-29 15:53:28.963  INFO DESKTOP-C48K438 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-29 15:53:29.610  INFO DESKTOP-C48K438 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-10-29 15:53:29.915  INFO DESKTOP-C48K438 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-10-29 15:53:29.944  INFO DESKTOP-C48K438 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-29 15:53:30.531  INFO DESKTOP-C48K438 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-29 15:53:30.549  INFO DESKTOP-C48K438 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:53:30.757  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Started TmsApplication in 4.6 seconds (JVM running for 5.929)
+2022-10-29 15:53:30.763  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Info log
+2022-10-29 15:53:30.765  WARN DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Hey, This is a warning!
+2022-10-29 15:53:30.765 ERROR DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Oops! We have an Error. OK
+2022-10-29 15:53:30.776  INFO DESKTOP-C48K438 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:53:30.787  INFO DESKTOP-C48K438 --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-10-29 15:53:30.816  INFO DESKTOP-C48K438 --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-10-29 15:53:51.540  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 19632 (D:\Hrushikesh\tms\target\classes started by Q in D:\Hrushikesh\tms)
+2022-10-29 15:53:51.547  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : No active profile set, falling back to 1 default profile: "default"
+2022-10-29 15:53:52.360  INFO DESKTOP-C48K438 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-29 15:53:52.385  INFO DESKTOP-C48K438 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-10-29 15:53:53.393  INFO DESKTOP-C48K438 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-29 15:53:53.572  INFO DESKTOP-C48K438 --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-29 15:53:54.018  INFO DESKTOP-C48K438 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-29 15:53:54.776  INFO DESKTOP-C48K438 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-10-29 15:53:55.067  INFO DESKTOP-C48K438 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-10-29 15:53:55.092  INFO DESKTOP-C48K438 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-29 15:53:55.716  INFO DESKTOP-C48K438 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-29 15:53:55.731  INFO DESKTOP-C48K438 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:53:55.954  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Started TmsApplication in 5.017 seconds (JVM running for 6.518)
+2022-10-29 15:53:55.961  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Info log
+2022-10-29 15:53:55.962  WARN DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Hey, This is a warning!
+2022-10-29 15:53:55.962 ERROR DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Oops! We have an Error. OK
+2022-10-29 15:53:55.982  INFO DESKTOP-C48K438 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:53:55.991  INFO DESKTOP-C48K438 --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-10-29 15:53:56.018  INFO DESKTOP-C48K438 --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2022-10-29 15:55:41.499  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 20164 (D:\Hrushikesh\tms\target\classes started by Q in D:\Hrushikesh\tms)
+2022-10-29 15:55:41.524  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : No active profile set, falling back to 1 default profile: "default"
+2022-10-29 15:55:42.872  INFO DESKTOP-C48K438 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-29 15:55:42.900  INFO DESKTOP-C48K438 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-10-29 15:55:44.554  INFO DESKTOP-C48K438 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-10-29 15:55:44.569  INFO DESKTOP-C48K438 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:55:44.571  INFO DESKTOP-C48K438 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-29 15:55:44.572  INFO DESKTOP-C48K438 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-29 15:55:44.850  INFO DESKTOP-C48K438 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-29 15:55:44.851  INFO DESKTOP-C48K438 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3177 ms
+2022-10-29 15:55:45.140  INFO DESKTOP-C48K438 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-29 15:55:45.255  INFO DESKTOP-C48K438 --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-29 15:55:45.602  INFO DESKTOP-C48K438 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-29 15:55:45.814  INFO DESKTOP-C48K438 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-10-29 15:55:46.307  INFO DESKTOP-C48K438 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-10-29 15:55:46.342  INFO DESKTOP-C48K438 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-29 15:55:46.805  INFO DESKTOP-C48K438 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-29 15:55:46.827  INFO DESKTOP-C48K438 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:55:46.913  WARN DESKTOP-C48K438 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-29 15:55:47.452  INFO DESKTOP-C48K438 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:55:47.504  INFO DESKTOP-C48K438 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-29 15:55:47.532  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Started TmsApplication in 6.767 seconds (JVM running for 8.206)
+2022-10-29 15:55:47.540  INFO DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Info log
+2022-10-29 15:55:47.541  WARN DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Hey, This is a warning!
+2022-10-29 15:55:47.541 ERROR DESKTOP-C48K438 --- [           main] c.y.t.TmsApplication                     : Oops! We have an Error. OK
+2022-10-29 15:58:35.943  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 18400 (D:\Hrushikesh\tms\target\classes started by Q in D:\Hrushikesh\tms)
+2022-10-29 15:58:35.965  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : No active profile set, falling back to 1 default profile: "default"
+2022-10-29 15:58:36.091  INFO DESKTOP-C48K438 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-29 15:58:36.092  INFO DESKTOP-C48K438 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-29 15:58:37.457  INFO DESKTOP-C48K438 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-29 15:58:37.488  INFO DESKTOP-C48K438 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-10-29 15:58:39.290  INFO DESKTOP-C48K438 --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-10-29 15:58:39.316  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:58:39.319  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-29 15:58:39.321  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-29 15:58:39.641  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-29 15:58:39.642  INFO DESKTOP-C48K438 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3549 ms
+2022-10-29 15:58:40.116  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-29 15:58:40.266  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-29 15:58:40.622  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-29 15:58:40.846  INFO DESKTOP-C48K438 --- [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-10-29 15:58:41.181  INFO DESKTOP-C48K438 --- [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-10-29 15:58:41.215  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-29 15:58:41.665  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-29 15:58:41.689  INFO DESKTOP-C48K438 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:58:41.797  WARN DESKTOP-C48K438 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-29 15:58:42.388  INFO DESKTOP-C48K438 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-29 15:58:42.415  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:58:42.450  INFO DESKTOP-C48K438 --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-29 15:58:42.469  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Started TmsApplication in 7.262 seconds (JVM running for 8.874)
+2022-10-29 15:58:42.473  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Info log
+2022-10-29 15:58:42.474  WARN DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Hey, This is a warning!
+2022-10-29 15:58:42.474 ERROR DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Oops! We have an Error. OK
+2022-10-29 15:59:41.481  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 1264 (D:\Hrushikesh\tms\target\classes started by Q in D:\Hrushikesh\tms)
+2022-10-29 15:59:41.499  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : No active profile set, falling back to 1 default profile: "default"
+2022-10-29 15:59:41.621  INFO DESKTOP-C48K438 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-29 15:59:41.625  INFO DESKTOP-C48K438 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-29 15:59:43.310  INFO DESKTOP-C48K438 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-29 15:59:43.347  INFO DESKTOP-C48K438 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2022-10-29 15:59:45.206  INFO DESKTOP-C48K438 --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2022-10-29 15:59:45.224  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:59:45.225  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-29 15:59:45.228  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-29 15:59:45.456  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-29 15:59:45.458  INFO DESKTOP-C48K438 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3831 ms
+2022-10-29 15:59:45.751  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-29 15:59:45.867  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-29 15:59:46.204  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-29 15:59:46.392  INFO DESKTOP-C48K438 --- [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2022-10-29 15:59:46.718  INFO DESKTOP-C48K438 --- [  restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2022-10-29 15:59:46.750  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-10-29 15:59:47.196  INFO DESKTOP-C48K438 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-29 15:59:47.219  INFO DESKTOP-C48K438 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 15:59:47.314  WARN DESKTOP-C48K438 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-29 15:59:47.870  INFO DESKTOP-C48K438 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-29 15:59:47.895  INFO DESKTOP-C48K438 --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2022-10-29 15:59:47.936  INFO DESKTOP-C48K438 --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-29 15:59:47.958  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Started TmsApplication in 7.263 seconds (JVM running for 8.945)
+2022-10-29 15:59:47.962  INFO DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Info log
+2022-10-29 15:59:47.963  WARN DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Hey, This is a warning!
+2022-10-29 15:59:47.963 ERROR DESKTOP-C48K438 --- [  restartedMain] c.y.t.TmsApplication                     : Oops! We have an Error. OK
+2022-10-29 16:00:33.634  INFO DESKTOP-C48K438 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-10-29 16:00:34.195  INFO DESKTOP-C48K438 --- [       Thread-5] o.a.c.h.Http11NioProtocol                : Pausing ProtocolHandler ["http-nio-8080"]
+2022-10-29 16:00:34.195  INFO DESKTOP-C48K438 --- [       Thread-5] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2022-10-29 16:00:34.203  INFO DESKTOP-C48K438 --- [       Thread-5] o.a.c.h.Http11NioProtocol                : Stopping ProtocolHandler ["http-nio-8080"]
+2022-10-29 16:00:34.207  INFO DESKTOP-C48K438 --- [       Thread-5] o.a.c.h.Http11NioProtocol                : Destroying ProtocolHandler ["http-nio-8080"]
+2022-10-29 16:00:34.214  INFO DESKTOP-C48K438 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-29 16:00:34.220  INFO DESKTOP-C48K438 --- [       Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2022-10-29 16:00:34.238  INFO DESKTOP-C48K438 --- [       Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
