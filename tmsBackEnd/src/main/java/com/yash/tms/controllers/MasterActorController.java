@@ -23,7 +23,7 @@ public class MasterActorController {
 
 	private final static Logger log = LoggerFactory.getLogger(MasterActorController.class);
 	@Autowired
-	MasterActorManager masterActorManager;
+	private MasterActorManager masterActorManager;
 
 	@GetMapping("/getAllActors")
 	public List<masterActor> findAllActors() {
