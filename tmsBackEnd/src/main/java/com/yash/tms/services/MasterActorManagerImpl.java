@@ -1,7 +1,6 @@
 package com.yash.tms.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,7 +58,7 @@ public class MasterActorManagerImpl implements MasterActorManager {
 		}
 		catch (Exception e) {
 			log.error("MasterActorManagerImpl :: findById error while find actor by actor id ::"+actorId+" "+e.getMessage());
-			log.error("MasterActorManagerImpl :: addActor Stacktrace :: "+e.getStackTrace());
+			log.error("MasterActorManagerImpl :: findById Stacktrace :: "+e.getStackTrace());
 			return null;
 		}
 		

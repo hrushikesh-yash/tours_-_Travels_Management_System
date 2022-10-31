@@ -44,6 +44,12 @@ public class masterUser {
 	
 	@Column(name = "userIsDeleted")
 	private short userIsDeleted;
+	
+	@Column(name = "userName")
+	private String userName;
+	
+	@Column(name = "password")
+	private String password;
 
 	masterUser(){}
 
@@ -127,12 +133,31 @@ public class masterUser {
 		this.userIsDeleted = userIsDeleted;
 	}
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
 		return "masterUser [userId=" + userId + ", actorId=" + actorId + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", emailId=" + emailId + ", mobileNo=" + mobileNo + ", address=" + address + ", gender="
-				+ gender + ", userCreatedDate=" + userCreatedDate + ", userIsDeleted=" + userIsDeleted + "]";
+				+ gender + ", userCreatedDate=" + userCreatedDate + ", userIsDeleted=" + userIsDeleted + ", userName="
+				+ userName + ", password=" + password + "]";
 	}
+
+	
 	
 	
 	
