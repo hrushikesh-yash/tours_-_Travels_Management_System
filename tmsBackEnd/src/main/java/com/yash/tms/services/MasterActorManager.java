@@ -3,14 +3,14 @@ package com.yash.tms.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.yash.tms.entity.masterActor;
+import com.yash.tms.entity.MasterActor;
 
 public interface MasterActorManager {
 
-	public List<masterActor> findAllActors(short actorIsDeleted);
+	public List<MasterActor> findAllActors(short actorIsDeleted);
 
-	public masterActor addActor(masterActor actor);
+	public MasterActor addActor(MasterActor actor);
 
-	public masterActor findById(int actorId);
+	public MasterActor findById(int actorId);
 
 }
