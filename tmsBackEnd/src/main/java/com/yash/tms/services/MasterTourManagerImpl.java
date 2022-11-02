@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yash.tms.entity.masterActor;
-import com.yash.tms.entity.masterTour;
+import com.yash.tms.entity.MasterActor;
+import com.yash.tms.entity.MasterTour;
 import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
@@ -20,7 +20,7 @@ public class MasterTourManagerImpl implements MasterTourManager {
 	private MasterTourDao masterTourDao;
 
 	@Override
-	public List<masterTour> findAlltours(short tourIsDeleted) {
+	public List<MasterTour> findAlltours(short tourIsDeleted) {
 		log.info("MasterTourManagerImpl :: findAlltours function started.");
 		try {
 			
@@ -34,14 +34,14 @@ public class MasterTourManagerImpl implements MasterTourManager {
 	}
 	
 	@Override
-	public masterTour addTour(masterTour tour) {
+	public MasterTour addTour(MasterTour tour) {
 		log.info("MasterTourManagerImpl :: addTour function started.");
 		try {
 			
 			 return masterTourDao.save(tour);
 		}
 		catch (Exception e) {
-			log.error("MasterTourManagerImpl :: addTour error while find all Tour. "+e.getMessage());
+			log.error("MasterTourManagerImpl :: addTour error while add Tour. "+e.getMessage());
 			log.error("MasterTourManagerImpl :: addTour Stacktrace :: "+e.getStackTrace());
 			return null;
 		}
@@ -49,10 +49,10 @@ public class MasterTourManagerImpl implements MasterTourManager {
 	}
 	
 	@Override
-	public masterTour findById(int tourId) {
+	public MasterTour findById(int tourId) {
 		log.info("MasterTourManagerImpl :: findById function started.");
 		try {
-			masterTour tour=masterTourDao.findById(tourId).orElseThrow(() -> new RecordNotfoundException("tour Id not found."));
+			MasterTour tour=masterTourDao.findById(tourId).orElseThrow(() -> new RecordNotfoundException("tour Id not found."));
 			 return tour;
 		}
 		catch (Exception e) {

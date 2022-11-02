@@ -2,14 +2,14 @@ package com.yash.tms.services;
 
 import java.util.List;
 
-import com.yash.tms.entity.masterUser;
+import com.yash.tms.entity.MasterUser;
 
 public interface MasterUserManager {
 
-	List<masterUser> findAllusers(short userIsDeleted);
+	List<MasterUser> findAllusers(short userIsDeleted);
 
-	masterUser addUser(masterUser user);
+	MasterUser addUser(MasterUser user);
 
-	masterUser findById(int userId);
+	MasterUser findById(int userId);
 
 }

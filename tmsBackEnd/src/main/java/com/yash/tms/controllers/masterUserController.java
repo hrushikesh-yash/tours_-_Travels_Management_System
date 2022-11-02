@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.masterActor;
-import com.yash.tms.entity.masterUser;
+import com.yash.tms.entity.MasterUser;
 import com.yash.tms.services.MasterUserManager;
 
 @RestController
@@ -27,9 +26,9 @@ public class masterUserController {
 	private MasterUserManager masterUserManager;
 
 	@GetMapping("/getAllUsers")
-	public List<masterUser> findAllusers() {
+	public List<MasterUser> findAllusers() {
 		log.info("masterUserController :: findAllusers function started.");
-		List<masterUser> masterUserList = null;
+		List<MasterUser> masterUserList = null;
 		try {
 			short userIsDeleted = 0;
 			masterUserList = masterUserManager.findAllusers(userIsDeleted);
@@ -46,7 +45,7 @@ public class masterUserController {
 	}
 	
 	@PostMapping("/addUser")
-	public masterUser addUser(@RequestBody masterUser user) {
+	public MasterUser addUser(@RequestBody MasterUser user) {
 		log.info("MasterUserController :: addUser function started.");
 		try {
 
@@ -59,11 +58,11 @@ public class masterUserController {
 	}
 	
 	@PutMapping("/updateUser/{userId}")
-	public masterUser updateUser(@PathVariable(value = "userId") int userId, @RequestBody masterUser user) {
+	public MasterUser updateUser(@PathVariable(value = "userId") int userId, @RequestBody MasterUser user) {
 		log.info("MasterUserController :: updateUser function started.");
 		try {
 
-			masterUser userToUpdate = masterUserManager.findById(userId);
+			MasterUser userToUpdate = masterUserManager.findById(userId);
 			userToUpdate.setUserId(userId);
 			userToUpdate.setActorId(user.getActorId());
 			userToUpdate.setFirstName(user.getFirstName());
@@ -85,12 +84,12 @@ public class masterUserController {
 
 	}
 	
-	@PutMapping("/user/{userId}")
+	@PutMapping("/delete/{userId}")
 	public String deleteUser(@PathVariable(value = "userId") int userId) {
 		log.info("MasterUserController :: deleteUser function started.");
 		try {
 
-			masterUser userToUpdate = masterUserManager.findById(userId);
+			MasterUser userToUpdate = masterUserManager.findById(userId);
 			userToUpdate.setUserIsDeleted((short) 1);
 			masterUserManager.addUser(userToUpdate);
 

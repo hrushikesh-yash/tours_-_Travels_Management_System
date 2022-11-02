@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "master_tour")
-public class masterTour {
+public class MasterTour {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,7 +33,7 @@ public class masterTour {
 	
 	
 
-	public masterTour() {
+	public MasterTour() {
 		
 	}
 

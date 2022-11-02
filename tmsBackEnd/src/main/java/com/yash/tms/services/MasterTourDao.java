@@ -6,12 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yash.tms.entity.masterTour;
+import com.yash.tms.entity.MasterTour;
 
 @Repository
-public interface MasterTourDao extends JpaRepository<masterTour, Integer> {
+public interface MasterTourDao extends JpaRepository<MasterTour, Integer> {
 
-	@Query(value = "from masterTour where tourIsDeleted=?1")
-	List<masterTour> findAlltours(short tourIsDeleted);
+	@Query(value = "from MasterTour where tourIsDeleted=?1")
+	List<MasterTour> findAlltours(short tourIsDeleted);
 
 }

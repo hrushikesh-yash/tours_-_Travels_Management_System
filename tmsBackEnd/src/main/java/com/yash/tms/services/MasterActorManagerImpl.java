@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.MasterActorDao;
-import com.yash.tms.entity.masterActor;
+import com.yash.tms.entity.MasterActor;
 import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
@@ -19,7 +19,7 @@ public class MasterActorManagerImpl implements MasterActorManager {
 	MasterActorDao masterActorDao;
 	
 	@Override
-	public List<masterActor> findAllActors(short actorIsDeleted) {
+	public List<MasterActor> findAllActors(short actorIsDeleted) {
 		log.info("MasterActorManagerImpl :: findAllActors function started.");
 		try {
 			
@@ -35,7 +35,7 @@ public class MasterActorManagerImpl implements MasterActorManager {
 	}
 
 	@Override
-	public masterActor addActor(masterActor actor) {
+	public MasterActor addActor(MasterActor actor) {
 		log.info("MasterActorManagerImpl :: addActor function started.");
 		try {
 			
@@ -50,10 +50,10 @@ public class MasterActorManagerImpl implements MasterActorManager {
 	}
 
 	@Override
-	public masterActor findById(int actorId) {
+	public MasterActor findById(int actorId) {
 		log.info("MasterActorManagerImpl :: findById function started.");
 		try {
-				masterActor actor=masterActorDao.findById(actorId).orElseThrow(() -> new RecordNotfoundException("Actor Id not found."));
+				MasterActor actor=masterActorDao.findById(actorId).orElseThrow(() -> new RecordNotfoundException("Actor Id not found."));
 			 return actor;
 		}
 		catch (Exception e) {

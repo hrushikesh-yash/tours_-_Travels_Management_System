@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.MasterUserDao;
-import com.yash.tms.entity.masterActor;
-import com.yash.tms.entity.masterUser;
+import com.yash.tms.entity.MasterActor;
+import com.yash.tms.entity.MasterUser;
 import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
@@ -21,7 +21,7 @@ public class MasterUserManagerImpl implements MasterUserManager {
 	private MasterUserDao masterUserDao;
 
 	@Override
-	public List<masterUser> findAllusers(short userIsDeleted) {
+	public List<MasterUser> findAllusers(short userIsDeleted) {
 		
 		log.info("MasterUserManagerImpl :: findAllusers function started.");
 		try {
@@ -36,24 +36,24 @@ public class MasterUserManagerImpl implements MasterUserManager {
 	}
 
 	@Override
-	public masterUser addUser(masterUser user) {
+	public MasterUser addUser(MasterUser user) {
 		log.info("MasterUserManagerImpl :: addUser function started.");
 		try {
 			
 			 return masterUserDao.save(user);
 		}
 		catch (Exception e) {
-			log.error("MasterUserManagerImpl :: addUser error while find all User. "+e.getMessage());
+			log.error("MasterUserManagerImpl :: addUser error while add User. "+e.getMessage());
 			log.error("MasterUserManagerImpl :: addUser Stacktrace :: "+e.getStackTrace());
 			return null;
 		}
 	}
 
 	@Override
-	public masterUser findById(int userId) {
+	public MasterUser findById(int userId) {
 		log.info("MasterUserManagerImpl :: findById function started.");
 		try {
-				masterUser user=masterUserDao.findById(userId).orElseThrow(() -> new RecordNotfoundException("User Id not found."));
+				MasterUser user=masterUserDao.findById(userId).orElseThrow(() -> new RecordNotfoundException("User Id not found."));
 			 return user;
 		}
 		catch (Exception e) {

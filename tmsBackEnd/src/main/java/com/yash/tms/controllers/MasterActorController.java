@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.masterActor;
+import com.yash.tms.entity.MasterActor;
 import com.yash.tms.services.MasterActorManager;
 
 @RestController
@@ -26,9 +26,9 @@ public class MasterActorController {
 	private MasterActorManager masterActorManager;
 
 	@GetMapping("/getAllActors")
-	public List<masterActor> findAllActors() {
+	public List<MasterActor> findAllActors() {
 		log.info("MasterActorController :: findAllActors function started.");
-		List<masterActor> mastorActorList = null;
+		List<MasterActor> mastorActorList = null;
 		try {
 			short actorIsDeleted = 0;
 			mastorActorList = masterActorManager.findAllActors(actorIsDeleted);
@@ -45,7 +45,7 @@ public class MasterActorController {
 	}
 
 	@PostMapping("/addActor")
-	public masterActor addActor(@RequestBody masterActor actor) {
+	public MasterActor addActor(@RequestBody MasterActor actor) {
 		log.info("MasterActorController :: addActor function started.");
 		try {
 
@@ -59,11 +59,11 @@ public class MasterActorController {
 	}
 
 	@PutMapping("/updateActor/{actorId}")
-	public masterActor updateActor(@PathVariable(value = "actorId") int actorId, @RequestBody masterActor actor) {
+	public MasterActor updateActor(@PathVariable(value = "actorId") int actorId, @RequestBody MasterActor actor) {
 		log.info("MasterActorController :: updateActor function started.");
 		try {
 
-			masterActor actorToUpdate = masterActorManager.findById(actorId);
+			MasterActor actorToUpdate = masterActorManager.findById(actorId);
 			actorToUpdate.setActorId(actorId);
 			actorToUpdate.setActorName(actor.getActorName());
 			actorToUpdate.setActorCreatedDate(actor.getActorCreatedDate());
@@ -77,19 +77,19 @@ public class MasterActorController {
 
 	}
 
-	@PutMapping("/actor/{actorId}")
+	@PutMapping("/delete/{actorId}")
 	public String deleteActor(@PathVariable(value = "actorId") int actorId) {
 		log.info("MasterActorController :: deleteActor function started.");
 		try {
 
-			masterActor actorToUpdate = masterActorManager.findById(actorId);
+			MasterActor actorToUpdate = masterActorManager.findById(actorId);
 			actorToUpdate.setActorIsDeleted((short) 1);
 			masterActorManager.addActor(actorToUpdate);
 
 			return "actor deleted sucessfully";
 
 		} catch (Exception e) {
-			log.error("MasterActorController :: error in updateActor function." + e.getMessage());
+			log.error("MasterActorController :: error in deleteActor function." + e.getMessage());
 
 		}
 		return null;

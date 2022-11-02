@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "master_user")
-public class masterUser {
+public class MasterUser {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -51,7 +51,7 @@ public class masterUser {
 	@Column(name = "password")
 	private String password;
 
-	masterUser(){}
+	MasterUser(){}
 
 	public int getUserId() {
 		return userId;

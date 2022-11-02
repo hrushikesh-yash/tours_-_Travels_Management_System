@@ -2,14 +2,14 @@ package com.yash.tms.services;
 
 import java.util.List;
 
-import com.yash.tms.entity.masterTour;
+import com.yash.tms.entity.MasterTour;
 
 public interface MasterTourManager {
 
-	List<masterTour> findAlltours(short tourIsDeleted);
+	List<MasterTour> findAlltours(short tourIsDeleted);
 
-	masterTour addTour(masterTour tour);
+	MasterTour addTour(MasterTour tour);
 
-	masterTour findById(int tourId);
+	MasterTour findById(int tourId);
 
 }

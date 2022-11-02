@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "master_actor")
-public class masterActor {
+public class MasterActor {
 
 	//@OneToMany
 	@Id
@@ -27,7 +27,7 @@ public class masterActor {
 	@Column(name = "actorIsDeleted")
 	private short actorIsDeleted;
 	
-	masterActor()
+	MasterActor()
 	{}
 
 	public int getActorId() {

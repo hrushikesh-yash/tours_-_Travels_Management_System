@@ -6,12 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yash.tms.entity.masterUser;
+import com.yash.tms.entity.MasterUser;
 
 @Repository
-public interface MasterUserDao extends JpaRepository<masterUser, Integer>{
+public interface MasterUserDao extends JpaRepository<MasterUser, Integer>{
 
-	@Query(value="from masterUser where userIsDeleted =?1")
-	List<masterUser> findAllusers(short userIsDeleted);
+	@Query(value="from MasterUser where userIsDeleted =?1")
+	List<MasterUser> findAllusers(short userIsDeleted);
 
 }

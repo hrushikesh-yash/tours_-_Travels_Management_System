@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.masterActor;
-import com.yash.tms.entity.masterTour;
+import com.yash.tms.entity.MasterActor;
+import com.yash.tms.entity.MasterTour;
 import com.yash.tms.services.MasterTourManager;
 
 @RestController
@@ -26,9 +26,9 @@ public class MasterTourController {
 	private MasterTourManager masterTourManager;
 	
 	@GetMapping("/getAlltours")
-	public List<masterTour> findAlltours() {
+	public List<MasterTour> findAlltours() {
 		log.info("MasterTourController :: findAlltours function started.");
-		List<masterTour> mastorTourList = null;
+		List<MasterTour> mastorTourList = null;
 		try {
 			short tourIsDeleted = 0;
 			mastorTourList = masterTourManager.findAlltours(tourIsDeleted);
@@ -45,7 +45,7 @@ public class MasterTourController {
 	}
 	
 	@PostMapping("/addActor")
-	public masterTour addActor(@RequestBody masterTour tour) {
+	public MasterTour addActor(@RequestBody MasterTour tour) {
 		log.info("MasterTourController :: addActor function started.");
 		try {
 
@@ -59,11 +59,11 @@ public class MasterTourController {
 	}
 
 	@PutMapping("/updateTour/{tourId}")
-	public masterTour updateTour(@PathVariable(value = "tourId") int tourId, @RequestBody masterTour tour) {
+	public MasterTour updateTour(@PathVariable(value = "tourId") int tourId, @RequestBody MasterTour tour) {
 		log.info("MastertourController :: updateTour function started.");
 		try {
 
-			masterTour tourToUpdate = masterTourManager.findById(tourId);
+			MasterTour tourToUpdate = masterTourManager.findById(tourId);
 			tourToUpdate.setTourId(tourId);
 			tourToUpdate.setTourName(tour.getTourName());
 			tourToUpdate.setCityId(tour.getCityId());
@@ -84,7 +84,7 @@ public class MasterTourController {
 		log.info("MastertourController :: deleteTour function started.");
 		try {
 
-			masterTour tourToUpdate = masterTourManager.findById(tourId);
+			MasterTour tourToUpdate = masterTourManager.findById(tourId);
 			tourToUpdate.setTourIsDeleted((short) 1);
 			masterTourManager.addTour(tourToUpdate);
 
