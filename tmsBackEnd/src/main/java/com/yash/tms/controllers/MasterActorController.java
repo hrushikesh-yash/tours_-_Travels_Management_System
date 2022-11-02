@@ -48,58 +48,53 @@ public class MasterActorController {
 	public masterActor addActor(@RequestBody masterActor actor) {
 		log.info("MasterActorController :: addActor function started.");
 		try {
-			
+
 			return masterActorManager.addActor(actor);
-			
 
 		} catch (Exception e) {
 			log.error("MasterActorController :: error in addActor function." + e.getMessage());
-		return null;
+			return null;
 		}
 
 	}
-	
+
 	@PutMapping("/updateActor/{actorId}")
-	public masterActor updateActor(@PathVariable(value = "actorId") int actorId,@RequestBody masterActor actor) {
+	public masterActor updateActor(@PathVariable(value = "actorId") int actorId, @RequestBody masterActor actor) {
 		log.info("MasterActorController :: updateActor function started.");
 		try {
-			
-			masterActor actorToUpdate=masterActorManager.findById(actorId);
+
+			masterActor actorToUpdate = masterActorManager.findById(actorId);
 			actorToUpdate.setActorId(actorId);
 			actorToUpdate.setActorName(actor.getActorName());
 			actorToUpdate.setActorCreatedDate(actor.getActorCreatedDate());
 			actorToUpdate.setActorIsDeleted(actor.getActorIsDeleted());
-//			log.info("MasterActorController :: updated sucesssfully.");
+			// log.info("MasterActorController :: updated sucesssfully.");
 			return masterActorManager.addActor(actorToUpdate);
 
 		} catch (Exception e) {
 			log.error("MasterActorController :: error in updateActor function." + e.getMessage());
-		return null;
+			return null;
 		}
 
 	}
-	
-	@PutMapping("/"
-			+ "/{actorId}")
+
+	@PutMapping("/delete/{actorId}")
 	public String deleteActor(@PathVariable(value = "actorId") int actorId) {
 		log.info("MasterActorController :: deleteActor function started.");
 		try {
-			
-			masterActor actorToUpdate=masterActorManager.findById(actorId);
+
+			masterActor actorToUpdate = masterActorManager.findById(actorId);
 			actorToUpdate.setActorIsDeleted((short) 1);
 			masterActorManager.addActor(actorToUpdate);
-			
-				return "actor deleted sucessfully";
-			
 
+			return "actor deleted sucessfully";
 
 		} catch (Exception e) {
 			log.error("MasterActorController :: error in updateActor function." + e.getMessage());
-		
+
 		}
 		return null;
 
 	}
-	
 
 }
