@@ -7,9 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yash.tms.dao.MasterActorDao;
 import com.yash.tms.dao.MasterStatusDao;
-import com.yash.tms.entity.masterActor;
 import com.yash.tms.entity.masterStatus;
 import com.yash.tms.exception.RecordNotfoundException;
 

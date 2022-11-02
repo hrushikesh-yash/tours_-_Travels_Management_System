@@ -1,7 +1,6 @@
 package com.yash.tms.controllers;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,27 +58,18 @@ public class MasterActorController {
 	}
 
 	@PutMapping("/updateActor/{actorId}")
-<<<<<<< HEAD
-	public masterActor updateActor(@PathVariable(value = "actorId") int actorId, @RequestBody masterActor actor) {
-		log.info("MasterActorController :: updateActor function started.");
-		try {
 
-			masterActor actorToUpdate = masterActorManager.findById(actorId);
-=======
 	public MasterActor updateActor(@PathVariable(value = "actorId") int actorId, @RequestBody MasterActor actor) {
 		log.info("MasterActorController :: updateActor function started.");
 		try {
 
 			MasterActor actorToUpdate = masterActorManager.findById(actorId);
->>>>>>> aa385209ae75864edd2e118aac137eae361cae07
+
 			actorToUpdate.setActorId(actorId);
 			actorToUpdate.setActorName(actor.getActorName());
 			actorToUpdate.setActorCreatedDate(actor.getActorCreatedDate());
 			actorToUpdate.setActorIsDeleted(actor.getActorIsDeleted());
-<<<<<<< HEAD
-			// log.info("MasterActorController :: updated sucesssfully.");
-=======
->>>>>>> aa385209ae75864edd2e118aac137eae361cae07
+
 			return masterActorManager.addActor(actorToUpdate);
 
 		} catch (Exception e) {
@@ -94,22 +84,16 @@ public class MasterActorController {
 		log.info("MasterActorController :: deleteActor function started.");
 		try {
 
-<<<<<<< HEAD
-			masterActor actorToUpdate = masterActorManager.findById(actorId);
-=======
 			MasterActor actorToUpdate = masterActorManager.findById(actorId);
->>>>>>> aa385209ae75864edd2e118aac137eae361cae07
+
 			actorToUpdate.setActorIsDeleted((short) 1);
 			masterActorManager.addActor(actorToUpdate);
 
 			return "actor deleted sucessfully";
 
 		} catch (Exception e) {
-<<<<<<< HEAD
-			log.error("MasterActorController :: error in updateActor function." + e.getMessage());
-=======
+
 			log.error("MasterActorController :: error in deleteActor function." + e.getMessage());
->>>>>>> aa385209ae75864edd2e118aac137eae361cae07
 
 		}
 		return null;
