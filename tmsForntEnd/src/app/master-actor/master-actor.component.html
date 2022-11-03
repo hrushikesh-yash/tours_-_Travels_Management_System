@@ -1,0 +1,33 @@
+<h3>master-actor works!</h3>
+
+<div class="masterActor-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Actor Name</label>
+        <input
+          type="text"
+          formControlName="actorName"
+          class="form-control"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label>Actor Description</label>
+        <input
+          type="text"
+          formControlName="actorDescription"
+          class="form-control"
+        />
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add Actor</button>
+         <button id="reset"
+          type="button"
+          (click)="onReset()"
+          class="btn btn-warning">
+          Reset
+        </button> 
+      </div>
+    </form>
+  </div>

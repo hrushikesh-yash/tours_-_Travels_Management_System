@@ -1,0 +1,51 @@
+<p>master-tour works!</p>
+
+<div class="masterTour-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Tour Name</label>
+        <input
+          type="text"
+          formControlName="tourName"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Tour Description</label>
+        <input
+          type="text"
+          formControlName="tourDescription"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>City Id</label>
+        <input
+          type="text"
+          formControlName="cityId"
+          class="form-control"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label>Tour Price</label>
+        <input
+          type="text"
+          formControlName="tourPrice"
+          class="form-control"
+        />
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add State</button>
+         <!-- <button id="reset"
+          type="button"
+          (click)="onReset()"
+          class="btn btn-warning">
+          Reset
+        </button>  -->
+      </div>
+    </form>
+  </div>

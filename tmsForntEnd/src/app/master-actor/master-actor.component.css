@@ -1,0 +1,13 @@
+.masterActor-form {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  #root {
+    padding: 30px;
+  }
+
+  button.reset
+  {
+    float: right;
+  }
