@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.masterCity;
+import com.yash.tms.entity.MasterCity;
 import com.yash.tms.services.MasterCityManager;
 
 @RestController
@@ -25,9 +25,9 @@ public class MasterCityController {
 	MasterCityManager masterCityManager;
 
 	@GetMapping("/getallcities")
-	public List<masterCity> findAllCities() {
+	public List<MasterCity> findAllCities() {
 		log.info("MasterCityController :: findAllCities function started.");
-		List<masterCity> mastorCityList = null;
+		List<MasterCity> mastorCityList = null;
 		try {
 			short cityIsDeleted = 0;
 			mastorCityList = masterCityManager.findAllCities(cityIsDeleted);
@@ -43,7 +43,7 @@ public class MasterCityController {
 	}
 
 	@PostMapping("/addcity")
-	public masterCity addCity(@RequestBody masterCity city) {
+	public MasterCity addCity(@RequestBody MasterCity city) {
 		log.info("MasterCityController :: addcity function started.");
 		try {
 
@@ -57,11 +57,11 @@ public class MasterCityController {
 	}
 
 	@PutMapping("/updatecity/{cityId}")
-	public masterCity updatecity(@PathVariable(value = "cityId") int cityId, @RequestBody masterCity city) {
+	public MasterCity updatecity(@PathVariable(value = "cityId") int cityId, @RequestBody MasterCity city) {
 		log.info("MasterCityController :: updateCity function started.");
 		try {
 
-			masterCity cityToUpdate = masterCityManager.findById(cityId);
+			MasterCity cityToUpdate = masterCityManager.findById(cityId);
 			cityToUpdate.setCityId(cityId);
 			cityToUpdate.setCityName(city.getCityName());
 			cityToUpdate.setCityIsDeleted(city.getCityIsDeleted());
@@ -80,7 +80,7 @@ public class MasterCityController {
 		log.info("MasterCityController :: deleteCity function started.");
 		try {
 
-			masterCity cityToUpdate = masterCityManager.findById(cityId);
+			MasterCity cityToUpdate = masterCityManager.findById(cityId);
 			cityToUpdate.setCityIsDeleted((short) 1);
 			masterCityManager.addCity(cityToUpdate);
 

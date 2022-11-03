@@ -2,13 +2,13 @@ package com.yash.tms.services;
 
 import java.util.List;
 
-import com.yash.tms.entity.masterStatus;
+import com.yash.tms.entity.MasterStatus;
 
 public interface MasterStatusManager {
-	public List<masterStatus> findAllStatus(short statusIsDeleted);
+	public List<MasterStatus> findAllStatus(short statusIsDeleted);
 
-	public masterStatus addStatus(masterStatus status);
+	public MasterStatus addStatus(MasterStatus status);
 
-	public masterStatus findById(int statusId);
+	public MasterStatus findById(int statusId);
 
 }

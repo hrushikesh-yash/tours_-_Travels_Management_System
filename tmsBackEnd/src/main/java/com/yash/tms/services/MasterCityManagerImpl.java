@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.MasterCityDao;
-import com.yash.tms.entity.masterCity;
+import com.yash.tms.entity.MasterCity;
 import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
@@ -19,7 +19,7 @@ public class MasterCityManagerImpl implements MasterCityManager{
 	MasterCityDao masterCityDao;
 	
 	@Override
-	public List<masterCity> findAllCities(short cityIsDeleted) {
+	public List<MasterCity> findAllCities(short cityIsDeleted) {
 		log.info("MasterCityManagerImpl :: findAllCities function started.");
 		try {
 			
@@ -35,7 +35,7 @@ public class MasterCityManagerImpl implements MasterCityManager{
 	}
 
 	@Override
-	public masterCity addCity(masterCity city) {
+	public MasterCity addCity(MasterCity city) {
 		log.info("MasterCityManagerImpl :: addCity function started.");
 		try {
 			
@@ -50,10 +50,10 @@ public class MasterCityManagerImpl implements MasterCityManager{
 	}
 
 	@Override
-	public masterCity findById(int cityId) {
+	public MasterCity findById(int cityId) {
 		log.info("MasterCityManagerImpl :: findById function started.");
 		try {
-				masterCity city=masterCityDao.findById(cityId).orElseThrow(() -> new RecordNotfoundException("City Id not found."));
+				MasterCity city=masterCityDao.findById(cityId).orElseThrow(() -> new RecordNotfoundException("City Id not found."));
 			 return city;
 		}
 		catch (Exception e) {

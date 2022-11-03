@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
-import com.yash.tms.entity.masterCity;
+import com.yash.tms.entity.MasterCity;
 
-public interface MasterCityDao extends JpaRepository<masterCity, Integer>{
+@Repository
+public interface MasterCityDao extends JpaRepository<MasterCity, Integer>{
 	
-	@Query(value = "from masterCity where cityIsDeleted = ?1")
-	public List<masterCity> findAllCities(Short cityIsDeleted);
+	@Query(value = "from MasterCity where cityIsDeleted = ?1")
+	public List<MasterCity> findAllCities(Short cityIsDeleted);
 
 }

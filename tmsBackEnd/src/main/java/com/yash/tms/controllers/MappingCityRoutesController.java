@@ -18,7 +18,7 @@ import com.yash.tms.entity.MasterActor;
 import com.yash.tms.services.MappingCityRoutesManager;
 
 @RestController
-@RequestMapping
+@RequestMapping("/cityRoute")
 public class MappingCityRoutesController {
 
 	private final static Logger log = LoggerFactory.getLogger(MappingCityRoutesController.class);

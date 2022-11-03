@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.MasterStatusDao;
-import com.yash.tms.entity.masterStatus;
+import com.yash.tms.entity.MasterStatus;
 import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
@@ -20,7 +20,7 @@ public class MasterStatusManagerImpl implements MasterStatusManager{
 	MasterStatusDao masterStatusDao;
 	
 	@Override
-	public List<masterStatus> findAllStatus(short statusIsDeleted) {
+	public List<MasterStatus> findAllStatus(short statusIsDeleted) {
 		log.info("MasterStatusManagerImpl :: findAllStatus function started.");
 		try {
 			
@@ -36,7 +36,7 @@ public class MasterStatusManagerImpl implements MasterStatusManager{
 	}
 
 	@Override
-	public masterStatus addStatus(masterStatus status) {
+	public MasterStatus addStatus(MasterStatus status) {
 		log.info("MasterStatusManagerImpl :: addStatus function started.");
 		try {
 			
@@ -51,10 +51,10 @@ public class MasterStatusManagerImpl implements MasterStatusManager{
 	}
 
 	@Override
-	public masterStatus findById(int statusId) {
+	public MasterStatus findById(int statusId) {
 		log.info("MasterActorManagerImpl :: findById function started.");
 		try {
-				masterStatus status=masterStatusDao.findById(statusId).orElseThrow(() -> new RecordNotfoundException("Status Id not found."));
+				MasterStatus status=masterStatusDao.findById(statusId).orElseThrow(() -> new RecordNotfoundException("Status Id not found."));
 			 return status;
 		}
 		catch (Exception e) {

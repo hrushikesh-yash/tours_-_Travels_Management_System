@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "master_status")
-public class masterStatus {
+public class MasterStatus {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,7 +22,7 @@ public class masterStatus {
 	@Column(name = "statusIsDeleted")
 	private short statusIsDeleted;
 
-	public masterStatus() {
+	public MasterStatus() {
 
 	}
 

@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "master_city")
-public class masterCity {
+public class MasterCity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,7 +31,7 @@ public class masterCity {
 	@Column(name = "cityIsDeleted")
 	private short cityIsDeleted;
 
-	masterCity()
+	MasterCity()
 	{}
 
 	public int getCityId() {

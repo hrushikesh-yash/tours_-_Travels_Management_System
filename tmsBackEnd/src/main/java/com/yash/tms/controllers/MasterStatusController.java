@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.masterStatus;
+import com.yash.tms.entity.MasterStatus;
 import com.yash.tms.services.MasterStatusManager;
 
 @RestController
@@ -25,9 +25,9 @@ public class MasterStatusController {
 	MasterStatusManager masterStatusManager;
 
 	@GetMapping("/getAllStatus")
-	public List<masterStatus> findAllStatus() {
+	public List<MasterStatus> findAllStatus() {
 		log.info("MasterStatusController :: findAllStatus function started.");
-		List<masterStatus> mastorStatusList = null;
+		List<MasterStatus> mastorStatusList = null;
 		try {
 			short statusIsDeleted = 0;
 			mastorStatusList = masterStatusManager.findAllStatus(statusIsDeleted);
@@ -44,7 +44,7 @@ public class MasterStatusController {
 	}
 
 	@PostMapping("/addStatus")
-	public masterStatus addStatus(@RequestBody masterStatus status) {
+	public MasterStatus addStatus(@RequestBody MasterStatus status) {
 		log.info("MasterStatusController :: addStatus function started.");
 		try {
 
@@ -58,11 +58,11 @@ public class MasterStatusController {
 	}
 
 	@PutMapping("/updateStatus/{statusId}")
-	public masterStatus updateStatus(@PathVariable(value = "statusId") int statusId, @RequestBody masterStatus status) {
+	public MasterStatus updateStatus(@PathVariable(value = "statusId") int statusId, @RequestBody MasterStatus status) {
 		log.info("MasterStatusController :: updateStatus function started.");
 		try {
 
-			masterStatus statusToUpdate = masterStatusManager.findById(statusId);
+			MasterStatus statusToUpdate = masterStatusManager.findById(statusId);
 			statusToUpdate.setStatusId(statusId);
 			statusToUpdate.setStatusName(status.getStatusName());
 			statusToUpdate.setStatusIsDeleted(status.getStatusIsDeleted());
@@ -81,7 +81,7 @@ public class MasterStatusController {
 		log.info("MasterStatusController :: deleteStatus function started.");
 		try {
 
-			masterStatus statusToUpdate = masterStatusManager.findById(statusId);
+			MasterStatus statusToUpdate = masterStatusManager.findById(statusId);
 			statusToUpdate.setStatusIsDeleted((short) 1);
 			masterStatusManager.addStatus(statusToUpdate);
 

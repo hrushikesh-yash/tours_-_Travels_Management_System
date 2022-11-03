@@ -2,14 +2,14 @@ package com.yash.tms.services;
 
 import java.util.List;
 
-import com.yash.tms.entity.masterCity;
+import com.yash.tms.entity.MasterCity;
 
 public interface MasterCityManager {
 
-	public List<masterCity> findAllCities(short cityIsDeleted);
+	public List<MasterCity> findAllCities(short cityIsDeleted);
 
-	public masterCity addCity(masterCity city);
+	public MasterCity addCity(MasterCity city);
 
-	public masterCity findById(int cityId);
+	public MasterCity findById(int cityId);
 
 }

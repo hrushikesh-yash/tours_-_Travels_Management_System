@@ -44,15 +44,15 @@ public class MasterTourController {
 
 	}
 	
-	@PostMapping("/addActor")
-	public MasterTour addActor(@RequestBody MasterTour tour) {
-		log.info("MasterTourController :: addActor function started.");
+	@PostMapping("/addTour")
+	public MasterTour addTour(@RequestBody MasterTour tour) {
+		log.info("MasterTourController :: addTour function started.");
 		try {
 
 			return masterTourManager.addTour(tour);
 
 		} catch (Exception e) {
-			log.error("MasterTourController :: error in addActor function." + e.getMessage());
+			log.error("MasterTourController :: error in addTour function." + e.getMessage());
 			return null;
 		}
 

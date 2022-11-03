@@ -52,6 +52,7 @@ public class MasterActorController {
 
 		} catch (Exception e) {
 			log.error("MasterActorController :: error in addActor function." + e.getMessage());
+			log.error("MasterActorController :: error in addActor function." + e.getStackTrace());
 			return null;
 		}
 
