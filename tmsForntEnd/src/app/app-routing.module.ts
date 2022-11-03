@@ -4,6 +4,7 @@ import { MasterActorComponent } from './master-actor/master-actor.component';
 import { MasterCityComponent } from './master-city/master-city.component';
 import { MasterStateComponent } from './master-state/master-state.component';
 import { MasterTourComponent } from './master-tour/master-tour.component';
+import { MasterUserComponent } from './master-user/master-user.component';
 
 const routes: Routes = 
 [
@@ -11,7 +12,7 @@ const routes: Routes =
   { path :'masterState',component:MasterStateComponent},
   { path : 'masterCity',component:MasterCityComponent},
   { path : 'masterTour',component:MasterTourComponent},
-
+ { path : 'masterUser',component:MasterUserComponent},
 
 ];
 
@@ -23,5 +24,5 @@ const routes: Routes =
 export class AppRoutingModule { }
 
 export const routingComponents = [
-  MasterActorComponent,MasterStateComponent,MasterCityComponent
+  MasterActorComponent,MasterStateComponent,MasterCityComponent,MasterUserComponent
 ]
