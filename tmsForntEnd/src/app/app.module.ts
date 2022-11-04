@@ -5,13 +5,14 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http'
-
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateMasterUserComponent } from './master-user/update-master-user/update-master-user.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
+    UpdateMasterUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,14 +5,16 @@ import { MasterCityComponent } from './master-city/master-city.component';
 import { MasterStateComponent } from './master-state/master-state.component';
 import { MasterTourComponent } from './master-tour/master-tour.component';
 import { MasterUserComponent } from './master-user/master-user.component';
+import { UpdateMasterUserComponent } from './master-user/update-master-user/update-master-user.component';
 
 const routes: Routes = 
 [
   { path :'masterActor',component:MasterActorComponent},
   { path :'masterState',component:MasterStateComponent},
-  { path : 'masterCity',component:MasterCityComponent},
-  { path : 'masterTour',component:MasterTourComponent},
- { path : 'masterUser',component:MasterUserComponent},
+  { path :'masterCity',component:MasterCityComponent},
+  { path :'masterTour',component:MasterTourComponent},
+  { path :'masterUser',component:MasterUserComponent},
+  { path :'masterUser/:id',component: UpdateMasterUserComponent}
 
 ];
 
@@ -24,5 +26,9 @@ const routes: Routes =
 export class AppRoutingModule { }
 
 export const routingComponents = [
-  MasterActorComponent,MasterStateComponent,MasterCityComponent,MasterUserComponent
+  MasterActorComponent,
+  MasterStateComponent,
+  MasterCityComponent,
+  MasterUserComponent,
+  UpdateMasterUserComponent
 ]
