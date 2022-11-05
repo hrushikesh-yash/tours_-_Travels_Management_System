@@ -16,7 +16,7 @@ export class AddEditStateComponent implements OnInit {
 
   loading = false;
   isAddMode!: boolean;
-  id!: string;
+  id!: number;
   stateForm!: FormGroup;
   submitted = false;
   state: State = new State;
@@ -29,7 +29,7 @@ export class AddEditStateComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id'].getValue();
     this.isAddMode = !this.id;
     // console.log(this.id);
     this.stateForm = this.formBuilder.group({

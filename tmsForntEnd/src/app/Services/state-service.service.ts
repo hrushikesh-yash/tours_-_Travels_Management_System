@@ -18,7 +18,7 @@ export class StateServiceService {
     return this.httpClient.get<State[]>(this.baseURL+"getAllStates"); 
   }
 
-  findStateById(id: string):Observable<State>{
+  findStateById(id: number):Observable<State>{
     return this.httpClient.get<State>(this.baseURL+"findStateById/"+`${id}`);
   }
 

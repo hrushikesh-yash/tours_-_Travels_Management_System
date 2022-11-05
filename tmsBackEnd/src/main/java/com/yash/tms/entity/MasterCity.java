@@ -29,7 +29,7 @@ public class MasterCity {
 	
 	
 	@Column(name = "cityIsDeleted")
-	private short cityIsDeleted;
+	private int cityIsDeleted;
 
 	MasterCity()
 	{}
@@ -75,12 +75,12 @@ public class MasterCity {
 	}
 
 
-	public short getCityIsDeleted() {
+	public int getCityIsDeleted() {
 		return cityIsDeleted;
 	}
 
 
-	public void setCityIsDeleted(short cityIsDeleted) {
+	public void setCityIsDeleted(int cityIsDeleted) {
 		this.cityIsDeleted = cityIsDeleted;
 	}
 

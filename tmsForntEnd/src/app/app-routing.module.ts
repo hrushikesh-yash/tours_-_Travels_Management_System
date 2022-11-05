@@ -7,7 +7,8 @@ import { AddUserComponent } from './master-user/add-user/add-user.component';
 import { MasterUserComponent } from './master-user/master-user.component';
 import { UpdateMasterUserComponent } from './master-user/update-master-user/update-master-user.component';
 
-const stateModule=() => import ('./master-state/state/state.module').then(x=>x.StateModule);
+const stateModule=() => import ('./State/state/state.module').then(x=>x.StateModule);
+const cityModule=() => import ('./city/city.module').then(x=>x.CityModule);
 
 
 const routes: Routes = 
@@ -20,6 +21,7 @@ const routes: Routes =
   { path :'addUser',component: AddUserComponent},
 
   { path :'State', loadChildren:stateModule},
+  { path :'City', loadChildren:cityModule},
 
 ];
 

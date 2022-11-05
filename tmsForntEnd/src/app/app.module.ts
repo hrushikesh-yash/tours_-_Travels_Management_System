@@ -8,6 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { AlertComponent } from './alter/alert.component';
+import { CityComponent } from './city/city.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AlertComponent } from './alter/alert.component';
     AppComponent,
     routingComponents,
     AlertComponent,
+    CityComponent,
     
   ],
   imports: [
