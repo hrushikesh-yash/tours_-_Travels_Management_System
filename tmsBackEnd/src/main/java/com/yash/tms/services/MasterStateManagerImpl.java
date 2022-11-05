@@ -20,7 +20,7 @@ public class MasterStateManagerImpl implements MasterStateManager {
 	MasterStateDao masterStateDao;
 
 	@Override
-	public List<MasterState> findAllStates(short stateIsDeleted) {
+	public List<MasterState> findAllStates(int stateIsDeleted) {
 		log.info("MasterStateManagerImpl :: findAllStates function started.");
 		try {
 

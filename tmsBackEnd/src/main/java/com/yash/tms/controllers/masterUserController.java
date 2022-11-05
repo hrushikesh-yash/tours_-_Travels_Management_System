@@ -100,12 +100,13 @@ public class masterUserController {
 
 	}
 	
-	@PutMapping("/delete/{userId}")
+	@GetMapping("/delete/{userId}")
 	public String deleteUser(@PathVariable(value = "userId") int userId) {
 		log.info("MasterUserController :: deleteUser function started.");
 		try {
 
 			MasterUser userToUpdate = masterUserManager.findById(userId);
+			log.info("found user haveing user id "+userId);
 			userToUpdate.setUserIsDeleted((short) 1);
 			masterUserManager.addUser(userToUpdate);
 

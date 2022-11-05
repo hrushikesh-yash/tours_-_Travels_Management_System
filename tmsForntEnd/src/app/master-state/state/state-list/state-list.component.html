@@ -1,0 +1,31 @@
+<h1>States</h1>
+<a routerLink="add" class="btn btn-sm btn-success mb-2">Add State</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 20%">State Id</th>
+            <th style="width: 30%">State Name</th>
+            <th style="width: 30%">StateCode </th>
+            <th style="width: 20%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let state of states">
+            <td>{{ state.stateId }}</td>
+            <td>{{state.stateName}}</td>
+            <td>{{state.stateCode}}</td>
+            <td style="white-space: nowrap">
+                <a routerLink="edit/{{state.stateId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
+                <button (click)="deleteState(state.stateId)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="isDeleting">
+                    <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!isDeleting">Delete</span>
+                </button>
+            </td>
+        </tr>
+        <tr *ngIf="!states">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

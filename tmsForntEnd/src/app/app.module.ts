@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import { UpdateMasterUserComponent } from './master-user/update-master-user/update-master-user.component'
+import { DatePipe } from '@angular/common';
+import { AlertComponent } from './alter/alert.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    UpdateMasterUserComponent,
+    AlertComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { UpdateMasterUserComponent } from './master-user/update-master-user/upda
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,7 +33,7 @@ export class MasterUserComponent implements OnInit {
     .subscribe({
       next: (data) => {
         this.users = data;
-        //console.log(data);
+        // console.log(this.users);
       },
       error: (e) => console.error(e)
     });
@@ -42,8 +42,26 @@ export class MasterUserComponent implements OnInit {
   updateUser(userId: number)
   {
     console.log(userId);
-    this.userService.sharedDate(userId)
+    this.userService.sharedDate(userId);
     this.router.navigate([userId], { relativeTo: this.route });
+  }
+
+  deleteUser(userId: number)
+  {
+    console.log(userId);
+    this.userService.deleteUser(userId)
+    .subscribe({
+      next: (data) => {
+        
+         console.log(data);
+      },
+      error: (e) => console.error(e)
+    });
+  }
+
+  goToUserList()
+  {
+    this.router.navigate(['masterUser']);
   }
 
   

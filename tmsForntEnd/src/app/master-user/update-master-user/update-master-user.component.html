@@ -1,6 +1,6 @@
 <p>update-master-user works!</p>
 
-<!-- <div class="card m-3">
+<div class="card m-3">
     <h5 class="card-header">User Details</h5>
     <div class="card-body">
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
@@ -9,9 +9,9 @@
             <label>First Name</label>
             <input
               type="text"
-              formControlName="firstName"
+              formControlName="firstName" 
               class="form-control"
-              
+              [(ngModel)]="user.firstName"
             />
             
           </div>
@@ -21,7 +21,7 @@
               type="text"
               formControlName="lastName"
               class="form-control"
-             
+              [(ngModel)]="user.lastName"
             />
            
           </div>
@@ -30,19 +30,19 @@
           <label>Email</label>
           <input
             type="text"
-            formControlName="email"
+            formControlName="emailId"
             class="form-control"
-            
+            [(ngModel)]="user.emailId"
           />
          
         </div>
   
         <div class="text-center">
-          <button class="btn btn-primary mr-1">Register</button>
-           <button class="btn btn-secondary" type="reset" (click)="onReset()">
+          <button class="btn btn-primary mr-1">Update User</button>
+           <!-- <button class="btn btn-secondary" type="reset" (click)="onReset()">
             Cancel
-          </button> 
+          </button>  -->
         </div>
       </form>
     </div>
-  </div>  -->
+  </div>  

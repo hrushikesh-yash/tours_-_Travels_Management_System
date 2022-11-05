@@ -6,7 +6,7 @@ import com.yash.tms.entity.MasterState;
 
 public interface MasterStateManager {
 
-	public List<MasterState> findAllStates(short stateIsDeleted);
+	public List<MasterState> findAllStates(int stateIsDeleted);
 
 	public MasterState addState(MasterState state);
 

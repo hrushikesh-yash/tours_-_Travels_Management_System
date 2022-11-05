@@ -7,33 +7,36 @@ import {User} from '../modules/masterUser';
   providedIn: 'root'
 })
 export class UserService {
-   baseURL:String = "http://localhost:8080/user";
+  
+   baseURL:String = "http://localhost:8080/user/";
 
   sharedUserId!:number;
 
   constructor(private httpClient: HttpClient) { }
   
   getUserList(): Observable<User[]>{
-    return this.httpClient.get<User[]>(this.baseURL+"/getAllUsers"); 
+    return this.httpClient.get<User[]>(this.baseURL+"getAllUsers"); 
   }
 
-  // createEmployee(employee: Employee): Observable<Object>{
-  //   return this.httpClient.post(`${this.baseURL}`, employee);
-  // }
+  createUser(user: User): Observable<Object>{
+    return this.httpClient.post(this.baseURL+"addUser", user);
+  }
 
   findUserById(id: number): Observable<User>{
-    console.log("number in the service : "+id )
-    return this.httpClient.get<User>(this.baseURL+"/findUserById/"+{id});
+    
+    return this.httpClient.get<User>(this.baseURL+"findUserById/"+`${id}`);
     
   }
 
-  // updateEmployee(id: number, employee: Employee): Observable<Object>{
-  //   return this.httpClient.put(`${this.baseURL}/${id}`, employee);
-  // }
+  updateUser(id: number, user: User): Observable<Object>{
+    return this.httpClient.put(this.baseURL+"updateUser/"+`${id}`,user);
+  }
 
-  // deleteEmployee(id: number): Observable<Object>{
-  //   return this.httpClient.delete(`${this.baseURL}/${id}`);
-  // }
+  deleteUser(id: number):Observable<any>
+  {
+    console.log("delete user id: " + id );
+    return this.httpClient.get(this.baseURL+"delete/"+`${id}`);
+  }
   
   sharedDate(userId:number) 
   {
