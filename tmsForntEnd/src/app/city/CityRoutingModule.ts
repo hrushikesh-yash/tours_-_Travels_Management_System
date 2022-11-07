@@ -5,7 +5,6 @@ import { CityListComponent } from './city-list/city-list.component';
 import { CityComponent } from './city.component';
 
 
-
 const routes: Routes = [
     {
         path: '', component: CityComponent,
@@ -21,7 +20,7 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class CityRoutingModule { 
+export class StateRoutingModule { 
     
 }
 

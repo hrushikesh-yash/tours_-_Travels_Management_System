@@ -22,7 +22,7 @@ export class CityListComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.cities = data;
-          // console.log(data);
+          console.log(data);
         },
         error: (error) => console.log(error)
       });

@@ -15,7 +15,7 @@ export class TourListComponent implements OnInit {
   tours?:Tour[];
 
   submitted = false;
-  registerForm !: FormGroup;
+
   userImage: String ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7lVd-MZ41Dj-AYVtJMuJmSS7f_CiNcrUhQ&usqp=CAU";
 
   constructor(private route: ActivatedRoute, 

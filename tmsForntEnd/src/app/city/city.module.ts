@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddEditCityComponent } from './add-edit-city/add-edit-city.component';
-import { CityRoutingModule } from './CityRoutingModule';
+import { StateRoutingModule } from './CityRoutingModule';
 import { CityListComponent } from './city-list/city-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    CityRoutingModule,
+    StateRoutingModule,
     ReactiveFormsModule
   ]
 })

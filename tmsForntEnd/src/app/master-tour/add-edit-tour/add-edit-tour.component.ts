@@ -14,7 +14,6 @@ import { TourService } from 'src/app/Services/tour.service';
   styleUrls: ['./add-edit-tour.component.css']
 })
 export class AddEditTourComponent implements OnInit {
-
   loading = false;
   isAddMode!: boolean;
   id!: number;
