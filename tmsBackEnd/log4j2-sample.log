@@ -2513,3 +2513,439 @@ Caused by: java.lang.ClassFormatError: Duplicate method name "findById" with sig
 2022-11-03T16:37:23,679 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
 2022-11-03T16:37:23,746 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
 2022-11-03T16:37:23,758 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.903 seconds (JVM running for 7.015)
+2022-11-04T11:02:45,336 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 17440 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T11:02:45,349 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T11:02:45,414 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T11:02:45,416 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T11:02:46,211 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T11:02:46,363 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 142 ms. Found 11 JPA repository interfaces.
+2022-11-04T11:02:47,074 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T11:02:47,093 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:02:47,094 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T11:02:47,095 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T11:02:47,252 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T11:02:47,253 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1836 ms
+2022-11-04T11:02:47,440 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T11:02:47,499 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T11:02:47,670 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T11:02:47,769 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T11:02:47,922 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T11:02:47,941 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T11:02:48,409 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T11:02:48,886 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T11:02:48,892 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:02:49,632 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T11:02:49,983 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T11:02:50,002 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:02:50,072 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T11:02:50,081 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.095 seconds (JVM running for 6.034)
+2022-11-04T11:13:06,619 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-04T11:13:06,632 [Thread-5] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:13:06,632 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-04T11:13:06,637 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:13:06,639 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:13:06,646 [Thread-5] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:13:06,650 [Thread-5] INFO  (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2022-11-04T11:13:06,660 [Thread-5] INFO  (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2022-11-04T11:13:06,730 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 17440 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T11:13:06,731 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T11:13:07,005 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T11:13:07,093 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 88 ms. Found 11 JPA repository interfaces.
+2022-11-04T11:13:07,186 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T11:13:07,187 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:13:07,189 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T11:13:07,189 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T11:13:07,214 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T11:13:07,214 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 481 ms
+2022-11-04T11:13:07,251 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T11:13:07,256 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-2 - Starting...
+2022-11-04T11:13:07,264 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-2 - Start completed.
+2022-11-04T11:13:07,265 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T11:13:07,299 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T11:13:07,398 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T11:13:07,398 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:13:07,670 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T11:13:07,750 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T11:13:07,757 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:13:07,770 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T11:13:07,775 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.077 seconds (JVM running for 623.714)
+2022-11-04T11:13:07,777 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-04T11:14:50,705 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-11-04T11:14:50,720 [Thread-7] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:14:50,721 [Thread-7] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-04T11:14:50,723 [Thread-7] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:14:50,724 [Thread-7] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:14:50,731 [Thread-7] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:14:50,732 [Thread-7] INFO  (HikariDataSource.java:350) - HikariPool-2 - Shutdown initiated...
+2022-11-04T11:14:50,735 [Thread-7] INFO  (HikariDataSource.java:352) - HikariPool-2 - Shutdown completed.
+2022-11-04T11:14:50,821 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 17440 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T11:14:50,822 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T11:14:51,053 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T11:14:51,150 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 95 ms. Found 11 JPA repository interfaces.
+2022-11-04T11:14:51,217 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T11:14:51,218 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:14:51,219 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T11:14:51,219 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T11:14:51,255 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T11:14:51,256 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 432 ms
+2022-11-04T11:14:51,283 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T11:14:51,288 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-3 - Starting...
+2022-11-04T11:14:51,295 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-3 - Start completed.
+2022-11-04T11:14:51,296 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T11:14:51,324 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T11:14:51,411 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T11:14:51,412 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:14:51,619 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T11:14:51,677 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T11:14:51,682 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:14:51,688 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T11:14:51,691 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 0.904 seconds (JVM running for 727.63)
+2022-11-04T11:14:51,692 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-04T11:15:20,707 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 20960 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T11:15:20,716 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T11:15:20,783 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T11:15:20,784 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T11:15:21,542 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T11:15:21,689 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 139 ms. Found 11 JPA repository interfaces.
+2022-11-04T11:15:22,414 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T11:15:22,435 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:15:22,437 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T11:15:22,437 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T11:15:22,583 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T11:15:22,584 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1799 ms
+2022-11-04T11:15:22,781 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T11:15:22,847 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T11:15:23,018 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T11:15:23,113 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T11:15:23,262 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T11:15:23,279 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T11:15:23,782 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T11:15:24,007 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T11:15:24,014 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:15:24,763 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T11:15:25,104 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T11:15:25,121 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:15:25,172 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T11:15:25,187 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 4.765 seconds (JVM running for 5.593)
+2022-11-04T11:46:59,062 [http-nio-8080-exec-2] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T11:46:59,063 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T11:46:59,069 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:547) - Completed initialization in 5 ms
+2022-11-04T11:48:40,899 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 17612 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T11:48:40,909 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T11:48:40,963 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T11:48:40,964 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T11:48:41,675 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T11:48:41,836 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 154 ms. Found 11 JPA repository interfaces.
+2022-11-04T11:48:42,568 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T11:48:42,604 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:48:42,605 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T11:48:42,605 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T11:48:42,771 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T11:48:42,772 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1806 ms
+2022-11-04T11:48:42,966 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T11:48:43,027 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T11:48:43,220 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T11:48:43,324 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T11:48:43,486 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T11:48:43,504 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T11:48:44,054 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T11:48:44,278 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T11:48:44,290 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T11:48:45,030 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T11:48:45,381 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T11:48:45,397 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T11:48:45,444 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T11:48:45,458 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 4.859 seconds (JVM running for 5.719)
+2022-11-04T11:51:02,943 [http-nio-8080-exec-3] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T11:51:02,944 [http-nio-8080-exec-3] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T11:51:02,947 [http-nio-8080-exec-3] INFO  (FrameworkServlet.java:547) - Completed initialization in 3 ms
+2022-11-04T11:51:03,003 [http-nio-8080-exec-3] INFO  (masterUserController.java:30) - masterUserController :: findAllusers function started.
+2022-11-04T11:51:03,005 [http-nio-8080-exec-3] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-04T11:55:18,859 [http-nio-8080-exec-4] WARN  (AbstractHandlerExceptionResolver.java:208) - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2022-11-04T11:55:45,622 [http-nio-8080-exec-6] WARN  (AbstractHandlerExceptionResolver.java:208) - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2022-11-04T11:56:16,173 [http-nio-8080-exec-7] INFO  (masterUserController.java:49) - MasterUserController :: addUser function started.
+2022-11-04T11:56:16,175 [http-nio-8080-exec-7] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T11:56:16,378 [http-nio-8080-exec-7] WARN  (SqlExceptionHelper.java:137) - SQL Error: 1062, SQLState: 23000
+2022-11-04T11:56:16,379 [http-nio-8080-exec-7] ERROR (SqlExceptionHelper.java:142) - Duplicate entry '2' for key 'master_user.PRIMARY'
+2022-11-04T11:56:16,381 [http-nio-8080-exec-7] INFO  (AbstractBatchImpl.java:213) - HHH000010: On release of batch it still contained JDBC statements
+2022-11-04T11:56:16,393 [http-nio-8080-exec-7] ERROR (MasterUserManagerImpl.java:46) - MasterUserManagerImpl :: addUser error while add User. could not execute statement; SQL [n/a]; constraint [master_user.PRIMARY]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-11-04T11:56:16,394 [http-nio-8080-exec-7] ERROR (MasterUserManagerImpl.java:47) - MasterUserManagerImpl :: addUser Stacktrace :: [Ljava.lang.StackTraceElement;@22858975
+2022-11-04T11:58:23,640 [http-nio-8080-exec-10] INFO  (masterUserController.java:49) - MasterUserController :: addUser function started.
+2022-11-04T11:58:23,640 [http-nio-8080-exec-10] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T11:58:23,663 [http-nio-8080-exec-10] WARN  (SqlExceptionHelper.java:137) - SQL Error: 1062, SQLState: 23000
+2022-11-04T11:58:23,664 [http-nio-8080-exec-10] ERROR (SqlExceptionHelper.java:142) - Duplicate entry '3' for key 'master_user.PRIMARY'
+2022-11-04T11:58:23,665 [http-nio-8080-exec-10] INFO  (AbstractBatchImpl.java:213) - HHH000010: On release of batch it still contained JDBC statements
+2022-11-04T11:58:23,666 [http-nio-8080-exec-10] ERROR (MasterUserManagerImpl.java:46) - MasterUserManagerImpl :: addUser error while add User. could not execute statement; SQL [n/a]; constraint [master_user.PRIMARY]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-11-04T11:58:23,667 [http-nio-8080-exec-10] ERROR (MasterUserManagerImpl.java:47) - MasterUserManagerImpl :: addUser Stacktrace :: [Ljava.lang.StackTraceElement;@c2c6083
+2022-11-04T11:58:48,048 [http-nio-8080-exec-2] INFO  (masterUserController.java:49) - MasterUserController :: addUser function started.
+2022-11-04T11:58:48,048 [http-nio-8080-exec-2] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T11:58:48,076 [http-nio-8080-exec-2] WARN  (SqlExceptionHelper.java:137) - SQL Error: 1062, SQLState: 23000
+2022-11-04T11:58:48,076 [http-nio-8080-exec-2] ERROR (SqlExceptionHelper.java:142) - Duplicate entry '4' for key 'master_user.PRIMARY'
+2022-11-04T11:58:48,077 [http-nio-8080-exec-2] INFO  (AbstractBatchImpl.java:213) - HHH000010: On release of batch it still contained JDBC statements
+2022-11-04T11:58:48,078 [http-nio-8080-exec-2] ERROR (MasterUserManagerImpl.java:46) - MasterUserManagerImpl :: addUser error while add User. could not execute statement; SQL [n/a]; constraint [master_user.PRIMARY]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-11-04T11:58:48,079 [http-nio-8080-exec-2] ERROR (MasterUserManagerImpl.java:47) - MasterUserManagerImpl :: addUser Stacktrace :: [Ljava.lang.StackTraceElement;@6f69bd5e
+2022-11-04T11:59:02,798 [http-nio-8080-exec-3] INFO  (masterUserController.java:49) - MasterUserController :: addUser function started.
+2022-11-04T11:59:02,798 [http-nio-8080-exec-3] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T11:59:02,820 [http-nio-8080-exec-3] WARN  (SqlExceptionHelper.java:137) - SQL Error: 1062, SQLState: 23000
+2022-11-04T11:59:02,820 [http-nio-8080-exec-3] ERROR (SqlExceptionHelper.java:142) - Duplicate entry '5' for key 'master_user.PRIMARY'
+2022-11-04T11:59:02,820 [http-nio-8080-exec-3] INFO  (AbstractBatchImpl.java:213) - HHH000010: On release of batch it still contained JDBC statements
+2022-11-04T11:59:02,826 [http-nio-8080-exec-3] ERROR (MasterUserManagerImpl.java:46) - MasterUserManagerImpl :: addUser error while add User. could not execute statement; SQL [n/a]; constraint [master_user.PRIMARY]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-11-04T11:59:02,826 [http-nio-8080-exec-3] ERROR (MasterUserManagerImpl.java:47) - MasterUserManagerImpl :: addUser Stacktrace :: [Ljava.lang.StackTraceElement;@1faa4bc1
+2022-11-04T11:59:04,447 [http-nio-8080-exec-5] INFO  (masterUserController.java:49) - MasterUserController :: addUser function started.
+2022-11-04T11:59:04,448 [http-nio-8080-exec-5] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T12:05:10,553 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 7576 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T12:05:10,563 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T12:05:10,624 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T12:05:10,625 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T12:05:11,379 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T12:05:11,533 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 141 ms. Found 11 JPA repository interfaces.
+2022-11-04T12:05:12,250 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T12:05:12,270 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T12:05:12,272 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T12:05:12,273 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T12:05:12,417 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T12:05:12,417 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1790 ms
+2022-11-04T12:05:12,577 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T12:05:12,643 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T12:05:12,835 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T12:05:12,936 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T12:05:13,079 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T12:05:13,100 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T12:05:13,572 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T12:05:13,779 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T12:05:13,785 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T12:05:14,482 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T12:05:14,811 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T12:05:14,830 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T12:05:14,878 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T12:05:14,891 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 4.641 seconds (JVM running for 5.498)
+2022-11-04T12:06:03,684 [http-nio-8080-exec-2] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T12:06:03,685 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T12:06:03,686 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:547) - Completed initialization in 1 ms
+2022-11-04T12:06:03,755 [http-nio-8080-exec-2] INFO  (masterUserController.java:30) - masterUserController :: findAllusers function started.
+2022-11-04T12:06:03,755 [http-nio-8080-exec-2] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-04T12:07:40,816 [http-nio-8080-exec-6] INFO  (masterUserController.java:49) - MasterUserController :: addUser function started.
+2022-11-04T12:07:40,817 [http-nio-8080-exec-6] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T12:07:51,994 [http-nio-8080-exec-7] INFO  (masterUserController.java:30) - masterUserController :: findAllusers function started.
+2022-11-04T12:07:51,995 [http-nio-8080-exec-7] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-04T12:12:17,190 [http-nio-8080-exec-9] INFO  (masterUserController.java:62) - MasterUserController :: updateUser function started.
+2022-11-04T12:12:17,192 [http-nio-8080-exec-9] INFO  (MasterUserManagerImpl.java:54) - MasterUserManagerImpl :: findById function started.
+2022-11-04T12:12:17,244 [http-nio-8080-exec-9] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T12:12:28,356 [http-nio-8080-exec-10] INFO  (masterUserController.java:30) - masterUserController :: findAllusers function started.
+2022-11-04T12:12:28,356 [http-nio-8080-exec-10] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-04T12:14:04,678 [http-nio-8080-exec-4] INFO  (masterUserController.java:89) - MasterUserController :: deleteUser function started.
+2022-11-04T12:14:04,678 [http-nio-8080-exec-4] INFO  (MasterUserManagerImpl.java:54) - MasterUserManagerImpl :: findById function started.
+2022-11-04T12:14:04,689 [http-nio-8080-exec-4] INFO  (MasterUserManagerImpl.java:40) - MasterUserManagerImpl :: addUser function started.
+2022-11-04T12:14:14,407 [http-nio-8080-exec-3] INFO  (masterUserController.java:30) - masterUserController :: findAllusers function started.
+2022-11-04T12:14:14,408 [http-nio-8080-exec-3] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-04T12:16:54,687 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 18100 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T12:16:54,706 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T12:16:54,754 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T12:16:54,755 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T12:16:55,525 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T12:16:55,688 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 153 ms. Found 11 JPA repository interfaces.
+2022-11-04T12:16:56,358 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T12:16:56,379 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T12:16:56,380 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T12:16:56,381 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T12:16:56,513 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T12:16:56,513 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1757 ms
+2022-11-04T12:16:56,690 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T12:16:56,742 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T12:16:56,916 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T12:16:57,006 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T12:16:57,142 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T12:16:57,157 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T12:16:57,618 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T12:16:57,830 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T12:16:57,840 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T12:16:58,620 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T12:16:58,949 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T12:16:58,959 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T12:16:59,003 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T12:16:59,017 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 4.631 seconds (JVM running for 5.477)
+2022-11-04T12:17:45,722 [http-nio-8080-exec-2] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T12:17:45,724 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T12:17:45,727 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:547) - Completed initialization in 2 ms
+2022-11-04T12:17:45,785 [http-nio-8080-exec-2] INFO  (MasterStateController.java:29) - MasterStateController :: findAllStates function started.
+2022-11-04T12:17:45,785 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-04T12:18:28,259 [http-nio-8080-exec-3] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:18:28,260 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:20:08,077 [http-nio-8080-exec-6] WARN  (AbstractHandlerExceptionResolver.java:208) - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.yash.tms.entity.MasterState com.yash.tms.controllers.MasterStateController.addState(com.yash.tms.entity.MasterState)]
+2022-11-04T12:21:12,182 [http-nio-8080-exec-8] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:21:12,182 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:21:12,221 [http-nio-8080-exec-8] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T12:21:12,222 [http-nio-8080-exec-8] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@3c40fa05
+2022-11-04T12:21:26,253 [http-nio-8080-exec-9] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:21:26,254 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:21:26,263 [http-nio-8080-exec-9] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T12:21:26,264 [http-nio-8080-exec-9] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@31d59443
+2022-11-04T12:21:27,349 [http-nio-8080-exec-10] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:21:27,349 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:21:27,354 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T12:21:27,355 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@23b37724
+2022-11-04T12:21:28,461 [http-nio-8080-exec-1] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:21:28,462 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:21:28,468 [http-nio-8080-exec-1] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T12:21:28,469 [http-nio-8080-exec-1] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@32d383fb
+2022-11-04T12:21:29,585 [http-nio-8080-exec-2] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:21:29,585 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:21:29,596 [http-nio-8080-exec-2] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T12:21:29,597 [http-nio-8080-exec-2] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@722ebc86
+2022-11-04T12:21:30,618 [http-nio-8080-exec-3] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T12:21:30,618 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T12:21:30,626 [http-nio-8080-exec-3] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T12:21:30,628 [http-nio-8080-exec-3] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@23ade429
+2022-11-04T13:05:01,495 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 12744 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T13:05:01,508 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T13:05:01,636 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T13:05:01,636 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T13:05:02,519 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T13:05:02,694 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 163 ms. Found 11 JPA repository interfaces.
+2022-11-04T13:05:03,495 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T13:05:03,516 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T13:05:03,517 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T13:05:03,518 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T13:05:03,662 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T13:05:03,663 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 2024 ms
+2022-11-04T13:05:03,883 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T13:05:03,949 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T13:05:04,134 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T13:05:04,244 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T13:05:04,473 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T13:05:04,493 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T13:05:05,064 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T13:05:05,330 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T13:05:05,339 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T13:05:06,176 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T13:05:06,576 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T13:05:06,598 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T13:05:06,658 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T13:05:06,669 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.529 seconds (JVM running for 6.545)
+2022-11-04T13:07:41,387 [http-nio-8080-exec-2] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T13:07:41,389 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T13:07:41,392 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:547) - Completed initialization in 3 ms
+2022-11-04T13:07:41,643 [http-nio-8080-exec-2] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T13:07:41,644 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T13:07:41,822 [http-nio-8080-exec-2] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T13:07:41,823 [http-nio-8080-exec-2] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@7dc03f34
+2022-11-04T14:00:10,084 [HikariPool-1 housekeeper] WARN  (HikariPool.java:788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m35s278ms389µs700ns).
+2022-11-04T14:00:48,954 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 14284 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T14:00:48,964 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T14:00:49,029 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T14:00:49,030 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T14:00:49,809 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T14:00:49,954 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 136 ms. Found 11 JPA repository interfaces.
+2022-11-04T14:00:50,705 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T14:00:50,730 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T14:00:50,731 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T14:00:50,732 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T14:00:50,875 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T14:00:50,876 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1845 ms
+2022-11-04T14:00:51,061 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T14:00:51,133 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T14:00:51,298 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T14:00:51,398 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T14:00:51,584 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T14:00:51,602 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T14:00:52,075 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T14:00:52,288 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T14:00:52,294 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T14:00:53,637 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T14:00:54,184 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T14:00:54,200 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T14:00:54,251 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T14:00:54,283 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.647 seconds (JVM running for 6.535)
+2022-11-04T14:01:44,463 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T14:01:44,464 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T14:01:44,467 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 3 ms
+2022-11-04T14:01:44,716 [http-nio-8080-exec-1] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T14:01:44,716 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T14:01:44,841 [http-nio-8080-exec-1] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T14:01:44,841 [http-nio-8080-exec-1] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@4df251d1
+2022-11-04T14:01:57,273 [http-nio-8080-exec-3] INFO  (MasterStateController.java:47) - MasterStateController :: addstate function started.
+2022-11-04T14:01:57,274 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-04T14:01:57,280 [http-nio-8080-exec-3] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. No default constructor for entity:  : com.yash.tms.entity.MasterState; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.yash.tms.entity.MasterState
+2022-11-04T14:01:57,281 [http-nio-8080-exec-3] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@1ef83ea4
+2022-11-04T14:06:40,453 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 9200 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T14:06:40,473 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T14:06:40,565 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T14:06:40,566 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T14:06:41,646 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T14:06:41,854 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 193 ms. Found 11 JPA repository interfaces.
+2022-11-04T14:06:42,974 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T14:06:43,011 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T14:06:43,012 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T14:06:43,015 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T14:06:43,212 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T14:06:43,213 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 2645 ms
+2022-11-04T14:06:43,504 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T14:06:43,591 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T14:06:43,797 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T14:06:43,948 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T14:06:44,177 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T14:06:44,198 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T14:06:44,852 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T14:06:45,188 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T14:06:45,197 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T14:06:46,351 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T14:06:46,841 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T14:06:46,865 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T14:06:46,919 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T14:06:46,933 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 6.962 seconds (JVM running for 8.186)
+2022-11-04T14:10:50,581 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 10536 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-04T14:10:50,592 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-04T14:10:50,653 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-04T14:10:50,654 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-04T14:10:51,418 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-04T14:10:51,585 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 158 ms. Found 11 JPA repository interfaces.
+2022-11-04T14:10:52,370 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-04T14:10:52,392 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-04T14:10:52,393 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-04T14:10:52,393 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-04T14:10:52,547 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-04T14:10:52,547 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1892 ms
+2022-11-04T14:10:52,745 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-04T14:10:52,830 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-04T14:10:53,030 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-04T14:10:53,155 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-04T14:10:53,331 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-04T14:10:53,355 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-04T14:10:53,849 [restartedMain] INFO  (PojoInstantiator.java:47) - HHH000182: No default (no-argument) constructor for class: com.yash.tms.entity.MasterState (class must be instantiated by Interceptor)
+2022-11-04T14:10:54,068 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-04T14:10:54,075 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-04T14:10:54,870 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-04T14:10:55,251 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-04T14:10:55,265 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-04T14:10:55,313 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-04T14:10:55,327 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.057 seconds (JVM running for 5.908)
+2022-11-04T14:13:45,903 [http-nio-8080-exec-2] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-04T14:13:45,904 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-04T14:13:45,908 [http-nio-8080-exec-2] INFO  (FrameworkServlet.java:547) - Completed initialization in 3 ms
+2022-11-04T14:13:45,962 [http-nio-8080-exec-2] INFO  (MasterCityController.java:29) - MasterCityController :: findAllCities function started.
+2022-11-04T14:13:45,962 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-04T14:16:24,791 [http-nio-8080-exec-5] INFO  (MasterCityController.java:47) - MasterCityController :: addcity function started.
+2022-11-04T14:16:24,791 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-04T14:16:45,285 [http-nio-8080-exec-6] INFO  (MasterCityController.java:29) - MasterCityController :: findAllCities function started.
+2022-11-04T14:16:45,285 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-04T14:17:33,276 [http-nio-8080-exec-7] INFO  (MasterCityController.java:47) - MasterCityController :: addcity function started.
+2022-11-04T14:17:33,277 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-04T14:17:47,535 [http-nio-8080-exec-8] INFO  (MasterCityController.java:29) - MasterCityController :: findAllCities function started.
+2022-11-04T14:17:47,536 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-04T14:18:47,001 [http-nio-8080-exec-9] INFO  (MasterCityController.java:80) - MasterCityController :: deleteCity function started.
+2022-11-04T14:18:47,002 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-04T14:18:47,024 [http-nio-8080-exec-9] ERROR (MasterCityManagerImpl.java:60) - MasterCityManagerImpl :: findById error while find city by city id ::103 City Id not found.
+2022-11-04T14:18:47,025 [http-nio-8080-exec-9] ERROR (MasterCityManagerImpl.java:61) - MasterCityManagerImpl :: addCity Stacktrace :: [Ljava.lang.StackTraceElement;@54939015
+2022-11-04T14:18:47,026 [http-nio-8080-exec-9] ERROR (MasterCityController.java:90) - MasterCityController :: error in updateCity function.Cannot invoke "com.yash.tms.entity.MasterCity.setCityIsDeleted(short)" because "cityToUpdate" is null
+2022-11-04T14:19:27,461 [http-nio-8080-exec-10] INFO  (MasterCityController.java:80) - MasterCityController :: deleteCity function started.
+2022-11-04T14:19:27,463 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-04T14:19:27,475 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-04T14:19:34,952 [http-nio-8080-exec-1] INFO  (MasterCityController.java:80) - MasterCityController :: deleteCity function started.
+2022-11-04T14:19:34,952 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-04T14:19:34,958 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-04T14:21:44,897 [http-nio-8080-exec-4] INFO  (MasterCityController.java:61) - MasterCityController :: updateCity function started.
+2022-11-04T14:21:44,897 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-04T14:21:44,903 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-04T14:21:53,100 [http-nio-8080-exec-5] INFO  (MasterCityController.java:29) - MasterCityController :: findAllCities function started.
+2022-11-04T14:21:53,101 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-04T17:40:49,949 [HikariPool-1 housekeeper] WARN  (HikariPool.java:788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m53s567ms429µs699ns).

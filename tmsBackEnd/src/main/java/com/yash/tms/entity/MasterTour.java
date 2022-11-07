@@ -29,7 +29,7 @@ public class MasterTour {
 	private int tourPrice;
 	
 	@Column(name = "tourIsDeleted")
-	private short tourIsDeleted;
+	private int tourIsDeleted;
 	
 	
 
@@ -78,11 +78,11 @@ public class MasterTour {
 	}
 	
 
-	public short getTourIsDeleted() {
+	public int getTourIsDeleted() {
 		return tourIsDeleted;
 	}
 
-	public void setTourIsDeleted(short tourIsDeleted) {
+	public void setTourIsDeleted(int tourIsDeleted) {
 		this.tourIsDeleted = tourIsDeleted;
 	}
 

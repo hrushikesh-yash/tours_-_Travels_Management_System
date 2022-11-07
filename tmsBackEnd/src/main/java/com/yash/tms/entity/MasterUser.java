@@ -31,7 +31,7 @@ public class MasterUser {
 	private String emailId;
 	
 	@Column(name = "mobileNo")
-	private String mobileNo;
+	private Long mobileNo;
 
 	@Column(name = "address")
 	private String address;
@@ -93,11 +93,11 @@ public class MasterUser {
 		this.emailId = emailId;
 	}
 
-	public String getMobileNo() {
+	public Long getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(String mobileNo) {
+	public void setMobileNo(Long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 

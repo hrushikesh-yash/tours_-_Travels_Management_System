@@ -23,7 +23,7 @@ public class MasterState {
 	private int stateCode;
 
 	@Column(name = "stateIsDeleted")
-	private short stateIsDeleted;
+	private int stateIsDeleted;
 
 	public int getStateId() {
 		return stateId;
@@ -49,11 +49,11 @@ public class MasterState {
 		this.stateCode = stateCode;
 	}
 
-	public short getStateIsDeleted() {
+	public int getStateIsDeleted() {
 		return stateIsDeleted;
 	}
 
-	public void setStateIsDeleted(short stateIsDeleted) {
+	public void setStateIsDeleted(int stateIsDeleted) {
 		this.stateIsDeleted = stateIsDeleted;
 	}
 
