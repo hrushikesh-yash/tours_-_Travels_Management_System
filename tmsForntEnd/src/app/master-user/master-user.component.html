@@ -1,4 +1,63 @@
-<div class="card m-3">
+
+<div class="container">
+  <div class= "float-right">
+    <button class="btn btn-warning" type="button" routerLink="/addUser"
+    routerLinkActive="active" >Add User</button>
+
+  </div>
+  
+  <div class="row user-list" style="margin: 1em 0;">
+        
+    <!-- START : Product Card -->
+    <div class="col-sm-12 col-md-6 col-lg-4 " *ngFor="let user of users; let i = index;">
+      <div class="card mb-4 shadow-sm pd-5">
+        <div class="image">
+         <img class="card-img-top" src="{{userImage}}" alt="Card image cap">
+        </div>
+
+        <div class="card-body">
+          <h2>{{user.firstName}} {{user.lastName}}</h2>
+          <h4 class="card-text">{{user.emailId}}</h4>
+          <h4 class="card-text">{{user.mobileNo}}</h4>
+          <h4 class="card-text">{{user.address}}</h4>
+          
+            <div class="text-center">
+              <button type="button" class="btn btn-primary" 
+              (click)="updateUser(user.userId)">Update User</button> &nbsp;
+              <button type="button" class="btn btn-danger" (click)="deleteUser(user.userId)">
+                Delete User</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- END : Product Card -->
+
+  </div>
+</div>  
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card m-3">
   <h5 class="card-header">Registration Form</h5>
   <div class="card-body">
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
@@ -43,4 +102,4 @@
       </div>
     </form>
   </div>
-</div>
+</div> -->

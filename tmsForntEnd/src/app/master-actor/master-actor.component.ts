@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class MasterActorComponent implements OnInit {
  
   submitted = false;
+  
   form = this.formBuilder.group(
     {
       actorName: [''],

@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,18 +20,19 @@ import com.yash.tms.services.MasterTourManager;
 
 @RestController
 @RequestMapping("/tour")
+@CrossOrigin("*")
 public class MasterTourController {
 	private final static Logger log = LoggerFactory.getLogger(MasterActorController.class);
 	
 	@Autowired
 	private MasterTourManager masterTourManager;
 	
-	@GetMapping("/getAlltours")
+	@GetMapping("/getAllTours")
 	public List<MasterTour> findAlltours() {
 		log.info("MasterTourController :: findAlltours function started.");
 		List<MasterTour> mastorTourList = null;
 		try {
-			short tourIsDeleted = 0;
+			int tourIsDeleted = 0;
 			mastorTourList = masterTourManager.findAlltours(tourIsDeleted);
 			if (!mastorTourList.isEmpty()) {
 				return mastorTourList;
@@ -41,6 +43,23 @@ public class MasterTourController {
 			return null;
 		}
 		return mastorTourList;
+
+	}
+	
+	@GetMapping("/findTourById/{tourId}")
+	public MasterTour findTourById(@PathVariable(value = "tourId") int tourId) {
+		log.info("MasterTourController :: findTourById function started.");
+		List<MasterTour> mastorTourList = null;
+		try {
+			
+			return masterTourManager.findById(tourId);
+			
+
+		} catch (Exception e) {
+			log.error("MasterTourController :: error in findTourById function." + e.getMessage());
+			return null;
+		}
+		
 
 	}
 	
@@ -80,15 +99,15 @@ public class MasterTourController {
 	}
 
 	@PutMapping("/delete/{tourId}")
-	public String deleteTour(@PathVariable(value = "tourId") int tourId) {
+	public MasterTour deleteTour(@PathVariable(value = "tourId") int tourId) {
 		log.info("MastertourController :: deleteTour function started.");
 		try {
 
 			MasterTour tourToUpdate = masterTourManager.findById(tourId);
-			tourToUpdate.setTourIsDeleted((short) 1);
+			tourToUpdate.setTourIsDeleted((int) 1);
 			masterTourManager.addTour(tourToUpdate);
 
-			return "actor deleted sucessfully";
+			return tourToUpdate;
 
 		} catch (Exception e) {
 			log.error("MasterActorController :: error in deleteTour function." + e.getMessage());

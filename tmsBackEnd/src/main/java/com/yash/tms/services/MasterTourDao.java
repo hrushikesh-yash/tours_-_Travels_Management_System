@@ -12,6 +12,6 @@ import com.yash.tms.entity.MasterTour;
 public interface MasterTourDao extends JpaRepository<MasterTour, Integer> {
 
 	@Query(value = "from MasterTour where tourIsDeleted=?1")
-	List<MasterTour> findAlltours(short tourIsDeleted);
+	List<MasterTour> findAlltours(int tourIsDeleted);
 
 }

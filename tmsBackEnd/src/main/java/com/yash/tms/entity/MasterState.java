@@ -20,11 +20,16 @@ public class MasterState {
 	private String stateName;
 
 	@Column(name = "stateCode")
-	private int stateCode;
+	private String stateCode;
 
 	@Column(name = "stateIsDeleted")
 	private int stateIsDeleted;
 
+	MasterState()
+	{
+		
+	}
+	
 	public int getStateId() {
 		return stateId;
 	}
@@ -41,11 +46,11 @@ public class MasterState {
 		this.stateName = stateName;
 	}
 
-	public int getStateCode() {
+	public String getStateCode() {
 		return stateCode;
 	}
 
-	public void setStateCode(int stateCode) {
+	public void setStateCode(String stateCode) {
 		this.stateCode = stateCode;
 	}
 
@@ -57,7 +62,7 @@ public class MasterState {
 		this.stateIsDeleted = stateIsDeleted;
 	}
 
-	public MasterState(int stateId, String stateName, int stateCode, short stateIsDeleted) {
+	public MasterState(int stateId, String stateName, String stateCode, int stateIsDeleted) {
 		super();
 		this.stateId = stateId;
 		this.stateName = stateName;

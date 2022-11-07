@@ -12,6 +12,6 @@ import com.yash.tms.entity.MasterState;
 public interface MasterStateDao extends JpaRepository<MasterState, Integer>{
 	
 	@Query(value = "from MasterState where stateIsDeleted = ?1")
-	public List<MasterState> findAllStates(Short stateIsDeleted);
+	public List<MasterState> findAllStates(int stateIsDeleted);
 
 }

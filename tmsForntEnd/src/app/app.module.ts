@@ -5,13 +5,20 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { AlertComponent } from './alter/alert.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
+    AlertComponent,
+    
+   
+    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

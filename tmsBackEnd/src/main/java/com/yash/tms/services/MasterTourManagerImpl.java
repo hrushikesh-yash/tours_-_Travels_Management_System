@@ -20,7 +20,7 @@ public class MasterTourManagerImpl implements MasterTourManager {
 	private MasterTourDao masterTourDao;
 
 	@Override
-	public List<MasterTour> findAlltours(short tourIsDeleted) {
+	public List<MasterTour> findAlltours(int tourIsDeleted) {
 		log.info("MasterTourManagerImpl :: findAlltours function started.");
 		try {
 			

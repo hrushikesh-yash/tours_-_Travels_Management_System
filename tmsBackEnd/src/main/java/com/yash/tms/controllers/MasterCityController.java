@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,19 +19,21 @@ import com.yash.tms.services.MasterCityManager;
 
 @RestController
 @RequestMapping("/city")
+@CrossOrigin("*")
 public class MasterCityController {
 
 	private final static Logger log = LoggerFactory.getLogger(MasterCityController.class);
 	@Autowired
 	MasterCityManager masterCityManager;
 
-	@GetMapping("/getallcities")
+	@GetMapping("/getAllCities")
 	public List<MasterCity> findAllCities() {
 		log.info("MasterCityController :: findAllCities function started.");
 		List<MasterCity> mastorCityList = null;
 		try {
 			short cityIsDeleted = 0;
 			mastorCityList = masterCityManager.findAllCities(cityIsDeleted);
+			log.info("size of city list: " + mastorCityList.size());
 			if (!mastorCityList.isEmpty()) {
 				return mastorCityList;
 			}
@@ -42,7 +45,21 @@ public class MasterCityController {
 		return mastorCityList;
 	}
 
-	@PostMapping("/addcity")
+	@GetMapping("/findCityById/{cityId}")
+	public MasterCity findCityById(@PathVariable(value = "cityId") int cityId) {
+		log.info("MasterCityController :: findCityById function started.");
+		try {
+
+			return masterCityManager.findById(cityId);
+
+		} catch (Exception e) {
+			log.error("MasterCityController :: error in findCityById function." + e.getMessage());
+			return null;
+		}
+
+	}
+
+	@PostMapping("/addCity")
 	public MasterCity addCity(@RequestBody MasterCity city) {
 		log.info("MasterCityController :: addcity function started.");
 		try {
@@ -56,7 +73,7 @@ public class MasterCityController {
 
 	}
 
-	@PutMapping("/updatecity/{cityId}")
+	@PutMapping("/updateCity/{cityId}")
 	public MasterCity updatecity(@PathVariable(value = "cityId") int cityId, @RequestBody MasterCity city) {
 		log.info("MasterCityController :: updateCity function started.");
 		try {
@@ -65,7 +82,8 @@ public class MasterCityController {
 			cityToUpdate.setCityId(cityId);
 			cityToUpdate.setCityName(city.getCityName());
 			cityToUpdate.setCityIsDeleted(city.getCityIsDeleted());
-			// log.info("MasterCityController :: updated sucesssfully.");
+			cityToUpdate.setPinCode(city.getPinCode());
+			cityToUpdate.setStateId(city.getStateId());
 			return masterCityManager.addCity(cityToUpdate);
 
 		} catch (Exception e) {
@@ -75,16 +93,16 @@ public class MasterCityController {
 
 	}
 
-	@PutMapping("/deletecity/{cityId}")
-	public String deleteCity(@PathVariable(value = "cityId") int cityId) {
+	@PutMapping("/deleteCity/{cityId}")
+	public MasterCity deleteCity(@PathVariable(value = "cityId") int cityId) {
 		log.info("MasterCityController :: deleteCity function started.");
 		try {
 
 			MasterCity cityToUpdate = masterCityManager.findById(cityId);
-			cityToUpdate.setCityIsDeleted((short) 1);
+			cityToUpdate.setCityIsDeleted( 1);
 			masterCityManager.addCity(cityToUpdate);
 
-			return "city deleted sucessfully";
+			return cityToUpdate;
 
 		} catch (Exception e) {
 			log.error("MasterCityController :: error in updateCity function." + e.getMessage());

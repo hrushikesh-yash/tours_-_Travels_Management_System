@@ -27,6 +27,7 @@ public class MasterUser {
 	@Column(name = "lastName")
 	private String lastName;
 	
+	
 	@Column(name = "emailId")
 	private String emailId;
 	
@@ -93,11 +94,11 @@ public class MasterUser {
 		this.emailId = emailId;
 	}
 
-	public Long getMobileNo() {
+	public long getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(Long mobileNo) {
+	public void setMobileNo(long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 
