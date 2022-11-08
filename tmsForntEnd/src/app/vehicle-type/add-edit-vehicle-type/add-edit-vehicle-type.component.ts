@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -6,6 +7,9 @@ import { first } from 'rxjs';
 import { VehicleType } from 'src/app/modules/VehicleType';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> a883caf69a40871958203f2c8411b457798c627d
 
 @Component({
   selector: 'app-add-edit-vehicle-type',
@@ -13,6 +17,7 @@ import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
   styleUrls: ['./add-edit-vehicle-type.component.css']
 })
 export class AddEditVehicleTypeComponent implements OnInit {
+<<<<<<< HEAD
   loading = false;
   isAddMode!: boolean;
   id!: number;
@@ -92,6 +97,12 @@ export class AddEditVehicleTypeComponent implements OnInit {
     }
 
 
+=======
+
+  constructor() { }
+
+  ngOnInit(): void {
+>>>>>>> a883caf69a40871958203f2c8411b457798c627d
   }
 
 }

@@ -10,8 +10,8 @@ const routes: Routes = [
         path: '', component: MasterTourComponent,
         children: [
             { path: '', component: TourListComponent },
-            { path: 'add', component: AddEditTourComponent },
-            { path: 'edit/:id', component: AddEditTourComponent }
+            { path: 'add', component: AddEditTourComponent},
+            { path: 'edit/:id', component:AddEditTourComponent }
         ]
     }
 ];

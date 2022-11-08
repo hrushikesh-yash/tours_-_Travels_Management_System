@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
 import { VehicleType } from 'src/app/modules/VehicleType';
 import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> a883caf69a40871958203f2c8411b457798c627d
 
 @Component({
   selector: 'app-vehicle-type-list',
@@ -11,6 +15,7 @@ import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
 })
 export class VehicleTypeListComponent implements OnInit {
 
+<<<<<<< HEAD
   vehicletypes: VehicleType[];
   isDeleting: boolean = false;
   constructor(private vehicleTypeService: VehicleTypeService,
@@ -40,6 +45,11 @@ export class VehicleTypeListComponent implements OnInit {
       .subscribe(() => this.vehicletypes = this.vehicletypes?.filter(x => x.vehicleTypeId !== vehicletypeId));
       this.isDeleting = false;
 
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+>>>>>>> a883caf69a40871958203f2c8411b457798c627d
   }
 
 }
