@@ -20,7 +20,7 @@ public class MappingCityRoutesManagerImpl implements MappingCityRoutesManager {
 	private MappingCityRoutesRepository mappingCityRoutesRepository;
 
 	@Override
-	public List<MappingCityRoutes> findAllRoutes(short routeIsDeleted) {
+	public List<MappingCityRoutes> findAllRoutes(int routeIsDeleted) {
 		log.info("MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.");
 		try {
 			

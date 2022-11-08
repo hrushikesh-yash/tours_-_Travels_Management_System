@@ -30,8 +30,8 @@ public class MasterVehicleDetailsController {
 		log.info("MasterVehicleDetailsController :: findAllVehicleDetails function started.");
 		List<MasterVehicleDetails> masterVehicleDetailsList = null;
 		try {
-			int vehicleDetailsIsDeleted = 0;
-			masterVehicleDetailsList = masterVehicleDetailsManager.findAllVehicleDetails(vehicleDetailsIsDeleted);
+			int vehicleIsDeleted = 0;
+			masterVehicleDetailsList = masterVehicleDetailsManager.findAllVehicleDetails(vehicleIsDeleted);
 			if (!masterVehicleDetailsList.isEmpty()) {
 				return masterVehicleDetailsList;
 			}

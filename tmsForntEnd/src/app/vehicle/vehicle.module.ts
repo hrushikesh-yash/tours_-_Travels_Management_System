@@ -5,6 +5,7 @@ import { VehicleRoutingModule } from './vehicle-routing.module';
 import { VehicleComponent } from '../vehicle/vehicle.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { AddEditVehicleComponent } from './add-edit-vehicle/add-edit-vehicle.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AddEditVehicleComponent } from './add-edit-vehicle/add-edit-vehicle.com
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     VehicleRoutingModule
   ]
 })

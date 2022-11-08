@@ -3,6 +3,6 @@ export class Vehicle{
     vehicleName:string="";
     vehicleTypeId:number=0;
     companyName:string="";
-    Vehiclecapcity:number=0;
+    vehicleCapcity:number=0;
     vehicleIsDeleted:number=0;
 }

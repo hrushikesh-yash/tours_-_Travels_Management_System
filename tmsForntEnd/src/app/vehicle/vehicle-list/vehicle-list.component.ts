@@ -28,7 +28,7 @@ export class VehicleListComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.Vehicles = data;
-          console.log(data);
+          // console.log(data);
         },
         error: (error) => console.log(error)
       });
@@ -37,7 +37,7 @@ export class VehicleListComponent implements OnInit {
   deleteState(vehicleId: number) {
 
     this.isDeleting = true;
-    this.vehicleService.deleteVehicleType(vehicleId)
+    this.vehicleService.deleteVehicle(vehicleId)
       .pipe(first())
       .subscribe(() => this.Vehicles = this.Vehicles?.filter(x => x.vehicleId !== vehicleId));
       this.isDeleting = false;

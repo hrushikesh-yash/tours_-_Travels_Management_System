@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import com.yash.tms.services.MappingCityRoutesManager;
 
 @RestController
 @RequestMapping("/cityRoute")
+@CrossOrigin("*")
 public class MappingCityRoutesController {
 
 	private final static Logger log = LoggerFactory.getLogger(MappingCityRoutesController.class);
@@ -31,7 +33,7 @@ public class MappingCityRoutesController {
 		log.info("MappingCityRoutesController :: findAllRoutes function started.");
 		List<MappingCityRoutes> routesList = null;
 		try {
-			short routeIsDeleted = 0;
+			int routeIsDeleted = 0;
 			routesList = mappingCityRoutesManager.findAllRoutes(routeIsDeleted);
 			if (!routesList.isEmpty()) {
 				return routesList;
@@ -42,6 +44,21 @@ public class MappingCityRoutesController {
 			return null;
 		}
 		return routesList;
+
+	}
+	
+	@GetMapping("/findRouteById/{routeId}")
+	public MappingCityRoutes findRouteById(@PathVariable(value = "routeId") int routeId) {
+		log.info("MappingCityRoutesController :: findRouteById function started.");
+		try {
+			return mappingCityRoutesManager.findById(routeId);
+			
+
+		} catch (Exception e) {
+			log.error("MappingCityRoutesController :: error in findAllRoutes function." + e.getMessage());
+			return null;
+		}
+
 
 	}
 	
@@ -82,15 +99,15 @@ public class MappingCityRoutesController {
 	}
 	
 	@PutMapping("/delete/{routeId}")
-	public String deleteRoute(@PathVariable(value = "routeId") int routeId) {
+	public MappingCityRoutes deleteRoute(@PathVariable(value = "routeId") int routeId) {
 		log.info("MappingCityRoutesController :: deleteRoute function started.");
 		try {
 
 			MappingCityRoutes routeToUpdate = mappingCityRoutesManager.findById(routeId);
-			routeToUpdate.setRouteIsDeleted((short) 1);
+			routeToUpdate.setRouteIsDeleted( 1);
 			mappingCityRoutesManager.addRoutes(routeToUpdate);
 
-			return "Route deleted sucessfully";
+			return routeToUpdate;
 
 		} catch (Exception e) {
 			log.error("MappingCityRoutesController :: error in deleteRoute function." + e.getMessage());

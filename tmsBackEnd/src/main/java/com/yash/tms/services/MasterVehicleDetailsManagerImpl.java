@@ -19,11 +19,11 @@ public class MasterVehicleDetailsManagerImpl implements MasterVehicleDetailsMana
 	MasterVehicleDetailsDao masterVehicleDetailsDao;
 	
 	@Override
-	public List<MasterVehicleDetails> findAllVehicleDetails(int vehicleDetailsIsDeleted) {
+	public List<MasterVehicleDetails> findAllVehicleDetails(int vehicleIsDeleted) {
 		log.info("MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.");
 		try {
 			
-			return masterVehicleDetailsDao.findAllVehicleDetails(vehicleDetailsIsDeleted);
+			return masterVehicleDetailsDao.findAllVehicleDetails(vehicleIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("MasterVehicleDetailsManagerImpl :: findAllVehicleDetails error while find all VehicleDetails. "+e.getMessage());

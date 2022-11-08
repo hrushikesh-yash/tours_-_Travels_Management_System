@@ -6,7 +6,7 @@ import com.yash.tms.entity.MappingCityRoutes;
 
 public interface MappingCityRoutesManager {
 
-	 List<MappingCityRoutes> findAllRoutes(short routeIsDeleted);
+	 List<MappingCityRoutes> findAllRoutes(int routeIsDeleted);
 
 	MappingCityRoutes addRoutes(MappingCityRoutes routes);
 

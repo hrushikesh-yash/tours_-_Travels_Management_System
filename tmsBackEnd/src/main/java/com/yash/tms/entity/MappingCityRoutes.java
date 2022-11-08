@@ -32,7 +32,7 @@ public class MappingCityRoutes {
 	private Date routeCreatedDate;
 	
 	@Column(name = "routeIsDeleted")
-	private short routeIsDeleted;
+	private int routeIsDeleted;
 	
 	public MappingCityRoutes() {
 		// TODO Auto-generated constructor stub
@@ -78,11 +78,11 @@ public class MappingCityRoutes {
 		this.routeCreatedDate = routeCreatedDate;
 	}
 
-	public short getRouteIsDeleted() {
+	public int getRouteIsDeleted() {
 		return routeIsDeleted;
 	}
 
-	public void setRouteIsDeleted(short routeIsDeleted) {
+	public void setRouteIsDeleted(int routeIsDeleted) {
 		this.routeIsDeleted = routeIsDeleted;
 	}
 	

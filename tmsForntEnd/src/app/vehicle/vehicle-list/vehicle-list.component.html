@@ -1,4 +1,3 @@
-<p>vehicle-list works!</p>
 <h1>vehicle</h1>
 <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Vehicle</a>
 <table class="table table-striped">
@@ -16,9 +15,9 @@
         <tr *ngFor="let vehicle of Vehicles">
             <td>{{vehicle.vehicleId}}</td>
             <td>{{vehicle.vehicleName}}</td>
-            <td>{{vehicle.vehicleId}}</td>
+            <td>{{vehicle.vehicleTypeId}}</td>
             <td>{{vehicle.companyName}}</td>
-            <td>{{vehicle.Vehiclecapcity}}</td>
+            <td>{{vehicle.vehicleCapcity}}</td>
             <td style="white-space: nowrap">
                 <a routerLink="edit/{{vehicle.vehicleId }}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
                 <button (click)="deleteState(vehicle.vehicleId )" class="btn btn-sm btn-danger btn-delete-city" [disabled]="isDeleting">

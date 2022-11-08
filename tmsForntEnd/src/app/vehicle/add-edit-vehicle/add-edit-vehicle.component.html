@@ -1,1 +1,46 @@
-<p>add-edit-vehicle works!</p>
+<h1 *ngIf="isAddMode">Add Vehicle</h1>
+<h1 *ngIf="!isAddMode">Edit Vehicle</h1>
+<form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+
+        <div class="form-group col-5">
+            <label>Vehicle Name</label>
+            <input type="text" formControlName="vehicleName" class="form-control" />
+            <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div> -->
+        </div>
+        
+        <div class="form-group col-5">
+            <label>Vehicle Type</label>
+            <select class="form-control" formControlName="vehicleTypeId">
+                <option *ngFor="let vehicleType of vehicleTypes" [value]="vehicleType.vehicleTypeId">
+                    {{vehicleType.vehicleTypeName}}</option>
+            </select>
+        </div>
+        <div class="form-group col-5">
+            <label>Company Name</label>
+            <input type="text" formControlName="companyName" class="form-control" />
+            <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div> -->
+        </div>
+
+        <div class="form-group col-5">
+            <label>Vehicle Capcity</label>
+            <input type="number" formControlName="vehicleCapcity" class="form-control" />
+            <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div> -->
+        </div>
+
+    </div>
+    <br>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save
+        </button> &nbsp;
+        <a routerLink="/Vehicle" class="btn btn-warning">Cancel</a>
+    </div>
+</form>

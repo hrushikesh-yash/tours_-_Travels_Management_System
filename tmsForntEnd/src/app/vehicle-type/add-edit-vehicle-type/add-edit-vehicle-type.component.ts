@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -7,9 +7,7 @@ import { first } from 'rxjs';
 import { VehicleType } from 'src/app/modules/VehicleType';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
-=======
-import { Component, OnInit } from '@angular/core';
->>>>>>> a883caf69a40871958203f2c8411b457798c627d
+
 
 @Component({
   selector: 'app-add-edit-vehicle-type',
@@ -17,13 +15,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-edit-vehicle-type.component.css']
 })
 export class AddEditVehicleTypeComponent implements OnInit {
-<<<<<<< HEAD
+
   loading = false;
   isAddMode!: boolean;
   id!: number;
   VehicleTypeForm!: FormGroup;
   submitted = false;
-  vehicleType:VehicleType= new VehicleType;
+  vehicleType: VehicleType = new VehicleType;
   // VehicleAddedDate =this.datepipe.transform(new Date(), 'yyyy-MM-dd');
 
 
@@ -31,7 +29,7 @@ export class AddEditVehicleTypeComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private VehicleTypeService:VehicleTypeService,
+    private VehicleTypeService: VehicleTypeService,
     private alertService: AlertService,
     public datepipe: DatePipe) { }
 
@@ -44,7 +42,7 @@ export class AddEditVehicleTypeComponent implements OnInit {
 
     this.VehicleTypeForm = this.formBuilder.group({
       vehicleTypeId: [this.id],
-      vehicleTypeName:[''],
+      vehicleTypeName: [''],
       vehicleTypeAddedDate: [''],
     });
 
@@ -82,27 +80,24 @@ export class AddEditVehicleTypeComponent implements OnInit {
 
     } else {
       console.log("Update Vehicle Type: " + this.vehicleType.vehicleTypeId)
-       this.VehicleTypeService.updateVehicleType(this.vehicleType.vehicleTypeId, this.vehicleType)
-            .pipe(first())
-            .subscribe({
-                next: () => {
-                    this.alertService.warn('Vehicle Type Updated', { keepAfterRouteChange: true });
-                    this.router.navigate(['../../'], { relativeTo: this.route });
-                },
-                error: error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                }
-            });
+      this.VehicleTypeService.updateVehicleType(this.vehicleType.vehicleTypeId, this.vehicleType)
+        .pipe(first())
+        .subscribe({
+          next: () => {
+            this.alertService.warn('Vehicle Type Updated', { keepAfterRouteChange: true });
+            this.router.navigate(['../../'], { relativeTo: this.route });
+          },
+          error: error => {
+            this.alertService.error(error);
+            this.loading = false;
+          }
+        });
     }
-
-
-=======
-
-  constructor() { }
-
-  ngOnInit(): void {
->>>>>>> a883caf69a40871958203f2c8411b457798c627d
   }
-
 }
+
+
+
+
+
+

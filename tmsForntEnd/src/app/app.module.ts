@@ -7,11 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertComponent } from './alter/alert.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-import { VehicleModule } from './Services/vehicle/vehicle.module';
+import { CityRoutesModule } from './city-routes/city-routes.module';
 
-=======
->>>>>>> a883caf69a40871958203f2c8411b457798c627d
+
 
 
 @NgModule({
@@ -19,10 +17,6 @@ import { VehicleModule } from './Services/vehicle/vehicle.module';
     AppComponent,
     routingComponents,
     AlertComponent,
-<<<<<<< HEAD
-=======
-    
->>>>>>> a883caf69a40871958203f2c8411b457798c627d
   ],
   imports: [
     BrowserModule,
@@ -31,6 +25,7 @@ import { VehicleModule } from './Services/vehicle/vehicle.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CityRoutesModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
