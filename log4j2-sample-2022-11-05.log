@@ -1,0 +1,736 @@
+2022-11-06T00:09:43,191 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-06T00:09:43,492 [Thread-95] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:09:43,492 [Thread-95] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T00:09:43,497 [Thread-95] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-06T00:09:43,502 [Thread-95] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:09:43,507 [Thread-95] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:09:43,507 [Thread-95] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T00:09:43,512 [Thread-95] INFO  (HikariDataSource.java:350) - HikariPool-24 - Shutdown initiated...
+2022-11-06T00:09:43,522 [Thread-95] INFO  (HikariDataSource.java:352) - HikariPool-24 - Shutdown completed.
+2022-11-06T00:09:43,697 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 11012 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T00:09:43,697 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T00:09:43,897 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T00:09:43,957 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 60 ms. Found 11 JPA repository interfaces.
+2022-11-06T00:09:44,037 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T00:09:44,037 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:09:44,037 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T00:09:44,037 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T00:09:44,057 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T00:09:44,057 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 355 ms
+2022-11-06T00:09:44,087 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T00:09:44,092 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-25 - Starting...
+2022-11-06T00:09:44,097 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-25 - Start completed.
+2022-11-06T00:09:44,097 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T00:09:44,182 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T00:09:44,182 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T00:09:44,862 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T00:09:44,953 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T00:09:44,959 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:09:44,964 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T00:09:44,968 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.331 seconds (JVM running for 46258.382)
+2022-11-06T00:09:44,970 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T00:13:35,728 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T00:13:35,728 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T00:13:35,730 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 2 ms
+2022-11-06T00:13:35,732 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:13:35,732 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:13:36,463 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:13:36,463 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:13:36,467 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:13:40,654 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:13:40,654 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:13:40,657 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:18:22,942 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:18:22,943 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:18:22,946 [http-nio-8080-exec-5] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:18:26,543 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:18:26,544 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:19:36,710 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:19:36,710 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:20:33,741 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:20:33,741 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:20:34,280 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:20:34,280 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:20:34,284 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:20:35,971 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:20:35,972 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:21:17,523 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:21:17,523 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:22:38,531 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:22:38,531 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:22:59,953 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:22:59,953 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:23:58,906 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:23:58,906 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:24:10,778 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:24:10,779 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:24:12,515 [http-nio-8080-exec-8] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:24:12,515 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:24:15,896 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:24:15,896 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:24:16,858 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:24:16,860 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:24:16,863 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:24:18,406 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:24:18,406 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:25:32,541 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:25:32,541 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:25:42,980 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:25:42,980 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:26:32,757 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:26:32,757 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:27:14,863 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:27:14,863 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:27:21,287 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:27:21,287 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:28:05,664 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:28:05,665 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:28:12,202 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:28:12,202 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:28:17,124 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:28:17,124 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:28:17,126 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:28:18,573 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:28:18,573 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:29:05,327 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:29:05,327 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:29:27,666 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:29:27,666 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:29:27,668 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:29:29,401 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:29:29,401 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:29:32,217 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:29:32,218 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:29:32,220 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:30:30,063 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:30:30,063 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:30:30,065 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:30:31,863 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:30:31,864 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:30:31,866 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:30:35,848 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:30:35,848 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:30:35,851 [http-nio-8080-exec-5] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:30:47,339 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:30:47,340 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:32:50,972 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:32:50,972 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:33:05,743 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:33:05,743 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:33:06,910 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:33:06,910 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:33:06,913 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:33:10,524 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:33:10,524 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:34:29,173 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:34:29,173 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:34:30,271 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:34:30,271 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:34:30,274 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:34:32,434 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:34:32,434 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:34:56,293 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:34:56,293 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:34:56,304 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:34:56,305 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:35:02,388 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:35:02,388 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:35:02,392 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:35:03,734 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:35:03,735 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:35:03,746 [http-nio-8080-exec-9] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:35:03,746 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:35:41,647 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:35:41,647 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:35:41,660 [http-nio-8080-exec-10] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:35:41,660 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:35:44,661 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:35:44,661 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:35:44,665 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:35:50,394 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:35:50,394 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:35:50,410 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:35:50,410 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:36:49,253 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:36:49,254 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:36:49,307 [http-nio-8080-exec-7] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:36:49,307 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:36:53,252 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:36:53,252 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:36:53,256 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:36:54,700 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:36:54,700 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:36:54,713 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:36:54,714 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:38:46,291 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:38:46,291 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:38:46,304 [http-nio-8080-exec-6] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:38:46,304 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:39:13,138 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:39:13,138 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:39:13,147 [http-nio-8080-exec-9] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:39:13,147 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:48:35,007 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:48:35,007 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:48:35,025 [http-nio-8080-exec-1] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:48:35,025 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:48:35,040 [http-nio-8080-exec-2] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:48:35,040 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:48:37,388 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:48:37,388 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:48:37,391 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:48:38,933 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:48:38,934 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:48:38,945 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:48:38,945 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:48:38,953 [http-nio-8080-exec-6] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:48:38,954 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:49:10,948 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:49:10,948 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:49:10,954 [http-nio-8080-exec-9] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:49:10,954 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:49:10,959 [http-nio-8080-exec-7] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:49:10,959 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:49:10,964 [http-nio-8080-exec-7] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:49:10,965 [http-nio-8080-exec-7] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@5da7665b
+2022-11-06T00:49:19,080 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:49:19,080 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:49:19,083 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:49:20,527 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:49:20,527 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:49:20,532 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:49:20,532 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:49:20,537 [http-nio-8080-exec-3] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:49:20,537 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:49:20,546 [http-nio-8080-exec-3] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:49:20,546 [http-nio-8080-exec-3] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@20c59c87
+2022-11-06T00:50:12,109 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:50:12,109 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:50:12,149 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:50:12,149 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:50:12,158 [http-nio-8080-exec-6] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:50:12,159 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:50:12,162 [http-nio-8080-exec-6] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:50:12,162 [http-nio-8080-exec-6] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@49403881
+2022-11-06T00:50:14,439 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:50:14,439 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:50:14,441 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:50:17,551 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:50:17,552 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:50:17,564 [http-nio-8080-exec-7] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:50:17,565 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:50:17,566 [http-nio-8080-exec-10] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:50:17,566 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:50:17,571 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:50:17,571 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@633d54f5
+2022-11-06T00:52:08,863 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:52:08,863 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:52:08,870 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:52:08,871 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:52:08,880 [http-nio-8080-exec-6] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:52:08,880 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:52:08,883 [http-nio-8080-exec-6] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:52:08,884 [http-nio-8080-exec-6] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@3b91ab94
+2022-11-06T00:52:10,806 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:52:10,807 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:52:10,809 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:52:13,992 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:52:13,992 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:52:14,004 [http-nio-8080-exec-7] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:52:14,004 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:52:14,009 [http-nio-8080-exec-10] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:52:14,009 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:52:14,014 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:52:14,014 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@52d32868
+2022-11-06T00:53:52,695 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:53:52,696 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:53:52,707 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:53:52,707 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:53:52,712 [http-nio-8080-exec-6] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:53:52,712 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:53:52,715 [http-nio-8080-exec-6] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:53:52,716 [http-nio-8080-exec-6] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@868cf29
+2022-11-06T00:53:54,911 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:53:54,911 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:53:54,917 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:53:56,288 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:53:56,288 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:53:56,293 [http-nio-8080-exec-7] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:53:56,293 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:53:56,307 [http-nio-8080-exec-10] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:53:56,307 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:53:56,311 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:53:56,312 [http-nio-8080-exec-10] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@4bbeb67b
+2022-11-06T00:53:59,720 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:53:59,721 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:53:59,724 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:54:00,910 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:54:00,910 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:54:00,922 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:54:00,922 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:54:00,928 [http-nio-8080-exec-4] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:54:00,928 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:54:00,933 [http-nio-8080-exec-4] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:54:00,935 [http-nio-8080-exec-4] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@1945523
+2022-11-06T00:54:52,156 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:54:52,156 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:54:52,191 [http-nio-8080-exec-6] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:54:52,192 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:54:52,204 [http-nio-8080-exec-8] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-06T00:54:52,204 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-06T00:54:52,208 [http-nio-8080-exec-8] ERROR (MasterStateManagerImpl.java:58) - MasterStateManagerImpl :: findById error while find city by state id ::0 State Id not found.
+2022-11-06T00:54:52,208 [http-nio-8080-exec-8] ERROR (MasterStateManagerImpl.java:60) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@60e14e91
+2022-11-06T00:55:50,376 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:55:50,376 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:55:50,420 [http-nio-8080-exec-1] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:55:50,420 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:56:00,194 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:56:00,194 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:56:00,197 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:56:02,012 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:56:02,012 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:56:06,379 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:56:06,379 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:56:06,382 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:56:07,595 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:56:07,595 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:56:07,604 [http-nio-8080-exec-6] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:56:07,604 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:56:28,410 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:56:28,410 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:56:28,441 [http-nio-8080-exec-9] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:56:28,441 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:57:40,303 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-06T00:57:40,607 [Thread-99] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:57:40,612 [Thread-99] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T00:57:40,612 [Thread-99] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-06T00:57:40,622 [Thread-99] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:57:40,626 [Thread-99] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:57:40,632 [Thread-99] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T00:57:40,637 [Thread-99] INFO  (HikariDataSource.java:350) - HikariPool-25 - Shutdown initiated...
+2022-11-06T00:57:40,642 [Thread-99] INFO  (HikariDataSource.java:352) - HikariPool-25 - Shutdown completed.
+2022-11-06T00:57:40,852 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 11012 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T00:57:40,857 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T00:57:41,087 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T00:57:41,177 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 90 ms. Found 11 JPA repository interfaces.
+2022-11-06T00:57:41,292 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T00:57:41,292 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:57:41,292 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T00:57:41,292 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T00:57:41,327 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T00:57:41,327 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 470 ms
+2022-11-06T00:57:41,367 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T00:57:41,377 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-26 - Starting...
+2022-11-06T00:57:41,382 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-26 - Start completed.
+2022-11-06T00:57:41,382 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T00:57:41,536 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T00:57:41,536 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T00:57:41,816 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T00:57:41,961 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T00:57:41,971 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T00:57:41,976 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T00:57:41,976 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.164 seconds (JVM running for 49135.395)
+2022-11-06T00:57:41,981 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T00:57:48,901 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T00:57:48,901 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T00:57:48,902 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 1 ms
+2022-11-06T00:57:48,906 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:57:48,906 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:57:48,919 [http-nio-8080-exec-4] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:57:48,920 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:57:59,698 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:57:59,698 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T00:57:59,726 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T00:57:59,727 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T00:58:27,304 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T00:58:27,305 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T00:58:27,309 [http-nio-8080-exec-5] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T00:58:50,174 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T00:58:50,174 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:00:03,532 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:00:03,532 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:00:24,368 [http-nio-8080-exec-1] INFO  (MasterCityController.java:64) - MasterCityController :: addcity function started.
+2022-11-06T01:00:24,368 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:00:24,456 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:00:24,456 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:00:24,460 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:01:08,897 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:01:08,898 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:01:08,906 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:01:08,906 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:01:10,508 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:01:10,508 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:01:10,512 [http-nio-8080-exec-5] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:01:11,511 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:01:11,511 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:01:11,523 [http-nio-8080-exec-7] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:01:11,524 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:01:13,200 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:01:13,201 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:01:13,203 [http-nio-8080-exec-9] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:06:08,727 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:06:08,727 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:06:08,730 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:10:33,274 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:10:33,274 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:10:33,277 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:11:22,055 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:11:22,055 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:11:22,058 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:12:23,191 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-06T01:12:23,594 [Thread-103] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:12:23,595 [Thread-103] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T01:12:23,597 [Thread-103] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-06T01:12:23,601 [Thread-103] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:12:23,605 [Thread-103] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:12:23,608 [Thread-103] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:12:23,609 [Thread-103] INFO  (HikariDataSource.java:350) - HikariPool-26 - Shutdown initiated...
+2022-11-06T01:12:23,618 [Thread-103] INFO  (HikariDataSource.java:352) - HikariPool-26 - Shutdown completed.
+2022-11-06T01:12:23,755 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 11012 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T01:12:23,756 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T01:12:23,969 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T01:12:24,025 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 56 ms. Found 11 JPA repository interfaces.
+2022-11-06T01:12:24,105 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T01:12:24,105 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:12:24,105 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T01:12:24,110 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T01:12:24,140 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T01:12:24,140 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 381 ms
+2022-11-06T01:12:24,165 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T01:12:24,170 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-27 - Starting...
+2022-11-06T01:12:24,180 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-27 - Start completed.
+2022-11-06T01:12:24,180 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T01:12:24,270 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T01:12:24,270 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:12:24,540 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T01:12:24,617 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T01:12:24,623 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:12:24,633 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T01:12:24,636 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 0.914 seconds (JVM running for 50018.051)
+2022-11-06T01:12:24,638 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T01:12:29,806 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T01:12:29,806 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T01:12:29,807 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 1 ms
+2022-11-06T01:12:29,809 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:12:29,809 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:12:29,815 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:12:39,889 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:12:39,889 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:12:39,894 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:12:40,702 [http-nio-8080-exec-4] INFO  (MasterCityController.java:97) - MasterCityController :: deleteCity function started.
+2022-11-06T01:12:40,702 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:12:40,708 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:15:18,602 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-11-06T01:15:18,767 [Thread-107] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:18,767 [Thread-107] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T01:15:18,772 [Thread-107] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-06T01:15:18,772 [Thread-107] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:18,777 [Thread-107] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:18,777 [Thread-107] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:15:18,782 [Thread-107] INFO  (HikariDataSource.java:350) - HikariPool-27 - Shutdown initiated...
+2022-11-06T01:15:18,787 [Thread-107] INFO  (HikariDataSource.java:352) - HikariPool-27 - Shutdown completed.
+2022-11-06T01:15:18,932 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 11012 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T01:15:18,932 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T01:15:19,271 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T01:15:19,323 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 51 ms. Found 11 JPA repository interfaces.
+2022-11-06T01:15:19,438 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T01:15:19,438 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:19,438 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T01:15:19,438 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T01:15:19,468 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T01:15:19,468 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 531 ms
+2022-11-06T01:15:19,528 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T01:15:19,533 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-28 - Starting...
+2022-11-06T01:15:19,538 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-28 - Start completed.
+2022-11-06T01:15:19,543 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T01:15:19,623 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T01:15:19,623 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:15:19,863 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T01:15:19,943 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T01:15:19,953 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:19,953 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T01:15:19,958 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.07 seconds (JVM running for 50193.373)
+2022-11-06T01:15:19,958 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T01:15:21,379 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-06T01:15:21,579 [Thread-111] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:21,579 [Thread-111] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T01:15:21,589 [Thread-111] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:21,589 [Thread-111] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:21,594 [Thread-111] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:15:21,594 [Thread-111] INFO  (HikariDataSource.java:350) - HikariPool-28 - Shutdown initiated...
+2022-11-06T01:15:21,604 [Thread-111] INFO  (HikariDataSource.java:352) - HikariPool-28 - Shutdown completed.
+2022-11-06T01:15:21,749 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 11012 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T01:15:21,754 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T01:15:21,969 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T01:15:22,029 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 58 ms. Found 11 JPA repository interfaces.
+2022-11-06T01:15:22,114 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T01:15:22,114 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:22,114 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T01:15:22,114 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T01:15:22,144 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T01:15:22,144 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 390 ms
+2022-11-06T01:15:22,169 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T01:15:22,179 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-29 - Starting...
+2022-11-06T01:15:22,184 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-29 - Start completed.
+2022-11-06T01:15:22,184 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T01:15:22,279 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T01:15:22,279 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:15:22,539 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T01:15:22,604 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T01:15:22,609 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:15:22,614 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T01:15:22,614 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 0.899 seconds (JVM running for 50196.033)
+2022-11-06T01:15:22,619 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T01:15:57,145 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T01:15:57,145 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T01:15:57,146 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 1 ms
+2022-11-06T01:15:57,148 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:15:57,148 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:15:57,151 [http-nio-8080-exec-1] ERROR (MasterCityManagerImpl.java:29) - MasterCityManagerImpl :: findAllCities error while find all actors. Parameter value [0] did not match expected type [java.lang.Integer (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [0] did not match expected type [java.lang.Integer (n/a)]
+2022-11-06T01:15:57,151 [http-nio-8080-exec-1] ERROR (MasterCityManagerImpl.java:30) - MasterCityManagerImpl :: findAllCities Stacktrace :: [Ljava.lang.StackTraceElement;@41bf57b6
+2022-11-06T01:15:57,152 [http-nio-8080-exec-1] ERROR (MasterCityController.java:42) - MasterCityController :: error in findAllCities function.null
+2022-11-06T01:17:11,530 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 6048 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T01:17:11,559 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T01:17:11,703 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06T01:17:11,708 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06T01:17:13,220 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T01:17:13,459 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 214 ms. Found 11 JPA repository interfaces.
+2022-11-06T01:17:15,178 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T01:17:15,225 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:17:15,230 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T01:17:15,232 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T01:17:15,465 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T01:17:15,468 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 3753 ms
+2022-11-06T01:17:15,835 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T01:17:15,968 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-06T01:17:16,293 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-06T01:17:16,531 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-06T01:17:16,905 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-06T01:17:16,939 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T01:17:18,295 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T01:17:18,317 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:17:19,864 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T01:17:20,515 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T01:17:20,539 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:17:20,624 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T01:17:20,676 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 9.925 seconds (JVM running for 11.413)
+2022-11-06T01:17:40,217 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T01:17:40,218 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T01:17:40,222 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 2 ms
+2022-11-06T01:17:40,296 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:17:40,296 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:17:40,639 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:17:40,640 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:17:40,652 [http-nio-8080-exec-2] ERROR (MasterCityManagerImpl.java:29) - MasterCityManagerImpl :: findAllCities error while find all actors. Parameter value [0] did not match expected type [java.lang.Integer (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [0] did not match expected type [java.lang.Integer (n/a)]
+2022-11-06T01:17:40,653 [http-nio-8080-exec-2] ERROR (MasterCityManagerImpl.java:30) - MasterCityManagerImpl :: findAllCities Stacktrace :: [Ljava.lang.StackTraceElement;@7ef30d7
+2022-11-06T01:17:40,654 [http-nio-8080-exec-2] ERROR (MasterCityController.java:42) - MasterCityController :: error in findAllCities function.null
+2022-11-06T01:18:00,210 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-11-06T01:18:00,434 [Thread-5] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:18:00,435 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T01:18:00,439 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-06T01:18:00,457 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:18:00,467 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:18:00,487 [Thread-5] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:18:00,498 [Thread-5] INFO  (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2022-11-06T01:18:00,558 [Thread-5] INFO  (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2022-11-06T01:18:00,861 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 6048 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T01:18:00,865 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T01:18:01,404 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T01:18:01,668 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 262 ms. Found 11 JPA repository interfaces.
+2022-11-06T01:18:01,966 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T01:18:01,968 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:18:01,971 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T01:18:01,972 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T01:18:02,017 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T01:18:02,018 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1147 ms
+2022-11-06T01:18:02,104 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T01:18:02,123 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-2 - Starting...
+2022-11-06T01:18:02,147 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-2 - Start completed.
+2022-11-06T01:18:02,148 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T01:18:02,499 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T01:18:02,502 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:18:03,062 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T01:18:03,300 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T01:18:03,312 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:18:03,317 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T01:18:03,326 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 2.672 seconds (JVM running for 54.064)
+2022-11-06T01:18:03,332 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T01:18:06,057 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T01:18:06,058 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T01:18:06,062 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 4 ms
+2022-11-06T01:18:06,068 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:18:06,068 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:18:06,685 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:18:06,686 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:18:06,695 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T01:18:11,654 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:18:11,655 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:18:41,442 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:18:41,442 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:18:41,461 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:18:44,548 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:18:44,549 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:18:44,578 [http-nio-8080-exec-6] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:18:44,578 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:18:48,187 [http-nio-8080-exec-8] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:18:48,188 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:18:48,193 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:18:48,260 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:18:48,262 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:18:48,266 [http-nio-8080-exec-9] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:18:57,286 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:18:57,286 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:18:57,299 [http-nio-8080-exec-1] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:18:57,299 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:19:05,528 [http-nio-8080-exec-2] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:19:05,529 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:19:05,537 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:19:05,586 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:19:05,586 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:19:05,589 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:19:27,148 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:19:27,148 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:19:27,159 [http-nio-8080-exec-5] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:19:27,160 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:19:31,855 [http-nio-8080-exec-6] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:19:31,855 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:19:31,861 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:19:31,891 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:19:31,892 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:19:31,898 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:19:44,906 [http-nio-8080-exec-8] INFO  (MasterCityController.java:97) - MasterCityController :: deleteCity function started.
+2022-11-06T01:19:44,907 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:19:44,912 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:19:49,786 [http-nio-8080-exec-9] INFO  (MasterCityController.java:97) - MasterCityController :: deleteCity function started.
+2022-11-06T01:19:49,786 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:19:49,792 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:20:13,616 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:20:13,618 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:20:13,624 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T01:20:35,908 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:20:35,908 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:20:35,912 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:20:37,236 [http-nio-8080-exec-3] INFO  (MasterCityController.java:97) - MasterCityController :: deleteCity function started.
+2022-11-06T01:20:37,237 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:20:37,242 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:21:17,382 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:21:17,382 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:21:17,386 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 1
+2022-11-06T01:21:20,666 [http-nio-8080-exec-6] INFO  (MasterCityController.java:97) - MasterCityController :: deleteCity function started.
+2022-11-06T01:21:20,667 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:21:20,673 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:21:30,158 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:21:30,158 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:21:30,783 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:21:30,784 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:21:30,788 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:21:32,629 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:21:32,630 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:21:32,643 [http-nio-8080-exec-10] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:21:32,643 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:21:49,246 [http-nio-8080-exec-1] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:21:49,246 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:21:49,252 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:21:49,291 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:21:49,291 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:21:49,295 [http-nio-8080-exec-2] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:24:04,323 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-06T01:24:04,538 [Thread-7] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:24:04,538 [Thread-7] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-06T01:24:04,538 [Thread-7] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-06T01:24:04,543 [Thread-7] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:24:04,548 [Thread-7] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:24:04,558 [Thread-7] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:24:04,558 [Thread-7] INFO  (HikariDataSource.java:350) - HikariPool-2 - Shutdown initiated...
+2022-11-06T01:24:04,573 [Thread-7] INFO  (HikariDataSource.java:352) - HikariPool-2 - Shutdown completed.
+2022-11-06T01:24:04,727 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 12.0.2 on DESKTOP-C48K438 with PID 6048 (D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd\target\classes started by Q in D:\Hrushikesh\tours_&_Travels_Management_System\tmsBackEnd)
+2022-11-06T01:24:04,727 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-06T01:24:05,082 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06T01:24:05,172 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 89 ms. Found 11 JPA repository interfaces.
+2022-11-06T01:24:05,322 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-06T01:24:05,327 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:24:05,327 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-06T01:24:05,327 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06T01:24:05,367 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-06T01:24:05,372 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 635 ms
+2022-11-06T01:24:05,432 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06T01:24:05,442 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-3 - Starting...
+2022-11-06T01:24:05,452 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-3 - Start completed.
+2022-11-06T01:24:05,452 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-06T01:24:05,779 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06T01:24:05,779 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06T01:24:06,149 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06T01:24:06,284 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-06T01:24:06,294 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-06T01:24:06,299 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06T01:24:06,304 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.648 seconds (JVM running for 417.043)
+2022-11-06T01:24:06,309 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-06T01:24:15,114 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06T01:24:15,114 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-06T01:24:15,118 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 4 ms
+2022-11-06T01:24:15,122 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:24:15,122 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:24:15,144 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:24:15,145 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:24:21,232 [http-nio-8080-exec-3] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:24:21,232 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:24:21,240 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:24:21,275 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:24:21,276 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:24:21,281 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:24:25,392 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:24:25,392 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:24:25,409 [http-nio-8080-exec-6] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:24:25,410 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:24:28,639 [http-nio-8080-exec-7] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:24:28,639 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:24:28,649 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:24:28,695 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:24:28,695 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:24:28,701 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:24:41,585 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:24:41,585 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:24:43,324 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:24:43,324 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:24:43,329 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:24:46,218 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:24:46,219 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:24:46,231 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:24:46,232 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:24:55,014 [http-nio-8080-exec-3] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-06T01:24:55,014 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:24:55,020 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-06T01:24:55,050 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:24:55,051 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:24:55,054 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:25:11,864 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:25:11,864 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:25:12,772 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:25:12,773 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:25:12,778 [http-nio-8080-exec-6] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:25:14,920 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:25:14,921 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:25:14,940 [http-nio-8080-exec-8] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:25:14,941 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:25:15,894 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:25:15,894 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:25:15,898 [http-nio-8080-exec-9] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:26:04,286 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:26:04,286 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:26:05,457 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:26:05,457 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:26:05,462 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:26:06,472 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:26:06,472 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:26:06,482 [http-nio-8080-exec-3] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:26:06,482 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:26:08,052 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:26:08,052 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:26:08,057 [http-nio-8080-exec-4] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-06T01:26:08,932 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-06T01:26:08,932 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-06T01:26:08,937 [http-nio-8080-exec-6] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-06T01:26:08,937 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-06T01:26:10,077 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-06T01:26:10,082 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-06T01:26:10,082 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 2
