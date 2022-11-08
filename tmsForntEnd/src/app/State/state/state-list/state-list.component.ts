@@ -20,7 +20,7 @@ export class StateListComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.states = data;
-          console.log(data);
+          // console.log(data);
         },
         error: (error) => console.log(error)
       });

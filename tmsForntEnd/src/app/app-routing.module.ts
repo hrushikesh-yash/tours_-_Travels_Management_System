@@ -7,13 +7,12 @@ import { UpdateMasterUserComponent } from './master-user/update-master-user/upda
 const stateModule=() => import ('./State/state/state.module').then(x=>x.StateModule);
 const cityModule=() => import ('./city/city.module').then(x=>x.CityModule);
 const tourModule=() => import ('./master-tour/tour.module').then(x=>x.TourModule);
-// const vehicleTypeModule=() => import ('./vehicle-type/vehicle-type.module').then(x=>x.VehicleTypeModule);
+const vehicleTypeModule=() => import ('./vehicle-type/vehicle-type.module').then(x=>x.VehicleTypeModule);
+const vehicleModule=() => import ('./vehicle/vehicle.module').then(x=>x.VehicleModule);
 
 const routes: Routes = 
 [
   { path :'masterActor',component:MasterActorComponent},
-  // { path :'masterCity',component:MasterCityComponent},
-  // { path :'masterTour',component:MasterTourComponent},
   { path :'masterUser',   component:MasterUserComponent},
   { path :'masterUser/:id',component: UpdateMasterUserComponent},
   { path :'addUser',component: AddUserComponent},
@@ -21,7 +20,8 @@ const routes: Routes =
   { path :'State', loadChildren:stateModule},
   { path :'City', loadChildren:cityModule},
   { path :'Tour',loadChildren:tourModule},
-  // { path :'Vehicle-Type',loadChildren:vehicleTypeModule},
+  { path :'Vehicle-Type',loadChildren:vehicleTypeModule},
+  {path:'Vehicle',loadChildren:vehicleModule}
 
 
 ];

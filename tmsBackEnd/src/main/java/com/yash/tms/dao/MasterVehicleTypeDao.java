@@ -12,6 +12,8 @@ import com.yash.tms.entity.MasterVehicleType;
 public interface MasterVehicleTypeDao extends JpaRepository<MasterVehicleType, Integer> {
 
 	@Query(value = "from MasterVehicleType where vehicleTypeIsDeleted =?1")
-	public List<MasterVehicleType> findAllVehicleTypes(short vehicleTypeIsDeleted);
+	public List<MasterVehicleType> findAllVehicleTypes(int vehicleTypeIsDeleted);
+	
+//	public List<MasterVehicleType> findbyvehicleTypeIsDeleted(int vehicleTypeIsDeleted);
 
 }

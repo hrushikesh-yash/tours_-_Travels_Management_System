@@ -29,6 +29,7 @@ export class StateServiceService {
   updateState(id: number, state: State): Observable<Object>{
     return this.httpClient.put(this.baseURL+"updateState/"+`${id}`,state);
   }
+  
   deleteState(stateId: number):Observable<object> {
     return this.httpClient.put(this.baseURL+"deleteState/"+`${stateId}`,null);
   }

@@ -19,7 +19,7 @@ public class MasterVehicleDetailsManagerImpl implements MasterVehicleDetailsMana
 	MasterVehicleDetailsDao masterVehicleDetailsDao;
 	
 	@Override
-	public List<MasterVehicleDetails> findAllVehicleDetails(short vehicleDetailsIsDeleted) {
+	public List<MasterVehicleDetails> findAllVehicleDetails(int vehicleDetailsIsDeleted) {
 		log.info("MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.");
 		try {
 			

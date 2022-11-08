@@ -1,6 +1,7 @@
 package com.yash.tms.entity;
 
-import java.util.Date;
+
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "master_vechile_type")
+@Table(name = "master_vehicle_type")
 public class MasterVehicleType {
 
 	@Id
@@ -22,10 +23,10 @@ public class MasterVehicleType {
 	private String vehicleTypeName;
 
 	@Column(name = "vehicleTypeAddedDate")
-	private Date vehicleTypeAddedDate;
+	private LocalDate vehicleTypeAddedDate;
 
 	@Column(name = "vehicleTypeIsDeleted")
-	private short vehicleTypeIsDeleted;
+	private int vehicleTypeIsDeleted;
 
 	public MasterVehicleType() {
 		// TODO Auto-generated constructor stub
@@ -47,20 +48,22 @@ public class MasterVehicleType {
 		this.vehicleTypeName = vehicleTypeName;
 	}
 
-	public short getVehicleTypeIsDeleted() {
+	public int getVehicleTypeIsDeleted() {
 		return vehicleTypeIsDeleted;
 	}
 
-	public void setVehicleTypeIsDeleted(short vehicleTypeIsDeleted) {
+	public void setVehicleTypeIsDeleted(int vehicleTypeIsDeleted) {
 		this.vehicleTypeIsDeleted = vehicleTypeIsDeleted;
 	}
 
-	public Date getVehicleTypeAddedDate() {
+	public LocalDate getVehicleTypeAddedDate() {
 		return vehicleTypeAddedDate;
 	}
 
-	public void setVehicleTypeAddedDate(Date vehicleTypeAddedDate) {
+	public void setVehicleTypeAddedDate(LocalDate vehicleTypeAddedDate) {
 		this.vehicleTypeAddedDate = vehicleTypeAddedDate;
 	}
+
+	
 
 }

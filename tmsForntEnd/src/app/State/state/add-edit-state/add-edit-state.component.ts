@@ -31,7 +31,7 @@ export class AddEditStateComponent implements OnInit {
 
     this.id = this.route.snapshot.params['id'];
     this.isAddMode = !this.id;
-     console.log(this.id);
+    //  console.log(this.id);
     this.stateForm = this.formBuilder.group({
       stateId: [this.id],
       stateName: [''],

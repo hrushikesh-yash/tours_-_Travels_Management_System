@@ -1,13 +1,13 @@
+import { DatePipe } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AlertComponent } from './alter/alert.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http';
-import { DatePipe } from '@angular/common';
-import { AlertComponent } from './alter/alert.component';
+import { VehicleModule } from './Services/vehicle/vehicle.module';
 
 
 
@@ -16,9 +16,6 @@ import { AlertComponent } from './alter/alert.component';
     AppComponent,
     routingComponents,
     AlertComponent,
-    
-   
-    
   ],
   imports: [
     BrowserModule,
@@ -26,7 +23,7 @@ import { AlertComponent } from './alter/alert.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

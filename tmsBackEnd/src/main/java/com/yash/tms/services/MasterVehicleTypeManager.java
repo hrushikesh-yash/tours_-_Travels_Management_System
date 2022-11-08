@@ -6,7 +6,7 @@ import com.yash.tms.entity.MasterVehicleType;
 
 public interface MasterVehicleTypeManager {
 
-	public List<MasterVehicleType> findAllVehicleTypes(short vehicleTypeIsDeleted);
+	public List<MasterVehicleType> findAllVehicleTypes(int vehicleTypeIsDeleted);
 
 	public MasterVehicleType addVehicleType(MasterVehicleType vehicleType);
 

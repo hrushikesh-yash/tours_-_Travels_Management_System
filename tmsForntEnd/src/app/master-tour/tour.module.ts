@@ -4,6 +4,7 @@ import { TourListComponent } from './tour-list/tour-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MasterTourComponent } from './master-tour.component';
 import { TourRoutingModule } from './TourRoutingModule';
+import { AddEditTourComponent } from './add-edit-tour/add-edit-tour.component';
 
 
 
@@ -11,12 +12,13 @@ import { TourRoutingModule } from './TourRoutingModule';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule,
+    // FormsModule,
     TourRoutingModule
   ],
   declarations: [
     MasterTourComponent,
-    TourListComponent
+    TourListComponent,
+    AddEditTourComponent
   ],
   
 })

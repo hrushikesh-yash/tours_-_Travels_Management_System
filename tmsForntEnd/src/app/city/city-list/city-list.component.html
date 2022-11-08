@@ -19,7 +19,7 @@
             <td>{{city.pinCode}}</td>
             <td style="white-space: nowrap">
                 <a routerLink="edit/{{city.cityId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
-                <button (click)="deleteState(city.cityId)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="isDeleting">
+                <button (click)="deleteState(city.cityId)" class="btn btn-sm btn-danger btn-delete-city" [disabled]="isDeleting">
                     <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
                     <span *ngIf="!isDeleting">Delete</span>
                 </button>

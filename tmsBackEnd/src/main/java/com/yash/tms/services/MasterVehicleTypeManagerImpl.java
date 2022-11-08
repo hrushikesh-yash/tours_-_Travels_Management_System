@@ -20,7 +20,7 @@ public class MasterVehicleTypeManagerImpl implements MasterVehicleTypeManager {
 	MasterVehicleTypeDao masterVehicleTypeDao;
 
 	@Override
-	public List<MasterVehicleType> findAllVehicleTypes(short vehicleTypeIsDeleted) {
+	public List<MasterVehicleType> findAllVehicleTypes(int vehicleTypeIsDeleted) {
 		log.info("MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.");
 		try {
 

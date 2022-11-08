@@ -1,0 +1,869 @@
+2022-11-07T11:26:53,005 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 1308 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T11:26:53,031 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T11:26:53,100 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-07T11:26:53,101 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-07T11:26:54,113 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T11:26:54,363 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 234 ms. Found 11 JPA repository interfaces.
+2022-11-07T11:26:55,351 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T11:26:55,386 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:26:55,388 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T11:26:55,390 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T11:26:55,598 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T11:26:55,599 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 2497 ms
+2022-11-07T11:26:55,823 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T11:26:55,899 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-07T11:26:56,093 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-07T11:26:56,238 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-07T11:26:57,501 [restartedMain] ERROR (HikariPool.java:594) - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.yash.tms.TmsApplication.main(TmsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+2022-11-07T11:26:57,528 [restartedMain] WARN  (JdbcEnvironmentInitiator.java:133) - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.yash.tms.TmsApplication.main(TmsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+2022-11-07T11:26:57,554 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T11:26:58,366 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-07T11:26:59,395 [restartedMain] ERROR (HikariPool.java:594) - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:559) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.yash.tms.TmsApplication.main(TmsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+2022-11-07T11:26:59,399 [restartedMain] WARN  (SqlExceptionHelper.java:137) - SQL Error: 1045, SQLState: 28000
+2022-11-07T11:26:59,399 [restartedMain] ERROR (SqlExceptionHelper.java:142) - Access denied for user 'root'@'localhost' (using password: YES)
+2022-11-07T11:26:59,408 [restartedMain] ERROR (AbstractEntityManagerFactoryBean.java:426) - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-11-07T11:26:59,409 [restartedMain] WARN  (AbstractApplicationContext.java:591) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-11-07T11:26:59,412 [restartedMain] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-07T11:26:59,431 [restartedMain] INFO  (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-07T11:26:59,451 [restartedMain] ERROR (SpringApplication.java:824) - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.yash.tms.TmsApplication.main(TmsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 21 more
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:559) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 21 more
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:559) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 21 more
+2022-11-07T11:28:26,164 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 13696 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T11:28:26,183 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T11:28:26,279 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-07T11:28:26,284 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-07T11:28:27,050 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T11:28:27,235 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 175 ms. Found 11 JPA repository interfaces.
+2022-11-07T11:28:27,982 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T11:28:28,004 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:28:28,004 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T11:28:28,005 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T11:28:28,153 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T11:28:28,153 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1868 ms
+2022-11-07T11:28:28,335 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T11:28:28,384 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-07T11:28:28,601 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-07T11:28:28,740 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-07T11:28:29,004 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-07T11:28:29,022 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T11:28:29,857 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T11:28:29,867 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:28:30,949 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T11:28:31,285 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T11:28:31,299 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:28:31,356 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T11:28:31,367 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.571 seconds (JVM running for 6.472)
+2022-11-07T11:28:48,934 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-07T11:28:48,935 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-07T11:28:48,936 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 1 ms
+2022-11-07T11:28:48,977 [http-nio-8080-exec-1] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T11:28:48,977 [http-nio-8080-exec-1] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T11:28:57,525 [http-nio-8080-exec-3] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T11:28:57,526 [http-nio-8080-exec-3] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T11:29:00,807 [http-nio-8080-exec-4] INFO  (masterUserController.java:52) - masterUserController :: findUserById function start.
+2022-11-07T11:29:00,807 [http-nio-8080-exec-4] INFO  (MasterUserManagerImpl.java:54) - MasterUserManagerImpl :: findById function started.
+2022-11-07T11:29:02,850 [http-nio-8080-exec-5] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T11:29:02,850 [http-nio-8080-exec-5] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T11:29:03,873 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:29:03,874 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:29:05,982 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T11:29:05,983 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T11:29:05,993 [http-nio-8080-exec-8] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T11:29:10,755 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:29:10,755 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:29:10,772 [http-nio-8080-exec-10] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-07T11:29:10,772 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-07T11:29:14,505 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:29:14,505 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:30:41,047 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:30:41,047 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:32:48,438 [http-nio-8080-exec-7] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:32:48,439 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:32:50,976 [http-nio-8080-exec-9] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-07T11:32:50,977 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-07T11:33:13,370 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:33:13,370 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:33:23,638 [http-nio-8080-exec-4] INFO  (MasterStateController.java:64) - MasterStateController :: addstate function started.
+2022-11-07T11:33:23,639 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-07T11:33:23,767 [http-nio-8080-exec-4] WARN  (SqlExceptionHelper.java:137) - SQL Error: 1366, SQLState: HY000
+2022-11-07T11:33:23,767 [http-nio-8080-exec-4] ERROR (SqlExceptionHelper.java:142) - Incorrect integer value: 'MH' for column 'state_code' at row 1
+2022-11-07T11:33:23,769 [http-nio-8080-exec-4] INFO  (AbstractBatchImpl.java:213) - HHH000010: On release of batch it still contained JDBC statements
+2022-11-07T11:33:23,778 [http-nio-8080-exec-4] ERROR (MasterStateManagerImpl.java:43) - MasterStateManagerImpl :: addState error while find all states. could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
+2022-11-07T11:33:23,779 [http-nio-8080-exec-4] ERROR (MasterStateManagerImpl.java:44) - MasterStateManagerImpl :: addState Stacktrace :: [Ljava.lang.StackTraceElement;@2d005c2a
+2022-11-07T11:33:23,798 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:33:23,799 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:36:38,061 [http-nio-8080-exec-7] INFO  (MasterStateController.java:64) - MasterStateController :: addstate function started.
+2022-11-07T11:36:38,061 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-07T11:36:38,107 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:36:38,108 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:36:43,066 [http-nio-8080-exec-10] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-07T11:36:43,066 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-07T11:36:55,008 [http-nio-8080-exec-3] INFO  (MasterStateController.java:78) - MasterStateController :: updateState function started.
+2022-11-07T11:36:55,008 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-07T11:36:55,017 [http-nio-8080-exec-3] INFO  (MasterStateController.java:82) - MasterStateontroller :: setting the state entity.
+2022-11-07T11:36:55,018 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-07T11:36:55,059 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:36:55,059 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:36:58,852 [http-nio-8080-exec-5] INFO  (MasterStateController.java:49) - MasterStateController :: findStateById function started.
+2022-11-07T11:36:58,852 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-07T11:37:07,717 [http-nio-8080-exec-7] INFO  (MasterStateController.java:78) - MasterStateController :: updateState function started.
+2022-11-07T11:37:07,718 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:52) - MasterStateManagerImpl :: findById function started.
+2022-11-07T11:37:07,724 [http-nio-8080-exec-7] INFO  (MasterStateController.java:82) - MasterStateontroller :: setting the state entity.
+2022-11-07T11:37:07,725 [http-nio-8080-exec-7] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-07T11:37:07,750 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:37:07,751 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:37:15,043 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T11:37:15,044 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T11:37:15,054 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T11:37:20,147 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:37:20,147 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:37:20,149 [http-nio-8080-exec-2] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-07T11:37:20,149 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-07T11:37:40,348 [http-nio-8080-exec-6] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-07T11:37:40,348 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-07T11:37:40,353 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-07T11:37:40,392 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T11:37:40,393 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T11:37:40,396 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T11:37:43,830 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:37:43,830 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:37:43,833 [http-nio-8080-exec-10] INFO  (MasterCityController.java:50) - MasterCityController :: findCityById function started.
+2022-11-07T11:37:43,833 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-07T11:37:46,110 [http-nio-8080-exec-2] INFO  (MasterCityController.java:78) - MasterCityController :: updateCity function started.
+2022-11-07T11:37:46,110 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:54) - MasterCityManagerImpl :: findById function started.
+2022-11-07T11:37:46,115 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-07T11:37:46,144 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T11:37:46,145 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T11:37:46,152 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T11:42:41,307 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T11:42:41,307 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T11:42:42,649 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T11:42:42,650 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T11:42:42,657 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T11:42:45,025 [http-nio-8080-exec-8] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T11:42:45,026 [http-nio-8080-exec-8] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T11:49:16,579 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-11-07T11:49:16,629 [Thread-5] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:49:16,629 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-07T11:49:16,635 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-07T11:49:16,650 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:49:16,656 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:49:16,666 [Thread-5] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:49:16,684 [Thread-5] INFO  (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2022-11-07T11:49:16,702 [Thread-5] INFO  (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2022-11-07T11:49:16,852 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 13696 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T11:49:16,853 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T11:49:17,197 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T11:49:17,286 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 88 ms. Found 11 JPA repository interfaces.
+2022-11-07T11:49:17,367 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T11:49:17,368 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:49:17,369 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T11:49:17,369 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T11:49:17,389 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T11:49:17,390 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 533 ms
+2022-11-07T11:49:17,418 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T11:49:17,422 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-2 - Starting...
+2022-11-07T11:49:17,436 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-2 - Start completed.
+2022-11-07T11:49:17,436 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T11:49:17,545 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T11:49:17,545 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:49:17,791 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T11:49:17,872 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T11:49:17,881 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:49:17,889 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T11:49:17,893 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.077 seconds (JVM running for 1252.959)
+2022-11-07T11:49:17,895 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-07T11:50:28,072 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2022-11-07T11:50:28,085 [Thread-7] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:28,085 [Thread-7] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-07T11:50:28,088 [Thread-7] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:28,089 [Thread-7] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:28,091 [Thread-7] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:50:28,091 [Thread-7] INFO  (HikariDataSource.java:350) - HikariPool-2 - Shutdown initiated...
+2022-11-07T11:50:28,094 [Thread-7] INFO  (HikariDataSource.java:352) - HikariPool-2 - Shutdown completed.
+2022-11-07T11:50:28,218 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 13696 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T11:50:28,219 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T11:50:28,447 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T11:50:28,523 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 75 ms. Found 11 JPA repository interfaces.
+2022-11-07T11:50:28,593 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T11:50:28,595 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:28,595 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T11:50:28,595 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T11:50:28,618 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T11:50:28,619 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 397 ms
+2022-11-07T11:50:28,648 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T11:50:28,652 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-3 - Starting...
+2022-11-07T11:50:28,659 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-3 - Start completed.
+2022-11-07T11:50:28,660 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T11:50:28,757 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T11:50:28,757 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:50:28,950 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T11:50:29,004 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T11:50:29,007 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:29,015 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T11:50:29,018 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 0.853 seconds (JVM running for 1324.079)
+2022-11-07T11:50:29,020 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-07T11:50:37,656 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-07T11:50:37,684 [Thread-11] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:37,685 [Thread-11] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-07T11:50:37,687 [Thread-11] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:37,689 [Thread-11] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:37,691 [Thread-11] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:50:37,691 [Thread-11] INFO  (HikariDataSource.java:350) - HikariPool-3 - Shutdown initiated...
+2022-11-07T11:50:37,694 [Thread-11] INFO  (HikariDataSource.java:352) - HikariPool-3 - Shutdown completed.
+2022-11-07T11:50:37,771 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 13696 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T11:50:37,773 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T11:50:38,039 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T11:50:38,148 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 108 ms. Found 11 JPA repository interfaces.
+2022-11-07T11:50:38,217 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T11:50:38,218 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:38,218 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T11:50:38,219 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T11:50:38,249 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T11:50:38,249 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 475 ms
+2022-11-07T11:50:38,286 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T11:50:38,292 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-4 - Starting...
+2022-11-07T11:50:38,300 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-4 - Start completed.
+2022-11-07T11:50:38,301 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T11:50:38,379 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T11:50:38,380 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T11:50:38,570 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T11:50:38,629 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T11:50:38,632 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T11:50:38,639 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T11:50:38,643 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 0.903 seconds (JVM running for 1333.703)
+2022-11-07T11:50:38,645 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-07T11:57:33,474 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-07T11:57:33,485 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-07T11:57:33,544 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 59 ms
+2022-11-07T11:57:33,646 [http-nio-8080-exec-1] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T11:57:33,647 [http-nio-8080-exec-1] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T13:03:58,404 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T13:03:58,407 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T13:03:58,453 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T13:04:42,224 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T13:04:42,225 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T13:04:42,235 [http-nio-8080-exec-5] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T13:05:11,121 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T13:05:11,124 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T13:05:11,129 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T13:05:36,575 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T13:05:36,576 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T13:05:36,581 [http-nio-8080-exec-9] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T13:05:48,818 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:05:48,819 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:06:06,349 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:06:06,349 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:06:10,405 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:06:10,406 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:06:42,016 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:06:42,017 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:06:45,932 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:06:45,933 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:06:52,001 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:06:52,001 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:07:00,617 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:07:00,618 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:07:09,341 [http-nio-8080-exec-8] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:07:09,342 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:07:15,471 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:07:15,471 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:12:45,045 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:12:45,046 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:13:34,236 [http-nio-8080-exec-3] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:13:34,239 [http-nio-8080-exec-3] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:13:56,500 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:13:56,502 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:16,111 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:16,113 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:22,559 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:22,559 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:26,359 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:26,359 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:28,620 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:28,621 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:31,370 [http-nio-8080-exec-3] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:31,370 [http-nio-8080-exec-3] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:34,828 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:34,831 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:14:41,606 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:14:41,607 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:26,345 [http-nio-8080-exec-8] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:26,346 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:33,223 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:33,224 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:39,395 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:39,396 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:43,144 [http-nio-8080-exec-3] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:43,144 [http-nio-8080-exec-3] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:46,238 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:46,238 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:53,331 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:53,332 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:15:57,770 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:15:57,770 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:02,204 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:02,205 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:09,905 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:09,906 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:27,441 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:27,441 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:31,861 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:31,861 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:34,135 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:34,138 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:37,015 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:37,015 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:37,718 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:37,718 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:51,039 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:51,039 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:16:58,450 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:16:58,451 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:17:02,333 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:17:02,333 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:17:07,969 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T13:17:07,969 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T13:17:11,313 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:17:11,314 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:17:49,636 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:17:49,636 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:17:55,608 [http-nio-8080-exec-8] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:17:55,609 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:18:34,202 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T13:18:34,203 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T13:18:34,215 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T13:18:39,219 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:18:39,219 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:18:54,245 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:18:54,245 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:19:14,187 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:19:14,187 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:19:53,550 [http-nio-8080-exec-8] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:19:53,551 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:20:02,330 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:20:02,330 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:20:13,257 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:20:13,257 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:20:44,249 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:20:44,250 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:20:52,875 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:20:52,875 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:21:22,116 [http-nio-8080-exec-8] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:21:22,118 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:21:27,995 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:21:27,996 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:21:30,582 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:21:30,582 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:21:50,280 [http-nio-8080-exec-3] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:21:50,281 [http-nio-8080-exec-3] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:22:45,220 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:22:45,221 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:22:54,250 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:22:54,250 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:23:01,801 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:23:01,801 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:23:16,265 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:23:16,265 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:23:38,935 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:23:38,936 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:23:50,153 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:23:50,154 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:23:55,879 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:23:55,880 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:24:03,098 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:24:03,098 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:24:08,052 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:24:08,053 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:45:33,272 [http-nio-8080-exec-8] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T13:45:33,273 [http-nio-8080-exec-8] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T13:45:35,818 [HikariPool-4 housekeeper] WARN  (HikariPool.java:788) - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=17m25s667ms170µs900ns).
+2022-11-07T13:45:37,349 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:45:37,350 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:45:38,563 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T13:45:38,564 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T13:45:38,569 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T13:47:56,466 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T13:47:56,466 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T13:47:57,276 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:47:57,278 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:48:38,633 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:48:38,634 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T13:49:13,281 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T13:49:13,282 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:24:02,039 [HikariPool-4 housekeeper] WARN  (HikariPool.java:788) - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=30m56s120ms100µs).
+2022-11-07T14:26:03,512 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:26:03,512 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:26:26,584 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:26:26,584 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:26:35,105 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:26:35,106 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:26:35,114 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:26:37,359 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T14:26:37,359 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T14:26:38,779 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:26:38,779 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:26:38,788 [http-nio-8080-exec-6] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:39:47,392 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-07T14:39:47,565 [Thread-15] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:39:47,567 [Thread-15] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-07T14:39:47,587 [Thread-15] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-07T14:39:47,683 [Thread-15] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:39:47,702 [Thread-15] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:39:47,735 [Thread-15] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T14:39:47,766 [Thread-15] INFO  (HikariDataSource.java:350) - HikariPool-4 - Shutdown initiated...
+2022-11-07T14:39:47,793 [Thread-15] INFO  (HikariDataSource.java:352) - HikariPool-4 - Shutdown completed.
+2022-11-07T14:39:48,625 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 13696 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T14:39:48,628 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T14:39:49,749 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T14:39:49,950 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 200 ms. Found 11 JPA repository interfaces.
+2022-11-07T14:39:50,227 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T14:39:50,230 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:39:50,232 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T14:39:50,232 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T14:39:50,306 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T14:39:50,306 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1669 ms
+2022-11-07T14:39:50,402 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T14:39:50,415 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-5 - Starting...
+2022-11-07T14:39:50,461 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-5 - Start completed.
+2022-11-07T14:39:50,463 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T14:39:50,712 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T14:39:50,714 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T14:39:51,045 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T14:39:51,203 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T14:39:51,213 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:39:51,231 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T14:39:51,242 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 2.769 seconds (JVM running for 11486.109)
+2022-11-07T14:39:51,247 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-07T14:40:07,050 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-07T14:40:07,066 [Thread-19] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:40:07,066 [Thread-19] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-07T14:40:07,070 [Thread-19] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:40:07,072 [Thread-19] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:40:07,074 [Thread-19] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T14:40:07,076 [Thread-19] INFO  (HikariDataSource.java:350) - HikariPool-5 - Shutdown initiated...
+2022-11-07T14:40:07,084 [Thread-19] INFO  (HikariDataSource.java:352) - HikariPool-5 - Shutdown completed.
+2022-11-07T14:40:07,236 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 13696 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T14:40:07,237 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T14:40:07,737 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T14:40:07,903 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 165 ms. Found 11 JPA repository interfaces.
+2022-11-07T14:40:07,981 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T14:40:07,983 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:40:07,983 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T14:40:07,984 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T14:40:08,006 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T14:40:08,006 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 766 ms
+2022-11-07T14:40:08,243 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T14:40:08,257 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-6 - Starting...
+2022-11-07T14:40:08,275 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-6 - Start completed.
+2022-11-07T14:40:08,276 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T14:40:08,543 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T14:40:08,544 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T14:40:08,878 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T14:40:09,027 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T14:40:09,034 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T14:40:09,044 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T14:40:09,048 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.89 seconds (JVM running for 11503.916)
+2022-11-07T14:40:09,050 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-07T14:46:41,336 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-07T14:46:41,349 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-07T14:46:41,358 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 8 ms
+2022-11-07T14:46:41,398 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:46:41,398 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:46:41,446 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:46:42,600 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:46:42,601 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:46:43,383 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:46:43,383 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:46:43,387 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:46:50,167 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:46:50,167 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:47:59,719 [http-nio-8080-exec-6] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:47:59,720 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:49:49,032 [http-nio-8080-exec-9] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:49:49,033 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:50:12,133 [http-nio-8080-exec-10] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:50:12,133 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:50:13,606 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:50:13,607 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:50:13,610 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:50:14,756 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:50:14,756 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:50:16,105 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:50:16,105 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:50:16,108 [http-nio-8080-exec-4] INFO  (MasterTourController.java:51) - MasterTourController :: findTourById function started.
+2022-11-07T14:50:16,109 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:50:16,110 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:53) - MasterTourManagerImpl :: findById function started.
+2022-11-07T14:50:28,512 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:50:28,513 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T14:50:30,202 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T14:50:30,203 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T14:50:30,210 [http-nio-8080-exec-9] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T14:50:30,214 [http-nio-8080-exec-8] INFO  (MasterTourController.java:51) - MasterTourController :: findTourById function started.
+2022-11-07T14:50:30,215 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:53) - MasterTourManagerImpl :: findById function started.
+2022-11-07T14:50:33,494 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T14:50:33,495 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:11:10,621 [HikariPool-6 housekeeper] WARN  (HikariPool.java:788) - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=16m31s951ms596µs300ns).
+2022-11-07T15:11:18,958 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T15:11:18,963 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T15:11:20,632 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:11:20,632 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:11:20,641 [http-nio-8080-exec-6] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T15:11:21,928 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:11:21,930 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:11:22,663 [http-nio-8080-exec-9] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T15:11:22,665 [http-nio-8080-exec-9] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
+2022-11-07T15:11:28,266 [http-nio-8080-exec-8] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:11:28,267 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:11:40,852 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:11:40,853 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:11:40,858 [http-nio-8080-exec-10] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T15:13:45,785 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:13:45,785 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:13:45,813 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T15:14:08,150 [http-nio-8080-exec-6] INFO  (MasterTourController.java:68) - MasterTourController :: addTour function started.
+2022-11-07T15:14:08,151 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:38) - MasterTourManagerImpl :: addTour function started.
+2022-11-07T15:14:08,287 [http-nio-8080-exec-5] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:14:08,287 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:14:23,127 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:14:23,128 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:14:23,133 [http-nio-8080-exec-7] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T15:14:24,414 [http-nio-8080-exec-9] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T15:14:24,414 [http-nio-8080-exec-9] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T15:14:55,416 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T15:14:55,416 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T15:15:15,708 [http-nio-8080-exec-3] INFO  (MasterStateController.java:64) - MasterStateController :: addstate function started.
+2022-11-07T15:15:15,709 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:38) - MasterStateManagerImpl :: addState function started.
+2022-11-07T15:15:15,773 [http-nio-8080-exec-4] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T15:15:15,773 [http-nio-8080-exec-4] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T15:15:18,258 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:15:18,260 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:15:18,267 [http-nio-8080-exec-6] INFO  (MasterCityController.java:36) - size of city list: 2
+2022-11-07T15:15:19,848 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T15:15:19,848 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T15:15:39,998 [http-nio-8080-exec-8] INFO  (MasterCityController.java:64) - MasterCityController :: addcity function started.
+2022-11-07T15:15:40,000 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:39) - MasterCityManagerImpl :: addCity function started.
+2022-11-07T15:15:40,048 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:15:40,048 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:15:40,054 [http-nio-8080-exec-1] INFO  (MasterCityController.java:36) - size of city list: 3
+2022-11-07T15:15:43,026 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:15:43,027 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:15:45,373 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-07T15:15:45,373 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:23) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-07T15:15:45,382 [http-nio-8080-exec-3] INFO  (MasterCityController.java:36) - size of city list: 3
+2022-11-07T15:15:45,403 [http-nio-8080-exec-4] INFO  (MasterTourController.java:51) - MasterTourController :: findTourById function started.
+2022-11-07T15:15:45,403 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:53) - MasterTourManagerImpl :: findById function started.
+2022-11-07T15:15:49,168 [http-nio-8080-exec-5] INFO  (MasterTourController.java:82) - MastertourController :: updateTour function started.
+2022-11-07T15:15:49,168 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:53) - MasterTourManagerImpl :: findById function started.
+2022-11-07T15:15:49,175 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:38) - MasterTourManagerImpl :: addTour function started.
+2022-11-07T15:15:49,220 [http-nio-8080-exec-7] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:15:49,222 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:23:41,909 [http-nio-8080-exec-1] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:23:41,909 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:26:49,429 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:26:49,429 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T15:28:06,032 [http-nio-8080-exec-4] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T15:28:06,033 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T16:09:03,142 [HikariPool-6 housekeeper] WARN  (HikariPool.java:788) - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=3m51s401ms751µs401ns).
+2022-11-07T17:45:25,680 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016637LT with PID 10432 (E:\Project\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by swapnil.savant in E:\Project\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-07T17:45:25,697 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-07T17:45:25,913 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-07T17:45:25,914 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-07T17:45:27,319 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-07T17:45:27,525 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 194 ms. Found 11 JPA repository interfaces.
+2022-11-07T17:45:28,296 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-07T17:45:28,318 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-07T17:45:28,319 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-07T17:45:28,319 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-07T17:45:28,482 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-07T17:45:28,483 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 2567 ms
+2022-11-07T17:45:28,703 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-07T17:45:28,788 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-07T17:45:28,975 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-07T17:45:29,080 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-07T17:45:29,258 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-07T17:45:29,274 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-07T17:45:30,342 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-07T17:45:30,349 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-07T17:45:31,491 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-07T17:45:32,271 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-07T17:45:32,289 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-07T17:45:34,327 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-07T17:45:34,340 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 9.055 seconds (JVM running for 10.075)
+2022-11-07T17:45:47,585 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-07T17:45:47,586 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-07T17:45:47,589 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 2 ms
+2022-11-07T17:45:47,682 [http-nio-8080-exec-1] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-07T17:45:47,683 [http-nio-8080-exec-1] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-07T17:45:50,673 [http-nio-8080-exec-2] INFO  (MasterTourController.java:32) - MasterTourController :: findAlltours function started.
+2022-11-07T17:45:50,674 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findAlltours function started.
+2022-11-07T17:45:52,828 [http-nio-8080-exec-3] INFO  (masterUserController.java:32) - masterUserController :: findAllusers function started.
+2022-11-07T17:45:52,829 [http-nio-8080-exec-3] INFO  (MasterUserManagerImpl.java:26) - MasterUserManagerImpl :: findAllusers function started.
