@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import com.yash.tms.services.MappingVehicleDriverManager;
 
 @RestController
 @RequestMapping("/mappingVehicleDriver")
+@CrossOrigin("*")
 public class MappingVehicleDriverController {
 	private final static Logger log = LoggerFactory.getLogger(MappingVehicleDriverController.class);
 
@@ -30,7 +32,7 @@ public class MappingVehicleDriverController {
 		log.info("MappingVehicleDriverController :: findAllMappingVehicleDriver function started.");
 		List<MappingVehicleDriverDetails> mappingVehicleDriverDetailsList = null;
 		try {
-			short mappingVehicleDriverIsDeleted = 0;
+			int mappingVehicleDriverIsDeleted = 0;
 			mappingVehicleDriverDetailsList = mappingVehicleDriverManager
 					.findAllMappingVehicleDriver(mappingVehicleDriverIsDeleted);
 			if (!mappingVehicleDriverDetailsList.isEmpty()) {
@@ -43,6 +45,25 @@ public class MappingVehicleDriverController {
 			return null;
 		}
 		return mappingVehicleDriverDetailsList;
+
+	}
+	
+	
+	@GetMapping("/findMappingVehicleDriverById/{mappingVehicleDriverDetailsId}")
+	public MappingVehicleDriverDetails findMappingVehicleDriverById(@PathVariable(value = "mappingVehicleDriverDetailsId") int mappingVehicleDriverDetailsId) {
+		log.info("MappingVehicleDriverController :: findMappingVehicleDriverById function started.");
+		
+		try {
+			return mappingVehicleDriverManager
+					.findById(mappingVehicleDriverDetailsId);
+			
+
+		} catch (Exception e) {
+			log.error("MappingVehicleDriverController :: error in findAlfindMappingVehicleDriverByIdlMappingVehicleDriver function."
+					+ e.getMessage());
+			return null;
+		}
+		
 
 	}
 
@@ -86,13 +107,13 @@ public class MappingVehicleDriverController {
 
 	}
 	
-	@PutMapping("/delete/{mappingVehicleDriverDetailsId}")
+	@PutMapping("/deleteMappingVehicleDriver/{mappingVehicleDriverDetailsId}")
 	public String deleteMappingVehicleDriver(@PathVariable(value = "mappingVehicleDriverDetailsId") int mappingVehicleDriverDetailsId) {
 		log.info("MappingVehicleDriverController :: deleteMappingVehicleDriver function started.");
 		try {
 
 			MappingVehicleDriverDetails mappingVehicleDriverToUpdate = mappingVehicleDriverManager.findById(mappingVehicleDriverDetailsId);
-			mappingVehicleDriverToUpdate.setMappingVehicleDriverIsDeleted((short) 1);
+			mappingVehicleDriverToUpdate.setMappingVehicleDriverIsDeleted( 1);
 			mappingVehicleDriverManager.addMappingVehicleDriver(mappingVehicleDriverToUpdate);
 
 			return "Mapping of Vehicle - driver deleted sucessfully";

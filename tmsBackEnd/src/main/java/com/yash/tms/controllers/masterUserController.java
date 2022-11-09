@@ -46,6 +46,26 @@ public class masterUserController {
 
 	}
 	
+	@GetMapping("/getAllByActorId/{actorId}")
+	public List<MasterUser> getAllByActorId(@PathVariable(value="actorId") int actorId) {
+		log.info("masterUserController :: getAllByActorId function started.");
+		List<MasterUser> getListByActorId = null;
+		try {
+
+			getListByActorId = masterUserManager.getAllByActorId(actorId);
+			getListByActorId.forEach(System.out::println);
+			if (!getListByActorId.isEmpty()) {
+				return getListByActorId;
+			}
+
+		} catch (Exception e) {
+			log.error("masterUserController :: error in getAllByActorId function." + e.getMessage());
+			return null;
+		}
+		return getListByActorId;
+
+	}
+	
 	@GetMapping("/findUserById/{userId}")
 	public MasterUser findUserById(@PathVariable(value = "userId") int userId)
 	{

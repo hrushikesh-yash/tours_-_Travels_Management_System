@@ -1,5 +1,6 @@
 package com.yash.tms.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -28,13 +29,13 @@ public class MappingVehicleDriverDetails {
 	private int routeId;
 
 	@Column(name = "vehicleDriverAssignDate")
-	private Date vehicleDriverAssignDate;
+	private LocalDate vehicleDriverAssignDate;
 
 	@Column(name = "vehiclefare")
 	private int vehicleFare;
 
 	@Column(name = "mappingVehicleDriverIsDeleted")
-	private short mappingVehicleDriverIsDeleted;
+	private int mappingVehicleDriverIsDeleted;
 
 	MappingVehicleDriverDetails() {
 
@@ -72,11 +73,11 @@ public class MappingVehicleDriverDetails {
 		this.routeId = routeId;
 	}
 
-	public Date getVehicleDriverAssignDate() {
+	public LocalDate getVehicleDriverAssignDate() {
 		return vehicleDriverAssignDate;
 	}
 
-	public void setVehicleDriverAssignDate(Date vehicleDriverAssignDate) {
+	public void setVehicleDriverAssignDate(LocalDate vehicleDriverAssignDate) {
 		this.vehicleDriverAssignDate = vehicleDriverAssignDate;
 	}
 
@@ -88,11 +89,11 @@ public class MappingVehicleDriverDetails {
 		this.vehicleFare = vehicleFare;
 	}
 
-	public short getMappingVehicleDriverIsDeleted() {
+	public int getMappingVehicleDriverIsDeleted() {
 		return mappingVehicleDriverIsDeleted;
 	}
 
-	public void setMappingVehicleDriverIsDeleted(short mappingVehicleDriverIsDeleted) {
+	public void setMappingVehicleDriverIsDeleted(int mappingVehicleDriverIsDeleted) {
 		this.mappingVehicleDriverIsDeleted = mappingVehicleDriverIsDeleted;
 	}
 	

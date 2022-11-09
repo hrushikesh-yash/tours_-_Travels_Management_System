@@ -98,7 +98,7 @@ public class MappingCityRoutesController {
 
 	}
 	
-	@PutMapping("/delete/{routeId}")
+	@PutMapping("/deleteRoute/{routeId}")
 	public MappingCityRoutes deleteRoute(@PathVariable(value = "routeId") int routeId) {
 		log.info("MappingCityRoutesController :: deleteRoute function started.");
 		try {

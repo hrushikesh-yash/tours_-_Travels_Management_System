@@ -21,7 +21,7 @@ public class MappingVehicleDriverManagerImpl implements MappingVehicleDriverMana
 	private MappingVechileDriverRepository mappingVechileDriverRepository;
 	
 	@Override
-	public List<MappingVehicleDriverDetails> findAllMappingVehicleDriver(short mappingVehicleDriverIsDeleted) {
+	public List<MappingVehicleDriverDetails> findAllMappingVehicleDriver(int mappingVehicleDriverIsDeleted) {
 		log.info("MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.");
 		try {
 			

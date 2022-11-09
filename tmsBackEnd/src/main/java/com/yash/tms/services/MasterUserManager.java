@@ -12,4 +12,6 @@ public interface MasterUserManager {
 
 	MasterUser findById(int userId);
 
+	List<MasterUser> getAllByActorId(int actorId);
+
 }

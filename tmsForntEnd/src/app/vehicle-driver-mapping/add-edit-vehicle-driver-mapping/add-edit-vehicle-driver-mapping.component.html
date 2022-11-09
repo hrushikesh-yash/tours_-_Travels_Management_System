@@ -1,0 +1,56 @@
+<p>add-edit-vehicle-driver-mapping works!</p>
+<h1 *ngIf="isAddMode">Add Vehicle Driver Mapping </h1>
+<h1 *ngIf="!isAddMode">Edit Vehicle Driver Mapping</h1>
+<form [formGroup]="vehicleDriverMappingForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+
+        <div class="form-group col-5">
+            <label>Vehicle Name</label>
+            <select class="form-control" formControlName="vehicleId">
+                <option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicleId">
+                    {{vehicle.vehicleName}}</option>
+            </select>
+        </div>
+
+        <div class="form-group col-5">
+            <label>Driver Name</label>
+            <select class="form-control" formControlName="driverId">
+                <option *ngFor="let user of drivers" [value]="user.userId">
+                    {{user.userName}}</option>
+            </select>
+        </div>
+
+        <div class="form-group col-5">
+            <label>Route Name</label>
+            <select class="form-control" formControlName="routeId">
+                <option *ngFor="let cityRoute of cityRoutes" [value]="cityRoute.routeId">
+                    {{cityRoute.routeName}}</option>
+            </select>
+        </div>
+
+        <div class="form-group col-5">
+            <label>Vehicle Driver Mapped Date</label>
+            <input type="date" formControlName="vehicleDriverAssignDate" class="form-control" />
+            <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div> -->
+        </div>
+
+        <div class="form-group col-5">
+            <label>Vehicle Fare</label>
+            <input type="number" formControlName="vehicleFare" class="form-control" />
+            <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div> -->
+        </div>
+
+    </div>
+    <br>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save
+        </button> &nbsp;
+        <a routerLink="/Vehicle-Driver-Assign" class="btn btn-warning">Cancel</a>
+    </div>
+</form>

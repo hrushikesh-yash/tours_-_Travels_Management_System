@@ -6,7 +6,7 @@ import com.yash.tms.entity.MappingVehicleDriverDetails;
 
 public interface MappingVehicleDriverManager {
 
-	List<MappingVehicleDriverDetails> findAllMappingVehicleDriver(short mappingVehicleDriverIsDeleted);
+	List<MappingVehicleDriverDetails> findAllMappingVehicleDriver(int mappingVehicleDriverIsDeleted);
 
 	MappingVehicleDriverDetails addMappingVehicleDriver(MappingVehicleDriverDetails mappingVehicleDriver);
 

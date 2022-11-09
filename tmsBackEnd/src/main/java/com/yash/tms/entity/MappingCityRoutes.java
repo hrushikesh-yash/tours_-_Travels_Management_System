@@ -1,5 +1,6 @@
 package com.yash.tms.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -29,7 +30,7 @@ public class MappingCityRoutes {
 	private int destinationCityId;
 	
 	@Column(name = "routeCreatedDate")
-	private Date routeCreatedDate;
+	private LocalDate routeCreatedDate;
 	
 	@Column(name = "routeIsDeleted")
 	private int routeIsDeleted;
@@ -70,11 +71,11 @@ public class MappingCityRoutes {
 		this.destinationCityId = destinationCityId;
 	}
 
-	public Date getRouteCreatedDate() {
+	public LocalDate getRouteCreatedDate() {
 		return routeCreatedDate;
 	}
 
-	public void setRouteCreatedDate(Date routeCreatedDate) {
+	public void setRouteCreatedDate(LocalDate routeCreatedDate) {
 		this.routeCreatedDate = routeCreatedDate;
 	}
 

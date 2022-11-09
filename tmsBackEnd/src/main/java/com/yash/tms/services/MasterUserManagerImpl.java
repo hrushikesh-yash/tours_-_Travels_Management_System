@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.MasterUserDao;
-import com.yash.tms.entity.MasterActor;
 import com.yash.tms.entity.MasterUser;
 import com.yash.tms.exception.RecordNotfoundException;
 
@@ -57,9 +56,23 @@ public class MasterUserManagerImpl implements MasterUserManager {
 			 return user;
 		}
 		catch (Exception e) {
-			log.error("MasterUserManagerImpl :: findById error while find user by actor id ::"+userId+" "+e.getMessage());
+			log.error("MasterUserManagerImpl :: findById error while find user by user id ::"+userId+" "+e.getMessage());
 			log.error("MasterUserManagerImpl :: findById Stacktrace :: "+e.getStackTrace());
 			return null;
 		}
+	}
+
+	@Override
+	public List<MasterUser> getAllByActorId(int actorId) {
+		log.info("MasterUserManagerImpl :: getAllByActorId function started.");
+		try {
+			return masterUserDao.findByIdActorId(actorId);//(userId).orElseThrow(() -> new RecordNotfoundException("User Id not found."));
+	
+	}
+	catch (Exception e) {
+		log.error("MasterUserManagerImpl :: getAllByActorId error while find  by actor id ::"+actorId+" "+e.getMessage());
+		log.error("MasterUserManagerImpl :: getAllByActorId Stacktrace :: "+e.getStackTrace());
+		return null;
+	}
 	}
 }

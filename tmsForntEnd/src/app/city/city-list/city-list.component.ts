@@ -33,7 +33,7 @@ export class CityListComponent implements OnInit {
     this.isDeleting = true;
     this.cityService.deleteCity(cityId)
       .pipe(first())
-      .subscribe(() => this.cities = this.cities?.filter(x => x.stateId !== cityId));
+      .subscribe(() => this.cities = this.cities?.filter(x => x.cityId !== cityId));
       this.isDeleting = false;
       this.isDeleting = false;
   }

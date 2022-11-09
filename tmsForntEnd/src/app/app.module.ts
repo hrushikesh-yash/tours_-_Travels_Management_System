@@ -8,6 +8,7 @@ import { AlertComponent } from './alter/alert.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CityRoutesModule } from './city-routes/city-routes.module';
+import { VehicleDriverMappingModule } from './vehicle-driver-mapping/vehicle-driver-mapping.module';
 
 
 
@@ -25,7 +26,6 @@ import { CityRoutesModule } from './city-routes/city-routes.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CityRoutesModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

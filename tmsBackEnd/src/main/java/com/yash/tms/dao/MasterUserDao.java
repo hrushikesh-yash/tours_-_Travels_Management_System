@@ -14,4 +14,7 @@ public interface MasterUserDao extends JpaRepository<MasterUser, Integer>{
 	@Query(value="from MasterUser where userIsDeleted =?1")
 	List<MasterUser> findAllusers(short userIsDeleted);
 
+	@Query(value = "from MasterUser where actorId=?1")
+	List<MasterUser> findByIdActorId(int actorId);
+
 }
