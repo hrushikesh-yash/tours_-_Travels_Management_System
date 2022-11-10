@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { City } from 'src/app/modules/City';
+import { CityList } from 'src/app/modules/CityList';
 import { CityRoutes } from 'src/app/modules/CityRoutes';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { CityRoutesService } from 'src/app/Services/city-routes.service';
@@ -20,7 +21,7 @@ export class AddEditCityRoutesComponent implements OnInit {
   id!: number;
   cityRouteForm: FormGroup;
   submitted = false;
-  cities: City[];
+  cities: CityList[];
   cityRoute: CityRoutes = new CityRoutes;
   cityId: number = 0;
 

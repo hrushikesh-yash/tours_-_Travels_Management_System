@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { City } from 'src/app/modules/City';
+import { CityList } from 'src/app/modules/CityList';
 import { Tour } from 'src/app/modules/Tour';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { CityServiceService } from 'src/app/Services/city-service.service';
@@ -19,7 +20,7 @@ export class AddEditTourComponent implements OnInit {
   id!: number;
   tourForm: FormGroup;
   submitted = false;
-  cities?: City[];
+  cities: CityList[];
   tour: Tour = new Tour;
   stateId: number = 0;
 

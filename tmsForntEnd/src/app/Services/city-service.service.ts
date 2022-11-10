@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { City } from '../modules/City';
+import {CityList} from '../modules/CityList'
 import { State } from '../modules/State';
 
 @Injectable({
@@ -17,8 +18,8 @@ export class CityServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCityList(): Observable<City[]> {
-    return this.httpClient.get<City[]>(this.baseURL+"getAllCities");
+  getCityList(): Observable<CityList[]> {
+    return this.httpClient.get<CityList[]>(this.baseURL+"getAllCities");
   }
 
   findCityById(cityId:number): Observable<City> {

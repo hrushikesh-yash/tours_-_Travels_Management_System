@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
-import { City, CityToView } from 'src/app/modules/City';
+import { City} from 'src/app/modules/City';
+import { CityList } from 'src/app/modules/CityList';
 import { CityServiceService } from 'src/app/Services/city-service.service';
+
 
 @Component({
   selector: 'app-city-list',
@@ -10,8 +12,8 @@ import { CityServiceService } from 'src/app/Services/city-service.service';
 })
 export class CityListComponent implements OnInit {
 
-  cities?: City[];
-  cityToView?:CityToView[];
+  cities: City[];
+  cityList:CityList[];
   isDeleting:boolean=false;
   constructor(private cityService: CityServiceService) { }
 
@@ -21,7 +23,7 @@ export class CityListComponent implements OnInit {
       .pipe(first())
       .subscribe({
         next: (data) => {
-          this.cities = data;
+          this.cityList = data;
           console.log(data);
         },
         error: (error) => console.log(error)
