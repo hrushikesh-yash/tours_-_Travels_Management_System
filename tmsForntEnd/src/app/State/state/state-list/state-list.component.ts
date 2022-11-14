@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { State } from 'src/app/modules/State';
 import { StateServiceService } from 'src/app/Services/state-service.service';
 import { first } from 'rxjs/operators';
+import { User } from 'src/app/modules/masterUser';
 
 @Component({
   selector: 'app-state-list',
@@ -10,9 +11,9 @@ import { first } from 'rxjs/operators';
 })
 export class StateListComponent implements OnInit {
   states?: State[];
-  isDeleting:boolean=false;
+  isDeleting: boolean = false;
   constructor(private stateService: StateServiceService) { }
-
+  currentUser: User
   ngOnInit(): void {
     this.isDeleting = false;
     this.stateService.getStateList()
@@ -24,6 +25,11 @@ export class StateListComponent implements OnInit {
         },
         error: (error) => console.log(error)
       });
+
+    let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
+    this.currentUser = user;
+    console.log(this.currentUser.firstName);
+
   }
   deleteState(stateId: number) {
 
@@ -31,7 +37,7 @@ export class StateListComponent implements OnInit {
     this.stateService.deleteState(stateId)
       .pipe(first())
       .subscribe(() => this.states = this.states?.filter(x => x.stateId !== stateId));
-      this.isDeleting = false;
+    this.isDeleting = false;
   }
 
 

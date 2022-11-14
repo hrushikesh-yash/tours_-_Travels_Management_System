@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/app/modules/masterUser';
 import { Tour } from 'src/app/modules/Tour';
 import { TourService } from 'src/app/Services/tour.service';
 
@@ -13,6 +14,7 @@ import { TourService } from 'src/app/Services/tour.service';
 export class TourListComponent implements OnInit {
 
   tours?:Tour[];
+  currentUser:User;
 
   submitted = false;
 
@@ -26,6 +28,10 @@ export class TourListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTourList()
+
+    let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
+    this.currentUser = user;
+    console.log(this.currentUser.firstName);
   }
 
   getTourList()

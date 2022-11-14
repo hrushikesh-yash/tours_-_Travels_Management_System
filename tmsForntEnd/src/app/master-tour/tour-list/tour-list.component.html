@@ -1,7 +1,7 @@
 <h1>Tours</h1>
 <div class="card">
     <div class="card-head">
-        <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Tour</a>
+        <a *ngIf="currentUser.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add Tour</a>
     </div>
     <div class="card-body">
         <div class="row tour-list" style="margin: 1em 0;">
@@ -19,12 +19,15 @@
                         <h4 class="card-text">{{tour.tourPrice}}</h4>
                         <h4 class="card-text">{{tour.cityId}}</h4>
         
-                        <div class="text-center">
+                        <div class="text-center" *ngIf="currentUser.actorId==1">
                             <a routerLink="edit/{{tour.tourId}}" class="btn btn-sm btn-primary mr-1">Edit Tour</a> &nbsp;
                             &nbsp;
                             <button type="button" class="btn btn-danger" (click)="deleteTour(tour.tourId)">
                                 Delete Tour</button>
                         </div>
+                        <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
+                            <a routerLink="addToTour/{{tour.tourId}}" class="btn btn-sm btn-info mr-1">Add to Tour</a> &nbsp;
+                        </td>
                     </div>
                 </div>
             </div>

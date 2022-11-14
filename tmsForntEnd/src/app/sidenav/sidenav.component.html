@@ -1,19 +1,27 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
     <div class="logo-container">
         <button class="btn btn-dark" (click)="toggleCollapse()"><i class="fal fa-bars" ></i></button>
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">{{loggedInUser.firstName}}</div>
+        <div class="logo-text" @fadeInOut *ngIf="collapsed" style="text-align:left;">
+        {{this.currentUser.firstName}} 
+            <div *ngIf="this.currentUser.actorId==2">
+                <h6 style="text-align:right;">User </h6>
+              </div>
+              <div *ngIf="this.currentUser.actorId==1">
+                <h6>Admin</h6>
+              </div>
+        </div>
         <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
             <i class="fal fa-times close-icon"></i>
         </button>
     </div>
     <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
+        <li class="sidenav-nav-item" *ngFor="let data of navData" >
             <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: true}" (click)="toggleCollapse()"
             >
                 <i class="sidenav-link-icon" [class]="data.icon"></i>
-                <span class="sidenav-link-text"  *ngIf="collapsed">
+                <span class="sidenav-link-text"  *ngIf="collapsed"  >
                     {{data.label}}
                 </span>
             </a>

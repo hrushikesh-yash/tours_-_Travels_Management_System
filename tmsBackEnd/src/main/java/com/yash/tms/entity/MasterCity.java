@@ -26,9 +26,9 @@ public class MasterCity {
 	@Column(name="cityName")
 	private String cityName;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "stateId")
-	private List<MasterState> stateId;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "stateId",referencedColumnName = "StateId")
+	private MasterState state;
 	
 	
 	@Column(name = "pinCode")
@@ -65,12 +65,14 @@ public class MasterCity {
 
 
 
-	public List<MasterState> getStateId() {
-		return stateId;
+	
+
+	public MasterState getState() {
+		return state;
 	}
 
-	public void setStateId(List<MasterState> stateId) {
-		this.stateId = stateId;
+	public void setState(MasterState state) {
+		this.state = state;
 	}
 
 	public int getPinCode() {

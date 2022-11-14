@@ -15,24 +15,24 @@ interface SideNavToggle {
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
-        style({opacity: 0}),
+        style({ opacity: 0 }),
         animate('350ms',
-          style({opacity: 1})
+          style({ opacity: 1 })
         )
       ]),
       transition(':leave', [
-        style({opacity: 1}),
+        style({ opacity: 1 }),
         animate('350ms',
-          style({opacity: 0})
+          style({ opacity: 0 })
         )
       ])
     ]),
     trigger('rotate', [
       transition(':enter', [
-        animate('1000ms', 
+        animate('1000ms',
           keyframes([
-            style({transform: 'rotate(0deg)', offset: '0'}),
-            style({transform: 'rotate(2turn)', offset: '1'})
+            style({ transform: 'rotate(0deg)', offset: '0' }),
+            style({ transform: 'rotate(2turn)', offset: '1' })
           ])
         )
       ])
@@ -42,7 +42,8 @@ interface SideNavToggle {
 
 export class SidenavComponent implements OnInit {
 
-  loggedInUser:User;
+  currentUser: User;
+  firstName: string = "";
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
   screenWidth = 0;
@@ -51,29 +52,41 @@ export class SidenavComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
-    if(this.screenWidth <= 800 ) {
+    if (this.screenWidth <= 800) {
       this.collapsed = false;
-      this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+      this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
     }
   }
 
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService) {
+    // this.currentUser=this.userService.getLoginUser();
+    console.log("User in side nav ");
+    let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
+    this.currentUser = user;
+    console.log(this.currentUser.firstName);
+    
+    if(this.currentUser.actorId==2)
+    {
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'State')
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Type')
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Driver-Assign')
+    }
+    
+  }
 
 
   ngOnInit(): void {
-      this.screenWidth = window.innerWidth;
-      this.loggedInUser=this.userService.getLoginUser();
+    this.screenWidth = window.innerWidth;
   }
 
   toggleCollapse(): void {
-    console.log(!this.collapsed);
     this.collapsed = !this.collapsed;
-    this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+    this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
   closeSidenav(): void {
     this.collapsed = false;
-    this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+    this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
 }

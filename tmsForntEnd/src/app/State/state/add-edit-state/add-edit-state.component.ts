@@ -3,9 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
+import { User } from 'src/app/modules/masterUser';
 import { State } from 'src/app/modules/State';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { StateServiceService } from 'src/app/Services/state-service.service';
+import { user } from 'src/app/Services/UserService.service';
 
 @Component({
   selector: 'app-add-edit-state',
@@ -16,10 +18,11 @@ export class AddEditStateComponent implements OnInit {
 
   loading = false;
   isAddMode!: boolean;
-  id!: number;
+  id: any;
   stateForm!: FormGroup;
   submitted = false;
   state: State = new State;
+
 
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -29,9 +32,10 @@ export class AddEditStateComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.id = this.route.snapshot.params['id'].getValue();
+    // this.id = this.route.snapshot.params['id'].getValue();
+    this.id =this.route.snapshot.paramMap.get('id');
     this.isAddMode = !this.id;
-    // console.log(this.id);
+    console.log(this.id);
     this.stateForm = this.formBuilder.group({
       stateId: [this.id],
       stateName: [''],
@@ -45,6 +49,7 @@ export class AddEditStateComponent implements OnInit {
         .subscribe(x => this.stateForm.patchValue(x));
     }
 
+    
   }
 
   onSubmit() {
@@ -87,6 +92,13 @@ export class AddEditStateComponent implements OnInit {
             });
     }
 
+
+
+
+  }
+
+  OnCancel(){
+    this.router.navigate(['../../'], { relativeTo: this.route });
 
   }
 

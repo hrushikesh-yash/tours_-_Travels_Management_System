@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
 import { City} from 'src/app/modules/City';
 import { CityList } from 'src/app/modules/CityList';
+import { User } from 'src/app/modules/masterUser';
 import { CityServiceService } from 'src/app/Services/city-service.service';
 
 
@@ -15,6 +16,8 @@ export class CityListComponent implements OnInit {
   cities: City[];
   cityList:CityList[];
   isDeleting:boolean=false;
+  currentUser:User;
+
   constructor(private cityService: CityServiceService) { }
 
   ngOnInit(): void {
@@ -28,6 +31,10 @@ export class CityListComponent implements OnInit {
         },
         error: (error) => console.log(error)
       });
+
+      let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
+    this.currentUser = user;
+    console.log(this.currentUser.firstName);
 
   }
   deleteState(cityId: number) {

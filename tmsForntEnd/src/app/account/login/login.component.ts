@@ -11,6 +11,7 @@ import { UserService } from 'src/app/Services/UserService.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
@@ -55,17 +56,24 @@ export class LoginComponent implements OnInit {
     this.accountService.login(this.loginForm.controls['username'].value, this.loginForm.controls['password'].value)
       .pipe(first())
       .subscribe({
-        next: (data) => {
+        next: (data: User) => {
           this.user = data;
-          console.log(data);
+          // console.log(this.user);
           this.accountService.shareLoginUser(this.user);
           this.alertService.success(this.user.firstName +' Login Sucesssfully !', { keepAfterRouteChange: true });
           this.router.navigate(['../Dashboard'], { relativeTo: this.route });
+          localStorage.setItem('user', JSON.stringify(this.user))
         },
-        error: (error) => {
+        error: (error: any) => {
           console.log(error),
             this.loading = false;
         }
       });
+    this.router.navigate(['../Dashboard'], { relativeTo: this.route });
+  }
+
+  gotoDashboard()
+  {
+    this.router.navigate(['../Dashboard'], { relativeTo: this.route });
   }
 }

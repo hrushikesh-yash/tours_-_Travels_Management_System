@@ -1,7 +1,7 @@
 <h1>City Routes</h1>
 <div class="card">
     <div class="card-head">
-        <a routerLink="addCity" class="btn btn-sm btn-success mb-2">Add City Routes</a>
+        <a *ngIf="currentUser.actorId==1" routerLink="addCity" class="btn btn-sm btn-success mb-2">Add City Routes</a>
     </div>
     <div class="card-body">
         <table class="table table-striped">
@@ -22,12 +22,15 @@
                     <td>{{cityRoute.sourceCityId}}</td>
                     <td>{{cityRoute.destinationCityId}}</td>
                     <td>{{cityRoute.routeCreatedDate}}</td>
-                    <td style="white-space: nowrap">
+                    <td style="white-space: nowrap" *ngIf="currentUser.actorId==1">
                         <a routerLink="edit/{{cityRoute.routeId }}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
                         <button (click)="deleteState(cityRoute.routeId )" class="btn btn-sm btn-danger btn-delete-cityRoute" [disabled]="isDeleting">
                             <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
                             <span *ngIf="!isDeleting">Delete</span>
                         </button>
+                    </td>
+                    <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
+                        <a routerLink="edit/{{cityRoute.routeId }}" class="btn btn-sm btn-primary mr-1">Add to Tour</a> &nbsp;
                     </td>
                 </tr>
                 <tr *ngIf="!cityRoutes">

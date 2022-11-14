@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
 import { CityRoutes } from 'src/app/modules/CityRoutes';
+import { User } from 'src/app/modules/masterUser';
 import { CityRoutesService } from 'src/app/Services/city-routes.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { CityRoutesService } from 'src/app/Services/city-routes.service';
 export class CityRoutesListComponent implements OnInit {
 
   cityRoutes:CityRoutes[];
+  currentUser:User;
 
   isDeleting:boolean=false;
   constructor(private cityRoutesService: CityRoutesService) { }
@@ -26,6 +28,9 @@ export class CityRoutesListComponent implements OnInit {
         },
         error: (error) => console.log(error)
       });
+
+      let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
+    this.currentUser = user;
 
   }
   deleteState(routeId: number) {

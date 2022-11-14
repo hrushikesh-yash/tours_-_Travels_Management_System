@@ -84,7 +84,7 @@ public class MasterCityController {
 			cityToUpdate.setCityName(city.getCityName());
 			cityToUpdate.setCityIsDeleted(city.getCityIsDeleted());
 			cityToUpdate.setPinCode(city.getPinCode());
-			cityToUpdate.setStateId(city.getStateId());
+			cityToUpdate.setState(city.getState());
 			return masterCityManager.addCity(cityToUpdate);
 
 		} catch (Exception e) {

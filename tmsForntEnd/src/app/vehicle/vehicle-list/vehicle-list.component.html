@@ -1,7 +1,7 @@
 <h1>Vehicle</h1>
 <div class="card">
     <div class="card-head">
-        <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Vehicle</a>
+        <a *ngIf="currentUser.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add Vehicle</a>
     </div>
     <div class="card-body">
         <table class="table table-striped">
@@ -22,12 +22,15 @@
                     <td>{{vehicle.vehicleTypeId}}</td>
                     <td>{{vehicle.companyName}}</td>
                     <td>{{vehicle.vehicleCapcity}}</td>
-                    <td style="white-space: nowrap">
+                    <td style="white-space: nowrap" *ngIf="currentUser.actorId==1">
                         <a routerLink="edit/{{vehicle.vehicleId }}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
                         <button (click)="deleteState(vehicle.vehicleId )" class="btn btn-sm btn-danger btn-delete-city" [disabled]="isDeleting">
                             <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
                             <span *ngIf="!isDeleting">Delete</span>
                         </button>
+                    </td>
+                    <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
+                        <a routerLink="addToTour/{{vehicle.vehicleId}}" class="btn btn-sm btn-primary mr-1">Add to Tour</a> &nbsp;
                     </td>
                 </tr>
                 <tr *ngIf="!Vehicles">

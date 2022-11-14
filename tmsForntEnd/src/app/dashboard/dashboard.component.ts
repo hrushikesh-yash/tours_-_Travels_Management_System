@@ -21,9 +21,9 @@ export class DashboardComponent implements OnInit {
 
   onToggleSideNav(data: SideNavToggle): void {
     this.screenWidth = data.screenWidth;
-    console.log(this.screenWidth);
+    // console.log(this.screenWidth);
     this.isSideNavCollapsed = data.collapsed;
-    console.log(this.isSideNavCollapsed);
+    // console.log(this.isSideNavCollapsed);
   }
 
 }
