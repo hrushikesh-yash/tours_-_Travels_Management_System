@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.City;
 import com.yash.tms.entity.MasterCity;
 import com.yash.tms.services.MasterCityManager;
 
@@ -28,12 +27,12 @@ public class MasterCityController {
 	MasterCityManager masterCityManager;
 
 	@GetMapping("/getAllCities")
-	public List<City> findAllCities() {
+	public List<MasterCity> findAllCities() {
 		log.info("MasterCityController :: findAllCities function started.");
 //		List<City> CityList = null;
 		try {
 			int cityIsDeleted = 0;
-			List<City>  CityList = masterCityManager.getAllCities(cityIsDeleted);
+			List<MasterCity>  CityList = masterCityManager.findAllCities(cityIsDeleted);
 			log.info("size of city list: " + CityList.size());
 			if (!CityList.isEmpty()) {
 				return CityList;

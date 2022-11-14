@@ -7,9 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yash.tms.dao.CityRepository;
 import com.yash.tms.dao.MasterCityDao;
-import com.yash.tms.entity.City;
 import com.yash.tms.entity.MasterCity;
 import com.yash.tms.exception.RecordNotfoundException;
 
@@ -20,8 +18,6 @@ public class MasterCityManagerImpl implements MasterCityManager {
 	@Autowired
 	MasterCityDao masterCityDao;
 	
-	@Autowired
-	CityRepository cityRepository;
 
 	@Override
 	public List<MasterCity> findAllCities(int cityIsDeleted) {
@@ -67,19 +63,5 @@ public class MasterCityManagerImpl implements MasterCityManager {
 
 	}
 
-	@Override
-	public List<City> getAllCities(int cityIsDeleted) {
-		log.info("MasterCityManagerImpl :: getMapping function started.");
-		try {
-			List<City> city = cityRepository.getAllCities();
-			log.info("Size of city :: "+city.size());
-			return city;
-		} catch (Exception e) {
-			log.error("MasterCityManagerImpl :: getMapping error while getmapping " + e.getMessage());
-			log.error("MasterCityManagerImpl :: getMapping Stacktrace :: " + e.getStackTrace());
-			return null;	
-		}
-		
-	}
 
 }

@@ -1,33 +1,39 @@
-
 <h1>Vehicle Type</h1>
-<a routerLink="Add-VehicleType" class="btn btn-sm btn-success mb-2">Add Vehicle Types</a>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th style="width: 20%">Vehicle Type Id</th>
-            <th style="width: 30%">Vehicle Types Name</th>
-            <th style="width: 30%">Vehicle type Added date</th>
-            <th style="width: 20%">Control Panel</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let vehicletype of vehicletypes">
-            <td>{{vehicletype.vehicleTypeId}}</td>
-            <td>{{vehicletype.vehicleTypeName}}</td>
-            <td>{{vehicletype.vehicleTypeAddedDate}}</td>
-            <td style="white-space: nowrap">
-                <a routerLink="Edit-VehicleType/{{vehicletype.vehicleTypeId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
-                <button (click)="deleteVehicleType(vehicletype.vehicleTypeId)" class="btn btn-sm btn-danger btn-delete-Vehicle-Type" [disabled]="isDeleting">
-                    <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
-                    <span *ngIf="!isDeleting">Delete</span>
-                </button>
-            </td>
-        </tr>
-        <tr *ngIf="!vehicletypes">
-            <td colspan="4" class="text-center">
-                <span class="spinner-border spinner-border-lg align-center"></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
+<div class="card">
+    <div class="card-head">
+        <a routerLink="Add-VehicleType" class="btn btn-sm btn-success mb-2">Add Vehicle Types</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 20%">Vehicle Type Id</th>
+                    <th style="width: 30%">Vehicle Types Name</th>
+                    <th style="width: 30%">Vehicle type Added date</th>
+                    <th style="width: 20%">Control Panel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicletype of vehicletypes">
+                    <td>{{vehicletype.vehicleTypeId}}</td>
+                    <td>{{vehicletype.vehicleTypeName}}</td>
+                    <td>{{vehicletype.vehicleTypeAddedDate}}</td>
+                    <td style="white-space: nowrap">
+                        <a routerLink="Edit-VehicleType/{{vehicletype.vehicleTypeId}}"
+                            class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
+                        <button (click)="deleteVehicleType(vehicletype.vehicleTypeId)"
+                            class="btn btn-sm btn-danger btn-delete-Vehicle-Type" [disabled]="isDeleting">
+                            <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
+                            <span *ngIf="!isDeleting">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="!vehicletypes">
+                    <td colspan="4" class="text-center">
+                        <span class="spinner-border spinner-border-lg align-center"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

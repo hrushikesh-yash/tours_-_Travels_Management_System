@@ -1,16 +1,23 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { map } from 'rxjs/operators';
 import {User} from '../modules/masterUser';
+ export interface user {
+  username: string;
+  password: string;
+ }
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   
+ loggedInUser:User;
    baseURL:String = "http://localhost:8080/user/";
 
   sharedUserId!:number;
+  user: user;
 
   constructor(private httpClient: HttpClient) { }
   
@@ -50,5 +57,19 @@ export class UserService {
   getUserId()
   {
     return this.sharedUserId;
+  }
+
+  login(userName:string, password:string): Observable<User> {
+    return this.httpClient.get<User>(this.baseURL+"getUserCredentials",{params:{userName,password}});
+  }
+
+  getLoginUser() 
+  {
+    return this.loggedInUser;
+  }
+
+  shareLoginUser(user:User) 
+  {
+     this.loggedInUser=user;
   }
 }

@@ -1,31 +1,37 @@
 <h1>Tours</h1>
-<a routerLink="add" class="btn btn-sm btn-success mb-2">Add Tour</a> <!--  -->
-<br>
+<div class="card">
+    <div class="card-head">
+        <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Tour</a>
+    </div>
+    <div class="card-body">
+        <div class="row tour-list" style="margin: 1em 0;">
 
-<div class="row tour-list" style="margin: 1em 0;">
-
-    <!-- START : Product Card -->
-    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let tour of tours; let i = index;">
-        <div class="card mb-4 shadow-sm ">
-            <div class="image">
-                <img class="card-img-top" src="{{userImage}}" alt="Card image cap" width="50" height="200">
-            </div>
-
-            <div class="card-body">
-                <h2>{{tour.tourName}}</h2>
-                <h4 class="card-text">{{tour.tourDescription}}</h4>
-                <h4 class="card-text">{{tour.tourPrice}}</h4>
-                <h4 class="card-text">{{tour.cityId}}</h4>
-
-                <div class="text-center">
-                    <a routerLink="edit/{{tour.tourId}}" class="btn btn-sm btn-primary mr-1">Edit Tour</a> &nbsp;
-                    &nbsp;
-                    <button type="button" class="btn btn-danger" (click)="deleteTour(tour.tourId)">
-                        Delete Tour</button>
+            <!-- START : Product Card -->
+            <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let tour of tours; let i = index;">
+                <div class="card mb-4 shadow-sm ">
+                    <div class="image">
+                        <img class="card-img-top" src="{{userImage}}" alt="Card image cap" width="50" height="200">
+                    </div>
+        
+                    <div class="card-body">
+                        <h2>{{tour.tourName}}</h2>
+                        <h4 class="card-text">{{tour.tourDescription}}</h4>
+                        <h4 class="card-text">{{tour.tourPrice}}</h4>
+                        <h4 class="card-text">{{tour.cityId}}</h4>
+        
+                        <div class="text-center">
+                            <a routerLink="edit/{{tour.tourId}}" class="btn btn-sm btn-primary mr-1">Edit Tour</a> &nbsp;
+                            &nbsp;
+                            <button type="button" class="btn btn-danger" (click)="deleteTour(tour.tourId)">
+                                Delete Tour</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- END : Product Card -->
 
+    </div>
 </div>
+ <!--  -->
+<br>
+

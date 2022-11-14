@@ -1,33 +1,42 @@
 <h1>Cities</h1>
-<a routerLink="add" class="btn btn-sm btn-success mb-2">Add City</a>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th style="width: 10%">City Id</th>
-            <th style="width: 20%">City Name</th>
-            <th style="width: 20%">State Name</th>
-            <th style="width: 20%">City Code </th>
-            <th style="width: 30%"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let city of cityList">
-            <td>{{city.cityId }}</td>
-            <td>{{city.cityName}}</td>
-            <td>{{city.stateName}}</td>
-            <td>{{city.pinCode}}</td>
-            <td style="white-space: nowrap">
-                <a routerLink="edit/{{city.cityId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
-                <button (click)="deleteState(city.cityId)" class="btn btn-sm btn-danger btn-delete-city" [disabled]="isDeleting">
-                    <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
-                    <span *ngIf="!isDeleting">Delete</span>
-                </button>
-            </td>
-        </tr>
-        <tr *ngIf="!cityList">
-            <td colspan="4" class="text-center">
-                <span class="spinner-border spinner-border-lg align-center"></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="card">
+    <div class="card-head">
+        <a routerLink="add" class="btn btn-sm btn-success mb-2">Add City</a>
+    </div>
+    <div class="card-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 10%">City Id</th>
+                    <th style="width: 20%">City Name</th>
+                    <th style="width: 20%">State Name</th>
+                    <th style="width: 20%">City Code </th>
+                    <th style="width: 30%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let city of cityList">
+                    <td>{{city.cityId }}</td>
+                    <td>{{city.cityName}}</td>
+                    <td>{{city.stateName}}</td>
+                    <td>{{city.pinCode}}</td>
+                    <td style="white-space: nowrap">
+                        <a routerLink="edit/{{city.cityId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
+                        <button (click)="deleteState(city.cityId)" class="btn btn-sm btn-danger btn-delete-city"
+                            [disabled]="isDeleting">
+                            <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
+                            <span *ngIf="!isDeleting">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="!cityList">
+                    <td colspan="4" class="text-center">
+                        <span class="spinner-border spinner-border-lg align-center"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

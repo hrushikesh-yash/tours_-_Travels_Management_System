@@ -1,38 +1,43 @@
-<h1>vehicle-driver-Assign</h1>
-<a routerLink="addVehicleDriverAssign" class="btn btn-sm btn-success mb-2">Assign vehicle Driver</a>
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th style="width: 10%">Mapping Id</th>
-            <th style="width: 10%">Vehicle Id</th>
-            <th style="width: 10%">Driver Id</th>
-            <th style="width: 10%">Route Id</th>
-            <th style="width: 20%">Vehicle Driver Assign Date</th>
-            <th style="width: 10%">Veicle Fare</th>
-            <th style="width: 20%">Control Panel</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let vehicleDriverMapping of vehicleDriverMappings">
-            <td>{{vehicleDriverMapping.mappingVehicleDriverDetailsId }}</td>
-            <td>{{vehicleDriverMapping.vehicleId}}</td>
-            <td>{{vehicleDriverMapping.driverId}}</td>
-            <td>{{vehicleDriverMapping.routeId}}</td>
-            <td>{{vehicleDriverMapping.vehicleDriverAssignDate}}</td>
-            <td>{{vehicleDriverMapping.vehicleFare}}</td>
-            <td style="white-space: nowrap">
-                <a routerLink="editVehicleDriverAssign/{{vehicleDriverMapping.mappingVehicleDriverDetailsId  }}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
-                <button (click)="deleteState(vehicleDriverMapping.mappingVehicleDriverDetailsId )" class="btn btn-sm btn-danger btn-delete-cityRoute" [disabled]="isDeleting">
-                    <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
-                    <span *ngIf="!isDeleting">Delete</span>
-                </button>
-            </td>
-        </tr>
-        <tr *ngIf="!vehicleDriverMappings">
-            <td colspan="7" class="text-center">
-                <span class="spinner-border spinner-border-lg align-center"></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<h1>Vehicle driver Assign</h1>
+<div class="card">
+    <div class="card-head">
+        <a routerLink="addVehicleDriverAssign" class="btn btn-sm btn-success mb-2">Assign vehicle Driver</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 10%">Mapping Id</th>
+                    <th style="width: 10%">Vehicle Id</th>
+                    <th style="width: 10%">Driver Id</th>
+                    <th style="width: 10%">Route Id</th>
+                    <th style="width: 20%">Vehicle Driver Assign Date</th>
+                    <th style="width: 10%">Veicle Fare</th>
+                    <th style="width: 20%">Control Panel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicleDriverMapping of vehicleDriverMappings">
+                    <td>{{vehicleDriverMapping.mappingVehicleDriverDetailsId }}</td>
+                    <td>{{vehicleDriverMapping.vehicleId}}</td>
+                    <td>{{vehicleDriverMapping.driverId}}</td>
+                    <td>{{vehicleDriverMapping.routeId}}</td>
+                    <td>{{vehicleDriverMapping.vehicleDriverAssignDate}}</td>
+                    <td>{{vehicleDriverMapping.vehicleFare}}</td>
+                    <td style="white-space: nowrap">
+                        <a routerLink="editVehicleDriverAssign/{{vehicleDriverMapping.mappingVehicleDriverDetailsId  }}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
+                        <button (click)="deleteState(vehicleDriverMapping.mappingVehicleDriverDetailsId )" class="btn btn-sm btn-danger btn-delete-cityRoute" [disabled]="isDeleting">
+                            <span *ngIf="isDeleting" class="spinner-border spinner-border-sm"></span>
+                            <span *ngIf="!isDeleting">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="!vehicleDriverMappings">
+                    <td colspan="7" class="text-center">
+                        <span class="spinner-border spinner-border-lg align-center"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

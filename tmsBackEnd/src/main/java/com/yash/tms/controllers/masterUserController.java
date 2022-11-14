@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.tms.entity.MasterUser;
@@ -133,11 +134,30 @@ public class masterUserController {
 			return "User deleted sucessfully";
 
 		} catch (Exception e) {
-			log.error("MasterUserController :: error in update User function." + e.getMessage());
+			log.error("MasterUserController :: error in deleteUser  function." + e.getMessage());
 
 		}
 		return null;
 
+	}
+	
+	@GetMapping("/getUserCredentials")
+	public MasterUser getUserCredentials(@RequestParam(value = "userName") String userName,@RequestParam(value = "password") String password)
+	{
+		log.info("MasterUserController :: getUserCredentials function started.");
+		try {
+			log.info("Username :: "+userName);
+
+			return  masterUserManager.findMasterUserByUsernameAndPassword(userName,password);
+			
+
+			
+
+		} catch (Exception e) {
+			log.error("MasterUserController :: error in getUserCredentials User function." + e.getMessage());
+
+		}
+		return null;
 	}
 	
 	

@@ -27,7 +27,6 @@ public class MasterUser {
 	@Column(name = "lastName")
 	private String lastName;
 	
-	
 	@Column(name = "emailId")
 	private String emailId;
 	

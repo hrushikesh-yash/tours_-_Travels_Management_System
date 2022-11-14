@@ -2,7 +2,6 @@ package com.yash.tms.services;
 
 import java.util.List;
 
-import com.yash.tms.entity.City;
 import com.yash.tms.entity.MasterCity;
 
 public interface MasterCityManager {
@@ -13,6 +12,6 @@ public interface MasterCityManager {
 
 	public MasterCity findById(int cityId);
 
-	public List<City> getAllCities(int cityIsDeleted);
+//	public List<City> getAllCities(int cityIsDeleted);
 
 }

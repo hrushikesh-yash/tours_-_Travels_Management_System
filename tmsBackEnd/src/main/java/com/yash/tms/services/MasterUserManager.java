@@ -14,4 +14,6 @@ public interface MasterUserManager {
 
 	List<MasterUser> getAllByActorId(int actorId);
 
+	MasterUser findMasterUserByUsernameAndPassword(String userName, String password);
+
 }

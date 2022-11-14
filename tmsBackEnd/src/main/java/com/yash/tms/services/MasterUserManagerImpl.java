@@ -25,7 +25,7 @@ public class MasterUserManagerImpl implements MasterUserManager {
 		log.info("MasterUserManagerImpl :: findAllusers function started.");
 		try {
 			
-			return masterUserDao.findAllusers(userIsDeleted);
+			return masterUserDao.findByUserIsDeleted(userIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("MasterUserManagerImpl :: findAllusers error while find all users. "+e.getMessage());
@@ -72,6 +72,20 @@ public class MasterUserManagerImpl implements MasterUserManager {
 	catch (Exception e) {
 		log.error("MasterUserManagerImpl :: getAllByActorId error while find  by actor id ::"+actorId+" "+e.getMessage());
 		log.error("MasterUserManagerImpl :: getAllByActorId Stacktrace :: "+e.getStackTrace());
+		return null;
+	}
+	}
+
+	@Override
+	public MasterUser findMasterUserByUsernameAndPassword(String userName, String password) {
+		log.info("MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.");
+		try {
+			return masterUserDao.findByUserNameAndPassword(userName,password);//(userId).orElseThrow(() -> new RecordNotfoundException("User Id not found."));
+	
+	}
+	catch (Exception e) {
+		log.error("MasterUserManagerImpl :: error in findMasterUserByUsernameAndPassword function  ::"+e.getMessage());
+		log.error("MasterUserManagerImpl :: findMasterUserByUsernameAndPassword Stacktrace :: "+e.getStackTrace());
 		return null;
 	}
 	}

@@ -11,10 +11,11 @@ import com.yash.tms.entity.MasterUser;
 @Repository
 public interface MasterUserDao extends JpaRepository<MasterUser, Integer>{
 
-	@Query(value="from MasterUser where userIsDeleted =?1")
-	List<MasterUser> findAllusers(short userIsDeleted);
+	List<MasterUser> findByUserIsDeleted(short userIsDeleted);
 
 	@Query(value = "from MasterUser where actorId=?1")
 	List<MasterUser> findByIdActorId(int actorId);
+
+	MasterUser findByUserNameAndPassword(String userName, String password);
 
 }

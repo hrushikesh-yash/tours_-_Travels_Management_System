@@ -1,48 +1,55 @@
-<p>add-edit-tour works!</p>
-
-<h1 *ngIf="isAddMode">Add Tour</h1>
-<h1 *ngIf="!isAddMode">Edit Tour</h1>
-<form [formGroup]="tourForm" (ngSubmit)="onSubmit()">
-    <div class="form-row">
-
-        <div class="form-group col-5">
-            <label>Tour Name</label>
-            <input type="text" formControlName="tourName" class="form-control" />
-            <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                <div *ngIf="f.firstName.errors.required">First Name is required</div>
-            </div> -->
-        </div>
-        <div class="form-group col-5">
-            <label>Tour Description</label>
-            <input type="text" formControlName="tourDescription" class="form-control" />
-            <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-            </div> -->
-        </div>
-
-        <div class="form-group col-5">
-            <label>Tour price</label>
-            <input type="number" formControlName="tourPrice" class="form-control" />
-            <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-            </div> -->
-        </div>
-
-        <div class="form-group col-5">
-            <label>City Name</label>
-            <select class="form-control" formControlName="cityId">
-                <option *ngFor="let city of cities" [value]="city.cityId">
-                    {{city.cityName}}</option>
-            </select>
-        </div>
-
+<div class="card">
+    <div class="card-head">
+        <h1 *ngIf="isAddMode">Add Tour</h1>
+        <h1 *ngIf="!isAddMode">Edit Tour</h1>
     </div>
-    <br>
-    <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">
-            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-            Save
-        </button> &nbsp;
-        <a routerLink="/Tour" class="btn btn-warning">Cancel</a>
+    <div class="card-body">
+
+
+        <form [formGroup]="tourForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+        
+                <div class="form-group col-5">
+                    <label>Tour Name</label>
+                    <input type="text" formControlName="tourName" class="form-control" />
+                    <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                    </div> -->
+                </div>
+                <div class="form-group col-5">
+                    <label>Tour Description</label>
+                    <input type="text" formControlName="tourDescription" class="form-control" />
+                    <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                    </div> -->
+                </div>
+        
+                <div class="form-group col-5">
+                    <label>Tour price</label>
+                    <input type="number" formControlName="tourPrice" class="form-control" />
+                    <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                    </div> -->
+                </div>
+        
+                <div class="form-group col-5">
+                    <label>City Name</label>
+                    <select class="form-control" formControlName="cityId">
+                        <option *ngFor="let city of cities" [value]="city.cityId">
+                            {{city.cityName}}</option>
+                    </select>
+                </div>
+        
+            </div>
+            <br>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Save
+                </button> &nbsp;
+                <a routerLink="/Tour" class="btn btn-warning">Cancel</a>
+            </div>
+        </form>
     </div>
-</form>
+</div>
+

@@ -7,8 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertComponent } from './alter/alert.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CityRoutesModule } from './city-routes/city-routes.module';
-import { VehicleDriverMappingModule } from './vehicle-driver-mapping/vehicle-driver-mapping.module';
+import { BodyComponent } from './body/body.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -18,6 +19,9 @@ import { VehicleDriverMappingModule } from './vehicle-driver-mapping/vehicle-dri
     AppComponent,
     routingComponents,
     AlertComponent,
+    SidenavComponent,
+    BodyComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,7 @@ import { VehicleDriverMappingModule } from './vehicle-driver-mapping/vehicle-dri
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+  
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
