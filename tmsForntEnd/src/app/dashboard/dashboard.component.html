@@ -1,5 +1,19 @@
-<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
-<app-body
-    [collapsed]="isSideNavCollapsed"
-    [screenWidth]="screenWidth"
-></app-body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light" 
+    style="background-color: #263238; height: 70px; color: #fff;">
+        <h1 style="padding-left: 1%; padding-top: 1%;"><strong>Tours & Travels</strong></h1>
+        <div style="padding-left: 82%; ">
+            <span>
+                <i class="fa-solid fa-person-walking-luggage" style="font-size: 32px;" ></i>
+              <em>{{cartProductCount}}</em>
+            </span>
+        </div>
+        
+    </nav>
+</header>
+
+
+<div>
+    <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+    <app-body [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-body>
+</div>

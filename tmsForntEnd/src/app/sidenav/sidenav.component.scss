@@ -33,19 +33,19 @@ body {
 .sidenav {
     background: #263238;
     transition: all .5s ease;
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    top: 0;
+    top: 10;
     width: 5rem;
-    height: 100vh;
-    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+    height: 99%;
+    box-shadow: 0 0.063rem 0 1.25rem 0 #8690a3;
 
     .logo-container {
         display: flex;
         align-items: center;
         padding: 0.938rem 0.938rem 0 0.938rem;
         width: 100%;
-
+      
         .logo {
             background: #fff;
             text-align: center;
@@ -73,11 +73,11 @@ body {
             height: 2rem;
             border-radius: 50%;
             background-color: transparent;
-            border: none;
-
-            .fa-times {
-                color: #fff;
-                font-size: 24px;
+            border-bottom: #fff;
+            
+            .fa-xmark {
+                color: #ffff;
+                font-size: 28px;
             }
         }
     }

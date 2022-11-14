@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.tms.entity.BookingHistory;
-import com.yash.tms.entity.MasterActor;
 import com.yash.tms.services.BookingHistoryManager;
 
 @RestController
 @RequestMapping("/bookingHistory")
+@CrossOrigin("*")
 public class BookingHistoryController {
 	private final static Logger log = LoggerFactory.getLogger(BookingHistoryController.class);
 	
@@ -30,8 +31,9 @@ public class BookingHistoryController {
 		log.info("BookingHistoryController :: findAllActors function started.");
 		List<BookingHistory> bookingHistoryList = null;
 		try {
-			short bookingHistoryIsDeleted = 0;
+			int bookingHistoryIsDeleted = 0;
 			bookingHistoryList = bookingHistoryManager.findAllBookingHistory(bookingHistoryIsDeleted);
+			log.info("Booking list :: "+bookingHistoryList.size());
 			if (!bookingHistoryList.isEmpty()) {
 				return bookingHistoryList;
 			}
@@ -69,13 +71,13 @@ public class BookingHistoryController {
 			bookingHistoryToUpdate.setBookingHistoryId(bookingHistoryId);
 			bookingHistoryToUpdate.setUserId(history.getUserId());
 			bookingHistoryToUpdate.setVehicleId(history.getVehicleId());
-			bookingHistoryToUpdate.setHotelId(history.getHotelId());
+//			bookingHistoryToUpdate.setHotelId(history.getHotelId());
 			bookingHistoryToUpdate.setStatusId(history.getStatusId());
 			bookingHistoryToUpdate.setBookingDate(history.getBookingDate());
 			bookingHistoryToUpdate.setTravelStartDate(history.getTravelStartDate());
 			bookingHistoryToUpdate.setTravelEndDate(history.getTravelEndDate());
 			bookingHistoryToUpdate.setTravelAmount(history.getTravelAmount());
-			bookingHistoryToUpdate.setBookingIsDelete(history.getBookingIsDelete());
+			bookingHistoryToUpdate.setBookingIsDeleted(history.getBookingIsDeleted());
 			return bookingHistoryManager.addBookingHistory(bookingHistoryToUpdate);
 
 		} catch (Exception e) {
@@ -91,7 +93,7 @@ public class BookingHistoryController {
 		try {
 
 			BookingHistory bookingHistoryToUpdate = bookingHistoryManager.findById(bookingHistoryId);
-			bookingHistoryToUpdate.setBookingIsDelete((short) 1);
+			bookingHistoryToUpdate.setBookingIsDeleted(1);
 			bookingHistoryManager.addBookingHistory(bookingHistoryToUpdate);
 
 			return "actor deleted sucessfully";

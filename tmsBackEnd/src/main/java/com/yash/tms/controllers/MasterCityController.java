@@ -33,7 +33,7 @@ public class MasterCityController {
 		try {
 			int cityIsDeleted = 0;
 			List<MasterCity>  CityList = masterCityManager.findAllCities(cityIsDeleted);
-			log.info("size of city list: " + CityList.size());
+			
 			if (!CityList.isEmpty()) {
 				return CityList;
 			}

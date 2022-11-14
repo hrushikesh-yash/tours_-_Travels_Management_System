@@ -1,17 +1,17 @@
 export const navbarData = [
     {
         routeLink: 'State',
-        icon: 'fal fa-landmark',
+        icon: 'fa-solid fa-landmark',
         label: 'State'
     },
     {
         routeLink: 'City', 
-        icon: 'fal fa-city',
+        icon: 'fa-solid fa-mountain-city',
         label: 'City'
     },
     {
         routeLink: 'Tour',
-        icon: 'fal fa-turtle',
+        icon: 'fa-solid fa-earth-oceania',
         label: 'Tour'
     },
     {
@@ -21,37 +21,37 @@ export const navbarData = [
     },
     {
         routeLink: 'Vehicle',
-        icon: 'fal fa-car',
+        icon: 'fa-solid fa-car',
         label: 'Vehicle'
     },
     {
         routeLink: 'City-Routes',
-        icon: 'fal fa-route',
+        icon: 'fa-solid fa-route',
         label: 'City-Routes'
     },
 
     {
         routeLink: 'Vehicle-Driver-Assign',
-        icon: 'fal fa-user',  
+        icon: 'fa-soild fa-user',  
         label: 'Vehicle Driver Assign'
     },
 
     {
         // routeLink: 'settings',
-        icon: 'fal fa-cog', 
+        icon: 'fa-solid fa-gear',
         label: 'Settings'
     },
 
-    {
-        // routeLink: 'settings',
-        icon: 'fal fa-cog', 
-        label: 'Settings'
-    },
-    {
-        // routeLink: 'settings',
-        icon: 'fal fa-cog', 
-        label: 'Settings'
-    },
+    // {
+    //     // routeLink: 'settings',
+    //     icon: 'fal fa-cog', 
+    //     label: 'Settings'
+    // },
+    // {
+    //     // routeLink: 'settings',
+    //     icon: 'fal fa-cog', 
+    //     label: 'Settings'
+    // },
 
 
 ];

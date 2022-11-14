@@ -1,5 +1,6 @@
 package com.yash.tms.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -12,41 +13,41 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "booking_history_details")
 public class BookingHistory {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "bookingHistoryId")
 	private int bookingHistoryId;
-	
+
 	@Column(name = "userId")
 	private String userId;
-	
+
 	@Column(name = "vehicleId")
 	private String vehicleId;
-	
+
 	@Column(name = "tourId")
 	private int tourId;
-	
-	@Column(name = "hotelId")
-	private int hotelId;
-	
+
+//	@Column(name = "hotelId")
+//	private int hotelId;
+
 	@Column(name = "statusId")
 	private int statusId;
-	
-	@Column(name="bookingdate")
-	private Date bookingDate;
-	
-	@Column(name ="travelStartDate")
+
+	@Column(name = "bookingDate")
+	private LocalDate bookingDate;
+
+	@Column(name = "travelStartDate")
 	private Date travelStartDate;
-	
-	@Column(name ="travelEndDate")
+
+	@Column(name = "travelEndDate")
 	private Date travelEndDate;
 
-	@Column(name="bookingAmount")
+	@Column(name = "bookingAmount")
 	private int travelAmount;
-	
+
 	@Column(name = "bookingIsDeleted")
-	private short bookingIsDelete;
+	private int bookingIsDeleted;
 
 	public BookingHistory() {
 		// TODO Auto-generated constructor stub
@@ -76,13 +77,13 @@ public class BookingHistory {
 		this.tourId = tourId;
 	}
 
-	public int getHotelId() {
-		return hotelId;
-	}
-
-	public void setHotelId(int hotelId) {
-		this.hotelId = hotelId;
-	}
+//	public int getHotelId() {
+//		return hotelId;
+//	}
+//
+//	public void setHotelId(int hotelId) {
+//		this.hotelId = hotelId;
+//	}
 
 	public int getStatusId() {
 		return statusId;
@@ -92,11 +93,11 @@ public class BookingHistory {
 		this.statusId = statusId;
 	}
 
-	public Date getBookingDate() {
+	public LocalDate getBookingDate() {
 		return bookingDate;
 	}
 
-	public void setBookingDate(Date bookingDate) {
+	public void setBookingDate(LocalDate bookingDate) {
 		this.bookingDate = bookingDate;
 	}
 
@@ -124,12 +125,12 @@ public class BookingHistory {
 		this.travelAmount = travelAmount;
 	}
 
-	public short getBookingIsDelete() {
-		return bookingIsDelete;
+	public int getBookingIsDeleted() {
+		return bookingIsDeleted;
 	}
 
-	public void setBookingIsDelete(short bookingIsDelete) {
-		this.bookingIsDelete = bookingIsDelete;
+	public void setBookingIsDeleted(int i) {
+		this.bookingIsDeleted = i;
 	}
 
 	public String getVehicleId() {
@@ -139,8 +140,5 @@ public class BookingHistory {
 	public void setVehicleId(String vehicleId) {
 		this.vehicleId = vehicleId;
 	}
-	
-	
-	
-}
 
+}

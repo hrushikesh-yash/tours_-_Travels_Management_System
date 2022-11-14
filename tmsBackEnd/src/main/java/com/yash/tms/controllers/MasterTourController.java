@@ -34,6 +34,7 @@ public class MasterTourController {
 		try {
 			int tourIsDeleted = 0;
 			mastorTourList = masterTourManager.findAlltours(tourIsDeleted);
+			log.info("size of city list: " + mastorTourList.size());
 			if (!mastorTourList.isEmpty()) {
 				return mastorTourList;
 			}

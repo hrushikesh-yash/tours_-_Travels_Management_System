@@ -1,4 +1,4 @@
-<h1>Cities</h1>
+<h1>Cities To Visit </h1>
 <div class="card">
     <div class="card-head">
         <a *ngIf="currentUser.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add City</a>
@@ -12,7 +12,7 @@
                     <th style="width: 20%">City Name</th>
                     <th style="width: 20%">State Name</th>
                     <th style="width: 20%">City Code </th>
-                    <th style="width: 20%">Controls</th>
+                    <th style="width: 20%" *ngIf="currentUser.actorId==1">Controls</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,9 +29,9 @@
                             <span *ngIf="!isDeleting">Delete</span>
                         </button>
                     </td>
-                    <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
+                    <!-- <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
                         <a routerLink="addToTour/{{city.cityId}}" class="btn btn-sm btn-info mr-1">Add to Tour</a> &nbsp;
-                    </td>
+                    </td> -->
                 </tr>
                 <tr *ngIf="!cityList">
                     <td colspan="4" class="text-center">

@@ -6,7 +6,7 @@ import com.yash.tms.entity.BookingHistory;
 
 public interface BookingHistoryManager {
 
-	List<BookingHistory> findAllBookingHistory(short bookingHistoryIsDeleted);
+	List<BookingHistory> findAllBookingHistory(int bookingHistoryIsDeleted);
 
 	BookingHistory addBookingHistory(BookingHistory history);
 

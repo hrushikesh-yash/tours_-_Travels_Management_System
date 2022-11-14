@@ -1,6 +1,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
     <div class="logo-container">
-        <button class="btn btn-dark" (click)="toggleCollapse()"><i class="fal fa-bars" ></i></button>
+        <button class="btn " style="background-color: #263238;" (click)="toggleCollapse()">
+            <i class="fa-solid fa-bars" style="color: #fff; font-size: 26px;"></i></button>
         <div class="logo-text" @fadeInOut *ngIf="collapsed" style="text-align:left;">
         {{this.currentUser.firstName}} 
             <div *ngIf="this.currentUser.actorId==2">
@@ -11,7 +12,7 @@
               </div>
         </div>
         <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
-            <i class="fal fa-times close-icon"></i>
+            <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
     <ul class="sidenav-nav">

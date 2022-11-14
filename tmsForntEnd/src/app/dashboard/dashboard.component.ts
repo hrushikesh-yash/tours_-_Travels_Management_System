@@ -10,7 +10,7 @@ interface SideNavToggle {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  cartProductCount:number=10;
   constructor() { }
 
   ngOnInit(): void {

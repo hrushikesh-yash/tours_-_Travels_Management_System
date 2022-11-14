@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.BookingHistoryRepository;
 import com.yash.tms.entity.BookingHistory;
-import com.yash.tms.entity.MasterActor;
 import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
@@ -21,11 +20,11 @@ public class BookingHistoryManagerImpl implements BookingHistoryManager {
 	private BookingHistoryRepository bookingHistoryRepository;
 	
 	@Override
-	public List<BookingHistory> findAllBookingHistory(short bookingHistoryIsDeleted) {
+	public List<BookingHistory> findAllBookingHistory(int bookingHistoryIsDeleted) {
 		log.info("BookingHistoryManagerImpl :: findAllActors function started.");
 		try {
 			
-			return bookingHistoryRepository.findAllBookingHistory(bookingHistoryIsDeleted);
+			return bookingHistoryRepository.findByBookingIsDeleted(bookingHistoryIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("BookingHistoryManagerImpl :: findAllActors error while find all actors. "+e.getMessage());
