@@ -85,8 +85,8 @@ public class MappingCityRoutesController {
 			MappingCityRoutes routeToUpdate = mappingCityRoutesManager.findById(routeId);
 			routeToUpdate.setRouteId(routeId);
 			routeToUpdate.setRouteName(route.getRouteName());
-			routeToUpdate.setSourceCityId(route.getSourceCityId());
-			routeToUpdate.setDestinationCityId(route.getDestinationCityId());
+			routeToUpdate.setSourceCity(route.getSourceCity());
+			routeToUpdate.setDestinationCity(route.getDestinationCity());
 			routeToUpdate.setRouteCreatedDate(route.getRouteCreatedDate());
 			routeToUpdate.setRouteIsDeleted(route.getRouteIsDeleted());
 			return mappingCityRoutesManager.addRoutes(routeToUpdate);

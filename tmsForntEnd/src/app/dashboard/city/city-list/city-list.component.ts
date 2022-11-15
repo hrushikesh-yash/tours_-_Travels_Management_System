@@ -14,7 +14,7 @@ import { CityServiceService } from 'src/app/Services/city-service.service';
 export class CityListComponent implements OnInit {
 
   cities: City[];
-  cityList:CityList[];
+  cityList:City[];
   isDeleting:boolean=false;
   currentUser:User;
 

@@ -20,15 +20,23 @@ public class MasterTourManagerImpl implements MasterTourManager {
 	private MasterTourDao masterTourDao;
 
 	@Override
-	public List<MasterTour> findAlltours(int tourIsDeleted) {
-		log.info("MasterTourManagerImpl :: findAlltours function started.");
+	public List<MasterTour> findByTourIsDeleted(int tourIsDeleted) {
+		log.info("MasterTourManagerImpl :: findByTourIsDeleted function started.");
 		try {
+			List<MasterTour> tourList=null;
+			try
+			{
+				tourList=masterTourDao.findByTourIsDeleted(tourIsDeleted);
+			}
+			catch (Exception e) {
+				log.error("MasterTourManagerImpl :: findByTourIsDeleted error from dao "+e.getMessage());
+			}
 			
-			return masterTourDao.findAlltours(tourIsDeleted);
+			return tourList;
 		}
 		catch (Exception e) {
-			log.error("MasterTourManagerImpl :: findAlltours error while find all tour. "+e.getMessage());
-			log.error("MasterTourManagerImpl :: findAlltours Stacktrace :: "+e.getStackTrace());
+			log.error("MasterTourManagerImpl :: findByTourIsDeleted error while find all tour. "+e.getMessage());
+			log.error("MasterTourManagerImpl :: findByTourIsDeleted Stacktrace :: "+e.getStackTrace());
 		}
 		return null;
 	}

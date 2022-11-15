@@ -37,7 +37,7 @@ export class AddEditCityComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.isAddMode = !this.id;
 
-   
+
 
     this.stateService.getStateList()
       .pipe(first())
@@ -56,7 +56,7 @@ export class AddEditCityComponent implements OnInit {
     });
 
     if (!this.isAddMode) {
-      console.log("mode: "+this.isAddMode);
+      console.log("mode: " + this.isAddMode);
       this.cityService.findCityById(this.id)
         .pipe(first())
         .subscribe(x => this.cityForm.patchValue(x));
@@ -68,44 +68,68 @@ export class AddEditCityComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.loading = true;
+
     this.city.cityId = this.cityForm.controls['cityId'].value;
     this.city.cityName = this.cityForm.controls['cityName'].value;
     this.city.pinCode = this.cityForm.controls['pinCode'].value;
-    this.city.stateId = this.cityForm.controls['stateId'].value;
 
-    console.log(this.city);
-    if (this.isAddMode) {
-      console.log(" Add City");
+    console.log("State id:: " + this.cityForm.controls['stateId'].value);
+
+    this.stateService.findStateById(this.cityForm.controls['stateId'].value)
+      .pipe(first())
+      .subscribe({
+        next: (data) => {
+          this.state = data;
+
+          console.log("in the subscribe " + JSON.stringify(this.state));
+          this.city.state = this.state;
+          console.log(" Add City " + JSON.stringify(this.city));
+          console.log(" State :: " + JSON.stringify(this.city.state));
+
+          if (this.isAddMode) {
+            this.cityService.addCity(this.city)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.success('City addedSucessfully !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../'], { relativeTo: this.route });
+                },
+                error: error => {
+                  this.alertService.error(error);
+                  this.loading = false;
+                }
+              });
+      
+          } else {
+            console.log("Update state: " + this.city.cityId);
+            this.cityService.updateCity(this.city.cityId, this.city)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.warn('City Updated Sucesssfully !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../../'], { relativeTo: this.route });
+                },
+                error: (error: string) => {
+                  this.alertService.error(error);
+                  this.loading = false;
+                }
+              });
+          }
+        
+        
+        
+        
+        },
+        error: (error: string) => {
+          this.alertService.error(error);
+          this.loading = false;
+        }
+      });
 
 
-          this.cityService.addCity(this.city)
-            .pipe(first())
-            .subscribe({
-              next: () => {
-                this.alertService.success('City addedSucessfully !', { keepAfterRouteChange: true });
-                this.router.navigate(['../'], { relativeTo: this.route });
-              },
-              error: error => {
-                this.alertService.error(error);
-                this.loading = false;
-              }
-            });
 
-    } else {
-      console.log("Update state: " + this.city.cityId);
-           this.cityService.updateCity(this.city.cityId,this.city)
-                .pipe(first())
-                .subscribe({
-                    next: () => {
-                        this.alertService.warn('City Updated Sucesssfully !', { keepAfterRouteChange: true });
-                        this.router.navigate(['../../'], { relativeTo: this.route });
-                    },
-                    error: (error: string) => {
-                        this.alertService.error(error);
-                        this.loading = false;
-                    }
-                });
-    }
+
+    
 
 
   }

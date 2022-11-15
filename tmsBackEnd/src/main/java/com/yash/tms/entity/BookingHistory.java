@@ -2,12 +2,16 @@ package com.yash.tms.entity;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,21 +22,22 @@ public class BookingHistory {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "bookingHistoryId")
 	private int bookingHistoryId;
+	
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "userId",referencedColumnName = "userId")
+	private MasterUser user;
 
-	@Column(name = "userId")
-	private int userId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "vehicleId",referencedColumnName = "vehicleId")
+	private MasterVehicleDetails vehicle;
 
-	@Column(name = "vehicleId")
-	private String vehicleId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "tourId",referencedColumnName = "tourId")
+	private MasterTour tour;
 
-	@Column(name = "tourId")
-	private int tourId;
-
-//	@Column(name = "hotelId")
-//	private int hotelId;
-
-	@Column(name = "statusId")
-	private int statusId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "statusId",referencedColumnName = "statusId")
+	private MasterStatus status;
 
 	@Column(name = "bookingDate")
 	private LocalDate bookingDate;
@@ -61,38 +66,38 @@ public class BookingHistory {
 		this.bookingHistoryId = bookingHistoryId;
 	}
 
+	public MasterUser getUser() {
+		return user;
+	}
+
+	public void setUser(MasterUser user) {
+		this.user = user;
+	}
+
+	public MasterVehicleDetails getVehicle() {
+		return vehicle;
+	}
+
+	public void setVehicle(MasterVehicleDetails vehicle) {
+		this.vehicle = vehicle;
+	}
+
+	public MasterTour getTour() {
+		return tour;
+	}
+
+	public void setTour(MasterTour tour) {
+		this.tour = tour;
+	}
+
 	
 
-	public int getUserId() {
-		return userId;
+	public MasterStatus getStatus() {
+		return status;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
-	public int getTourId() {
-		return tourId;
-	}
-
-	public void setTourId(int tourId) {
-		this.tourId = tourId;
-	}
-
-//	public int getHotelId() {
-//		return hotelId;
-//	}
-//
-//	public void setHotelId(int hotelId) {
-//		this.hotelId = hotelId;
-//	}
-
-	public int getStatusId() {
-		return statusId;
-	}
-
-	public void setStatusId(int statusId) {
-		this.statusId = statusId;
+	public void setStatus(MasterStatus status) {
+		this.status = status;
 	}
 
 	public LocalDate getBookingDate() {
@@ -131,16 +136,14 @@ public class BookingHistory {
 		return bookingIsDeleted;
 	}
 
-	public void setBookingIsDeleted(int i) {
-		this.bookingIsDeleted = i;
+	public void setBookingIsDeleted(int bookingIsDeleted) {
+		this.bookingIsDeleted = bookingIsDeleted;
 	}
+	
+	
 
-	public String getVehicleId() {
-		return vehicleId;
-	}
+	
 
-	public void setVehicleId(String vehicleId) {
-		this.vehicleId = vehicleId;
-	}
+	
 
 }

@@ -11,7 +11,7 @@ import com.yash.tms.entity.MasterVehicleDetails;
 @Repository
 public interface MasterVehicleDetailsDao extends JpaRepository<MasterVehicleDetails, Integer>{
 	
-	@Query(value="from MasterVehicleDetails where vehicleIsDeleted =?1")
-	public List<MasterVehicleDetails> findAllVehicleDetails(int vehicleIsDeleted);
+//	@Query(value="from MasterVehicleDetails where vehicleIsDeleted =?1")
+	public List<MasterVehicleDetails> findByVehicleIsDeleted(int vehicleIsDeleted);
 
 }

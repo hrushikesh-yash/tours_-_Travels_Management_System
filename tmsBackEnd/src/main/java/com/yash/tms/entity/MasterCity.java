@@ -26,7 +26,7 @@ public class MasterCity {
 	@Column(name="cityName")
 	private String cityName;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "stateId",referencedColumnName = "StateId")
 	private MasterState state;
 	

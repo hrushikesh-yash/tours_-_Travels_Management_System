@@ -92,9 +92,9 @@ public class MappingVehicleDriverController {
 			MappingVehicleDriverDetails mappingVehicleDriverToUpdate = mappingVehicleDriverManager
 					.findById(mappingVehicleDriverDetailsId);
 			mappingVehicleDriverToUpdate.setMappingVehicleDriverDetailsId(mappingVehicleDriverDetailsId);
-			mappingVehicleDriverToUpdate.setVehicleId(mappingVehicleDriver.getVehicleId());
-			mappingVehicleDriverToUpdate.setDriverId(mappingVehicleDriver.getDriverId());
-			mappingVehicleDriverToUpdate.setRouteId(mappingVehicleDriver.getRouteId());
+			mappingVehicleDriverToUpdate.setVehicle(mappingVehicleDriver.getVehicle());
+			mappingVehicleDriverToUpdate.setDriver(mappingVehicleDriver.getDriver());
+			mappingVehicleDriverToUpdate.setRoute(mappingVehicleDriver.getRoute());
 			mappingVehicleDriverToUpdate.setVehicleDriverAssignDate(mappingVehicleDriver.getVehicleDriverAssignDate());
 			mappingVehicleDriverToUpdate.setMappingVehicleDriverIsDeleted(mappingVehicleDriver.getMappingVehicleDriverIsDeleted());
 			return mappingVehicleDriverManager.addMappingVehicleDriver(mappingVehicleDriverToUpdate);

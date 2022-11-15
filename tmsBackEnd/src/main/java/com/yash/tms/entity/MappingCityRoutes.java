@@ -3,11 +3,14 @@ package com.yash.tms.entity;
 import java.time.LocalDate;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,12 +25,13 @@ public class MappingCityRoutes {
 	@Column(name = "routeName")
 	private String routeName;
 	
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "sourceCityId",referencedColumnName = "cityId")
+	private MasterCity sourceCity;
 	
-	@Column(name = "sourceCityId")
-	private int sourceCityId;
-	
-	@Column(name = "destinationCityId")
-	private int destinationCityId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "destinationCityId",referencedColumnName = "cityId")
+	private MasterCity destinationCity;
 	
 	@Column(name = "routeCreatedDate")
 	private LocalDate routeCreatedDate;
@@ -55,20 +59,24 @@ public class MappingCityRoutes {
 		this.routeName = routeName;
 	}
 
-	public int getSourceCityId() {
-		return sourceCityId;
+	
+
+	public MasterCity getSourceCity() {
+		return sourceCity;
 	}
 
-	public void setSourceCityId(int sourceCityId) {
-		this.sourceCityId = sourceCityId;
+	public void setSourceCity(MasterCity sourceCity) {
+		this.sourceCity = sourceCity;
 	}
 
-	public int getDestinationCityId() {
-		return destinationCityId;
+	
+
+	public MasterCity getDestinationCity() {
+		return destinationCity;
 	}
 
-	public void setDestinationCityId(int destinationCityId) {
-		this.destinationCityId = destinationCityId;
+	public void setDestinationCity(MasterCity destinationCity) {
+		this.destinationCity = destinationCity;
 	}
 
 	public LocalDate getRouteCreatedDate() {

@@ -23,7 +23,7 @@ public class MasterVehicleDetailsManagerImpl implements MasterVehicleDetailsMana
 		log.info("MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.");
 		try {
 			
-			return masterVehicleDetailsDao.findAllVehicleDetails(vehicleIsDeleted);
+			return masterVehicleDetailsDao.findByVehicleIsDeleted(vehicleIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("MasterVehicleDetailsManagerImpl :: findAllVehicleDetails error while find all VehicleDetails. "+e.getMessage());

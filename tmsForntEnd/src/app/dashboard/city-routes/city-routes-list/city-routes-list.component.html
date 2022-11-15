@@ -19,8 +19,8 @@
                 <tr *ngFor="let cityRoute of cityRoutes">
                     <td>{{cityRoute.routeId }}</td>
                     <td>{{cityRoute.routeName}}</td>
-                    <td>{{cityRoute.sourceCityId}}</td>
-                    <td>{{cityRoute.destinationCityId}}</td>
+                    <td>{{cityRoute.sourceCity.cityName}}</td>
+                    <td>{{cityRoute.destinationCity.cityName}}</td>
                     <td>{{cityRoute.routeCreatedDate}}</td>
                     <td style="white-space: nowrap" *ngIf="currentUser.actorId==1">
                         <a routerLink="edit/{{cityRoute.routeId }}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;

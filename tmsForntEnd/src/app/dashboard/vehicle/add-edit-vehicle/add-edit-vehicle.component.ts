@@ -75,43 +75,54 @@ export class AddEditVehicleComponent implements OnInit {
     this.loading = true;
     this.vehicle.vehicleId = this.vehicleForm.controls['vehicleId'].value;
     this.vehicle.vehicleName = this.vehicleForm.controls['vehicleName'].value;
-    this.vehicle.vehicleTypeId = this.vehicleForm.controls['vehicleTypeId'].value;
     this.vehicle.vehicleCapcity = this.vehicleForm.controls['vehicleCapcity'].value;
     this.vehicle.companyName= this.vehicleForm.controls['companyName'].value;
 
-    console.log(this.vehicle);
-    if (this.isAddMode) {
-      console.log(" Add City");
+    this.vehicleTypeService.findVehicleTypeById(this.vehicle.vehicleType = this.vehicleForm.controls['vehicleTypeId'].value)
+    .pipe(first())
+    .subscribe({
+      next: (data) => {
+        this.vehicleType = data;
+        this.vehicle.vehicleType=this.vehicleType;
 
-
-          this.vehicleService.addVehicleDetails(this.vehicle)
-            .pipe(first())
-            .subscribe({
-              next: () => {
-                this.alertService.success('Vehicle addedSucessfully !', { keepAfterRouteChange: true });
-                this.router.navigate(['../'], { relativeTo: this.route });
-              },
-              error: error => {
-                this.alertService.error(error);
-                this.loading = false;
-              }
-            });
-
-    } else {
-      console.log("Update Vehicle: " + this.vehicle.vehicleId);
-           this.vehicleService.updateVehicle(this.vehicle.vehicleId,this.vehicle)
+        console.log(this.vehicle);
+        if (this.isAddMode) {
+          console.log(" Add City");
+    
+    
+              this.vehicleService.addVehicleDetails(this.vehicle)
                 .pipe(first())
                 .subscribe({
-                    next: () => {
-                        this.alertService.warn('Vehicle Updated Sucesssfully !', { keepAfterRouteChange: true });
-                        this.router.navigate(['../../'], { relativeTo: this.route });
-                    },
-                    error: (error: string) => {
-                        this.alertService.error(error);
-                        this.loading = false;
-                    }
+                  next: () => {
+                    this.alertService.success('Vehicle addedSucessfully !', { keepAfterRouteChange: true });
+                    this.router.navigate(['../'], { relativeTo: this.route });
+                  },
+                  error: error => {
+                    this.alertService.error(error);
+                    this.loading = false;
+                  }
                 });
-    }
+    
+        } else {
+          console.log("Update Vehicle: " + this.vehicle.vehicleId);
+               this.vehicleService.updateVehicle(this.vehicle.vehicleId,this.vehicle)
+                    .pipe(first())
+                    .subscribe({
+                        next: () => {
+                            this.alertService.warn('Vehicle Updated Sucesssfully !', { keepAfterRouteChange: true });
+                            this.router.navigate(['../../'], { relativeTo: this.route });
+                        },
+                        error: (error: string) => {
+                            this.alertService.error(error);
+                            this.loading = false;
+                        }
+                    });
+        }
+      },
+      error: (error) => console.log(error)
+    });
+
+   
 
 
   }

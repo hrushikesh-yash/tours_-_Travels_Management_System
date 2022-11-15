@@ -69,10 +69,10 @@ public class BookingHistoryController {
 
 			BookingHistory bookingHistoryToUpdate  = bookingHistoryManager.findById(bookingHistoryId);
 			bookingHistoryToUpdate.setBookingHistoryId(bookingHistoryId);
-			bookingHistoryToUpdate.setUserId(history.getUserId());
-			bookingHistoryToUpdate.setVehicleId(history.getVehicleId());
+			bookingHistoryToUpdate.setUser(history.getUser());
+			bookingHistoryToUpdate.setVehicle(history.getVehicle());
 //			bookingHistoryToUpdate.setHotelId(history.getHotelId());
-			bookingHistoryToUpdate.setStatusId(history.getStatusId());
+			bookingHistoryToUpdate.setStatus(history.getStatus());
 			bookingHistoryToUpdate.setBookingDate(history.getBookingDate());
 			bookingHistoryToUpdate.setTravelStartDate(history.getTravelStartDate());
 			bookingHistoryToUpdate.setTravelEndDate(history.getTravelEndDate());

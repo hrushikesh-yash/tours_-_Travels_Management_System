@@ -19,9 +19,9 @@
             <tbody>
                 <tr *ngFor="let vehicleDriverMapping of vehicleDriverMappings">
                     <td>{{vehicleDriverMapping.mappingVehicleDriverDetailsId }}</td>
-                    <td>{{vehicleDriverMapping.vehicleId}}</td>
-                    <td>{{vehicleDriverMapping.driverId}}</td>
-                    <td>{{vehicleDriverMapping.routeId}}</td>
+                    <td>{{vehicleDriverMapping.vehicle.vehicleName}}</td>
+                    <td>{{vehicleDriverMapping.driver.firstName}}</td>
+                    <td>{{vehicleDriverMapping.route.routeName}}</td>
                     <td>{{vehicleDriverMapping.vehicleDriverAssignDate}}</td>
                     <td>{{vehicleDriverMapping.vehicleFare}}</td>
                     <td style="white-space: nowrap">

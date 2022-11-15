@@ -3,6 +3,7 @@ package com.yash.tms.services;
 import java.util.List;
 
 import com.yash.tms.entity.BookingHistory;
+import com.yash.tms.entity.MasterUser;
 
 public interface BookingHistoryManager {
 

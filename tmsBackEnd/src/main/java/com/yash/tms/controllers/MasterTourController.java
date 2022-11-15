@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.tms.entity.MasterActor;
 import com.yash.tms.entity.MasterTour;
 import com.yash.tms.services.MasterTourManager;
 
@@ -33,7 +32,7 @@ public class MasterTourController {
 		List<MasterTour> mastorTourList = null;
 		try {
 			int tourIsDeleted = 0;
-			mastorTourList = masterTourManager.findAlltours(tourIsDeleted);
+			mastorTourList = masterTourManager.findByTourIsDeleted(tourIsDeleted);
 			log.info("size of city list: " + mastorTourList.size());
 			if (!mastorTourList.isEmpty()) {
 				return mastorTourList;
@@ -86,7 +85,7 @@ public class MasterTourController {
 			MasterTour tourToUpdate = masterTourManager.findById(tourId);
 			tourToUpdate.setTourId(tourId);
 			tourToUpdate.setTourName(tour.getTourName());
-			tourToUpdate.setCityId(tour.getCityId());
+			tourToUpdate.setCity(tour.getCity());
 			tourToUpdate.setTourDescription(tour.getTourDescription());
 			tourToUpdate.setTourPrice(tour.getTourPrice());
 			tourToUpdate.setTourIsDeleted(tour.getTourIsDeleted());

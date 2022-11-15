@@ -1,10 +1,13 @@
 package com.yash.tms.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,8 +25,9 @@ public class MasterTour {
 	@Column(name = "tourDescription")
 	private String tourDescription;
 
-	@Column(name = "cityId")
-	private int cityId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "cityId",referencedColumnName = "cityId")
+	private MasterCity city;
 
 	@Column(name = "tourPrice")
 	private int tourPrice;
@@ -61,12 +65,13 @@ public class MasterTour {
 		this.tourDescription = tourDescription;
 	}
 
-	public int getCityId() {
-		return cityId;
+	
+	public MasterCity getCity() {
+		return city;
 	}
 
-	public void setCityId(int cityId) {
-		this.cityId = cityId;
+	public void setCity(MasterCity city) {
+		this.city = city;
 	}
 
 	public int getTourPrice() {
@@ -88,9 +93,11 @@ public class MasterTour {
 
 	@Override
 	public String toString() {
-		return "masterTour [tourid=" + tourId + ", tourName=" + tourName + ", tourDescription=" + tourDescription
-				+ ", cityId=" + cityId + ", tourPrice=" + tourPrice + ", tourIsDeleted=" + tourIsDeleted + "]";
+		return "MasterTour [tourId=" + tourId + ", tourName=" + tourName + ", tourDescription=" + tourDescription
+				+ ", city=" + city + ", tourPrice=" + tourPrice + ", tourIsDeleted=" + tourIsDeleted + "]";
 	}
+
+	
 
 	
 

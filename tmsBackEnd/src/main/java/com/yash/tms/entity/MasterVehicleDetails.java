@@ -1,10 +1,13 @@
 package com.yash.tms.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,8 +19,9 @@ public class MasterVehicleDetails {
 	@Column(name = "vehicleId")
 	private int vehicleId;
 
-	@Column(name = "vehicleTypeId")
-	private int vehicleTypeId;
+	@ManyToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "vehicleTypeId",referencedColumnName = "vehicleTypeId")
+	private MasterVehicleType vehicleType;
 
 	@Column(name = "vehicleName")
 	private String vehicleName;
@@ -43,12 +47,14 @@ public class MasterVehicleDetails {
 		this.vehicleId = vechileId;
 	}
 
-	public int getVehicleTypeId() {
-		return vehicleTypeId;
+	
+
+	public MasterVehicleType getVehicleType() {
+		return vehicleType;
 	}
 
-	public void setVehicleTypeId(int vehicleTypeId) {
-		this.vehicleTypeId = vehicleTypeId;
+	public void setVehicleType(MasterVehicleType vehicleType) {
+		this.vehicleType = vehicleType;
 	}
 
 	public String getVehicleName() {
@@ -85,9 +91,11 @@ public class MasterVehicleDetails {
 
 	@Override
 	public String toString() {
-		return "masterVehicle [vehicleId=" + vehicleId + ", vehicleTypeId=" + vehicleTypeId + ", vehicleName="
+		return "MasterVehicleDetails [vehicleId=" + vehicleId + ", vehicleType=" + vehicleType + ", vehicleName="
 				+ vehicleName + ", companyName=" + companyName + ", vehicleCapcity=" + vehicleCapcity
 				+ ", vehicleIsDeleted=" + vehicleIsDeleted + "]";
 	}
+
+	
 
 }

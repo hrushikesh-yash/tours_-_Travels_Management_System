@@ -65,7 +65,8 @@ public class BookingHistoryManagerImpl implements BookingHistoryManager {
 	public List<BookingHistory> findBookingByUserId(int userId) {
 		log.info("BookingHistoryManagerImpl :: findById function started.");
 		try {
-			return bookingHistoryRepository.findByUserId(userId);
+//			return bookingHistoryRepository.findByUserId(userId);
+			return null;
 			 
 		}
 		catch (Exception e) {

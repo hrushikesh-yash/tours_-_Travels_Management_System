@@ -17,7 +17,7 @@
                         <h2>{{tour.tourName}}</h2>
                         <h4 class="card-text">{{tour.tourDescription}}</h4>
                         <h4 class="card-text">{{tour.tourPrice}}</h4>
-                        <h4 class="card-text">{{tour.cityId}}</h4>
+                        <h4 class="card-text">{{tour.city.cityName}}</h4>
         
                         <div class="text-center" *ngIf="currentUser.actorId==1">
                             <a routerLink="edit/{{tour.tourId}}" class="btn btn-sm btn-primary mr-1">Edit Tour</a> &nbsp;

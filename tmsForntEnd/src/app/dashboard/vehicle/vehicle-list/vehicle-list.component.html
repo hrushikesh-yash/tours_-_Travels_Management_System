@@ -16,10 +16,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let vehicle of Vehicles">
+                <tr *ngFor="let vehicle of vehicles">
                     <td>{{vehicle.vehicleId}}</td>
                     <td>{{vehicle.vehicleName}}</td>
-                    <td>{{vehicle.vehicleTypeId}}</td>
+                    <td>{{vehicle.vehicleType.vehicleTypeName}}</td>
                     <td>{{vehicle.companyName}}</td>
                     <td>{{vehicle.vehicleCapcity}}</td>
                     <td style="white-space: nowrap" *ngIf="currentUser.actorId==1">
@@ -33,7 +33,7 @@
                         <a routerLink="addToTour/{{vehicle.vehicleId}}" class="btn btn-sm btn-primary mr-1">Add to Tour</a> &nbsp;
                     </td>
                 </tr>
-                <tr *ngIf="!Vehicles">
+                <tr *ngIf="!vehicles">
                     <td colspan="4" class="text-center">
                         <span class="spinner-border spinner-border-lg align-center"></span>
                     </td>

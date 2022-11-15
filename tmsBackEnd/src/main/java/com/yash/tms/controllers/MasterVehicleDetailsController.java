@@ -83,7 +83,7 @@ public class MasterVehicleDetailsController {
 			vehicleDetailsToUpdate.setVehicleName(vehicleDetails.getVehicleName());
 			vehicleDetailsToUpdate.setVehicleCapcity(vehicleDetails.getVehicleCapcity());
 			vehicleDetailsToUpdate.setCompanyName(vehicleDetails.getCompanyName());
-			vehicleDetailsToUpdate.setVehicleTypeId(vehicleDetails.getVehicleTypeId());
+			vehicleDetailsToUpdate.setVehicleType(vehicleDetails.getVehicleType());
 			vehicleDetailsToUpdate.setVehicleIsDeleted(vehicleDetails.getVehicleIsDeleted());
 			return masterVehicleDetailsManager.addVehicleDetails(vehicleDetailsToUpdate);
 

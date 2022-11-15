@@ -16,7 +16,7 @@ export const navbarData = [
     },
     {
         routeLink: 'Vehicle-Type',
-        icon: 'fal fa-drone',
+        icon: 'fa-solid fa-truck-plane',
         label: 'Vehicle-Type'
     },
     {
@@ -32,7 +32,7 @@ export const navbarData = [
 
     {
         routeLink: 'Vehicle-Driver-Assign',
-        icon: 'fa-soild fa-user',  
+        icon: 'fa-solid fa-user-injured',
         label: 'Vehicle Driver Assign'
     },
 

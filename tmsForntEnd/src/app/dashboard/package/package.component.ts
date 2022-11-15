@@ -22,13 +22,15 @@ export class PackageComponent implements OnInit {
 
     let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
     this.currentUser = user;
+    console.log(this.currentUser.userId)
     this.bookingService.getBookingByUserId(this.currentUser.userId)
     .pipe(first())
     .subscribe({
       next: (data) => {
         this.bookingHistoryItems = data;
         console.log(this.bookingHistoryItems);
-        this.cartItems=this.bookingHistoryItems.length;
+        this.totalAmmount=this.bookingHistoryItems[0].travelAmount;
+        // this.cartItems=this.bookingHistoryItems.length;
       },
       error: (error) => console.log(error)
     });

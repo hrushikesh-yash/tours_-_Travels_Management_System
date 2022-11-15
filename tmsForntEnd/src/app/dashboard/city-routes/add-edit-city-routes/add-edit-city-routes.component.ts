@@ -20,8 +20,10 @@ export class AddEditCityRoutesComponent implements OnInit {
   isAddMode!: boolean;
   id!: number;
   cityRouteForm: FormGroup;
+  sourceCity: City;
+  destinationCity: City;
   submitted = false;
-  cities: CityList[];
+  cities: City[];
   cityRoute: CityRoutes = new CityRoutes;
   cityId: number = 0;
 
@@ -35,10 +37,10 @@ export class AddEditCityRoutesComponent implements OnInit {
   ngOnInit(): void {
 
     this.id = this.route.snapshot.params['id'];
-    console.log("this id :: "+this.id)
+    console.log("this id :: " + this.id)
     this.isAddMode = !this.id;
 
-   
+
 
     this.cityService.getCityList()
       .pipe(first())
@@ -53,15 +55,17 @@ export class AddEditCityRoutesComponent implements OnInit {
     this.cityRouteForm = this.formBuilder.group({
       routeId: [this.id],
       routeName: [''],
-      sourceCityId: [''],
-      destinationCityId: [''],
-      routeCreatedDate:['']
+      sourceCity: [''],
+      destinationCity: [''],
+      routeCreatedDate: ['']
     });
 
     if (!this.isAddMode) {
       this.cityRoutesService.findRouteById(this.id)
         .pipe(first())
-        .subscribe(x => this.cityRouteForm.patchValue(x));
+        .subscribe(x => 
+          this.cityRouteForm.patchValue(x)
+          );
     }
 
 
@@ -72,43 +76,67 @@ export class AddEditCityRoutesComponent implements OnInit {
     this.loading = true;
     this.cityRoute.routeId = this.cityRouteForm.controls['routeId'].value;
     this.cityRoute.routeName = this.cityRouteForm.controls['routeName'].value;
-    this.cityRoute.sourceCityId = this.cityRouteForm.controls['sourceCityId'].value;
-    this.cityRoute.destinationCityId = this.cityRouteForm.controls['destinationCityId'].value;
     this.cityRoute.routeCreatedDate = this.cityRouteForm.controls['routeCreatedDate'].value;
 
-    // console.log(this.city);
-    if (this.isAddMode) {
-      console.log(" Add City Route");
+    this.cityService.findCityById(this.cityRouteForm.controls['sourceCityId'].value)
+      .pipe(first())
+      .subscribe({
+        next: (data) => {
+          this.sourceCity = data;
 
-
-          this.cityRoutesService.addRoutes(this.cityRoute)
+          this.cityService.findCityById(this.cityRouteForm.controls['destinationCityId'].value)
             .pipe(first())
             .subscribe({
-              next: () => {
-                this.alertService.success('City Route added Sucessfully !', { keepAfterRouteChange: true });
-                this.router.navigate(['../'], { relativeTo: this.route });
-              },
-              error: error => {
-                this.alertService.error(error);
-                this.loading = false;
+              next: (data) => {
+                this.destinationCity = data;
+
+                this.cityRoute.sourceCity = this.sourceCity;
+                this.cityRoute.destinationCity = this.destinationCity;
+
+                if (this.isAddMode) {
+                  console.log(" Add City Route");
+
+
+                  this.cityRoutesService.addRoutes(this.cityRoute)
+                    .pipe(first())
+                    .subscribe({
+                      next: () => {
+                        this.alertService.success('City Route added Sucessfully !', { keepAfterRouteChange: true });
+                        this.router.navigate(['../'], { relativeTo: this.route });
+                      },
+                      error: error => {
+                        this.alertService.error(error);
+                        this.loading = false;
+                      }
+                    });
+
+                } else {
+                  // console.log("Update state: " + this.cityRoute.routeId);
+                  this.cityRoutesService.updateRoute(this.cityRoute.routeId, this.cityRoute)
+                    .pipe(first())
+                    .subscribe({
+                      next: () => {
+                        this.alertService.warn('City Route Updated Sucesssfully !', { keepAfterRouteChange: true });
+                        this.router.navigate(['../../'], { relativeTo: this.route });
+                      },
+                      error: (error: string) => {
+                        this.alertService.error(error);
+                        this.loading = false;
+                      }
+                    });
+                }
+
               }
             });
 
-    } else {
-      // console.log("Update state: " + this.cityRoute.routeId);
-           this.cityRoutesService.updateRoute(this.cityRoute.routeId,this.cityRoute)
-                .pipe(first())
-                .subscribe({
-                    next: () => {
-                        this.alertService.warn('City Route Updated Sucesssfully !', { keepAfterRouteChange: true });
-                        this.router.navigate(['../../'], { relativeTo: this.route });
-                    },
-                    error: (error: string) => {
-                        this.alertService.error(error);
-                        this.loading = false;
-                    }
-                });
-    }
+
+        }
+      });
+
+
+
+    // console.log(this.city);
+
 
 
   }

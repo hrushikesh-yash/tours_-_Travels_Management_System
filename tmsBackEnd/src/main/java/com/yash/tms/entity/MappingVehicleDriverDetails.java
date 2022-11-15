@@ -3,12 +3,17 @@ package com.yash.tms.entity;
 import java.time.LocalDate;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "mapping_vehicle_driver_details")
@@ -19,14 +24,17 @@ public class MappingVehicleDriverDetails {
 	@Column(name = "mappingVehicleDriverDetailsId")
 	private int mappingVehicleDriverDetailsId;
 
-	@Column(name = "vehicleId")
-	private int vehicleId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "vehicleId",referencedColumnName = "vehicleId")
+	private MasterVehicleDetails vehicle;
 
-	@Column(name = "driverId")
-	private int driverId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "driverId",referencedColumnName = "userId")
+	private MasterUser driver;
 
-	@Column(name = "routeId")
-	private int routeId;
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "routeId",referencedColumnName = "routeId")
+	private MappingCityRoutes route;
 
 	@Column(name = "vehicleDriverAssignDate")
 	private LocalDate vehicleDriverAssignDate;
@@ -49,28 +57,32 @@ public class MappingVehicleDriverDetails {
 		this.mappingVehicleDriverDetailsId = mappingVehicleDriverDetailsId;
 	}
 
-	public int getVehicleId() {
-		return vehicleId;
+	
+
+	
+
+	public MasterVehicleDetails getVehicle() {
+		return vehicle;
 	}
 
-	public void setVehicleId(int vehicleId) {
-		this.vehicleId = vehicleId;
+	public void setVehicle(MasterVehicleDetails vehicle) {
+		this.vehicle = vehicle;
 	}
 
-	public int getDriverId() {
-		return driverId;
+	public MasterUser getDriver() {
+		return driver;
 	}
 
-	public void setDriverId(int driverId) {
-		this.driverId = driverId;
+	public void setDriver(MasterUser driver) {
+		this.driver = driver;
 	}
 
-	public int getRouteId() {
-		return routeId;
+	public MappingCityRoutes getRoute() {
+		return route;
 	}
 
-	public void setRouteId(int routeId) {
-		this.routeId = routeId;
+	public void setRoute(MappingCityRoutes route) {
+		this.route = route;
 	}
 
 	public LocalDate getVehicleDriverAssignDate() {

@@ -11,7 +11,7 @@ import com.yash.tms.entity.MappingCityRoutes;
 @Repository
 public interface MappingCityRoutesRepository extends JpaRepository<MappingCityRoutes, Integer> {
 
-	@Query(value = "from MappingCityRoutes where routeIsDeleted=?1")
-	List<MappingCityRoutes> findAllRoutes(int routeIsDeleted);
+//	@Query(value = "from MappingCityRoutes where routeIsDeleted=?1")
+	List<MappingCityRoutes> findByRouteIsDeleted(int routeIsDeleted);
 
 }

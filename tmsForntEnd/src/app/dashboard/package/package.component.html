@@ -4,10 +4,12 @@
             <ul>
                 <li *ngFor="let item of bookingHistoryItems">
                     <!-- <img class="card-img-top" src="{{item.image}}" alt="Card image cap"> -->
-                   Tour Details : {{item.tourId}}
-                    <span>{{item.vehicleId  | currency:'INR'}}</span>
+                   <h3><strong>{{item.user.firstName}}</strong></h3>
                     <br>
-                    Vehicle: {{item.vehicleId }}
+                    <strong>Tour Details : {{item.tour.tourName}} </strong>
+                    <h3>{{item.vehicle.vehicleName  | currency:'INR'}}</h3>
+                    <br>
+                    Vehicle: {{item.vehicle.vehicleName}}
                     <br>
                     Travelling Date : {{item.travelStartDate }} to {{item.travelEndDate}}
                     <button class="btn-close"> <!-- (click)="removeItemFromCart(item.id)"-->

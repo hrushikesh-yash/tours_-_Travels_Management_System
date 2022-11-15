@@ -19,7 +19,7 @@
                 <tr *ngFor="let city of cityList">
                     <td>{{city.cityId }}</td>
                     <td>{{city.cityName}}</td>
-                    <td>{{city.stateName}}</td>
+                    <td>{{city.state.stateName}}</td>
                     <td>{{city.pinCode}}</td>
                     <td style="white-space: nowrap" *ngIf="currentUser.actorId==1">
                         <a routerLink="edit/{{city.cityId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;

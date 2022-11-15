@@ -6,7 +6,7 @@ import com.yash.tms.entity.MasterTour;
 
 public interface MasterTourManager {
 
-	List<MasterTour> findAlltours(int tourIsDeleted);
+	List<MasterTour> findByTourIsDeleted(int tourIsDeleted);
 
 	MasterTour addTour(MasterTour tour);
 

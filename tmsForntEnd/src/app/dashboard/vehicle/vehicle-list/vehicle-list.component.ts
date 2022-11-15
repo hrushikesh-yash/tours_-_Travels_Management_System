@@ -11,7 +11,7 @@ import { VehicleService } from 'src/app/Services/vehicle.service';
 })
 export class VehicleListComponent implements OnInit {
 
-  Vehicles?: Vehicle[];
+  vehicles: Vehicle[];
   isDeleting:boolean=false;
   currentUser:User;
   constructor(private vehicleService: VehicleService) { }
@@ -31,8 +31,8 @@ export class VehicleListComponent implements OnInit {
       .pipe(first())
       .subscribe({
         next: (data) => {
-          this.Vehicles = data;
-          // console.log(data);
+          this.vehicles = data;
+          console.log(this.vehicles);
         },
         error: (error) => console.log(error)
       });
@@ -41,11 +41,11 @@ export class VehicleListComponent implements OnInit {
   deleteState(vehicleId: number) {
 
     this.isDeleting = true;
-    this.vehicleService.deleteVehicle(vehicleId)
-      .pipe(first())
-      .subscribe(() => this.Vehicles = this.Vehicles?.filter(x => x.vehicleId !== vehicleId));
-      this.isDeleting = false;
-      this.isDeleting = false;
+    // this.vehicleService.deleteVehicle(vehicleId)
+    //   .pipe(first())
+    //   .subscribe(() => this.Vehicles = this.Vehicles?.filter(x => x.vehicleId !== vehicleId));
+    //   this.isDeleting = false;
+    //   this.isDeleting = false;
   }
   
 

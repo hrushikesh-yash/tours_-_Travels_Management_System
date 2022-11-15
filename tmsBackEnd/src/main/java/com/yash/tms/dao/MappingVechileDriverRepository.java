@@ -11,8 +11,8 @@ import com.yash.tms.entity.MappingVehicleDriverDetails;
 @Repository
 public interface MappingVechileDriverRepository extends JpaRepository<MappingVehicleDriverDetails, Integer> {
 
-	@Query(value = "from MappingVehicleDriverDetails Where mappingVehicleDriverIsDeleted=?1")
-	List<MappingVehicleDriverDetails> findAllMappingVechileDriver(int mappingVechileDriverIsDeleted);
+//	@Query(value = "from MappingVehicleDriverDetails Where mappingVehicleDriverIsDeleted=?1")
+	List<MappingVehicleDriverDetails> findByMappingVehicleDriverIsDeleted(int mappingVechileDriverIsDeleted);
 	
 //	MappingVehicleDriverDetails findByVehicleId(int vehicleId);
 

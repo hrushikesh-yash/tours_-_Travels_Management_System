@@ -1,3 +1,4 @@
+import { DatePipe, formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -17,7 +18,8 @@ import { TourService } from 'src/app/Services/tour.service';
 })
 export class TourListComponent implements OnInit {
 
-  tours?:Tour[];
+  tours:Tour[];
+  tour:Tour;
   currentUser:User;
   booking:BookingHistory= new BookingHistory;
 
@@ -31,7 +33,8 @@ export class TourListComponent implements OnInit {
     private formBuilder: FormBuilder,
     private tourService:TourService,
     private alertService:AlertService,
-    private bookingService:BookingHistoryService) { }
+    private bookingService:BookingHistoryService,
+    private datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.getTourList()
@@ -47,7 +50,7 @@ export class TourListComponent implements OnInit {
     .subscribe({
       next: (data) => {
         this.tours = data;
-        console.log(this.tours);
+        // console.log(this.tours);
       },
       error: (e) => console.error(e)
     });
@@ -75,10 +78,21 @@ export class TourListComponent implements OnInit {
 
   addToTour(tourId:number)
   {
+    this.tourService.findTourById(tourId)
+    .pipe(first())
+    .subscribe({
+      next:(data) =>{
+        this.tour=data;
+        this.booking.tour=this.tour;
+        this.booking.user=this.currentUser;
+        this.booking.bookingDate=new Date(formatDate(new Date(), 'yyyy/MM/dd',''));
+        this.booking.travelStartDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
+        this.booking.travelEndDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
+      },
+      error:(error) => console.log(error)
+    });
     
-    this.booking.tourId=tourId;
-    this.booking.userId=this.currentUser.userId;
-    console.log("User Id:: "+this.booking.userId);
+    console.log(this.booking);
     // this.bookingService.addBooking(this.booking)
     // .pipe(first())
     // .subscribe({

@@ -25,7 +25,7 @@ public class MappingVehicleDriverManagerImpl implements MappingVehicleDriverMana
 		log.info("MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.");
 		try {
 			
-			return mappingVechileDriverRepository.findAllMappingVechileDriver(mappingVehicleDriverIsDeleted);
+			return mappingVechileDriverRepository.findByMappingVehicleDriverIsDeleted(mappingVehicleDriverIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("MappingVechileDriverManagerImpl :: findAllMappingVechileDriver error while find all vehicle driver mapping. "+e.getMessage());

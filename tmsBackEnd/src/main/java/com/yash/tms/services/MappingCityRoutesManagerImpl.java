@@ -24,7 +24,7 @@ public class MappingCityRoutesManagerImpl implements MappingCityRoutesManager {
 		log.info("MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.");
 		try {
 			
-			return mappingCityRoutesRepository.findAllRoutes(routeIsDeleted);
+			return mappingCityRoutesRepository.findByRouteIsDeleted(routeIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("MappingCityRoutesManagerImpl :: findAllMappingCityRoutes error while find all routes. "+e.getMessage());

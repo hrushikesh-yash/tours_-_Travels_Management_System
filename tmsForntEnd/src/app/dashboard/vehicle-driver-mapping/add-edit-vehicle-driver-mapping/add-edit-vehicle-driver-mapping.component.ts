@@ -128,9 +128,9 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
     this.submitted = true;
     this.loading = true;
     this.vehicleDriverMapping.mappingVehicleDriverDetailsId=this.id;
-    this.vehicleDriverMapping.vehicleId= this.vehicleDriverMappingForm.controls['vehicleId'].value;
-    this.vehicleDriverMapping.driverId= this.vehicleDriverMappingForm.controls['driverId'].value;
-    this.vehicleDriverMapping.routeId = this.vehicleDriverMappingForm.controls['routeId'].value;
+    // this.vehicleDriverMapping.vehicleId= this.vehicleDriverMappingForm.controls['vehicleId'].value;
+    // this.vehicleDriverMapping.driverId= this.vehicleDriverMappingForm.controls['driverId'].value;
+    // this.vehicleDriverMapping.routeId = this.vehicleDriverMappingForm.controls['routeId'].value;
     this.vehicleDriverMapping.vehicleDriverAssignDate= this.vehicleDriverMappingForm.controls['vehicleDriverAssignDate'].value;
     this.vehicleDriverMapping.vehicleFare = this.vehicleDriverMappingForm.controls['vehicleFare'].value;
 

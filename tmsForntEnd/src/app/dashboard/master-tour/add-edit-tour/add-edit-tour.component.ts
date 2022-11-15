@@ -20,16 +20,16 @@ export class AddEditTourComponent implements OnInit {
   id!: number;
   tourForm: FormGroup;
   submitted = false;
-  cities: CityList[];
+  cities: City[];
   tour: Tour = new Tour;
-  stateId: number = 0;
+  city: City;
 
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
     private alertService: AlertService,
     private cityService: CityServiceService,
-    private tourService:TourService) { }
+    private tourService: TourService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -38,27 +38,33 @@ export class AddEditTourComponent implements OnInit {
     this.tourForm = this.formBuilder.group({
       tourId: [this.id],
       tourName: [''],
-      tourDescription:[''],
+      tourDescription: [''],
       tourPrice: [''],
       cityId: [''],
     });
 
+    this.getAllCities();
+
+
+    if (!this.isAddMode) {
+      this.tourService.findTourById(this.id)
+        .pipe(first())
+        .subscribe(x => this.tourForm.patchValue(x));
+    }
+
+  }
+
+  getAllCities()
+  {
     this.cityService.getCityList()
       .pipe(first())
       .subscribe({
         next: (data) => {
           this.cities = data;
+          console.log(this.cities)
         },
         error: (error) => console.log(error)
       });
-
-
-      if (!this.isAddMode) {
-        this.tourService.findTourById(this.id)
-          .pipe(first())
-          .subscribe(x => this.tourForm.patchValue(x));
-      }
-
   }
 
   onSubmit() {
@@ -68,43 +74,56 @@ export class AddEditTourComponent implements OnInit {
     this.tour.tourName = this.tourForm.controls['tourName'].value;
     this.tour.tourDescription = this.tourForm.controls['tourDescription'].value;
     this.tour.tourPrice = this.tourForm.controls['tourPrice'].value;
-    this.tour.cityId = this.tourForm.controls['cityId'].value;
-
-    console.log(this.tour);
-    if (this.isAddMode) {
-      console.log(" Add Tour");
 
 
-          this.tourService.addTour(this.tour)
-            .pipe(first())
-            .subscribe({
-              next: () => {
-                this.alertService.success('Tour Added Sucessfully !', { keepAfterRouteChange: true });
-                this.router.navigate(['../'], { relativeTo: this.route });
-              },
-              error: error => {
-                this.alertService.error(error);
-                this.loading = false;
-              }
-            });
+    this.cityService.findCityById(this.tourForm.controls['cityId'].value)
+      .pipe(first())
+      .subscribe({
+        next: (data: any) => {
+          this.city = data;
+          console.log(this.city);
+          this.tour.city = this.city;
+          console.log(this.tour)
 
-    } else {
-      console.log("Update state: " + this.tour.tourId);
-           this.tourService.updateTour(this.tour.tourId,this.tour)
-                .pipe(first())
-                .subscribe({
-                    next: () => {
-                        this.alertService.warn('Tour Updated Sucesssfully !', { keepAfterRouteChange: true });
-                        this.router.navigate(['../../'], { relativeTo: this.route });
-                    },
-                    error: (error: string) => {
-                        this.alertService.error(error);
-                        this.loading = false;
-                    }
-                });
-    }
+          if (this.isAddMode) {
+            console.log(" Add Tour");
+
+
+            this.tourService.addTour(this.tour)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.success('Tour Added Sucessfully !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../'], { relativeTo: this.route });
+                },
+                error: error => {
+                  this.alertService.error(error);
+                  this.loading = false;
+                }
+              });
+
+          } else {
+            console.log("Update state: " + this.tour.tourId);
+            this.tourService.updateTour(this.tour.tourId, this.tour)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.warn('Tour Updated Sucesssfully !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../../'], { relativeTo: this.route });
+                },
+                error: (error: string) => {
+                  this.alertService.error(error);
+                  this.loading = false;
+                }
+              });
+          }
+
+
+        }
+
+      })
+
 
 
   }
-
 }

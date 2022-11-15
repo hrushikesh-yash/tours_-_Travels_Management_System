@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.yash.tms.entity.BookingHistory;
+import com.yash.tms.entity.MasterUser;
 
 @Repository
 public interface BookingHistoryRepository extends JpaRepository<BookingHistory, Integer> {
@@ -13,6 +14,6 @@ public interface BookingHistoryRepository extends JpaRepository<BookingHistory, 
 //	@Query(value = "from BookingHistory where bookingHistoryIsDeleted=?1")
 	List<BookingHistory> findByBookingIsDeleted(int bookingHistoryIsDeleted);
 
-	List<BookingHistory> findByUserId(int userId);
+//	List<BookingHistory> findByUserId(int userId);
 
 }
