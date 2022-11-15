@@ -106,4 +106,21 @@ public class BookingHistoryController {
 
 	}
 	
+	@GetMapping("/findBookingByUserId/{userId}")
+	public List<BookingHistory> findBookingByUserId(@PathVariable(value = "userId") int userId)
+	{
+		log.info("BookingHistoryController :: findBookingByUserId function started.");
+		
+		try {
+
+			return bookingHistoryManager.findBookingByUserId(userId);
+			
+			
+
+		} catch (Exception e) {
+			log.error("BookingHistoryController :: error in findBookingByUserId function." + e.getMessage());
+			return null;
+		}
+	}
+	
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MasterStateComponent } from '../state/master-state/master-state.component';
+import { MasterStateComponent } from './master-state/master-state.component';
 import { AddEditStateComponent } from './add-edit-state/add-edit-state.component';
 import { StateListComponent } from './state-list/state-list.component';
 

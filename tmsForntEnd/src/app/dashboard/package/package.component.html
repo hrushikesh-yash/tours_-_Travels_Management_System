@@ -1,0 +1,29 @@
+<div class="p-4">
+    <div class="container">
+        <div class="product-cart" *ngIf="cartItems> 0">
+            <ul>
+                <li *ngFor="let item of bookingHistoryItems">
+                    <!-- <img class="card-img-top" src="{{item.image}}" alt="Card image cap"> -->
+                   Tour Details : {{item.tourId}}
+                    <span>{{item.vehicleId  | currency:'INR'}}</span>
+                    <br>
+                    Vehicle: {{item.vehicleId }}
+                    <br>
+                    Travelling Date : {{item.travelStartDate }} to {{item.travelEndDate}}
+                    <button class="btn-close"> <!-- (click)="removeItemFromCart(item.id)"-->
+                        <i class="fa-thin fa-circle-xmark"></i>
+                      </button>    
+                </li>
+            </ul>
+            <div class="cart-total">
+                <p><button type="button" class="btn btn-outline-primary btn-sm">Empty Cart</button></p>
+                <!--(click)="emptyCart()"-->
+                <p class="text-right">
+                    <strong class="d-block">Total Amount:</strong>
+                    <span class="d-block">{{totalAmmount | currency:'INR'}}</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

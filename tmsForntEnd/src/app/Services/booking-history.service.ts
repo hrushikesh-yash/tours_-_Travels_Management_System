@@ -14,4 +14,10 @@ export class BookingHistoryService {
   addBooking(bookingHistory: BookingHistory):Observable<BookingHistory>{
     return this.httpClient.post<BookingHistory>(this.baseURL+"addBookingHistory",bookingHistory);
   }
+
+  getBookingByUserId(userId:number):Observable<BookingHistory[]>{
+    return this.httpClient.get<BookingHistory[]>(this.baseURL+"findBookingByUserId/"+`${userId}`);
+  }
+
+
 }

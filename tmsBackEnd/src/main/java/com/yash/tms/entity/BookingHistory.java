@@ -20,7 +20,7 @@ public class BookingHistory {
 	private int bookingHistoryId;
 
 	@Column(name = "userId")
-	private String userId;
+	private int userId;
 
 	@Column(name = "vehicleId")
 	private String vehicleId;
@@ -38,10 +38,10 @@ public class BookingHistory {
 	private LocalDate bookingDate;
 
 	@Column(name = "travelStartDate")
-	private Date travelStartDate;
+	private LocalDate travelStartDate;
 
 	@Column(name = "travelEndDate")
-	private Date travelEndDate;
+	private LocalDate travelEndDate;
 
 	@Column(name = "bookingAmount")
 	private int travelAmount;
@@ -61,12 +61,14 @@ public class BookingHistory {
 		this.bookingHistoryId = bookingHistoryId;
 	}
 
-	public String getUserId() {
+	
+
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
-		userId = userId;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public int getTourId() {
@@ -101,19 +103,19 @@ public class BookingHistory {
 		this.bookingDate = bookingDate;
 	}
 
-	public Date getTravelStartDate() {
+	public LocalDate getTravelStartDate() {
 		return travelStartDate;
 	}
 
-	public void setTravelStartDate(Date travelStartDate) {
+	public void setTravelStartDate(LocalDate travelStartDate) {
 		this.travelStartDate = travelStartDate;
 	}
 
-	public Date getTravelEndDate() {
+	public LocalDate getTravelEndDate() {
 		return travelEndDate;
 	}
 
-	public void setTravelEndDate(Date travelEndDate) {
+	public void setTravelEndDate(LocalDate travelEndDate) {
 		this.travelEndDate = travelEndDate;
 	}
 

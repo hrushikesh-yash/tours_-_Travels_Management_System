@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.BookingHistoryRepository;
 import com.yash.tms.entity.BookingHistory;
-import com.yash.tms.exception.RecordNotfoundException;
 
 @Service
 public class BookingHistoryManagerImpl implements BookingHistoryManager {
@@ -51,7 +50,7 @@ public class BookingHistoryManagerImpl implements BookingHistoryManager {
 	public BookingHistory findById(int bookingHistoryId) {
 		log.info("BookingHistoryManagerImpl :: findById function started.");
 		try {
-			BookingHistory history=bookingHistoryRepository.findById(bookingHistoryId).orElseThrow(() -> new RecordNotfoundException("history Id not found."));
+			BookingHistory history=bookingHistoryRepository.findById(bookingHistoryId).get(); //orElseThrow(() -> new RecordNotfoundException("history Id not found."));
 			 return history;
 		}
 		catch (Exception e) {
@@ -60,6 +59,20 @@ public class BookingHistoryManagerImpl implements BookingHistoryManager {
 			return null;
 		}
 		
+	}
+
+	@Override
+	public List<BookingHistory> findBookingByUserId(int userId) {
+		log.info("BookingHistoryManagerImpl :: findById function started.");
+		try {
+			return bookingHistoryRepository.findByUserId(userId);
+			 
+		}
+		catch (Exception e) {
+			log.error("BookingHistoryManagerImpl :: findBookingByUserId error while find by user id  id ::"+userId+" "+e.getMessage());
+			log.error("BookingHistoryManagerImpl :: findBookingByUserId Stacktrace :: "+e.getStackTrace());
+			return null;
+		}
 	}
 
 }

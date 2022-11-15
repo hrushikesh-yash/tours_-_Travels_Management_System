@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AlertService } from '../Services/alert-service.service';
 interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
@@ -10,8 +12,11 @@ interface SideNavToggle {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  cartProductCount:number=10;
-  constructor() { }
+  cartProductCount: number = 10;
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+
+    private alertService: AlertService) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +29,18 @@ export class DashboardComponent implements OnInit {
     // console.log(this.screenWidth);
     this.isSideNavCollapsed = data.collapsed;
     // console.log(this.isSideNavCollapsed);
+  }
+
+  logout() {
+    this.alertService.success('Logout Sucessfully !', { keepAfterRouteChange: true });
+    this.router.navigate(['../'], { relativeTo: this.route });
+    localStorage.clear();
+  }
+
+  test()
+  {
+    // this.router.navigate(['/package'], { relativeTo: this.route });
+    // this.router.navigate(['../'], { relativeTo: this.route });
   }
 
 }

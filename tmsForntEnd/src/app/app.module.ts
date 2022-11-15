@@ -4,13 +4,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertComponent } from './alter/alert.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyComponent } from './body/body.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 
 @NgModule({
@@ -18,9 +15,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     AppComponent,
     routingComponents,
     AlertComponent,
-    SidenavComponent,
-    BodyComponent,
-    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    // DashboardModule
   
   ],
   providers: [DatePipe],

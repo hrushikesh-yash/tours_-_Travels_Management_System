@@ -1,11 +1,23 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light" 
     style="background-color: #263238; height: 70px; color: #fff;">
-        <h1 style="padding-left: 1%; padding-top: 1%;"><strong>Tours & Travels</strong></h1>
-        <div style="padding-left: 82%; ">
+        <h1 style="padding-left: 1%; padding-top: 1%;"><strong>Tours & Travels</strong></h1> &nbsp;
+        <button type="button" class="btn btn-outline-danger btn-sm" 
+        routerLink="/Package" routerLinkActive="active"
+        >Package</button>
+        <div style="padding-left: 71%;">
+           
+            <i class="fa-solid fa-person-walking-luggage" style="font-size: 32px;" 
+                title="Tour Package" ></i>
+            <em>{{cartProductCount}}</em>
+            
+        </div>
+
+        <div style="position: fixed; ">
             <span>
-                <i class="fa-solid fa-person-walking-luggage" style="font-size: 32px;" ></i>
-              <em>{{cartProductCount}}</em>
+                <i class="fa-solid fa-right-from-bracket" style="font-size: 25px;" 
+                (click)="logout()" title="Logout"></i>
+                <!-- <em style="font-size: 10px;">Logout </em> -->
             </span>
         </div>
         
