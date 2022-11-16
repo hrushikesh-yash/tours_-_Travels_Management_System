@@ -51,8 +51,8 @@ public class MasterCityManagerImpl implements MasterCityManager {
 	public MasterCity findById(int cityId) {
 		log.info("MasterCityManagerImpl :: findById function started.");
 		try {
-			MasterCity city = masterCityDao.findById(cityId)
-					.orElseThrow(() -> new RecordNotfoundException("City Id not found."));
+			MasterCity city = masterCityDao.findById(cityId).get();
+					
 			return city;
 		} catch (Exception e) {
 			log.error("MasterCityManagerImpl :: findById error while find city by city id ::" + cityId + " "

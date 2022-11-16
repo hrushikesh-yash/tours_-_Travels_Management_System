@@ -25,8 +25,8 @@ export class AddEditCityRoutesComponent implements OnInit {
   submitted = false;
   cities: City[];
   cityRoute: CityRoutes = new CityRoutes;
-  cityId: number = 0;
-
+  sourceCityId: number = 0;
+  destinationCityId:number=0;
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
@@ -55,8 +55,8 @@ export class AddEditCityRoutesComponent implements OnInit {
     this.cityRouteForm = this.formBuilder.group({
       routeId: [this.id],
       routeName: [''],
-      sourceCity: [''],
-      destinationCity: [''],
+      sourceCityId: [''],
+      destinationCityId: [''],
       routeCreatedDate: ['']
     });
 
@@ -77,14 +77,18 @@ export class AddEditCityRoutesComponent implements OnInit {
     this.cityRoute.routeId = this.cityRouteForm.controls['routeId'].value;
     this.cityRoute.routeName = this.cityRouteForm.controls['routeName'].value;
     this.cityRoute.routeCreatedDate = this.cityRouteForm.controls['routeCreatedDate'].value;
+    this.sourceCityId=this.cityRouteForm.controls['sourceCityId'].value;
+    console.log(this.sourceCityId);
+    this.destinationCityId=this.cityRouteForm.controls['destinationCityId'].value
+    console.log(this.destinationCityId);
 
-    this.cityService.findCityById(this.cityRouteForm.controls['sourceCityId'].value)
+    this.cityService.findCityById(this.sourceCityId)
       .pipe(first())
       .subscribe({
         next: (data) => {
           this.sourceCity = data;
 
-          this.cityService.findCityById(this.cityRouteForm.controls['destinationCityId'].value)
+          this.cityService.findCityById(this.destinationCityId)
             .pipe(first())
             .subscribe({
               next: (data) => {

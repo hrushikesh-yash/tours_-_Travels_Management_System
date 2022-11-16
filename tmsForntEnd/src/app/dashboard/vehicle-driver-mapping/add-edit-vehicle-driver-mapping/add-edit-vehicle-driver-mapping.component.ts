@@ -21,7 +21,7 @@ import { VehicleService } from 'src/app/Services/vehicle.service';
 })
 export class AddEditVehicleDriverMappingComponent implements OnInit {
 
-  
+
   loading = false;
   isAddMode!: boolean;
   id!: number;
@@ -29,11 +29,14 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
   submitted = false;
 
   cityRoutes: CityRoutes[];
-  vehicles:Vehicle[];
-  drivers:User[];
-  vehicleDriverMapping:VehicleDriverMapping= new VehicleDriverMapping; 
-  driverActorId:number=2;
-  
+  vehicles: Vehicle[];
+  drivers: User[];
+  vehicleDriverMapping: VehicleDriverMapping = new VehicleDriverMapping;
+  driverActorId: number = 2;
+  vehicle: Vehicle;
+  cityRoute: CityRoutes;
+  user: User;
+
   mappingVehicleDriverDetailsId: number = 0;
 
   constructor(private formBuilder: FormBuilder,
@@ -42,32 +45,32 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
     private cityRoutesService: CityRoutesService,
     private alertService: AlertService,
     private mappingVehicleDriverService: MappingVehicleDriverService,
-    private vehicleService:VehicleService,
-    private userService:UserService) { }
+    private vehicleService: VehicleService,
+    private userService: UserService) { }
 
   ngOnInit(): void {
 
     this.id = this.route.snapshot.params['id'];
-    console.log("this id :: "+this.id)
+    console.log("this id :: " + this.id)
     this.isAddMode = !this.id;
 
-  
 
-   this.getAllVehicles()
 
-   this.getAllCityRoutes()
+    this.getAllVehicles()
+
+    this.getAllCityRoutes()
 
     this.getAllDrivers()
 
-      
+
 
     this.vehicleDriverMappingForm = this.formBuilder.group({
       mappingVehicleDriverDetailsId: [this.id],
       vehicleId: [''],
       driverId: [''],
       routeId: [''],
-      vehicleDriverAssignDate:[''],
-      vehicleFare:['']
+      vehicleDriverAssignDate: [''],
+      vehicleFare: ['']
     });
 
     if (!this.isAddMode) {
@@ -81,8 +84,7 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
 
 
 
-  getAllVehicles()
-  {
+  getAllVehicles() {
     this.vehicleService.getVehicleTypeList()
       .pipe(first())
       .subscribe({
@@ -94,8 +96,7 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
       });
   }
 
-  getAllCityRoutes()
-  {
+  getAllCityRoutes() {
     this.cityRoutesService.findAllRoutes()
       .pipe(first())
       .subscribe({
@@ -107,9 +108,8 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
       });
   }
 
-  getAllDrivers()
-  {
-    
+  getAllDrivers() {
+
     this.userService.getAllByActorId(this.driverActorId)
       .pipe(first())
       .subscribe({
@@ -127,47 +127,82 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.loading = true;
-    this.vehicleDriverMapping.mappingVehicleDriverDetailsId=this.id;
+    this.vehicleDriverMapping.mappingVehicleDriverDetailsId = this.id;
     // this.vehicleDriverMapping.vehicleId= this.vehicleDriverMappingForm.controls['vehicleId'].value;
     // this.vehicleDriverMapping.driverId= this.vehicleDriverMappingForm.controls['driverId'].value;
     // this.vehicleDriverMapping.routeId = this.vehicleDriverMappingForm.controls['routeId'].value;
-    this.vehicleDriverMapping.vehicleDriverAssignDate= this.vehicleDriverMappingForm.controls['vehicleDriverAssignDate'].value;
+    this.vehicleDriverMapping.vehicleDriverAssignDate = this.vehicleDriverMappingForm.controls['vehicleDriverAssignDate'].value;
     this.vehicleDriverMapping.vehicleFare = this.vehicleDriverMappingForm.controls['vehicleFare'].value;
 
-
-    // console.log(this.city);
-    if (this.isAddMode) {
-      console.log(" Add Vehicle Driver Mapping ");
-
-
-          this.mappingVehicleDriverService.addMappingVehicleDriver(this.vehicleDriverMapping)
+    this.vehicleService.findVehicleById(this.vehicleDriverMappingForm.controls['vehicleId'].value)
+      .pipe(first())
+      .subscribe({
+        next: (data) => {
+          this.vehicle = data;
+          this.vehicleDriverMapping.vehicle = this.vehicle;
+          this.cityRoutesService.findRouteById(this.vehicleDriverMappingForm.controls['routeId'].value)
             .pipe(first())
             .subscribe({
-              next: () => {
-                this.alertService.success('Vehicle Driver Mapping added Sucessfully !', { keepAfterRouteChange: true });
-                this.router.navigate(['../'], { relativeTo: this.route });
+              next: (data) => {
+                this.cityRoute = data
+                this.vehicleDriverMapping.route = this.cityRoute;
+                this.userService.findUserById(this.vehicleDriverMappingForm.controls['driverId'].value)
+                  .pipe(first())
+                  .subscribe({
+                    next: (data) => {
+                      this.user = data
+                      this.vehicleDriverMapping.driver = this.user;
+
+                       console.log(this.vehicleDriverMapping);
+                      if (this.isAddMode) {
+                        console.log(" Add Vehicle Driver Mapping ");
+
+
+                        this.mappingVehicleDriverService.addMappingVehicleDriver(this.vehicleDriverMapping)
+                          .pipe(first())
+                          .subscribe({
+                            next: () => {
+                              this.alertService.success('Vehicle Driver Mapping added Sucessfully !', { keepAfterRouteChange: true });
+                              this.router.navigate(['../'], { relativeTo: this.route });
+                            },
+                            error: error => {
+                              this.alertService.error(error);
+                              this.loading = false;
+                            }
+                          });
+
+                      } else {
+                        console.log("Update Vehicle Driver Mapping : " + this.vehicleDriverMapping.mappingVehicleDriverDetailsId);
+                        this.mappingVehicleDriverService.updateMappingVehicleDriver(this.vehicleDriverMapping.mappingVehicleDriverDetailsId, this.vehicleDriverMapping)
+                          .pipe(first())
+                          .subscribe({
+                            next: () => {
+                              this.alertService.warn('Vehicle Driver Mapping Updated Sucesssfully !', { keepAfterRouteChange: true });
+                              this.router.navigate(['../../'], { relativeTo: this.route });
+                            },
+                            error: (error: string) => {
+                              this.alertService.error(error);
+                              this.loading = false;
+                            }
+                          });
+                      }
+
+                    },
+                    error: (err) => {
+                      console.log(err);
+                    }
+                  });
+
               },
-              error: error => {
-                this.alertService.error(error);
-                this.loading = false;
+              error: (err) => {
+                console.log(err);
               }
             });
+        },
+        error: (err) => console.log(err)
+      });
 
-    } else {
-      console.log("Update Vehicle Driver Mapping : " + this.vehicleDriverMapping.mappingVehicleDriverDetailsId);
-           this.mappingVehicleDriverService.updateMappingVehicleDriver(this.vehicleDriverMapping.mappingVehicleDriverDetailsId,this.vehicleDriverMapping)
-                .pipe(first())
-                .subscribe({
-                    next: () => {
-                        this.alertService.warn('Vehicle Driver Mapping Updated Sucesssfully !', { keepAfterRouteChange: true });
-                        this.router.navigate(['../../'], { relativeTo: this.route });
-                    },
-                    error: (error: string) => {
-                        this.alertService.error(error);
-                        this.loading = false;
-                    }
-                });
-    }
+
 
 
   }

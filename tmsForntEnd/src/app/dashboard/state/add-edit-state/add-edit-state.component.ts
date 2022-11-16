@@ -67,7 +67,7 @@ export class AddEditStateComponent implements OnInit {
         .pipe(first())
         .subscribe({
           next: () => {
-            this.alertService.success('User added', { keepAfterRouteChange: true });
+            this.alertService.success('State added', { keepAfterRouteChange: true });
             this.router.navigate(['../'], { relativeTo: this.route });
           },
           error: error => {

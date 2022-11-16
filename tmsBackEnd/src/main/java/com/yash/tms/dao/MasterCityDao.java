@@ -11,8 +11,8 @@ import com.yash.tms.entity.MasterCity;
 @Repository
 public interface MasterCityDao extends JpaRepository<MasterCity, Integer>{
 	
-	  @Query(value = "from MasterCity where cityIsDeleted = ?1") public
-	  List<MasterCity> findAllCities(int cityIsDeleted);
+	  @Query(value = "from MasterCity where cityIsDeleted = ?1")
+	  public List<MasterCity> findAllCities(int cityIsDeleted);
 	  
 	 
 	 
