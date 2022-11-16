@@ -15,4 +15,6 @@ public interface BookingHistoryManager {
 
 	List<BookingHistory> findBookingByUserId(int userId);
 
+	BookingHistory findByStatusId(int statusId);
+
 }

@@ -42,6 +42,21 @@ public class MasterStatusController {
 		return mastorStatusList;
 
 	}
+	
+	@GetMapping("/getStatusByName/{statusName}")
+	public MasterStatus getStatusByName(@PathVariable(name="statusName") String statusName) {
+		log.info("MasterStatusController :: getStatusByName function started.");
+		try {
+			return masterStatusManager.getStatusByName(statusName);
+			
+
+		} catch (Exception e) {
+			log.error("MasterStatusController :: error in getStatusByName function." + e.getMessage());
+			return null;
+		}
+		
+
+	}
 
 	@PostMapping("/addStatus")
 	public MasterStatus addStatus(@RequestBody MasterStatus status) {

@@ -65,13 +65,27 @@ public class BookingHistoryManagerImpl implements BookingHistoryManager {
 	public List<BookingHistory> findBookingByUserId(int userId) {
 		log.info("BookingHistoryManagerImpl :: findById function started.");
 		try {
-//			return bookingHistoryRepository.findByUserId(userId);
-			return null;
+			return bookingHistoryRepository.findByUserUserId(userId);
 			 
 		}
 		catch (Exception e) {
 			log.error("BookingHistoryManagerImpl :: findBookingByUserId error while find by user id  id ::"+userId+" "+e.getMessage());
 			log.error("BookingHistoryManagerImpl :: findBookingByUserId Stacktrace :: "+e.getStackTrace());
+			return null;
+		}
+	}
+
+	@Override
+	public BookingHistory findByStatusId(int statusId) {
+		log.info("BookingHistoryManagerImpl :: findByStatusId function started.");
+		try {
+			return bookingHistoryRepository.findByStatusStatusId(statusId);
+			
+			 
+		}
+		catch (Exception e) {
+			log.error("BookingHistoryManagerImpl :: findByStatusId error while find by status id  id ::"+statusId+" "+e.getMessage());
+			log.error("BookingHistoryManagerImpl :: findByStatusId Stacktrace :: "+e.getStackTrace());
 			return null;
 		}
 	}

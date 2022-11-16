@@ -12,7 +12,6 @@ import { BookingHistoryService } from 'src/app/Services/booking-history.service'
 export class PackageComponent implements OnInit {
 
    cartItems:number=1;
-   totalAmmount:number =10;
   bookingHistoryItems:BookingHistory[];
   currentUser:User;
 
@@ -29,7 +28,7 @@ export class PackageComponent implements OnInit {
       next: (data) => {
         this.bookingHistoryItems = data;
         console.log(this.bookingHistoryItems);
-        this.totalAmmount=this.bookingHistoryItems[0].travelAmount;
+        // this.totalAmmount=this.bookingHistoryItems[0].travelAmount;
         // this.cartItems=this.bookingHistoryItems.length;
       },
       error: (error) => console.log(error)

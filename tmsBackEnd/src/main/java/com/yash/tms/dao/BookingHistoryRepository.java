@@ -14,6 +14,8 @@ public interface BookingHistoryRepository extends JpaRepository<BookingHistory, 
 //	@Query(value = "from BookingHistory where bookingHistoryIsDeleted=?1")
 	List<BookingHistory> findByBookingIsDeleted(int bookingHistoryIsDeleted);
 
-//	List<BookingHistory> findByUserId(int userId);
+	BookingHistory findByStatusStatusId(int statusId);
+
+	List<BookingHistory> findByUserUserId(int userId);
 
 }

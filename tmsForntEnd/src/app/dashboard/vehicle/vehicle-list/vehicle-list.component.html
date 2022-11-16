@@ -30,7 +30,7 @@
                         </button>
                     </td>
                     <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
-                        <a routerLink="addToTour/{{vehicle.vehicleId}}" class="btn btn-sm btn-primary mr-1">Add to Tour</a> &nbsp;
+                        <a (click)="addToTour(vehicle.vehicleId)" class="btn btn-outline-secondary">Add to Tour</a> &nbsp;
                     </td>
                 </tr>
                 <tr *ngIf="!vehicles">

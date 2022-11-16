@@ -11,4 +11,6 @@ public interface MasterStatusManager {
 
 	public MasterStatus findById(int statusId);
 
+	public MasterStatus getStatusByName(String statusName);
+
 }

@@ -14,4 +14,6 @@ public interface MasterStatusDao extends JpaRepository<MasterStatus, Integer>{
 	@Query(value="from MasterStatus where statusIsDeleted =?1")
 	public List<MasterStatus> findAllStatus(short statusIsDeleted);
 
+	public MasterStatus findByStatusName(String statusName);
+
 }

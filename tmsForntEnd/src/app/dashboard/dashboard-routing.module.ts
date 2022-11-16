@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BookingReportComponent } from './booking-report/booking-report.component';
 import { DashboardComponent } from './dashboard.component';
 import { PackageComponent } from './package/package.component';
 const stateModule = () => import('./state/state.module').then(x => x.StateModule);
@@ -16,6 +17,7 @@ const routes: Routes = [
     path: '', component: DashboardComponent,
     children: [
       { path: 'Package', component: PackageComponent },
+      { path: 'Report', component: BookingReportComponent },
       { path: 'State', loadChildren: stateModule },
       { path: 'City', loadChildren: cityModule },
       { path: 'Tour', loadChildren: tourModule },
@@ -25,7 +27,7 @@ const routes: Routes = [
       { path: 'Vehicle-Driver-Assign', loadChildren: vehicleDriverMappingModule }
     ]
   },
-  
+
 ];
 
 @NgModule({

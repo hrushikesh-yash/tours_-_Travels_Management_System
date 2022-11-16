@@ -6,9 +6,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { BookingHistory } from 'src/app/modules/BookingHistory';
 import { User } from 'src/app/modules/masterUser';
+import { Status } from 'src/app/modules/Status';
 import { Tour } from 'src/app/modules/Tour';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { BookingHistoryService } from 'src/app/Services/booking-history.service';
+import { StatusService } from 'src/app/Services/status.service';
 import { TourService } from 'src/app/Services/tour.service';
 
 @Component({
@@ -20,6 +22,7 @@ export class TourListComponent implements OnInit {
 
   tours:Tour[];
   tour:Tour;
+  status:Status;
   currentUser:User;
   booking:BookingHistory= new BookingHistory;
 
@@ -34,14 +37,15 @@ export class TourListComponent implements OnInit {
     private tourService:TourService,
     private alertService:AlertService,
     private bookingService:BookingHistoryService,
-    private datePipe: DatePipe) { }
+    private datePipe: DatePipe,
+    private statusService:StatusService) { }
 
   ngOnInit(): void {
     this.getTourList()
 
     let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
     this.currentUser = user;
-    console.log(this.currentUser.firstName);
+
   }
 
   getTourList()
@@ -83,27 +87,44 @@ export class TourListComponent implements OnInit {
     .subscribe({
       next:(data) =>{
         this.tour=data;
-        this.booking.tour=this.tour;
-        this.booking.user=this.currentUser;
-        this.booking.bookingDate=new Date(formatDate(new Date(), 'yyyy/MM/dd',''));
-        this.booking.travelStartDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
-        this.booking.travelEndDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
+        console.log(this.tour)
+         this.booking.tour=this.tour;
+          console.log(this.currentUser);
+         this.booking.user=this.currentUser;
+         this.statusService.findStatusByName("Pending")
+         .pipe(first())
+         .subscribe({
+            next:(data) =>
+            {
+
+              this.status=data;
+              this.booking.status=this.status
+              this.bookingService.addBooking(this.booking)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.success('Tour added in your Package Sucessfullly !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../Vehicle'], { relativeTo: this.route });
+                },
+                error: error => {
+                  this.alertService.error(error);
+                }
+              });
+
+            },
+            error:(err) => console.log(err)
+         });
+        // this.booking.bookingDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
+        // this.booking.travelStartDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
+        // this.booking.travelEndDate=new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
+      
+        console.log(this.booking);
       },
       error:(error) => console.log(error)
     });
     
-    console.log(this.booking);
-    // this.bookingService.addBooking(this.booking)
-    // .pipe(first())
-    // .subscribe({
-    //   next: () => {
-    //     this.alertService.info('Tour added in Package Sucessfullly !', { keepAfterRouteChange: true });
-    //     this.router.navigate(['../'], { relativeTo: this.route });
-    //   },
-    //   error: error => {
-    //     this.alertService.error(error);
-    //   }
-    // });
+    
+   
   }
 
 }

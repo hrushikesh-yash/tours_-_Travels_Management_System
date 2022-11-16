@@ -54,15 +54,29 @@ public class MasterStatusManagerImpl implements MasterStatusManager{
 	public MasterStatus findById(int statusId) {
 		log.info("MasterActorManagerImpl :: findById function started.");
 		try {
-				MasterStatus status=masterStatusDao.findById(statusId).orElseThrow(() -> new RecordNotfoundException("Status Id not found."));
+				MasterStatus status=masterStatusDao.findById(statusId).get();
 			 return status;
 		}
 		catch (Exception e) {
 			log.error("MasterStatusManagerImpl :: findById error while find actor by status id ::"+statusId+" "+e.getMessage());
-			log.error("MasterStatusManagerImpl :: addStatus Stacktrace :: "+e.getStackTrace());
+			log.error("MasterStatusManagerImpl :: findById Stacktrace :: "+e.getStackTrace());
 			return null;
 		}
 		
+	}
+
+	@Override
+	public MasterStatus getStatusByName(String statusName) {
+		log.info("MasterActorManagerImpl :: getStatusByName function started.");
+		try {
+			return masterStatusDao.findByStatusName(statusName);
+			 
+		}
+		catch (Exception e) {
+			log.error("MasterStatusManagerImpl :: getStatusByName error while find actor by status Name::"+statusName+" "+e.getMessage());
+			log.error("MasterStatusManagerImpl :: getStatusByName Stacktrace :: "+e.getStackTrace());
+			return null;
+		}
 	}
 
 }

@@ -30,7 +30,7 @@
                         </button>
                     </td>
                     <td style="white-space: nowrap" *ngIf="currentUser.actorId==2">
-                        <a routerLink="edit/{{cityRoute.routeId }}" class="btn btn-sm btn-primary mr-1">Add to Tour</a> &nbsp;
+                        <a (click)="addToTour(cityRoute.routeId)" class="btn btn-sm btn-outline-primary mr-1">Add to Tour</a> &nbsp;
                     </td>
                 </tr>
                 <tr *ngIf="!cityRoutes">

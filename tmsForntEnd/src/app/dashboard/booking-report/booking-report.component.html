@@ -1,0 +1,50 @@
+<div class="p-1">
+    <div class="container-xxl">
+        <div class="card">
+            <div class="card-head">
+                <h1><strong>Booking Report</strong></h1>
+            </div>
+            <div class="card-body">
+        
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%"> Sr No</th>
+                            <th style="width: 8%">User Name</th>
+                            <th style="width: 10%">Tour Name</th>
+                            <th style="width: 8%">City Name </th>
+                            <th style="width: 10%">Vehicle Name</th>
+                            <th style="width: 12%">Tour Route</th>
+                            <th style="width: 12%">Journey Start Date</th>
+                            <th style="width: 12%">Journey End Date</th>
+                            <th style="width: 10%">Booking Date</th>
+                            <th style="width: 8%">Tour Amount</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let booking of bookingHistory">
+                            <td>{{booking.bookingHistoryId}}</td>
+                            <td>{{booking.user.userName}}</td>
+                            <td>{{booking.tour.tourName}}</td>
+                            <td>{{booking.tour.city.cityName}}</td>
+                            <td>{{booking.vehicle.vehicleName}}</td>
+                            <td>{{booking.cityRoute.routeName}}</td>
+                            <td>{{booking.travelStartDate}}</td>
+                            <td>{{booking.travelEndDate}}</td>
+                            <td>{{booking.bookingDate}}</td>
+                            <td>{{booking.travelAmount | currency:'INR'}}</td>
+                           
+                        </tr>
+                        <tr *ngIf="!bookingHistory">
+                            <td colspan="10" class="text-center">
+                                Loading
+                                <span class="spinner-border spinner-border-lg align-center"></span>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+        
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,7 @@
     position: fixed;
     right: 1em;
     top: 73px;
-    width: 550px;
+    width: 700px;
     background-color: #FFF;
     border: 1px solid #CCC;
     box-shadow: 0 5px 15px rgba(0,0,0, 0.2);
@@ -14,8 +14,8 @@
     padding: 0;
   }
   
-  .product-cart li {
-    display: flex;
+  .product-cart table {
+     /* display: flex; */
     flex-flow: row;
     padding: 1em;
     border-bottom: 1px solid #CCC;

@@ -6,6 +6,7 @@ import { PackageComponent } from './package/package.component';
 import { DashboardComponent } from './dashboard.component';
 import { BodyComponent } from '../body/body.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
+import { BookingReportComponent } from './booking-report/booking-report.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SidenavComponent } from '../sidenav/sidenav.component';
     PackageComponent,
     DashboardComponent,
     BodyComponent,
-    SidenavComponent
+    SidenavComponent,
+    BookingReportComponent
 
   ],
   imports: [

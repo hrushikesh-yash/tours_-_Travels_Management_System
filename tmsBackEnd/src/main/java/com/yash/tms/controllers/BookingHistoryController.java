@@ -123,4 +123,21 @@ public class BookingHistoryController {
 		}
 	}
 	
+	@GetMapping("/findByStatusId/{statusId}")
+	public BookingHistory findByStatusId(@PathVariable(value = "statusId") int statusId)
+	{
+		log.info("BookingHistoryController :: findBookingByUserId function started.");
+		
+		try {
+
+			return bookingHistoryManager.findByStatusId(statusId);
+			
+			
+
+		} catch (Exception e) {
+			log.error("BookingHistoryController :: error in findBookingByUserId function." + e.getMessage());
+			return null;
+		}
+	}
+	
 }

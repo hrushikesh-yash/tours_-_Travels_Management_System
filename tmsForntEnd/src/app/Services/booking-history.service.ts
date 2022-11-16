@@ -7,6 +7,8 @@ import { BookingHistory } from '../modules/BookingHistory';
   providedIn: 'root'
 })
 export class BookingHistoryService {
+ 
+ 
   baseURL:String = "http://localhost:8080/bookingHistory/"
 
   constructor(private httpClient: HttpClient) { }
@@ -16,8 +18,18 @@ export class BookingHistoryService {
   }
 
   getBookingByUserId(userId:number):Observable<BookingHistory[]>{
+    return this.httpClient.get<BookingHistory[]>(this.baseURL+"findBookingByUserId/"+`${userId}`);
+  }
+
+  findByStatusId(pendingStatus: number):Observable<BookingHistory> {
+    return this.httpClient.get<BookingHistory>(this.baseURL+"findByStatusId/"+`${pendingStatus}`)
+  }
+
+  getAllAbookings():Observable<BookingHistory[]> 
+  {
     return this.httpClient.get<BookingHistory[]>(this.baseURL+"findAllBookingHistory");
   }
+
 
 
 }

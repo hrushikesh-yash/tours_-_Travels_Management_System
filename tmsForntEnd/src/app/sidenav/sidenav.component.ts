@@ -60,23 +60,29 @@ export class SidenavComponent implements OnInit {
 
   constructor(private userService: UserService) {
     // this.currentUser=this.userService.getLoginUser();
-    console.log("User in side nav ");
+    
     let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
     this.currentUser = user;
-    console.log(this.currentUser.firstName);
+    // console.log(this.currentUser.firstName);
     
-    if(this.currentUser.actorId==2)
-    {
-      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'State')
-      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Type')
-      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Driver-Assign')
-    }
+    
     
   }
 
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
+    if(this.currentUser.actorId==2)
+    {
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'State')
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Type')
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Driver-Assign')
+     
+    }
+    else if(this.currentUser.actorId==1)
+    {
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'settings')
+    }
   }
 
   toggleCollapse(): void {

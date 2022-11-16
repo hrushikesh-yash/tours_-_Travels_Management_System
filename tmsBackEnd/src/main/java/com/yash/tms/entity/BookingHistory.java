@@ -38,6 +38,10 @@ public class BookingHistory {
 	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "statusId",referencedColumnName = "statusId")
 	private MasterStatus status;
+	
+	@OneToOne(cascade = CascadeType.DETACH)
+	@JoinColumn(name = "routeId",referencedColumnName = "routeId")
+	private MappingCityRoutes cityRoute;
 
 	@Column(name = "bookingDate")
 	private LocalDate bookingDate;
@@ -139,6 +143,18 @@ public class BookingHistory {
 	public void setBookingIsDeleted(int bookingIsDeleted) {
 		this.bookingIsDeleted = bookingIsDeleted;
 	}
+
+	public MappingCityRoutes getCityRoute() {
+		return cityRoute;
+	}
+
+	public void setCityRoute(MappingCityRoutes cityRoute) {
+		this.cityRoute = cityRoute;
+	}
+
+	
+	
+	
 	
 	
 

@@ -37,16 +37,16 @@ export const navbarData = [
     },
 
     {
-        // routeLink: 'settings',
+        routeLink: 'settings',
         icon: 'fa-solid fa-gear',
         label: 'Settings'
     },
 
-    // {
-    //     // routeLink: 'settings',
-    //     icon: 'fal fa-cog', 
-    //     label: 'Settings'
-    // },
+    {
+        routeLink: 'Report',
+        icon: 'fa-solid fa-file', 
+        label: 'Report'
+    },
     // {
     //     // routeLink: 'settings',
     //     icon: 'fal fa-cog', 
