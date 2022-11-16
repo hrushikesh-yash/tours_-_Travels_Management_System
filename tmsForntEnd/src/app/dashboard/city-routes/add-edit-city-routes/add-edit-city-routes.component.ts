@@ -57,7 +57,8 @@ export class AddEditCityRoutesComponent implements OnInit {
       routeName: [''],
       sourceCityId: [''],
       destinationCityId: [''],
-      routeCreatedDate: ['']
+      routeCreatedDate: [''],
+      routePrice:['']
     });
 
     if (!this.isAddMode) {
@@ -142,6 +143,11 @@ export class AddEditCityRoutesComponent implements OnInit {
     // console.log(this.city);
 
 
+
+  }
+
+  OnCancel(){
+    this.router.navigate(['../'], { relativeTo: this.route });
 
   }
 

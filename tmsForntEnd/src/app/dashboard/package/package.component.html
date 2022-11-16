@@ -8,7 +8,8 @@
                       <th scope="col">Tour Name</th>
                       <th scope="col">Tour Price</th>
                       <th scope="col">Vehicle Name</th>
-                      <th scope="col">CIty Route</th>
+                      <th scope="col">City Route</th>
+                      <th scope="col">City Route Price</th>
                     </tr>
                   </thead>
                 <tbody>
@@ -18,6 +19,7 @@
                     <td>{{item.tour.tourPrice | currency:'INR'}}</td>
                     <td>{{item.vehicle.vehicleName}}</td>
                     <td>{{item.cityRoute.routeName}}</td>
+                    <td>{{item.cityRoute.routePrice}}</td>
                   </tr>
                 </tbody>
               </table> 

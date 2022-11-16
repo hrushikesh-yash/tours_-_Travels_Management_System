@@ -6,5 +6,6 @@ export class Vehicle{
     vehicleType:VehicleType;
     companyName:string="";
     vehicleCapcity:number=0;
+    vehiclePrice:number=0;
     vehicleIsDeleted:number=0;
 }

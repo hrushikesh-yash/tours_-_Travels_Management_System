@@ -36,6 +36,9 @@ public class MappingCityRoutes {
 	@Column(name = "routeCreatedDate")
 	private LocalDate routeCreatedDate;
 	
+	@Column(name = "routePrice")
+	private int routePrice;
+	
 	@Column(name = "routeIsDeleted")
 	private int routeIsDeleted;
 	
@@ -94,6 +97,15 @@ public class MappingCityRoutes {
 	public void setRouteIsDeleted(int routeIsDeleted) {
 		this.routeIsDeleted = routeIsDeleted;
 	}
+
+	public int getRoutePrice() {
+		return routePrice;
+	}
+
+	public void setRoutePrice(int routePrice) {
+		this.routePrice = routePrice;
+	}
+	
 	
 	
 

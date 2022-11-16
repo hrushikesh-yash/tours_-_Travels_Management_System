@@ -77,11 +77,8 @@ export class SidenavComponent implements OnInit {
       this.navData=this.navData.filter(navlist => navlist.routeLink !== 'State')
       this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Type')
       this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Driver-Assign')
+      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Report')
      
-    }
-    else if(this.currentUser.actorId==1)
-    {
-      this.navData=this.navData.filter(navlist => navlist.routeLink !== 'settings')
     }
   }
 

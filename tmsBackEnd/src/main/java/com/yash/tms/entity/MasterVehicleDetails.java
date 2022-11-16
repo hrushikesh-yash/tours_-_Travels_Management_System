@@ -31,6 +31,9 @@ public class MasterVehicleDetails {
 
 	@Column(name = "vehicleCapcity")
 	private int vehicleCapcity;
+	
+	@Column(name = "vehiclePrice")
+	private int vehiclePrice;
 
 	@Column(name = "vehicleIsDeleted")
 	private int vehicleIsDeleted;
@@ -89,12 +92,15 @@ public class MasterVehicleDetails {
 		this.vehicleIsDeleted = vehicleIsDeleted;
 	}
 
-	@Override
-	public String toString() {
-		return "MasterVehicleDetails [vehicleId=" + vehicleId + ", vehicleType=" + vehicleType + ", vehicleName="
-				+ vehicleName + ", companyName=" + companyName + ", vehicleCapcity=" + vehicleCapcity
-				+ ", vehicleIsDeleted=" + vehicleIsDeleted + "]";
+	public int getVehiclePrice() {
+		return vehiclePrice;
 	}
+
+	public void setVehiclePrice(int vehiclePrice) {
+		this.vehiclePrice = vehiclePrice;
+	}
+
+	
 
 	
 

@@ -12,18 +12,27 @@
                     <div class="image">
                         <img class="card-img-top" src="{{userImage}}" alt="Card image cap" width="50" height="200">
                     </div>
-        
+
                     <div class="card-body">
                         <h2>{{tour.tourName}}</h2>
                         <h4 class="card-text">{{tour.tourDescription}}</h4>
-                        <h4 class="card-text">{{tour.tourPrice}}</h4>
+                        <h4 class="card-text">{{tour.tourPrice| currency:'INR' }}</h4>
                         <h4 class="card-text">{{tour.city.cityName}}</h4>
-        
+
                         <div class="text-center" *ngIf="currentUser.actorId==1">
-                            <a routerLink="edit/{{tour.tourId}}" class="btn btn-sm btn-primary mr-1">Edit Tour</a> &nbsp;
+                            <a routerLink="edit/{{tour.tourId}}" class="btn btn-sm btn-primary mr-1">Edit Tour</a>
+                            &nbsp;
                             &nbsp;
                             <button type="button" class="btn btn-danger" (click)="deleteTour(tour.tourId)">
                                 Delete Tour</button>
+                        </div>
+
+                        <div class="form-group col-5" *ngIf="currentUser.actorId==2">
+                            <label>Travelling Start Date</label>
+                            <input type="date" class="form-control" [(ngModel)]="travellingStartDate"/>
+                            <br>
+                            <label>Travelling End Date</label>
+                            <input type="date" class="form-control"  [(ngModel)]="travellingEndDate"/>
                         </div>
                         <td style="float:right;" *ngIf="currentUser.actorId==2">
                             <a class="btn btn-sm btn-info mr-1" (click)="addToTour(tour.tourId)">Add to Tour</a> &nbsp;
@@ -35,6 +44,5 @@
 
     </div>
 </div>
- <!--  -->
+<!--  -->
 <br>
-

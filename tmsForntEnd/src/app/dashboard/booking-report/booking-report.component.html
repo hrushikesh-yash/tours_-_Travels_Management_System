@@ -3,6 +3,15 @@
         <div class="card">
             <div class="card-head">
                 <h1><strong>Booking Report</strong></h1>
+                <!-- <div class="form-group col-5">
+                    <i class="fa-brands fa-searchengin"></i>
+                    <input type="text" placeholder="Search" [(ngModel)]="SearchText" 
+                    class="form-control col-4">
+                  </div> -->
+                  <div class="top-navigation__search">
+                    <i class="top-navigation__search-icon fa-brands fa-searchengin"></i>
+                    <input class="top-navigation__search-input" placeholder="Search..." [(ngModel)]="SearchText"/>
+                  </div>
             </div>
             <div class="card-body">
         
@@ -22,7 +31,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                         <tr *ngFor="let booking of bookingHistory">
+                         <tr *ngFor="let booking of bookingHistory | filter:SearchText ">
                             <td>{{booking.bookingHistoryId}}</td>
                             <td>{{booking.user.userName}}</td>
                             <td>{{booking.tour.tourName}}</td>

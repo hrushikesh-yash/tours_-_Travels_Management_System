@@ -12,7 +12,7 @@ import { user } from 'src/app/Services/UserService.service';
 @Component({
   selector: 'app-add-edit-state',
   templateUrl: './add-edit-state.component.html',
-  styleUrls: ['./add-edit-state.component.css']
+  styleUrls: ['./add-edit-state.component.scss']
 })
 export class AddEditStateComponent implements OnInit {
 
@@ -98,7 +98,7 @@ export class AddEditStateComponent implements OnInit {
   }
 
   OnCancel(){
-    this.router.navigate(['../../'], { relativeTo: this.route });
+    this.router.navigate(['../'], { relativeTo: this.route });
 
   }
 

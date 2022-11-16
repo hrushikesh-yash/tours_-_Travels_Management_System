@@ -11,6 +11,7 @@ import { BookingHistoryService } from 'src/app/Services/booking-history.service'
 export class BookingReportComponent implements OnInit {
 
   bookingHistory:BookingHistory[];
+  SearchText:any;
   constructor(
     private bookingHistoryService:BookingHistoryService,
   ) { }
@@ -21,11 +22,14 @@ export class BookingReportComponent implements OnInit {
     .subscribe({
       next:(data) =>{
         this.bookingHistory=data
+        
       },
       error :(err) =>
       console.log(err)
       
     });
   }
+
+  
 
 }

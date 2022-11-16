@@ -26,7 +26,7 @@ export class AddEditVehicleComponent implements OnInit {
   submitted = false;
   vehicleTypes: VehicleType[];
   vehicle: Vehicle = new Vehicle;
-  vehicleType: VehicleType= new VehicleType;
+  vehicleType: VehicleType = new VehicleType;
   vehicleTypeId: number = 0;
 
   constructor(private formBuilder: FormBuilder,
@@ -41,7 +41,7 @@ export class AddEditVehicleComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.isAddMode = !this.id;
 
-   
+
 
     this.vehicleTypeService.getVehicleTypeList()
       .pipe(first())
@@ -57,7 +57,8 @@ export class AddEditVehicleComponent implements OnInit {
       vehicleName: [''],
       companyName: [''],
       vehicleTypeId: [''],
-      vehicleCapcity: ['']
+      vehicleCapcity: [''],
+      vehicleprice:['']
     });
 
     if (!this.isAddMode) {
@@ -76,54 +77,55 @@ export class AddEditVehicleComponent implements OnInit {
     this.vehicle.vehicleId = this.vehicleForm.controls['vehicleId'].value;
     this.vehicle.vehicleName = this.vehicleForm.controls['vehicleName'].value;
     this.vehicle.vehicleCapcity = this.vehicleForm.controls['vehicleCapcity'].value;
-    this.vehicle.companyName= this.vehicleForm.controls['companyName'].value;
+    this.vehicle.companyName = this.vehicleForm.controls['companyName'].value;
 
     this.vehicleTypeService.findVehicleTypeById(this.vehicle.vehicleType = this.vehicleForm.controls['vehicleTypeId'].value)
-    .pipe(first())
-    .subscribe({
-      next: (data) => {
-        this.vehicleType = data;
-        this.vehicle.vehicleType=this.vehicleType;
+      .pipe(first())
+      .subscribe({
+        next: (data) => {
+          this.vehicleType = data;
+          this.vehicle.vehicleType = this.vehicleType;
 
-        console.log(this.vehicle);
-        if (this.isAddMode) {
-          console.log(" Add City");
-    
-    
-              this.vehicleService.addVehicleDetails(this.vehicle)
-                .pipe(first())
-                .subscribe({
-                  next: () => {
-                    this.alertService.success('Vehicle addedSucessfully !', { keepAfterRouteChange: true });
-                    this.router.navigate(['../'], { relativeTo: this.route });
-                  },
-                  error: error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                  }
-                });
-    
-        } else {
-          console.log("Update Vehicle: " + this.vehicle.vehicleId);
-               this.vehicleService.updateVehicle(this.vehicle.vehicleId,this.vehicle)
-                    .pipe(first())
-                    .subscribe({
-                        next: () => {
-                            this.alertService.warn('Vehicle Updated Sucesssfully !', { keepAfterRouteChange: true });
-                            this.router.navigate(['../../'], { relativeTo: this.route });
-                        },
-                        error: (error: string) => {
-                            this.alertService.error(error);
-                            this.loading = false;
-                        }
-                    });
-        }
-      },
-      error: (error) => console.log(error)
-    });
+          console.log(this.vehicle);
+          if (this.isAddMode) {
+            console.log(" Add City");
 
-   
 
+            this.vehicleService.addVehicleDetails(this.vehicle)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.success('Vehicle addedSucessfully !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../'], { relativeTo: this.route });
+                },
+                error: error => {
+                  this.alertService.error(error);
+                  this.loading = false;
+                }
+              });
+
+          } else {
+            console.log("Update Vehicle: " + this.vehicle.vehicleId);
+            this.vehicleService.updateVehicle(this.vehicle.vehicleId, this.vehicle)
+              .pipe(first())
+              .subscribe({
+                next: () => {
+                  this.alertService.warn('Vehicle Updated Sucesssfully !', { keepAfterRouteChange: true });
+                  this.router.navigate(['../../'], { relativeTo: this.route });
+                },
+                error: (error: string) => {
+                  this.alertService.error(error);
+                  this.loading = false;
+                }
+              });
+          }
+        },
+        error: (error) => console.log(error)
+      });
+  }
+
+  OnCancel(){
+    this.router.navigate(['../'], { relativeTo: this.route });
 
   }
 }

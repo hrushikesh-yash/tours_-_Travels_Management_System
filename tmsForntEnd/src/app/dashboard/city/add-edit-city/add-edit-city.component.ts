@@ -126,11 +126,11 @@ export class AddEditCityComponent implements OnInit {
         }
       });
 
+  }
 
 
-
-    
-
+  OnCancel(){
+    this.router.navigate(['../'], { relativeTo: this.route });
 
   }
 

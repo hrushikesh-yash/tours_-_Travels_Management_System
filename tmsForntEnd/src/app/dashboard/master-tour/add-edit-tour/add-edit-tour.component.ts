@@ -121,9 +121,10 @@ export class AddEditTourComponent implements OnInit {
 
         }
 
-      })
+      });
+  }
 
-
-
+  OnCancel(){
+    this.router.navigate(['../'], { relativeTo: this.route });
   }
 }

@@ -55,7 +55,7 @@
                     <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                     Save
                 </button> &nbsp;
-                <a routerLink="/Vehicle-Driver-Assign" class="btn btn-warning">Cancel</a>
+                <a (click)="OnCancel()" class="btn btn-warning">Cancel</a>
             </div>
         </form>
     </div>

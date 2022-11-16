@@ -201,9 +201,10 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
         },
         error: (err) => console.log(err)
       });
+  }
 
-
-
+  OnCancel(){
+    this.router.navigate(['../'], { relativeTo: this.route });
 
   }
 

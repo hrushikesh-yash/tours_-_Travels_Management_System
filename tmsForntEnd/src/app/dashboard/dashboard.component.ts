@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { User } from '../modules/masterUser';
 import { AlertService } from '../Services/alert-service.service';
-import { user } from '../Services/UserService.service';
+
 interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
@@ -14,7 +15,7 @@ interface SideNavToggle {
 })
 export class DashboardComponent implements OnInit {
   cartProductCount: number = 10;
-  currentUser:user;
+  currentUser:User;
   constructor(private route: ActivatedRoute,
     private router: Router,
 
@@ -24,6 +25,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
     this.currentUser = user;
+    console.log(this.currentUser.actorId)
   }
 
   isSideNavCollapsed = false;

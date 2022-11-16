@@ -94,6 +94,11 @@ export class AddEditVehicleTypeComponent implements OnInit {
         });
     }
   }
+
+  OnCancel(){
+    this.router.navigate(['../'], { relativeTo: this.route });
+
+  }
 }
 
 

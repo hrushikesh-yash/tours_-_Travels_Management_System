@@ -7,6 +7,8 @@ import { DashboardComponent } from './dashboard.component';
 import { BodyComponent } from '../body/body.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { BookingReportComponent } from './booking-report/booking-report.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { BookingReportComponent } from './booking-report/booking-report.componen
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    FormsModule,
+    DashboardRoutingModule,
+    Ng2SearchPipeModule
   ]
 })
 export class DashboardModule { }

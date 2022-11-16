@@ -39,6 +39,14 @@
                     </div> -->
                 </div>
 
+                <div class="form-group col-5">
+                    <label>City Route Price</label>
+                    <input type="number" formControlName="routePrice" class="form-control" />
+                    <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                    </div> -->
+                </div>
+
             </div>
             <br>
             <div class="form-group">
@@ -46,7 +54,7 @@
                     <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                     Save
                 </button> &nbsp;
-                <a routerLink="/City-Routes" class="btn btn-warning">Cancel</a>
+                <a (click)="OnCancel()" class="btn btn-warning">Cancel</a>
             </div>
         </form>
     </div>

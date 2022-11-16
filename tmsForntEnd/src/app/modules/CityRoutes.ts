@@ -6,5 +6,6 @@ export class CityRoutes{
     sourceCity:City;
     destinationCity:City;
     routeCreatedDate:Date = new Date();
+    routePrice:number=0;
     routeIsDeleted:number=0;
 }

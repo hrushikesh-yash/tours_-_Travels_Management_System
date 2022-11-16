@@ -37,21 +37,15 @@ export const navbarData = [
     },
 
     {
-        routeLink: 'settings',
+        routeLink: '',
         icon: 'fa-solid fa-gear',
-        label: 'Settings'
+        label: 'Edit User Details'
     },
 
     {
         routeLink: 'Report',
         icon: 'fa-solid fa-file', 
         label: 'Report'
-    },
-    // {
-    //     // routeLink: 'settings',
-    //     icon: 'fal fa-cog', 
-    //     label: 'Settings'
-    // },
-
+    }
 
 ];

@@ -7,7 +7,7 @@ import { User } from 'src/app/modules/masterUser';
 @Component({
   selector: 'app-state-list',
   templateUrl: './state-list.component.html',
-  styleUrls: ['./state-list.component.css']
+  styleUrls: ['./state-list.component.scss']
 })
 export class StateListComponent implements OnInit {
   states?: State[];
