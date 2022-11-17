@@ -11,7 +11,7 @@ import { CityRoutesService } from 'src/app/Services/city-routes.service';
 @Component({
   selector: 'app-city-routes-list',
   templateUrl: './city-routes-list.component.html',
-  styleUrls: ['./city-routes-list.component.css']
+  styleUrls: ['./city-routes-list.component.scss']
 })
 export class CityRoutesListComponent implements OnInit {
 

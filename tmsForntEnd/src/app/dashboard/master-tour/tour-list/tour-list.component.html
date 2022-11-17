@@ -34,16 +34,16 @@
                                     <label>Travelling Start Date</label>
                                     <input type="date" class="form-control" [(ngModel)]="travellingStartDate"/>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3" *ngIf="currentUser.actorId==2">
                                     <label>Travelling End Date</label>
                                     <input type="date" class="form-control"  [(ngModel)]="travellingEndDate"/>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2" *ngIf="currentUser.actorId==2">
                                     <label>No of Traveller</label>
                                     <input type="number" class="form-control col-sm-2"  [(ngModel)]="noOfTraveller"/>
                                 </div>
                                 
-                                <div class="col-2" style="float:right; ">
+                                <div class="col-2" style="float:right;"*ngIf="currentUser.actorId==2">
                                     <label style="color: white;">button</label>
                                     <a class="btn btn-sm btn-info" 
                                     (click)="addToTour(tour.tourId)">Add to Tour</a> &nbsp;

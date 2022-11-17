@@ -12,7 +12,7 @@ import { TourService } from 'src/app/Services/tour.service';
 @Component({
   selector: 'app-add-edit-tour',
   templateUrl: './add-edit-tour.component.html',
-  styleUrls: ['./add-edit-tour.component.css']
+  styleUrls: ['./add-edit-tour.component.scss']
 })
 export class AddEditTourComponent implements OnInit {
   loading = false;

@@ -17,7 +17,7 @@ import { VehicleService } from 'src/app/Services/vehicle.service';
 @Component({
   selector: 'app-add-edit-vehicle-driver-mapping',
   templateUrl: './add-edit-vehicle-driver-mapping.component.html',
-  styleUrls: ['./add-edit-vehicle-driver-mapping.component.css']
+  styleUrls: ['./add-edit-vehicle-driver-mapping.component.scss']
 })
 export class AddEditVehicleDriverMappingComponent implements OnInit {
 

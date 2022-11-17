@@ -6,7 +6,7 @@ import { MappingVehicleDriverService } from 'src/app/Services/mapping-vehicle-dr
 @Component({
   selector: 'app-vehicle-driver-mapping-list',
   templateUrl: './vehicle-driver-mapping-list.component.html',
-  styleUrls: ['./vehicle-driver-mapping-list.component.css']
+  styleUrls: ['./vehicle-driver-mapping-list.component.scss']
 })
 export class VehicleDriverMappingListComponent implements OnInit {
 

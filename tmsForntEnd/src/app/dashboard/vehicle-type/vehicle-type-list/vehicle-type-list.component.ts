@@ -9,7 +9,7 @@ import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
 @Component({
   selector: 'app-vehicle-type-list',
   templateUrl: './vehicle-type-list.component.html',
-  styleUrls: ['./vehicle-type-list.component.css']
+  styleUrls: ['./vehicle-type-list.component.scss']
 })
 export class VehicleTypeListComponent implements OnInit {
 

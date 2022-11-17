@@ -12,7 +12,7 @@ import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
 @Component({
   selector: 'app-add-edit-vehicle-type',
   templateUrl: './add-edit-vehicle-type.component.html',
-  styleUrls: ['./add-edit-vehicle-type.component.css']
+  styleUrls: ['./add-edit-vehicle-type.component.scss']
 })
 export class AddEditVehicleTypeComponent implements OnInit {
 

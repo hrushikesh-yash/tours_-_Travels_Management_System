@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
-import { City } from 'src/app/modules/City';
-import { State } from 'src/app/modules/State';
 import { Vehicle } from 'src/app/modules/Vehicle';
 import { VehicleType } from 'src/app/modules/VehicleType';
 import { AlertService } from 'src/app/Services/alert-service.service';
-import { CityServiceService } from 'src/app/Services/city-service.service';
-import { StateServiceService } from 'src/app/Services/state-service.service';
 import { VehicleTypeService } from 'src/app/Services/vehicle-type.service';
 import { VehicleService } from 'src/app/Services/vehicle.service';
 
 @Component({
   selector: 'app-add-edit-vehicle',
   templateUrl: './add-edit-vehicle.component.html',
-  styleUrls: ['./add-edit-vehicle.component.css']
+  styleUrls: ['./add-edit-vehicle.component.scss']
 })
 export class AddEditVehicleComponent implements OnInit {
 

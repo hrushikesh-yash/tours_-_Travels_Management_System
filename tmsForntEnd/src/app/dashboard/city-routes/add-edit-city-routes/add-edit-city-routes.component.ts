@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { City } from 'src/app/modules/City';
-import { CityList } from 'src/app/modules/CityList';
 import { CityRoutes } from 'src/app/modules/CityRoutes';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { CityRoutesService } from 'src/app/Services/city-routes.service';
@@ -12,7 +11,7 @@ import { CityServiceService } from 'src/app/Services/city-service.service';
 @Component({
   selector: 'app-add-edit-city-routes',
   templateUrl: './add-edit-city-routes.component.html',
-  styleUrls: ['./add-edit-city-routes.component.css']
+  styleUrls: ['./add-edit-city-routes.component.scss']
 })
 export class AddEditCityRoutesComponent implements OnInit {
 

@@ -10643,3 +10643,387 @@ Caused by: java.lang.IllegalArgumentException: Can not set int field com.yash.tm
 2022-11-17T15:30:54,677 [http-nio-8080-exec-1] INFO  (BookingHistoryManagerImpl.java:66) - BookingHistoryManagerImpl :: findById function started.
 2022-11-17T15:33:12,166 [http-nio-8080-exec-3] INFO  (BookingHistoryController.java:113) - BookingHistoryController :: findBookingByUserId function started.
 2022-11-17T15:33:12,166 [http-nio-8080-exec-3] INFO  (BookingHistoryManagerImpl.java:66) - BookingHistoryManagerImpl :: findById function started.
+2022-11-17T15:34:14,510 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016824DT with PID 12816 (D:\Training\Projects\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by hrushikesh.w in D:\Training\Projects\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-17T15:34:14,539 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-17T15:34:14,644 [restartedMain] INFO  (DeferredLog.java:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-17T15:34:14,645 [restartedMain] INFO  (DeferredLog.java:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-17T15:34:15,494 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-17T15:34:15,655 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 148 ms. Found 11 JPA repository interfaces.
+2022-11-17T15:34:16,438 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-17T15:34:16,472 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-17T15:34:16,473 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-17T15:34:16,474 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-17T15:34:16,603 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-17T15:34:16,604 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 1958 ms
+2022-11-17T15:34:16,797 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-17T15:34:16,844 [restartedMain] INFO  (Version.java:44) - HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-17T15:34:17,035 [restartedMain] INFO  (JavaReflectionManager.java:56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-17T15:34:17,149 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-1 - Starting...
+2022-11-17T15:34:17,324 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-1 - Start completed.
+2022-11-17T15:34:17,340 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-17T15:34:18,329 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-17T15:34:18,408 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-17T15:34:19,342 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-17T15:34:19,728 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-17T15:34:19,751 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-17T15:34:19,796 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-17T15:34:19,808 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 5.678 seconds (JVM running for 6.676)
+2022-11-17T15:34:49,306 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-17T15:34:49,306 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-17T15:34:49,308 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 2 ms
+2022-11-17T15:34:49,371 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T15:34:49,371 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T15:34:51,214 [http-nio-8080-exec-2] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T15:34:51,214 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T15:34:51,232 [http-nio-8080-exec-2] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T15:35:07,388 [http-nio-8080-exec-3] INFO  (MasterTourController.java:51) - MasterTourController :: findTourById function started.
+2022-11-17T15:35:07,388 [http-nio-8080-exec-3] INFO  (MasterTourManagerImpl.java:61) - MasterTourManagerImpl :: findById function started.
+2022-11-17T15:35:07,442 [http-nio-8080-exec-4] INFO  (MasterStatusController.java:50) - MasterStatusController :: getStatusByName function started.
+2022-11-17T15:35:07,443 [http-nio-8080-exec-4] INFO  (MasterStatusManagerImpl.java:70) - MasterActorManagerImpl :: getStatusByName function started.
+2022-11-17T15:35:07,519 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:51) - BookingHistoryController :: addBookingHistory function started.
+2022-11-17T15:35:07,520 [http-nio-8080-exec-5] INFO  (BookingHistoryManagerImpl.java:37) - BookingHistoryManagerImpl :: addActor function started.
+2022-11-17T15:35:07,743 [http-nio-8080-exec-6] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T15:35:07,743 [http-nio-8080-exec-6] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T15:35:20,353 [http-nio-8080-exec-7] INFO  (MasterVehicleDetailsController.java:49) - MasterVehicleDetailsController :: findVehicleById function started.
+2022-11-17T15:35:20,354 [http-nio-8080-exec-7] INFO  (MasterVehicleDetailsManagerImpl.java:54) - MasterVehicleDetailsManagerImpl :: findById function started.
+2022-11-17T15:35:20,376 [http-nio-8080-exec-8] INFO  (BookingHistoryController.java:130) - BookingHistoryController :: findBookingByUserId function started.
+2022-11-17T15:35:20,376 [http-nio-8080-exec-8] INFO  (BookingHistoryManagerImpl.java:80) - BookingHistoryManagerImpl :: findByStatusId function started.
+2022-11-17T15:35:20,399 [http-nio-8080-exec-9] INFO  (BookingHistoryController.java:51) - BookingHistoryController :: addBookingHistory function started.
+2022-11-17T15:35:20,400 [http-nio-8080-exec-9] INFO  (BookingHistoryManagerImpl.java:37) - BookingHistoryManagerImpl :: addActor function started.
+2022-11-17T15:35:20,896 [http-nio-8080-exec-10] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T15:35:20,896 [http-nio-8080-exec-10] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T15:35:39,429 [http-nio-8080-exec-1] INFO  (MappingCityRoutesController.java:52) - MappingCityRoutesController :: findRouteById function started.
+2022-11-17T15:35:39,429 [http-nio-8080-exec-1] INFO  (MappingCityRoutesManagerImpl.java:52) - MappingCityRoutesManagerImpl :: findById function started.
+2022-11-17T15:35:39,462 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:130) - BookingHistoryController :: findBookingByUserId function started.
+2022-11-17T15:35:39,462 [http-nio-8080-exec-2] INFO  (BookingHistoryManagerImpl.java:80) - BookingHistoryManagerImpl :: findByStatusId function started.
+2022-11-17T15:35:39,478 [http-nio-8080-exec-3] INFO  (BookingHistoryController.java:51) - BookingHistoryController :: addBookingHistory function started.
+2022-11-17T15:35:39,478 [http-nio-8080-exec-3] INFO  (BookingHistoryManagerImpl.java:37) - BookingHistoryManagerImpl :: addActor function started.
+2022-11-17T15:36:01,254 [http-nio-8080-exec-4] INFO  (BookingHistoryController.java:113) - BookingHistoryController :: findBookingByUserId function started.
+2022-11-17T15:36:01,255 [http-nio-8080-exec-4] INFO  (BookingHistoryManagerImpl.java:66) - BookingHistoryManagerImpl :: findById function started.
+2022-11-17T15:36:40,238 [http-nio-8080-exec-5] INFO  (masterUserController.java:147) - MasterUserController :: getUserCredentials function started.
+2022-11-17T15:36:40,238 [http-nio-8080-exec-5] INFO  (masterUserController.java:149) - Username :: swapnil
+2022-11-17T15:36:40,238 [http-nio-8080-exec-5] INFO  (MasterUserManagerImpl.java:81) - MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.
+2022-11-17T15:36:43,072 [http-nio-8080-exec-6] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T15:36:43,072 [http-nio-8080-exec-6] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T15:36:43,082 [http-nio-8080-exec-6] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T15:40:20,752 [http-nio-8080-exec-8] INFO  (MappingVehicleDriverController.java:32) - MappingVehicleDriverController :: findAllMappingVehicleDriver function started.
+2022-11-17T15:40:20,753 [http-nio-8080-exec-8] INFO  (MappingVehicleDriverManagerImpl.java:25) - MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.
+2022-11-17T16:19:19,353 [http-nio-8080-exec-10] INFO  (masterUserController.java:147) - MasterUserController :: getUserCredentials function started.
+2022-11-17T16:19:19,353 [http-nio-8080-exec-10] INFO  (masterUserController.java:149) - Username :: hrushi
+2022-11-17T16:19:19,353 [http-nio-8080-exec-10] INFO  (MasterUserManagerImpl.java:81) - MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.
+2022-11-17T16:19:30,962 [http-nio-8080-exec-1] INFO  (masterUserController.java:147) - MasterUserController :: getUserCredentials function started.
+2022-11-17T16:19:30,962 [http-nio-8080-exec-1] INFO  (masterUserController.java:149) - Username :: swapnil
+2022-11-17T16:19:30,962 [http-nio-8080-exec-1] INFO  (MasterUserManagerImpl.java:81) - MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.
+2022-11-17T16:19:42,751 [http-nio-8080-exec-2] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-17T16:19:42,751 [http-nio-8080-exec-2] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-17T16:19:44,608 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T16:19:44,608 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T16:19:47,658 [http-nio-8080-exec-4] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T16:19:47,658 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T16:19:47,663 [http-nio-8080-exec-4] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T16:20:21,234 [http-nio-8080-exec-5] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-17T16:20:21,234 [http-nio-8080-exec-5] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-17T16:20:33,608 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T16:20:33,609 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T16:20:35,455 [http-nio-8080-exec-7] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T16:20:35,456 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T16:20:35,460 [http-nio-8080-exec-7] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T16:20:37,843 [http-nio-8080-exec-8] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T16:20:37,844 [http-nio-8080-exec-8] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T16:20:37,851 [http-nio-8080-exec-8] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T16:20:40,078 [http-nio-8080-exec-9] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T16:20:40,078 [http-nio-8080-exec-9] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T16:20:41,302 [http-nio-8080-exec-10] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T16:20:41,303 [http-nio-8080-exec-10] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T16:20:42,352 [http-nio-8080-exec-1] INFO  (MappingVehicleDriverController.java:32) - MappingVehicleDriverController :: findAllMappingVehicleDriver function started.
+2022-11-17T16:20:42,352 [http-nio-8080-exec-1] INFO  (MappingVehicleDriverManagerImpl.java:25) - MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.
+2022-11-17T16:20:47,045 [http-nio-8080-exec-2] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T16:20:47,045 [http-nio-8080-exec-2] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T16:20:47,089 [http-nio-8080-exec-3] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T16:20:47,089 [http-nio-8080-exec-3] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T16:20:47,130 [http-nio-8080-exec-4] INFO  (masterUserController.java:52) - masterUserController :: getAllByActorId function started.
+2022-11-17T16:20:47,130 [http-nio-8080-exec-4] INFO  (MasterUserManagerImpl.java:67) - MasterUserManagerImpl :: getAllByActorId function started.
+2022-11-17T16:21:09,497 [http-nio-8080-exec-5] INFO  (MasterVehicleDetailsController.java:49) - MasterVehicleDetailsController :: findVehicleById function started.
+2022-11-17T16:21:09,497 [http-nio-8080-exec-5] INFO  (MasterVehicleDetailsManagerImpl.java:54) - MasterVehicleDetailsManagerImpl :: findById function started.
+2022-11-17T16:21:09,510 [http-nio-8080-exec-6] INFO  (MappingCityRoutesController.java:52) - MappingCityRoutesController :: findRouteById function started.
+2022-11-17T16:21:09,510 [http-nio-8080-exec-6] INFO  (MappingCityRoutesManagerImpl.java:52) - MappingCityRoutesManagerImpl :: findById function started.
+2022-11-17T16:21:09,538 [http-nio-8080-exec-7] INFO  (masterUserController.java:73) - masterUserController :: findUserById function start.
+2022-11-17T16:21:09,538 [http-nio-8080-exec-7] INFO  (MasterUserManagerImpl.java:53) - MasterUserManagerImpl :: findById function started.
+2022-11-17T16:21:09,570 [http-nio-8080-exec-9] INFO  (MappingVehicleDriverController.java:73) - MappingVehicleDriverController :: addMappingVehicleDriver function started.
+2022-11-17T16:21:09,570 [http-nio-8080-exec-9] INFO  (MappingVehicleDriverManagerImpl.java:39) - MappingVechileDriverManagerImpl :: addMappingVehicleDriver function started.
+2022-11-17T16:21:09,698 [http-nio-8080-exec-10] INFO  (MappingVehicleDriverController.java:32) - MappingVehicleDriverController :: findAllMappingVehicleDriver function started.
+2022-11-17T16:21:09,698 [http-nio-8080-exec-10] INFO  (MappingVehicleDriverManagerImpl.java:25) - MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.
+2022-11-17T16:21:33,547 [http-nio-8080-exec-1] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T16:21:33,548 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T16:21:33,553 [http-nio-8080-exec-1] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T16:21:53,697 [http-nio-8080-exec-3] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T16:21:53,698 [http-nio-8080-exec-3] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T16:21:53,706 [http-nio-8080-exec-3] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T16:23:41,603 [http-nio-8080-exec-5] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T16:23:41,604 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T16:23:41,609 [http-nio-8080-exec-5] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T16:23:41,787 [http-nio-8080-exec-6] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T16:23:41,788 [http-nio-8080-exec-6] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T16:23:41,800 [http-nio-8080-exec-6] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T16:23:53,626 [http-nio-8080-exec-7] INFO  (masterUserController.java:147) - MasterUserController :: getUserCredentials function started.
+2022-11-17T16:23:53,626 [http-nio-8080-exec-7] INFO  (masterUserController.java:149) - Username :: hrushi
+2022-11-17T16:23:53,626 [http-nio-8080-exec-7] INFO  (MasterUserManagerImpl.java:81) - MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.
+2022-11-17T16:23:57,637 [http-nio-8080-exec-8] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T16:23:57,637 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T16:23:57,641 [http-nio-8080-exec-8] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:14:37,328 [HikariPool-1 housekeeper] WARN  (HikariPool.java:788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m18s725ms369µs800ns).
+2022-11-17T17:17:28,555 [http-nio-8080-exec-10] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:17:28,556 [http-nio-8080-exec-10] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:17:28,598 [http-nio-8080-exec-10] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:17:28,660 [http-nio-8080-exec-1] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:17:28,660 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:17:28,664 [http-nio-8080-exec-1] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:22:16,757 [File Watcher] INFO  (LocalDevToolsAutoConfiguration.java:213) - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-17T17:22:16,839 [Thread-5] INFO  (DirectJDKLog.java:173) - Pausing ProtocolHandler ["http-nio-8080"]
+2022-11-17T17:22:16,840 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2022-11-17T17:22:16,884 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-17T17:22:16,915 [Thread-5] INFO  (DirectJDKLog.java:173) - Stopping ProtocolHandler ["http-nio-8080"]
+2022-11-17T17:22:16,917 [Thread-5] INFO  (DirectJDKLog.java:173) - Destroying ProtocolHandler ["http-nio-8080"]
+2022-11-17T17:22:16,923 [Thread-5] INFO  (AbstractEntityManagerFactoryBean.java:651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-17T17:22:16,927 [Thread-5] INFO  (HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+2022-11-17T17:22:16,933 [Thread-5] INFO  (HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+2022-11-17T17:22:17,330 [restartedMain] INFO  (StartupInfoLogger.java:55) - Starting TmsApplication using Java 17.0.4.1 on YP1016824DT with PID 12816 (D:\Training\Projects\tours_-_Travels_Management_System\tmsBackEnd\target\classes started by hrushikesh.w in D:\Training\Projects\tours_-_Travels_Management_System\tmsBackEnd)
+2022-11-17T17:22:17,331 [restartedMain] INFO  (SpringApplication.java:634) - No active profile set, falling back to 1 default profile: "default"
+2022-11-17T17:22:17,891 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-17T17:22:17,983 [restartedMain] INFO  (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 91 ms. Found 11 JPA repository interfaces.
+2022-11-17T17:22:18,139 [restartedMain] INFO  (TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+2022-11-17T17:22:18,140 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-17T17:22:18,141 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-17T17:22:18,141 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-17T17:22:18,255 [restartedMain] INFO  (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-17T17:22:18,256 [restartedMain] INFO  (ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 921 ms
+2022-11-17T17:22:18,305 [restartedMain] INFO  (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-17T17:22:18,314 [restartedMain] INFO  (HikariDataSource.java:110) - HikariPool-2 - Starting...
+2022-11-17T17:22:18,367 [restartedMain] INFO  (HikariDataSource.java:123) - HikariPool-2 - Start completed.
+2022-11-17T17:22:18,368 [restartedMain] INFO  (Dialect.java:175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-17T17:22:18,616 [restartedMain] INFO  (JtaPlatformInitiator.java:52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-17T17:22:18,616 [restartedMain] INFO  (AbstractEntityManagerFactoryBean.java:437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-17T17:22:18,886 [restartedMain] WARN  (JpaBaseConfiguration.java:219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-17T17:22:18,998 [restartedMain] INFO  (OptionalLiveReloadServer.java:59) - LiveReload server is running on port 35729
+2022-11-17T17:22:19,007 [restartedMain] INFO  (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+2022-11-17T17:22:19,015 [restartedMain] INFO  (TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-17T17:22:19,020 [restartedMain] INFO  (StartupInfoLogger.java:61) - Started TmsApplication in 1.801 seconds (JVM running for 6485.618)
+2022-11-17T17:22:19,022 [restartedMain] INFO  (ConditionEvaluationDeltaLoggingListener.java:63) - Condition evaluation unchanged
+2022-11-17T17:22:35,848 [http-nio-8080-exec-1] INFO  (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-17T17:22:35,849 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+2022-11-17T17:22:35,849 [http-nio-8080-exec-1] INFO  (FrameworkServlet.java:547) - Completed initialization in 0 ms
+2022-11-17T17:22:35,852 [http-nio-8080-exec-1] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:22:35,852 [http-nio-8080-exec-1] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:22:35,872 [http-nio-8080-exec-1] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:22:35,896 [http-nio-8080-exec-2] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:22:35,897 [http-nio-8080-exec-2] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:22:35,904 [http-nio-8080-exec-2] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:22:48,068 [http-nio-8080-exec-3] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:22:48,069 [http-nio-8080-exec-3] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:22:48,087 [http-nio-8080-exec-3] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:23:04,629 [http-nio-8080-exec-4] INFO  (masterUserController.java:147) - MasterUserController :: getUserCredentials function started.
+2022-11-17T17:23:04,629 [http-nio-8080-exec-4] INFO  (masterUserController.java:149) - Username :: swapnil
+2022-11-17T17:23:04,629 [http-nio-8080-exec-4] INFO  (MasterUserManagerImpl.java:81) - MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.
+2022-11-17T17:23:09,475 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:23:09,475 [http-nio-8080-exec-5] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:23:09,485 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:42:20,256 [http-nio-8080-exec-7] INFO  (masterUserController.java:147) - MasterUserController :: getUserCredentials function started.
+2022-11-17T17:42:20,256 [http-nio-8080-exec-7] INFO  (masterUserController.java:149) - Username :: swapnil
+2022-11-17T17:42:20,256 [http-nio-8080-exec-7] INFO  (MasterUserManagerImpl.java:81) - MasterUserManagerImpl :: findMasterUserByUsernameAndPassword function started.
+2022-11-17T17:42:23,420 [http-nio-8080-exec-8] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-17T17:42:23,420 [http-nio-8080-exec-8] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-17T17:42:27,178 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T17:42:27,178 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T17:42:30,539 [http-nio-8080-exec-10] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-17T17:42:30,540 [http-nio-8080-exec-10] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-17T17:48:46,888 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:48:46,889 [http-nio-8080-exec-2] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:48:46,900 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:48:47,098 [http-nio-8080-exec-3] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-17T17:48:47,098 [http-nio-8080-exec-3] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-17T17:48:50,194 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T17:48:50,194 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T17:51:00,669 [http-nio-8080-exec-6] INFO  (MasterStateController.java:31) - MasterStateController :: findAllStates function started.
+2022-11-17T17:51:00,669 [http-nio-8080-exec-6] INFO  (MasterStateManagerImpl.java:24) - MasterStateManagerImpl :: findAllStates function started.
+2022-11-17T17:51:03,454 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T17:51:03,455 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T17:51:07,021 [http-nio-8080-exec-8] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:51:07,022 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:51:07,027 [http-nio-8080-exec-8] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:51:29,770 [http-nio-8080-exec-9] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:51:29,771 [http-nio-8080-exec-9] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:51:29,787 [http-nio-8080-exec-9] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:51:29,841 [http-nio-8080-exec-10] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:51:29,842 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:51:29,848 [http-nio-8080-exec-10] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:51:58,542 [http-nio-8080-exec-1] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:51:58,543 [http-nio-8080-exec-1] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:51:58,553 [http-nio-8080-exec-1] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:51:58,622 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:51:58,623 [http-nio-8080-exec-2] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:51:58,635 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:59:05,452 [http-nio-8080-exec-4] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:59:05,452 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:59:05,475 [http-nio-8080-exec-4] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T17:59:05,603 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T17:59:05,603 [http-nio-8080-exec-5] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T17:59:05,618 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T17:59:47,938 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T17:59:47,938 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T17:59:51,457 [http-nio-8080-exec-7] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T17:59:51,457 [http-nio-8080-exec-7] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T17:59:51,461 [http-nio-8080-exec-7] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:00:22,806 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:00:22,806 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:01:28,538 [http-nio-8080-exec-10] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:01:28,538 [http-nio-8080-exec-10] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:01:28,552 [http-nio-8080-exec-10] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T18:01:28,585 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:01:28,586 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:01:49,123 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:01:49,124 [http-nio-8080-exec-2] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:01:49,138 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:01:49,138 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:01:49,139 [http-nio-8080-exec-2] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T18:01:52,480 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:01:52,480 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:01:52,570 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:01:52,571 [http-nio-8080-exec-5] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:01:52,583 [http-nio-8080-exec-5] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T18:01:54,552 [http-nio-8080-exec-6] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:01:54,553 [http-nio-8080-exec-6] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:01:54,557 [http-nio-8080-exec-6] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:02:14,904 [http-nio-8080-exec-7] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:02:14,904 [http-nio-8080-exec-7] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:02:14,915 [http-nio-8080-exec-8] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:02:14,915 [http-nio-8080-exec-8] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:02:14,919 [http-nio-8080-exec-7] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T18:02:14,921 [http-nio-8080-exec-8] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:02:17,477 [http-nio-8080-exec-9] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:02:17,477 [http-nio-8080-exec-9] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:02:17,482 [http-nio-8080-exec-9] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:02:17,514 [http-nio-8080-exec-10] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:02:17,514 [http-nio-8080-exec-10] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:02:17,530 [http-nio-8080-exec-10] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T18:04:45,459 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:04:45,460 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:04:50,631 [http-nio-8080-exec-4] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:04:50,631 [http-nio-8080-exec-4] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:04:50,633 [http-nio-8080-exec-4] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:04:52,250 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:04:52,250 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:05:47,357 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:05:47,357 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:05:49,831 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:05:49,831 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:07:35,393 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:07:35,393 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:07:39,229 [http-nio-8080-exec-10] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:07:39,229 [http-nio-8080-exec-10] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:07:39,234 [http-nio-8080-exec-10] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:07:40,323 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:07:40,323 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:07:44,288 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:07:44,288 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:07:46,360 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:07:46,360 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:07:58,087 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:07:58,087 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:02,989 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:02,989 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:08,168 [http-nio-8080-exec-6] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:08,168 [http-nio-8080-exec-6] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:10,312 [http-nio-8080-exec-8] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:10,312 [http-nio-8080-exec-8] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:42,403 [http-nio-8080-exec-7] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:42,403 [http-nio-8080-exec-7] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:43,114 [http-nio-8080-exec-9] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:43,115 [http-nio-8080-exec-9] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:45,972 [http-nio-8080-exec-10] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:45,972 [http-nio-8080-exec-10] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:52,242 [http-nio-8080-exec-1] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:52,242 [http-nio-8080-exec-1] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:53,554 [http-nio-8080-exec-2] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:08:53,554 [http-nio-8080-exec-2] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:08:58,786 [http-nio-8080-exec-3] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:08:58,786 [http-nio-8080-exec-3] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:08:58,789 [http-nio-8080-exec-3] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:09:00,129 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:09:00,130 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:09:31,419 [http-nio-8080-exec-5] INFO  (MasterTourController.java:31) - MasterTourController :: findAlltours function started.
+2022-11-17T18:09:31,420 [http-nio-8080-exec-5] INFO  (MasterTourManagerImpl.java:24) - MasterTourManagerImpl :: findByTourIsDeleted function started.
+2022-11-17T18:09:31,423 [http-nio-8080-exec-5] INFO  (MasterTourController.java:36) - size of city list: 1
+2022-11-17T18:09:46,861 [http-nio-8080-exec-6] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:09:46,862 [http-nio-8080-exec-6] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:09:46,868 [http-nio-8080-exec-6] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:06,826 [http-nio-8080-exec-8] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:06,827 [http-nio-8080-exec-8] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:06,829 [http-nio-8080-exec-8] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:19,875 [http-nio-8080-exec-7] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:19,875 [http-nio-8080-exec-7] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:19,879 [http-nio-8080-exec-7] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:23,567 [http-nio-8080-exec-9] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:23,568 [http-nio-8080-exec-9] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:23,570 [http-nio-8080-exec-9] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:31,403 [http-nio-8080-exec-10] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:31,403 [http-nio-8080-exec-10] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:31,405 [http-nio-8080-exec-10] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:41,381 [http-nio-8080-exec-1] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:41,381 [http-nio-8080-exec-1] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:41,386 [http-nio-8080-exec-1] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:44,520 [http-nio-8080-exec-2] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:44,520 [http-nio-8080-exec-2] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:44,524 [http-nio-8080-exec-2] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:10:45,690 [http-nio-8080-exec-3] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T18:10:45,690 [http-nio-8080-exec-3] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T18:10:47,572 [http-nio-8080-exec-4] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:10:47,572 [http-nio-8080-exec-4] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:10:47,573 [http-nio-8080-exec-4] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:11:17,057 [http-nio-8080-exec-5] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:11:17,057 [http-nio-8080-exec-5] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:11:17,060 [http-nio-8080-exec-5] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:11:23,914 [http-nio-8080-exec-6] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:11:23,914 [http-nio-8080-exec-6] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:11:23,916 [http-nio-8080-exec-6] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:11:25,529 [http-nio-8080-exec-8] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T18:11:25,529 [http-nio-8080-exec-8] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T18:11:26,698 [http-nio-8080-exec-7] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:11:26,698 [http-nio-8080-exec-7] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:11:26,700 [http-nio-8080-exec-7] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:11:39,436 [http-nio-8080-exec-9] INFO  (MasterVehicleTypeController.java:31) - MasterVehicleTypeController :: findAllVehicleTypes function started.
+2022-11-17T18:11:39,437 [http-nio-8080-exec-9] INFO  (MasterVehicleTypeManagerImpl.java:24) - MasterVehicleTypeManagerImpl :: findAllVehicleTypes function started.
+2022-11-17T18:11:39,438 [http-nio-8080-exec-9] INFO  (MasterVehicleTypeController.java:37) - vehicle type date : 2022-11-15
+2022-11-17T18:11:44,103 [http-nio-8080-exec-10] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T18:11:44,103 [http-nio-8080-exec-10] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T18:11:46,182 [http-nio-8080-exec-1] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T18:11:46,182 [http-nio-8080-exec-1] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T18:12:12,700 [http-nio-8080-exec-2] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T18:12:12,700 [http-nio-8080-exec-2] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T18:12:14,702 [http-nio-8080-exec-3] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:12:14,702 [http-nio-8080-exec-3] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:12:30,860 [http-nio-8080-exec-4] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:12:30,860 [http-nio-8080-exec-4] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:12:33,216 [http-nio-8080-exec-5] INFO  (MasterCityController.java:31) - MasterCityController :: findAllCities function started.
+2022-11-17T18:12:33,216 [http-nio-8080-exec-5] INFO  (MasterCityManagerImpl.java:24) - MasterCityManagerImpl :: findAllCities function started.
+2022-11-17T18:12:49,186 [http-nio-8080-exec-6] INFO  (MappingVehicleDriverController.java:32) - MappingVehicleDriverController :: findAllMappingVehicleDriver function started.
+2022-11-17T18:12:49,186 [http-nio-8080-exec-6] INFO  (MappingVehicleDriverManagerImpl.java:25) - MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.
+2022-11-17T18:13:16,121 [http-nio-8080-exec-8] INFO  (MappingVehicleDriverController.java:32) - MappingVehicleDriverController :: findAllMappingVehicleDriver function started.
+2022-11-17T18:13:16,121 [http-nio-8080-exec-8] INFO  (MappingVehicleDriverManagerImpl.java:25) - MappingVechileDriverManagerImpl :: findAllMappingVechileDriver function started.
+2022-11-17T18:13:19,647 [http-nio-8080-exec-7] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T18:13:19,647 [http-nio-8080-exec-7] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T18:13:19,648 [http-nio-8080-exec-9] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T18:13:19,648 [http-nio-8080-exec-9] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T18:13:19,671 [http-nio-8080-exec-10] INFO  (masterUserController.java:52) - masterUserController :: getAllByActorId function started.
+2022-11-17T18:13:19,672 [http-nio-8080-exec-10] INFO  (MasterUserManagerImpl.java:67) - MasterUserManagerImpl :: getAllByActorId function started.
+2022-11-17T18:13:39,046 [http-nio-8080-exec-1] INFO  (MasterVehicleDetailsController.java:30) - MasterVehicleDetailsController :: findAllVehicleDetails function started.
+2022-11-17T18:13:39,046 [http-nio-8080-exec-1] INFO  (MasterVehicleDetailsManagerImpl.java:23) - MasterVehicleDetailsManagerImpl :: findAllVehicleDetails function started.
+2022-11-17T18:13:39,067 [http-nio-8080-exec-3] INFO  (masterUserController.java:52) - masterUserController :: getAllByActorId function started.
+2022-11-17T18:13:39,067 [http-nio-8080-exec-2] INFO  (MappingCityRoutesController.java:33) - MappingCityRoutesController :: findAllRoutes function started.
+2022-11-17T18:13:39,067 [http-nio-8080-exec-3] INFO  (MasterUserManagerImpl.java:67) - MasterUserManagerImpl :: getAllByActorId function started.
+2022-11-17T18:13:39,067 [http-nio-8080-exec-2] INFO  (MappingCityRoutesManagerImpl.java:24) - MappingCityRoutesManagerImpl :: findAllMappingCityRoutes function started.
+2022-11-17T18:15:25,644 [http-nio-8080-exec-8] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:15:25,645 [http-nio-8080-exec-8] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:15:25,654 [http-nio-8080-exec-8] INFO  (BookingHistoryController.java:36) - Booking list :: 1
+2022-11-17T18:16:02,205 [http-nio-8080-exec-9] INFO  (BookingHistoryController.java:31) - BookingHistoryController :: findAllActors function started.
+2022-11-17T18:16:02,206 [http-nio-8080-exec-9] INFO  (BookingHistoryManagerImpl.java:23) - BookingHistoryManagerImpl :: findAllActors function started.
+2022-11-17T18:16:02,213 [http-nio-8080-exec-9] INFO  (BookingHistoryController.java:36) - Booking list :: 1
