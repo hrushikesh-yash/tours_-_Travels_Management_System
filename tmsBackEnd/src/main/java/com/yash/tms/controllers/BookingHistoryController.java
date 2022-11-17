@@ -77,6 +77,7 @@ public class BookingHistoryController {
 			bookingHistoryToUpdate.setTravelStartDate(history.getTravelStartDate());
 			bookingHistoryToUpdate.setTravelEndDate(history.getTravelEndDate());
 			bookingHistoryToUpdate.setTravelAmount(history.getTravelAmount());
+			bookingHistoryToUpdate.setNoOfTraveller(history.getNoOfTraveller());
 			bookingHistoryToUpdate.setBookingIsDeleted(history.getBookingIsDeleted());
 			return bookingHistoryManager.addBookingHistory(bookingHistoryToUpdate);
 

@@ -10,6 +10,7 @@ const routes: Routes = [
     children: [
       {path:'', component: LoginComponent},
       {path: 'Register', component: RegisterComponent},
+      {path:'EditUser',component:RegisterComponent}
     ]
   }  
 ];

@@ -8,7 +8,8 @@ import { BodyComponent } from '../body/body.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { BookingReportComponent } from './booking-report/booking-report.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditUSerComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -17,12 +18,14 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     BodyComponent,
     SidenavComponent,
-    BookingReportComponent
+    BookingReportComponent,
+    EditUSerComponent
 
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     DashboardRoutingModule,
     Ng2SearchPipeModule
   ]

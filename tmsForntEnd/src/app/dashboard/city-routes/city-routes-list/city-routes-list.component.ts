@@ -72,6 +72,7 @@ export class CityRoutesListComponent implements OnInit {
             this.bookingHistory=data
             console.log(this.bookingHistory)
             this.bookingHistory.cityRoute=this.cityRoute;
+            this.bookingHistory.travelAmount+=this.cityRoute.routePrice
             console.log(this.bookingHistory)
 
             this.bookingHistoryService.addBooking(this.bookingHistory)

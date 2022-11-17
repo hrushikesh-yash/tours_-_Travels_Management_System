@@ -7,15 +7,16 @@ import { AlertService } from 'src/app/Services/alert-service.service';
 import { UserService } from 'src/app/Services/UserService.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'app-edit-user',
+  templateUrl: './edit-user.component.html',
+  styleUrls: ['./edit-user.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class EditUSerComponent implements OnInit {
 
   addUserForm!: FormGroup;
   submitted = false;
   user: User = new User;
+  currentUser:User;
   userAddDate: Date = new Date();
   constructor(private userService: UserService,
     private formBuilder: FormBuilder,
@@ -26,7 +27,9 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
+    this.currentUser = user; 
+    console.log(this.currentUser);
     this.addUserForm = this.formBuilder.group(
       {
         firstName: [''],
@@ -38,6 +41,8 @@ export class RegisterComponent implements OnInit {
         mobileNo: [''],
         address: ['']
       });
+
+      this.addUserForm.patchValue(this.currentUser);
   }
 
   onSubmit() {
@@ -73,7 +78,5 @@ export class RegisterComponent implements OnInit {
   {
     this.router.navigate(['../']);
   }
-
-
 
 }

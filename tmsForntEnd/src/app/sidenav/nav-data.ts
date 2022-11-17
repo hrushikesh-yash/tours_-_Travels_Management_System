@@ -1,5 +1,7 @@
+
 export const navbarData = [
     {
+       
         routeLink: 'State',
         icon: 'fa-solid fa-landmark',
         label: 'State'
@@ -37,8 +39,8 @@ export const navbarData = [
     },
 
     {
-        routeLink: '',
-        icon: 'fa-solid fa-gear',
+        routeLink: 'EditUser',
+        icon: 'fa-solid fa-user-pen',
         label: 'Edit User Details'
     },
 

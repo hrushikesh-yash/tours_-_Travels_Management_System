@@ -9,6 +9,7 @@ import { AlertComponent } from './alter/alert.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EditUSerComponent } from './dashboard/edit-user/edit-user.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppComponent,
     routingComponents,
     AlertComponent,
+
   ],
   imports: [
     BrowserModule,

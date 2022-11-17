@@ -12,7 +12,7 @@ import { StateServiceService } from 'src/app/Services/state-service.service';
 @Component({
   selector: 'app-add-edit-city',
   templateUrl: './add-edit-city.component.html',
-  styleUrls: ['./add-edit-city.component.css']
+  styleUrls: ['./add-edit-city.component.scss']
 })
 export class AddEditCityComponent implements OnInit {
   loading = false;
@@ -130,7 +130,15 @@ export class AddEditCityComponent implements OnInit {
 
 
   OnCancel(){
-    this.router.navigate(['../'], { relativeTo: this.route });
+    if (this.isAddMode)
+    {
+      this.router.navigate(['../'], { relativeTo: this.route });
+    }
+    else{
+      this.router.navigate(['../../'], { relativeTo: this.route });
+    }
+
+   
 
   }
 

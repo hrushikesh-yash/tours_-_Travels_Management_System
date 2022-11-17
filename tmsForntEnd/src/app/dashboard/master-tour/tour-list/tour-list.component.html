@@ -6,7 +6,65 @@
     <div class="card-body">
         <div class="row tour-list" style="margin: 1em 0;">
 
-            <!-- START : Product Card -->
+            <div class="product-cart" *ngIf="tours && tours.length > 0">
+                <ul>
+                    <li *ngFor="let tour of tours; let i = index;">
+                        <img class="card-img-top" src="{{userImage}}" alt="Card image cap">
+
+                        <div class="container">
+                            <div class="row">
+                                <span class="col-sm-2">{{tour.tourName}} </span>
+                                <span class="col-sm-1">{{tour.city.cityName}}</span>
+                                <span class="col-sm-5">{{tour.tourDescription}}</span>
+                                <span class="col-sm-2">{{tour.tourPrice | currency:'INR'}}</span>
+                                <span class="col-sm-2 text-center" *ngIf="currentUser.actorId==1">
+                                    <i class="fa-solid fa-pen-to-square" style="font-size: 20px;" 
+                                    routerLink="edit/{{tour.tourId}}"></i>
+                                   &nbsp;
+
+                                   <i class="fa-solid fa-trash" style="font-size: 20px; color:red"
+                                    (click)="deleteTour(tour.tourId)"></i>
+                                   
+                               </span>
+                            </div>
+                            <br>
+                            <div class="row">
+                                
+                                <div class="col-3" *ngIf="currentUser.actorId==2">
+                                    <label>Travelling Start Date</label>
+                                    <input type="date" class="form-control" [(ngModel)]="travellingStartDate"/>
+                                </div>
+                                <div class="col-3">
+                                    <label>Travelling End Date</label>
+                                    <input type="date" class="form-control"  [(ngModel)]="travellingEndDate"/>
+                                </div>
+                                <div class="col-2">
+                                    <label>No of Traveller</label>
+                                    <input type="number" class="form-control col-sm-2"  [(ngModel)]="noOfTraveller"/>
+                                </div>
+                                
+                                <div class="col-2" style="float:right; ">
+                                    <label style="color: white;">button</label>
+                                    <a class="btn btn-sm btn-info" 
+                                    (click)="addToTour(tour.tourId)">Add to Tour</a> &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+                        
+                        
+
+
+
+
+                    </li>
+                </ul>
+            </div>
+
+            <!-- START : Product Card
             <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let tour of tours; let i = index;">
                 <div class="card mb-4 shadow-sm ">
                     <div class="image">
@@ -39,10 +97,9 @@
                         </td>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
 </div>
-<!--  -->
 <br>

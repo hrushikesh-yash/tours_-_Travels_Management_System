@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingReportComponent } from './booking-report/booking-report.component';
 import { DashboardComponent } from './dashboard.component';
+import { EditUSerComponent } from './edit-user/edit-user.component';
 import { PackageComponent } from './package/package.component';
 const stateModule = () => import('./state/state.module').then(x => x.StateModule);
 const cityModule = () => import('./city/city.module').then(x => x.CityModule);
@@ -24,7 +25,8 @@ const routes: Routes = [
       { path: 'Vehicle-Type', loadChildren: vehicleTypeModule },
       { path: 'Vehicle', loadChildren: vehicleModule },
       { path: 'City-Routes', loadChildren: cityRoutesModule },
-      { path: 'Vehicle-Driver-Assign', loadChildren: vehicleDriverMappingModule }
+      { path: 'Vehicle-Driver-Assign', loadChildren: vehicleDriverMappingModule },
+      { path: 'EditUser', component: EditUSerComponent },
     ]
   },
 

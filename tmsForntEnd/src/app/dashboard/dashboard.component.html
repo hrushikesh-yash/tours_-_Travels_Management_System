@@ -7,7 +7,7 @@
         <div class="div-right">           
             <i *ngIf="currentUser.actorId==2" class="fa-solid fa-person-walking-luggage" style="font-size: 32px;" 
                 title="Tour Package" routerLink="Package" routerLinkActive="active"></i>
-            <em  *ngIf="currentUser.actorId === 2">{{cartProductCount}}</em> &nbsp;&nbsp;&nbsp;&nbsp;
+            <em  *ngIf="currentUser.actorId === 2">Tour</em> &nbsp;&nbsp;&nbsp;&nbsp;
             <span>
                 <i class="fa-solid fa-right-from-bracket" style="font-size: 25px;" 
                 (click)="logout()" title="Logout"></i>

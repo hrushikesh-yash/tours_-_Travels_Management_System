@@ -9,7 +9,7 @@ import { CityServiceService } from 'src/app/Services/city-service.service';
 @Component({
   selector: 'app-city-list',
   templateUrl: './city-list.component.html',
-  styleUrls: ['./city-list.component.css']
+  styleUrls: ['./city-list.component.scss']
 })
 export class CityListComponent implements OnInit {
 

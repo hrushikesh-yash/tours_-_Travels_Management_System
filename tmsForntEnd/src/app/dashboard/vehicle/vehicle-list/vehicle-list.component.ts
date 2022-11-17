@@ -62,19 +62,24 @@ export class VehicleListComponent implements OnInit {
 
   addToTour(vehicleId:number)
   {
+    console.log(vehicleId);
     this.vehicleService.findVehicleById(vehicleId)
     .pipe(first())
     .subscribe({
       next:(data) =>
       {
         this.vehicle=data
+        console.log(this.vehicle);
 
         this.bookingService.findByStatusId(this.pendingStatus)
         .pipe(first())
         .subscribe({
           next:(data) =>{
             this.bookingHistory=data;
+            console.log("booking history "+this.bookingHistory)
             this.bookingHistory.vehicle=this.vehicle;
+            console.log("booking history vehicle "+this.bookingHistory.vehicle)
+            this.bookingHistory.travelAmount+= this.vehicle.vehiclePrice;
             console.log(this.bookingHistory) 
 
             this.bookingService.addBooking(this.bookingHistory)

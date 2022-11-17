@@ -29,10 +29,10 @@ interface SideNavToggle {
     ]),
     trigger('rotate', [
       transition(':enter', [
-        animate('1000ms',
+        animate('500ms',
           keyframes([
             style({ transform: 'rotate(0deg)', offset: '0' }),
-            style({ transform: 'rotate(2turn)', offset: '1' })
+            style({ transform: 'rotate(1turn)', offset: '1' })
           ])
         )
       ])
@@ -42,7 +42,7 @@ interface SideNavToggle {
 
 export class SidenavComponent implements OnInit {
 
-  currentUser: User;
+  currentUser:User
   firstName: string = "";
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
@@ -80,6 +80,10 @@ export class SidenavComponent implements OnInit {
       this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Report')
      
     }
+
+   
+
+    
   }
 
   toggleCollapse(): void {

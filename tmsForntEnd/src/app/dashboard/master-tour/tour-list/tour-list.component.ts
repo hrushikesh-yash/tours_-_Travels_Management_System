@@ -27,6 +27,7 @@ export class TourListComponent implements OnInit {
   booking: BookingHistory = new BookingHistory;
   travellingStartDate: Date;
   travellingEndDate: Date;
+  noOfTraveller:number;
 
   submitted = false;
 
@@ -82,7 +83,8 @@ export class TourListComponent implements OnInit {
 
   addToTour(tourId: number) {
 
-    // console.log(this.travellingStartDate,this.travellingEndDate);
+    console.log(this.noOfTraveller);
+    
     this.tourService.findTourById(tourId)
       .pipe(first())
       .subscribe({
@@ -93,6 +95,7 @@ export class TourListComponent implements OnInit {
           
           this.booking.travelStartDate=this.travellingStartDate;
           this.booking.travelEndDate=this.travellingEndDate
+          this.booking.travelAmount += this.tour.tourPrice;
           this.booking.user = this.currentUser;
           this.statusService.findStatusByName("Pending")
             .pipe(first())
@@ -101,6 +104,7 @@ export class TourListComponent implements OnInit {
 
                 this.status = data;
                 this.booking.status = this.status
+                this.booking. noOfTraveller=this.noOfTraveller;
                 this.bookingService.addBooking(this.booking)
                   .pipe(first())
                   .subscribe({

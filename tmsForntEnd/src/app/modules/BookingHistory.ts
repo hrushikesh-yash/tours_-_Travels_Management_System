@@ -17,4 +17,5 @@ export class BookingHistory{
     travelStartDate:Date= new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
     travelEndDate:Date= new Date(formatDate(new Date(), 'yyyy/MM/dd','en'));
     travelAmount:number=0;
+    noOfTraveller:number=0;
 }

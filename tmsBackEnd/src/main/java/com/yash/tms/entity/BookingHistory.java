@@ -55,12 +55,10 @@ public class BookingHistory {
 	@Column(name = "bookingAmount")
 	private int travelAmount;
 	
-	@Column(name = "vehiclePrice")
-	private int vehiclePrice;
-	
-	@Column(name = "routePrice")
-	private int routePrice;
+	@Column(name = "noOfTraveller")
+	private int noOfTraveller;
 
+	
 	@Column(name = "bookingIsDeleted")
 	private int bookingIsDeleted;
 
@@ -150,6 +148,14 @@ public class BookingHistory {
 		this.bookingIsDeleted = bookingIsDeleted;
 	}
 
+	public int getNoOfTraveller() {
+		return noOfTraveller;
+	}
+
+	public void setNoOfTraveller(int noOfTraveller) {
+		this.noOfTraveller = noOfTraveller;
+	}
+
 	public MappingCityRoutes getCityRoute() {
 		return cityRoute;
 	}
@@ -158,23 +164,7 @@ public class BookingHistory {
 		this.cityRoute = cityRoute;
 	}
 
-	public int getVehiclePrice() {
-		return vehiclePrice;
-	}
 
-	public void setVehiclePrice(int vehiclePrice) {
-		this.vehiclePrice = vehiclePrice;
-	}
-
-	public int getRoutePrice() {
-		return routePrice;
-	}
-
-	public void setRoutePrice(int routePrice) {
-		this.routePrice = routePrice;
-	}
-
-	
 	
 	
 	
