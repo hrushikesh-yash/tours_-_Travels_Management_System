@@ -54,7 +54,7 @@ export class AddEditVehicleComponent implements OnInit {
       companyName: [''],
       vehicleTypeId: [''],
       vehicleCapcity: [''],
-      vehicleprice:['']
+      vehiclePrice:['']
     });
 
     if (!this.isAddMode) {
@@ -74,7 +74,7 @@ export class AddEditVehicleComponent implements OnInit {
     this.vehicle.vehicleName = this.vehicleForm.controls['vehicleName'].value;
     this.vehicle.vehicleCapcity = this.vehicleForm.controls['vehicleCapcity'].value;
     this.vehicle.companyName = this.vehicleForm.controls['companyName'].value;
-
+    this.vehicle.vehiclePrice = this.vehicleForm.controls['vehiclePrice'].value;
     this.vehicleTypeService.findVehicleTypeById(this.vehicle.vehicleType = this.vehicleForm.controls['vehicleTypeId'].value)
       .pipe(first())
       .subscribe({
@@ -121,7 +121,15 @@ export class AddEditVehicleComponent implements OnInit {
   }
 
   OnCancel(){
-    this.router.navigate(['../'], { relativeTo: this.route });
+    if(this.isAddMode)
+    {
+      this.router.navigate(['../'], { relativeTo: this.route });
+    }
+    else
+    {
+      this.router.navigate(['../../'], { relativeTo: this.route });
+    }
+    
 
   }
 }

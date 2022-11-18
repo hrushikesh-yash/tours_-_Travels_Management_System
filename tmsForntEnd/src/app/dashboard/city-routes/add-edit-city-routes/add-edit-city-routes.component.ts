@@ -79,9 +79,11 @@ export class AddEditCityRoutesComponent implements OnInit {
     this.cityRoute.routeCreatedDate = this.cityRouteForm.controls['routeCreatedDate'].value;
     this.sourceCityId=this.cityRouteForm.controls['sourceCityId'].value;
     console.log(this.sourceCityId);
-    this.destinationCityId=this.cityRouteForm.controls['destinationCityId'].value
+    this.destinationCityId=this.cityRouteForm.controls['destinationCityId'].value;
     console.log(this.destinationCityId);
-
+    console.log(this.cityRouteForm.controls['routePrice'].value)
+    this.cityRoute.routePrice=this.cityRouteForm.controls['routePrice'].value;
+    console.log(this.cityRoute)
     this.cityService.findCityById(this.sourceCityId)
       .pipe(first())
       .subscribe({
@@ -146,7 +148,14 @@ export class AddEditCityRoutesComponent implements OnInit {
   }
 
   OnCancel(){
-    this.router.navigate(['../'], { relativeTo: this.route });
+    if(this.isAddMode)
+    {
+      this.router.navigate(['../'], { relativeTo: this.route });
+    }
+    else
+    {
+      this.router.navigate(['../../'], { relativeTo: this.route });
+    }
 
   }
 

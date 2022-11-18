@@ -25,7 +25,7 @@ public class MasterTour {
 	@Column(name = "tourDescription")
 	private String tourDescription;
 
-	@OneToOne(cascade = CascadeType.MERGE)
+	@OneToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name = "cityId",referencedColumnName = "cityId")
 	private MasterCity city;
 
