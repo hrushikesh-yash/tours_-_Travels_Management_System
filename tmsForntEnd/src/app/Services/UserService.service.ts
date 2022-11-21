@@ -29,8 +29,8 @@ export class UserService {
     return this.httpClient.get<User[]>(this.baseURL+"getAllByActorId/"+`${actorId}`); 
   }
 
-  createUser(user: User): Observable<Object>{
-    return this.httpClient.post(this.baseURL+"addUser", user);
+  createUser(user: User): Observable<User>{
+    return this.httpClient.post<User>(this.baseURL+"addUser", user);
   }
 
   findUserById(id: number): Observable<User>{

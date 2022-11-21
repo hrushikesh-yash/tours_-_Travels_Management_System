@@ -2,7 +2,10 @@ import { DatePipe, formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { first } from 'rxjs';
+import { Actor } from 'src/app/modules/Admin';
 import { User } from 'src/app/modules/masterUser';
+import { ActorService } from 'src/app/Services/admin.service';
 import { AlertService } from 'src/app/Services/alert-service.service';
 import { UserService } from 'src/app/Services/UserService.service';
 
@@ -17,11 +20,16 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   user: User = new User;
   userAddDate: Date = new Date();
+  actorId: number = 2;
+  actor: Actor;
+  userAfterAdded: User;
+
   constructor(private userService: UserService,
     private formBuilder: FormBuilder,
     private router: Router,
     private datePipe: DatePipe,
-    private alertService: AlertService) {
+    private alertService: AlertService,
+    private actorService: ActorService) {
 
   }
 
@@ -47,7 +55,7 @@ export class RegisterComponent implements OnInit {
     //   return;
     // }
 
-    this.alertService.success('User added Sucessfully !', { keepAfterRouteChange: true });
+    
 
     this.user.firstName = this.addUserForm.controls['firstName'].value;
     this.user.lastName = this.addUserForm.controls['lastName'].value;
@@ -57,20 +65,44 @@ export class RegisterComponent implements OnInit {
     this.user.gender = this.addUserForm.controls['gender'].value;
     this.user.mobileNo = this.addUserForm.controls['mobileNo'].value;
     this.user.address = this.addUserForm.controls['address'].value;
-    this.user.userIsCreated = new Date(formatDate(new Date(), 'yyyy/MM/dd', 'en'));
+
     this.user.useIsDeleted = 0;
 
-    console.log(this.user);
+    // this.user.actor.actorId = this.actorId
 
-    this.userService.createUser(this.user)
-      .subscribe(data => {
-        this.router.navigate(['../']);
-      }
-        , error => console.log(error));
+    this.actorService.findActorById(this.actorId)
+    .pipe(first())
+    .subscribe({
+      next:(data) =>{
+        this.user.actor=data
+
+        this.userService.createUser(this.user)
+        .pipe(first())
+        .subscribe({
+          next: (data) => {
+            this.userAfterAdded = data;
+            console.log(this.userAfterAdded);
+          },
+          error: (err) => {
+            this.alertService.error(err);
+          },
+          complete: () => {
+            this.alertService.success('User added Sucessfully !', { keepAfterRouteChange: true });
+            this.router.navigate(['../']);
+          }
+  
+        });
+
+      },
+      error :(err) => 
+      this.alertService.error(err)
+    });
+
+   
+
   }
 
-  onCancel()
-  {
+  onCancel() {
     this.router.navigate(['../']);
   }
 

@@ -1,7 +1,7 @@
 <h1>Tours</h1>
 <div class="card">
     <div class="card-head">
-        <a *ngIf="currentUser.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add Tour</a>
+        <a *ngIf="currentUser.actor.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add Tour</a>
     </div>
     <div class="card-body">
         <div class="row tour-list" style="margin: 1em 0;">
@@ -17,7 +17,7 @@
                                 <span class="col-sm-1">{{tour.city.cityName}}</span>
                                 <span class="col-sm-5">{{tour.tourDescription}}</span>
                                 <span class="col-sm-2">{{tour.tourPrice | currency:'INR'}}</span>
-                                <span class="col-sm-2 text-center" *ngIf="currentUser.actorId==1">
+                                <span class="col-sm-2 text-center" *ngIf="currentUser.actor.actorId==1">
                                     <i class="fa-solid fa-pen-to-square" style="font-size: 20px;" 
                                     routerLink="edit/{{tour.tourId}}"></i>
                                    &nbsp;
@@ -30,20 +30,20 @@
                             <br>
                             <div class="row">
                                 
-                                <div class="col-3" *ngIf="currentUser.actorId==2">
+                                <div class="col-3" *ngIf="currentUser.actor.actorId==2">
                                     <label>Travelling Start Date</label>
                                     <input type="date" class="form-control" [(ngModel)]="travellingStartDate"/>
                                 </div>
-                                <div class="col-3" *ngIf="currentUser.actorId==2">
+                                <div class="col-3" *ngIf="currentUser.actor.actorId==2">
                                     <label>Travelling End Date</label>
                                     <input type="date" class="form-control"  [(ngModel)]="travellingEndDate"/>
                                 </div>
-                                <div class="col-2" *ngIf="currentUser.actorId==2">
+                                <div class="col-2" *ngIf="currentUser.actor.actorId==2">
                                     <label>No of Traveller</label>
                                     <input type="number" class="form-control col-sm-2"  [(ngModel)]="noOfTraveller"/>
                                 </div>
                                 
-                                <div class="col-2" style="float:right;"*ngIf="currentUser.actorId==2">
+                                <div class="col-2" style="float:right;"*ngIf="currentUser.actor.actorId==2">
                                     <label style="color: white;">button</label>
                                     <a class="btn btn-sm btn-info" 
                                     (click)="addToTour(tour.tourId)">Add to Tour</a> &nbsp;

@@ -6,29 +6,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;	
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "master_actor")
 public class MasterActor {
 
-	//@OneToMany
+	// @OneToMany
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "actorId")
 	private int actorId;
-	
+
 	@Column(name = "actorName")
 	private String actorName;
-	
-	@Column(name = "actorCreatedDate")
-	private Date actorCreatedDate;
-	
+
 	@Column(name = "actorIsDeleted")
-	private short actorIsDeleted;
-	
-	MasterActor()
-	{}
+	private int actorIsDeleted;
+
+	MasterActor() {
+	}
 
 	public int getActorId() {
 		return actorId;
@@ -46,31 +43,18 @@ public class MasterActor {
 		this.actorName = actorName;
 	}
 
-	public Date getActorCreatedDate() {
-		return actorCreatedDate;
-	}
-
-	public void setActorCreatedDate(Date actorCreatedDate) {
-		this.actorCreatedDate = actorCreatedDate;
-	}
-
-	public short getActorIsDeleted() {
+	public int getActorIsDeleted() {
 		return actorIsDeleted;
 	}
 
-	public void setActorIsDeleted(short actorIsDeleted) {
+	public void setActorIsDeleted(int actorIsDeleted) {
 		this.actorIsDeleted = actorIsDeleted;
 	}
 
 	@Override
 	public String toString() {
-		return "masterActor [actorId=" + actorId + ", actorName=" + actorName + ", actorCreatedDate=" + actorCreatedDate
-				+ ", actorIsDeleted=" + actorIsDeleted + "]";
+		return "masterActor [actorId=" + actorId + ", actorName=" + actorName + ", actorIsDeleted=" + actorIsDeleted
+				+ "]";
 	}
-	
-	
-	
-	
-	
-	
+
 }

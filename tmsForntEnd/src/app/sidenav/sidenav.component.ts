@@ -72,7 +72,7 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
-    if(this.currentUser.actorId==2)
+    if(this.currentUser.actor.actorId==2)
     {
       this.navData=this.navData.filter(navlist => navlist.routeLink !== 'State')
       this.navData=this.navData.filter(navlist => navlist.routeLink !== 'Vehicle-Type')

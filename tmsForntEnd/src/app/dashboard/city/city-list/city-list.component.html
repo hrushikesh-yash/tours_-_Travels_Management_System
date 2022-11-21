@@ -1,7 +1,7 @@
 <h1><strong>Cities To Visit</strong></h1>
 <div class="card">
     <div class="card-head">
-        <a *ngIf="currentUser.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add City</a>
+        <a *ngIf="currentUser.actor.actorId==1" routerLink="add" class="btn btn-sm btn-success mb-2">Add City</a>
     </div>
     <div class="card-body">
 
@@ -12,7 +12,7 @@
                     <th style="width: 20%">City Name</th>
                     <th style="width: 20%">State Name</th>
                     <th style="width: 20%">City Code </th>
-                    <th style="width: 20%" *ngIf="currentUser.actorId==1">Controls</th>
+                    <th style="width: 20%" *ngIf="currentUser.actor.actorId==1">Controls</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@
                     <td>{{city.cityName}}</td>
                     <td>{{city.state.stateName}}</td>
                     <td>{{city.pinCode}}</td>
-                    <td style="white-space: nowrap" *ngIf="currentUser.actorId==1">
+                    <td style="white-space: nowrap" *ngIf="currentUser.actor.actorId==1">
                         <a routerLink="edit/{{city.cityId}}" class="btn btn-sm btn-primary mr-1">Edit</a> &nbsp;
                         <button (click)="deleteState(city.cityId)" class="btn btn-sm btn-danger btn-delete-city"
                             [disabled]="isDeleting">

@@ -2,11 +2,14 @@ package com.yash.tms.entity;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,8 +21,9 @@ public class MasterUser {
 	@Column(name = "userId")
 	private int userId;
 	
-	@Column(name = "actorId")
-	private int actorId;
+	@ManyToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "actorId",referencedColumnName = "actorId")
+	private MasterActor actor;
 	
 	@Column(name = "firstName")
 	private String firstName;
@@ -39,11 +43,8 @@ public class MasterUser {
 	@Column(name = "gender")
 	private String gender;
 	
-	@Column(name = "userCreatedDate")
-	private Date userCreatedDate;
-	
 	@Column(name = "userIsDeleted")
-	private short userIsDeleted;
+	private int  userIsDeleted;
 	
 	@Column(name = "userName")
 	private String userName;
@@ -51,7 +52,27 @@ public class MasterUser {
 	@Column(name = "password")
 	private String password;
 
-	MasterUser(){}
+	public MasterUser(){}
+
+	
+	
+	public MasterUser(int userId, MasterActor actor, String firstName, String lastName, String emailId, Long mobileNo,
+			String address, String gender, int userIsDeleted, String userName, String password) {
+		super();
+		this.userId = userId;
+		this.actor = actor;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
+		this.mobileNo = mobileNo;
+		this.address = address;
+		this.gender = gender;
+		this.userIsDeleted = userIsDeleted;
+		this.userName = userName;
+		this.password = password;
+	}
+
+
 
 	public int getUserId() {
 		return userId;
@@ -61,12 +82,12 @@ public class MasterUser {
 		this.userId = userId;
 	}
 
-	public int getActorId() {
-		return actorId;
+	public MasterActor getActor() {
+		return actor;
 	}
 
-	public void setActorId(int actorId) {
-		this.actorId = actorId;
+	public void setActor(MasterActor actor) {
+		this.actor = actor;
 	}
 
 	public String getFirstName() {
@@ -93,11 +114,11 @@ public class MasterUser {
 		this.emailId = emailId;
 	}
 
-	public long getMobileNo() {
+	public Long getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(long mobileNo) {
+	public void setMobileNo(Long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 
@@ -117,19 +138,13 @@ public class MasterUser {
 		this.gender = gender;
 	}
 
-	public Date getUserCreatedDate() {
-		return userCreatedDate;
-	}
+	
 
-	public void setUserCreatedDate(Date userCreatedDate) {
-		this.userCreatedDate = userCreatedDate;
-	}
-
-	public short getUserIsDeleted() {
+	public int getUserIsDeleted() {
 		return userIsDeleted;
 	}
 
-	public void setUserIsDeleted(short userIsDeleted) {
+	public void setUserIsDeleted(int userIsDeleted) {
 		this.userIsDeleted = userIsDeleted;
 	}
 
@@ -148,15 +163,10 @@ public class MasterUser {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
 
-	@Override
-	public String toString() {
-		return "masterUser [userId=" + userId + ", actorId=" + actorId + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", emailId=" + emailId + ", mobileNo=" + mobileNo + ", address=" + address + ", gender="
-				+ gender + ", userCreatedDate=" + userCreatedDate + ", userIsDeleted=" + userIsDeleted + ", userName="
-				+ userName + ", password=" + password + "]";
-	}
-
+	
 	
 	
 	

@@ -6,7 +6,7 @@ import com.yash.tms.entity.MasterUser;
 
 public interface MasterUserManager {
 
-	List<MasterUser> findAllusers(short userIsDeleted);
+	List<MasterUser> findByUserIsDeleted(int userIsDeleted);
 
 	MasterUser addUser(MasterUser user);
 
@@ -15,5 +15,7 @@ public interface MasterUserManager {
 	List<MasterUser> getAllByActorId(int actorId);
 
 	MasterUser findMasterUserByUsernameAndPassword(String userName, String password);
+	
+	boolean findByUserName(String userName);
 
 }

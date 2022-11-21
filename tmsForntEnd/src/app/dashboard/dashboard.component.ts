@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
     this.currentUser = user;
-    console.log(this.currentUser.actorId)
+    console.log(this.currentUser.actor.actorId)
   }
 
   isSideNavCollapsed = false;

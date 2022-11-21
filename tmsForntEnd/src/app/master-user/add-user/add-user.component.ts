@@ -58,7 +58,7 @@ export class AddUserComponent implements OnInit {
     this.user.gender=this.addUserForm.controls['gender'].value;
     this.user.mobileNo=this.addUserForm.controls['mobileNo'].value;
     this.user.address=this.addUserForm.controls['address'].value;
-    this.user.userIsCreated=new Date(formatDate(new Date(), 'yyyy/MM/dd', 'en'));
+    // this.user.userIsCreated=new Date(formatDate(new Date(), 'yyyy/MM/dd', 'en'));
     this.user.useIsDeleted=0;
     
     console.log(this.user);

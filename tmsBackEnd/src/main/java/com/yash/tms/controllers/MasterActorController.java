@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import com.yash.tms.services.MasterActorManager;
 
 @RestController
 @RequestMapping("/actor")
+@CrossOrigin("*")
 public class MasterActorController {
 
 	private final static Logger log = LoggerFactory.getLogger(MasterActorController.class);
@@ -68,13 +70,26 @@ public class MasterActorController {
 
 			actorToUpdate.setActorId(actorId);
 			actorToUpdate.setActorName(actor.getActorName());
-			actorToUpdate.setActorCreatedDate(actor.getActorCreatedDate());
 			actorToUpdate.setActorIsDeleted(actor.getActorIsDeleted());
 
 			return masterActorManager.addActor(actorToUpdate);
 
 		} catch (Exception e) {
 			log.error("MasterActorController :: error in updateActor function." + e.getMessage());
+			return null;
+		}
+
+	}
+
+	@GetMapping("/findActorByActorId/{actorId}")
+	public MasterActor findActorByActorId(@PathVariable(value = "actorId") int actorId) {
+		log.info("MasterActorController :: findActorByActorId function started.");
+		try {
+
+			return masterActorManager.findById(actorId);
+
+		} catch (Exception e) {
+			log.error("MasterActorController :: error in findActorByActorId function." + e.getMessage());
 			return null;
 		}
 

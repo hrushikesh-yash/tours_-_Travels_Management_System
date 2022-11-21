@@ -1,6 +1,8 @@
+import { Actor } from "./Admin";
+
 export class User {
-    userId:number=0;
-    actorId:number=2;
+    userId:number;
+    actor:Actor;
     firstName:string="";
     lastName:string="";
     userName:string="";
@@ -9,6 +11,6 @@ export class User {
     mobileNo:number=0;
     address:string="";
     gender:string="";
-    userIsCreated:Date=new Date();
+ 
     useIsDeleted:number=0;
 }

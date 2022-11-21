@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.yash.tms.dao.MasterActorDao;
 import com.yash.tms.entity.MasterActor;
-import com.yash.tms.exception.RecordNotfoundException;
+import com.yash.tms.exception.RecordNotFoundException;
 
 @Service
 public class MasterActorManagerImpl implements MasterActorManager {
@@ -23,7 +23,7 @@ public class MasterActorManagerImpl implements MasterActorManager {
 		log.info("MasterActorManagerImpl :: findAllActors function started.");
 		try {
 			
-			return masterActorDao.findAllActors(actorIsDeleted);
+			return masterActorDao.findByActorIsDeleted(actorIsDeleted);
 		}
 		catch (Exception e) {
 			log.error("MasterActorManagerImpl :: findAllActors error while find all actors. "+e.getMessage());
@@ -53,7 +53,7 @@ public class MasterActorManagerImpl implements MasterActorManager {
 	public MasterActor findById(int actorId) {
 		log.info("MasterActorManagerImpl :: findById function started.");
 		try {
-				MasterActor actor=masterActorDao.findById(actorId).orElseThrow(() -> new RecordNotfoundException("Actor Id not found."));
+				MasterActor actor=masterActorDao.findById(actorId).orElseThrow(() -> new RecordNotFoundException("Actor Id not found."));
 			 return actor;
 		}
 		catch (Exception e) {

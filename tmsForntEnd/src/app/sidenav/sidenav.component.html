@@ -4,10 +4,10 @@
             <i class="fa-solid fa-bars" style="color: #fff; font-size: 26px;"></i></button>
         <div class="logo-text" @fadeInOut *ngIf="collapsed" style="text-align:left;">
         {{this.currentUser.firstName}} 
-            <div *ngIf="this.currentUser.actorId==2">
+            <div *ngIf="this.currentUser.actor.actorId==2">
                 <h6 style="text-align:right;">User </h6>
               </div>
-              <div *ngIf="this.currentUser.actorId==1">
+              <div *ngIf="this.currentUser.actor.actorId==1">
                 <h6>Admin</h6>
               </div>
         </div>
