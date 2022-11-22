@@ -23,17 +23,14 @@ public class CustomException extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<Object> handleAllExceptions(Exception ex,WebRequest request) {
-		List<String> details = new ArrayList();
-		details.add(ex.getLocalizedMessage());
-		ErrorResponse error = new ErrorResponse("Server Error",details);
+		ErrorResponse error = new ErrorResponse(ex.getMessage());
 		return new ResponseEntity(error,HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	@ExceptionHandler(RecordNotFoundException.class)
 	public final ResponseEntity<Object> handleUserNotFoundException(RecordNotFoundException ex, WebRequest request) {
-		List<String> details = new ArrayList<>();
-		details.add(ex.getLocalizedMessage());
-		ErrorResponse error = new ErrorResponse("Record Not Found", details);
+		
+		ErrorResponse error = new ErrorResponse(ex.getMessage());
 		return new ResponseEntity(error, HttpStatus.NOT_FOUND);
 	}
 
@@ -45,15 +42,13 @@ public class CustomException extends ResponseEntityExceptionHandler {
 		for (ObjectError error : ex.getBindingResult().getAllErrors()) {
 			details.add(error.getDefaultMessage());
 		}
-		ErrorResponse error = new ErrorResponse("Record Insertion Failed !", details);
+		ErrorResponse error = new ErrorResponse(ex.getMessage());
 		return new ResponseEntity(error, HttpStatus.BAD_REQUEST);
 	}
 
 	@ExceptionHandler(DuplicateEntryException.class)
 	public final ResponseEntity<Object> handleDuplicateEntryExceptions(DuplicateEntryException ex, WebRequest request) {
-		List<String> details = new ArrayList<>();
-		details.add(ex.getLocalizedMessage());
-		ErrorResponse error = new ErrorResponse("Duplicate Entry", details);
+		ErrorResponse error = new ErrorResponse(ex.getMessage());
 		return new ResponseEntity(error, HttpStatus.NOT_ACCEPTABLE);
 	}
 

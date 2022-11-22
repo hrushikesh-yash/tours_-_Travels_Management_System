@@ -16,7 +16,7 @@ import { EditUSerComponent } from './dashboard/edit-user/edit-user.component';
   declarations: [
     AppComponent,
     routingComponents,
-    AlertComponent,
+    // AlertComponent,
 
   ],
   imports: [

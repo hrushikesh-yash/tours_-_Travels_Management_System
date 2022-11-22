@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs';
-import { Actor } from 'src/app/modules/Admin';
+import { Actor } from 'src/app/modules/Actor';
 import { User } from 'src/app/modules/masterUser';
 import { ActorService } from 'src/app/Services/admin.service';
 import { AlertService } from 'src/app/Services/alert-service.service';
@@ -21,7 +21,6 @@ export class RegisterComponent implements OnInit {
   user: User = new User;
   userAddDate: Date = new Date();
   actorId: number = 2;
-  actor: Actor;
   userAfterAdded: User;
 
   constructor(private userService: UserService,
@@ -55,7 +54,7 @@ export class RegisterComponent implements OnInit {
     //   return;
     // }
 
-    
+
 
     this.user.firstName = this.addUserForm.controls['firstName'].value;
     this.user.lastName = this.addUserForm.controls['lastName'].value;
@@ -67,8 +66,7 @@ export class RegisterComponent implements OnInit {
     this.user.address = this.addUserForm.controls['address'].value;
 
     this.user.useIsDeleted = 0;
-
-    // this.user.actor.actorId = this.actorId
+   
 
     this.actorService.findActorById(this.actorId)
     .pipe(first())
@@ -84,13 +82,16 @@ export class RegisterComponent implements OnInit {
             console.log(this.userAfterAdded);
           },
           error: (err) => {
-            this.alertService.error(err);
+            console.log(err)
+            let msg=err.error.message;
+            console.log(msg);
+            this.alertService.error(msg,{ keepAfterRouteChange: true });
           },
           complete: () => {
             this.alertService.success('User added Sucessfully !', { keepAfterRouteChange: true });
             this.router.navigate(['../']);
           }
-  
+
         });
 
       },
@@ -98,7 +99,7 @@ export class RegisterComponent implements OnInit {
       this.alertService.error(err)
     });
 
-   
+
 
   }
 

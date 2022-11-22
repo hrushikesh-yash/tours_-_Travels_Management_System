@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -29,15 +30,15 @@ import com.yash.tms.services.MasterUserManagerImpl;
 @RestController
 @RequestMapping("/user")
 @CrossOrigin("*")
-public class masterUserController  {
+public class masterUserController {
 
 	private final static Logger log = LoggerFactory.getLogger(masterUserController.class);
 
 	@Autowired
 	private MasterUserManager masterUserManager;
-	
+
 	@Autowired
-	private CustomException exception;
+	private MasterActorDao masterActorDao;
 
 	@GetMapping("/getAllUsers")
 	public ResponseEntity<List<MasterUser>> findAllusers() throws RecordNotFoundException {
@@ -47,16 +48,14 @@ public class masterUserController  {
 			int userIsDeleted = 0;
 			masterUserList = masterUserManager.findByUserIsDeleted(userIsDeleted);
 			if (masterUserList.isEmpty()) {
-//				new //("User is alredy exists.");
+				throw new RecordNotFoundException("UserList is empty.");
 			}
 
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 			log.error("masterUserController :: error in findAllusers function." + e.getMessage());
-			throw new RecordNotFoundException(e.getLocalizedMessage());
 		}
-		
-		
-		return new ResponseEntity<>(masterUserList,HttpStatus.OK);
+
+		return new ResponseEntity<>(masterUserList, HttpStatus.OK);
 
 	}
 
@@ -93,26 +92,20 @@ public class masterUserController  {
 	}
 
 	@PostMapping("/addUser")
-	public MasterUser addUser(@RequestBody MasterUser user) {
+	public MasterUser addUser(@RequestBody MasterUser user) throws DuplicateEntryException {
 		log.info("MasterUserController :: addUser function started.");
-		MasterUser emptyUser= new MasterUser();
+		MasterUser emptyUser = new MasterUser();
 		try {
-//			user.setActor(masterActorDao.findById(user.getActor().getActorId()).get());
-			if (!masterUserManager.findByUserName(user.getUserName())) 
-			{
+			if (!masterUserManager.findByUserName(user.getUserName())) {
 				log.info("User is not present in the database");
-//				emptyUser= masterUserManager.addUser(user);
-			} 
-			else 
-			{
+				emptyUser= masterUserManager.addUser(user);
+			} else {
 				log.info("User is alredy Exists.. ");
-				CustomException exception= new CustomException(,);
-				
-				throw new   //DuplicateEntryException("User is alredy Exists.. ");
-			}
-			
 
-		} catch (Exception e) {
+				throw new DuplicateEntryException("User is alredy Exists.. ");
+			}
+
+		} catch (ArithmeticException e) {
 			log.error("MasterUserController :: error in addUser function." + e.getMessage());
 		}
 		return emptyUser;
@@ -166,14 +159,20 @@ public class masterUserController  {
 
 	@GetMapping("/getUserCredentials")
 	public MasterUser getUserCredentials(@RequestParam(value = "userName") String userName,
-			@RequestParam(value = "password") String password) {
+			@RequestParam(value = "password") String password) throws RecordNotFoundException {
 		log.info("MasterUserController :: getUserCredentials function started.");
 		try {
-			log.info("Username :: " + userName);
+			MasterUser user = masterUserManager.findMasterUserByUsernameAndPassword(userName, password);
+			if(user!=null)
+			{
+				return user;
+			}
+			else
+			{
+				throw new RecordNotFoundException("User not found.. (^_^)");
+			}
 
-			return masterUserManager.findMasterUserByUsernameAndPassword(userName, password);
-
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 			log.error("MasterUserController :: error in getUserCredentials User function." + e.getMessage());
 
 		}

@@ -1,5 +1,5 @@
 <div *ngFor="let alert of alerts" class="{{cssClass(alert)}}">
-    <span [innerHTML]="alert.message"></span>
+   <Strong><span [innerHTML]="alert.message"></span></Strong> 
     <!-- <a class="close" (click)="removeAlert(alert)">&times;</a> -->
     <button class="btn-close" (click)="removeAlert(alert)" style="float: right;">
         <i class="fal close-icon"></i>

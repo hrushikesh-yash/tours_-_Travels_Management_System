@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
+      username: [''],
+      password: ['']
     });
 
     // get return url from route parameters or default to '/'
@@ -67,12 +67,12 @@ export class LoginComponent implements OnInit {
           });
           localStorage.setItem('user', JSON.stringify(this.user))
         },
-        error: (error: any) => {
-          console.log(error),
+        error: (err) => {
+          this.alertService.error(err.error.message, { keepAfterRouteChange: true });
             this.loading = false;
         }
       });
-    this.router.navigate(['../Dashboard'], { relativeTo: this.route });
+
 
   }
 

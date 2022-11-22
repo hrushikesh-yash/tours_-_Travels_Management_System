@@ -1,4 +1,4 @@
-import { Actor } from "./Admin";
+import { Actor } from "./Actor";
 
 export class User {
     userId:number;

@@ -5,16 +5,16 @@ import java.util.List;
 public class ErrorResponse {
 	
 	private String message;
-	private List<String> details;
+//	private List<String> details;
 
 	public ErrorResponse() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ErrorResponse(String message, List<String> details) {
+	public ErrorResponse(String message) {
 		super();
 		this.message = message;
-		this.details = details;
+//		this.details = details;
 	}
 
 	public String getMessage() {
@@ -25,13 +25,13 @@ public class ErrorResponse {
 		this.message = message;
 	}
 
-	public List<String> getDetails() {
-		return details;
-	}
-
-	public void setDetails(List<String> details) {
-		this.details = details;
-	}
+//	public List<String> getDetails() {
+//		return details;
+//	}
+//
+//	public void setDetails(List<String> details) {
+//		this.details = details;
+//	}
 	
 
 }

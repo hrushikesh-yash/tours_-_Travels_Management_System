@@ -6,13 +6,15 @@ import { AccountComponent } from './account.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from '../alter/alert.component';
 
 
 @NgModule({
   declarations: [
     AccountComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,
