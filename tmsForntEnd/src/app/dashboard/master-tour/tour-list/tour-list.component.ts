@@ -28,6 +28,7 @@ export class TourListComponent implements OnInit {
   travellingStartDate: Date;
   travellingEndDate: Date;
   noOfTraveller:number;
+  bookingForm:FormGroup;
 
   submitted = false;
 
@@ -48,6 +49,12 @@ export class TourListComponent implements OnInit {
 
     let user = JSON.parse(localStorage.getItem("user") as any);//localStorage.getItem('user');
     this.currentUser = user;
+
+    this.bookingForm = this.formBuilder.group({
+      travellingStartDate: [],
+      travellingEndDate: [''],
+      noOfTraveller: [''],
+    });
 
   }
 
@@ -83,7 +90,8 @@ export class TourListComponent implements OnInit {
 
   addToTour(tourId: number) {
 
-    console.log(this.noOfTraveller);
+   
+   
     
     this.tourService.findTourById(tourId)
       .pipe(first())
@@ -93,10 +101,12 @@ export class TourListComponent implements OnInit {
           // console.log(this.tour)
           this.booking.tour = this.tour;
           
-          this.booking.travelStartDate=this.travellingStartDate;
-          this.booking.travelEndDate=this.travellingEndDate
+          this.booking.travelStartDate=this.bookingForm.controls['travellingStartDate'].value
+          this.booking.travelEndDate=this.bookingForm.controls['travellingEndDate'].value
+                this.booking. noOfTraveller=this.bookingForm.controls['noOfTraveller'].value;
           this.booking.travelAmount += this.tour.tourPrice;
           this.booking.user = this.currentUser;
+          
           this.statusService.findStatusByName("Pending")
             .pipe(first())
             .subscribe({
@@ -104,7 +114,6 @@ export class TourListComponent implements OnInit {
 
                 this.status = data;
                 this.booking.status = this.status
-                this.booking. noOfTraveller=this.noOfTraveller;
                 this.bookingService.addBooking(this.booking)
                   .pipe(first())
                   .subscribe({

@@ -34,6 +34,7 @@
                 <div class="form-group col-5">
                     <label>State Name</label>
                     <select class="form-control" formControlName="stateId">
+                        <option>Select State</option>
                         <option *ngFor="let state of states" [value]="state.stateId">
                             {{state.stateName}}</option>
                     </select>

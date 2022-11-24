@@ -20,4 +20,6 @@ public interface MasterUserDao extends JpaRepository<MasterUser, Integer>{
 
 	public MasterUser findByUserName(String userName);
 
+	List<MasterUser> findByActorActorId(int actorId);
+
 }

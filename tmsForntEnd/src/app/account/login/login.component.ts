@@ -61,10 +61,10 @@ export class LoginComponent implements OnInit {
           // console.log(this.user);
           this.accountService.shareLoginUser(this.user);
           this.alertService.success(this.user.firstName +' Login Sucesssfully !', { keepAfterRouteChange: true });
-          this.router.navigate(['../Dashboard'], { relativeTo: this.route })
-          .then(() => {
-            window.location.reload();
-          });
+          this.router.navigate(['../Dashboard'], { relativeTo: this.route });
+          // .then(() => {
+          //   //window.location.reload();
+          // });
           localStorage.setItem('user', JSON.stringify(this.user))
         },
         error: (err) => {

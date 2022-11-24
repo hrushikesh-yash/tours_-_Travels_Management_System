@@ -32,7 +32,7 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
   vehicles: Vehicle[];
   drivers: User[];
   vehicleDriverMapping: VehicleDriverMapping = new VehicleDriverMapping;
-  driverActorId: number = 2;
+  driverActorId: number = 3;
   vehicle: Vehicle;
   cityRoute: CityRoutes;
   user: User;
@@ -90,7 +90,7 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
       .subscribe({
         next: (data: Vehicle[]) => {
           this.vehicles = data;
-          console.log(this.vehicles);
+          // console.log(this.vehicles);
         },
         error: (error) => console.log(error)
       });
@@ -102,7 +102,7 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
       .subscribe({
         next: (data: CityRoutes[]) => {
           this.cityRoutes = data;
-          console.log(this.vehicles);
+          // console.log(this.vehicles);
         },
         error: (error) => console.log(error)
       });
@@ -113,7 +113,7 @@ export class AddEditVehicleDriverMappingComponent implements OnInit {
     this.userService.getAllByActorId(this.driverActorId)
       .pipe(first())
       .subscribe({
-        next: (data: User[]) => {
+        next: (data) => {
           this.drivers = data;
           console.log(this.drivers);
         },

@@ -39,6 +39,10 @@ public class BookingHistory {
 	@JoinColumn(name = "routeId",referencedColumnName = "routeId")
 	private MappingCityRoutes cityRoute;
 
+	@OneToOne(cascade = CascadeType.DETACH)
+	@JoinColumn(name = "statusId",referencedColumnName = "statusId")
+	private MasterStatus status;
+
 	@Column(name = "bookingDate")
 	private LocalDate bookingDate;
 
@@ -152,6 +156,16 @@ public class BookingHistory {
 		this.cityRoute = cityRoute;
 	}
 
+	public MasterStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(MasterStatus status) {
+		this.status = status;
+	}
+
+	
+	
 
 	
 	

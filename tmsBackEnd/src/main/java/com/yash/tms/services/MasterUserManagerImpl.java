@@ -64,7 +64,7 @@ public class MasterUserManagerImpl implements MasterUserManager {
 	public List<MasterUser> getAllByActorId(int actorId) {
 		log.info("MasterUserManagerImpl :: getAllByActorId function started.");
 		try {
-			return masterUserDao.findByIdActorId(actorId);// (userId).orElseThrow(() -> new
+			return masterUserDao.findByActorActorId(actorId);// (userId).orElseThrow(() -> new
 															// RecordNotfoundException("User Id not found."));
 
 		} catch (Exception e) {
